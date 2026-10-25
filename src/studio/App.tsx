@@ -44,7 +44,7 @@ async function loadMapComponent(id: string) {
       return module.default
     }
     
-    // Se non c'è default, cerca un componente con lo stesso nome del file
+    // Se non c'è default function, cerca un componente con lo stesso nome del file
     const componentName = id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('') + 'Page'
     if (module[componentName] && typeof module[componentName] === 'function') {
       console.log(`📌 Componente trovato: ${componentName}`)
@@ -63,6 +63,15 @@ async function loadMapComponent(id: string) {
     if (typeof module === 'function') {
       console.log(`📌 Componente trovato: modulo diretto`)
       return module
+    }
+    
+    // Caso speciale: default è un oggetto che contiene un componente
+    if (module.default && typeof module.default === 'object' && module.default.component) {
+      const comp = module.default.component
+      if (typeof comp === 'function') {
+        console.log(`📌 Componente trovato: default.component`)
+        return comp
+      }
     }
     
     console.warn(`⚠️ Nessun componente valido trovato per ${id}`, module)
