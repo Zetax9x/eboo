@@ -51,12 +51,6 @@ const map: OverviewMap = {
       title: 'Feedback negativo',
       accent: 'teal',
       icon: 'RefreshCw',
-      illustration: {
-        id: 'sistema-endocrino-feedback',
-        alt: 'Schema circolare di feedback ormonale',
-        prompt: 'circular loop diagram with arrows linking brain, pituitary gland and a target gland, one returning arrow showing inhibition',
-        icon: 'RefreshCw',
-      },
       bullets: [
         'L’ormone finale **inibisce** ipotalamo e ipofisi',
         'Es. T3/T4 alti → ↓ TRH e ↓ TSH',

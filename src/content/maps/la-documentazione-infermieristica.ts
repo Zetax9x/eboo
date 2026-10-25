@@ -1,0 +1,116 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'la-documentazione-infermieristica',
+  chapter: 'concorsi',
+  title: 'La documentazione infermieristica',
+  subtitle: 'Cartella, contenuti, responsabilità e aspetti legali',
+  icon: 'FileText',
+  status: 'bozza',
+  sources: [
+    'Codice deontologico degli infermieri (FNOPI, 2014)',
+    'Legge 24/2017 — Legge Gelli-Bianco',
+    'Linee guida nazionali sulla documentazione clinica (Ministero della Salute)',
+  ],
+  intro:
+    'La documentazione infermieristica è la **registrazione scritta** di ogni aspetto dell’assistenza: dati, interventi, risposte del paziente, comunicazioni. È un **documento legale** e uno strumento di continuità assistenziale.',
+  columns: 2,
+  blocks: [
+    {
+      title: 'Finalità e valore',
+      icon: 'ShieldCheck',
+      accent: 'blue',
+      items: [
+        'Garantisce **continuità** dell’assistenza tra turni e servizi',
+        'Strumento di **comunicazione** nell’équipe multiprofessionale',
+        'Base per la **valutazione** degli esiti assistenziali',
+        'Supporto per la **ricerca** e la formazione',
+        'Documento **legale**: prova in caso di contenzioso',
+        'Riflette la **qualità** dell’assistenza fornita',
+        'Rispetta il **diritto alla privacy** del paziente (GDPR)',
+      ],
+    },
+    {
+      title: 'Contenuti essenziali',
+      icon: 'ClipboardList',
+      accent: 'green',
+      items: [
+        '**Accertamento** infermieristico: dati soggettivi e oggettivi',
+        '**Diagnosi** infermieristiche (NANDA-I) e problemi collaborativi',
+        '**Piano di assistenza**: obiettivi, interventi, tempi',
+        '**Interventi** eseguiti: data, ora, firma, iniziali',
+        '**Risposte** del paziente: parametri, sintomi, esiti',
+        '**Comunicazioni** con medico, paziente, famiglia',
+        '**Educazione terapeutica** fornita e feedback del paziente',
+        '**Eventi avversi** e segnalazioni',
+      ],
+    },
+    {
+      title: 'Regole di compilazione',
+      icon: 'ListChecks',
+      accent: 'orange',
+      items: [
+        'Scrivere in modo **chiaro, conciso, oggettivo**',
+        'Usare **terminologia standard** (NANDA, NIC, NOC)',
+        '**Data e ora** su ogni voce: formato 24h',
+        '**Firma** o iniziali leggibili: responsabilità personale',
+        '**Correzioni**: linea singola, data, ora, firma (mai cancellare)',
+        'Niente **abbreviazioni** non convenzionali',
+        'Registrare **solo fatti osservati**, non opinioni',
+        'Evitare **giudizi** o etichette sul paziente',
+      ],
+    },
+    {
+      title: 'Aspetti legali e deontologici',
+      icon: 'Scale',
+      accent: 'red',
+      items: [
+        'La cartella è **titolarità del paziente** (art. 32 Cost.)',
+        '**Accesso** del paziente: diritto di visione e copia (L. 24/2017)',
+        '**Segreto professionale**: obbligo di riservatezza (art. 58 CdE)',
+        '**Responsabilità** per omissioni, errori, falsità',
+        '**Falsità in atto pubblico**: reato penale (art. 483 c.p.)',
+        '**Diritto di rettifica**: paziente può chiedere correzioni',
+        '**Conservazione**: 10 anni (cartella clinica), 20 anni (nascite)',
+        '**Responsabilità solidale** in caso di errore documentale',
+      ],
+    },
+    {
+      title: 'Errori comuni e rischi',
+      icon: 'TriangleAlert',
+      accent: 'purple',
+      items: [
+        '**Omissioni**: non registrare interventi o comunicazioni',
+        '**Ritardi**: compilare la cartella a fine turno (non in tempo reale)',
+        '**Ambiguità**: frasi vaghe, abbreviazioni errate',
+        '**Cancellature**: usare bianchetto o cancellare righe',
+        '**Copie non autorizzate**: violazione della privacy',
+        '**Falsità**: dati inventati o alterati (reato)',
+        '**Mancata firma**: responsabilità non attribuibile',
+        '**Linguaggio non tecnico**: termini colloquiali o offensivi',
+      ],
+    },
+    {
+      title: 'Best practice e qualità',
+      icon: 'CircleCheck',
+      accent: 'teal',
+      checks: [
+        { text: 'Compilare **in tempo reale**, non a fine turno', kind: 'ok' },
+        { text: 'Usare **scale validate** per la valutazione (es. NRS dolore)', kind: 'ok' },
+        { text: 'Registrare **tutte le comunicazioni** con il paziente', kind: 'ok' },
+        { text: 'Segnalare **eventi avversi** senza timore (cultura della sicurezza)', kind: 'ok' },
+        { text: 'Rispettare il **GDPR**: minimizzazione dei dati, accesso limitato', kind: 'ok' },
+        { text: 'Partecipare alla **revisione** della cartella (audit)', kind: 'ok' },
+        { text: 'Aggiornare le **conoscenze** su documentazione e normativa', kind: 'ok' },
+      ],
+    },
+  ],
+  keyPoints: [
+    'La documentazione è **legale**: ogni voce è una prova in caso di contenzioso',
+    '**Data, ora, firma** su ogni voce: responsabilità personale e tracciabilità',
+    'Rispettare **privacy** e **segreto professionale**: accesso solo a chi ha diritto',
+  ],
+}
+
+export default map

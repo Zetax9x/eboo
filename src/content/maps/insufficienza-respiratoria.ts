@@ -18,7 +18,7 @@ const map: DiseaseMap = {
   illustration: {
     id: 'ir-polmoni-gas',
     alt: 'Polmoni con alveoli e scambio gassoso alterato',
-    prompt: 'human lungs with alveoli, oxygen and carbon dioxide molecules moving across alveolar membrane, blood capillaries',
+    prompt: 'patient sitting upright in a hospital bed wearing a clear oxygen face mask, breathing with visible effort, shoulders raised',
     icon: 'Wind',
   },
   types: [

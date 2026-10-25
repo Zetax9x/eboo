@@ -42,15 +42,6 @@ const map: OverviewMap = {
         prompt: 'human neck and chest showing carotid sinus and aortic arch with baroreceptor nerves highlighted',
         icon: 'Activity',
       },
-      inset: {
-        label: 'Riflesso barocettoriale',
-        illustration: {
-          id: 'rap-riflesso',
-          alt: 'Schema del riflesso barocettoriale',
-          prompt: 'flowchart of baroreceptor reflex: pressure change, nerve signal, brainstem, autonomic response to heart and vessels',
-          icon: 'Workflow',
-        },
-      },
       bullets: [
         'Situati nel **seno carotideo** e nell’**arco aortico**',
         'Rilevano la **distensione** della parete vasale',
@@ -117,12 +108,6 @@ const map: OverviewMap = {
       title: 'Controllo a lungo termine',
       accent: 'navy',
       icon: 'Clock',
-      illustration: {
-        id: 'rap-lungo-termine',
-        alt: 'Reni e volume ematico',
-        prompt: 'kidneys regulating blood volume through urine output, with arrows showing water and sodium balance',
-        icon: 'Clock',
-      },
       bullets: [
         'Regolano il **volume plasmatico** e la **gittata cardiaca**',
         '**Reni**: meccanismo di **riassorbimento** e **secrezione** di Na+ e H2O',

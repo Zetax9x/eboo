@@ -75,12 +75,12 @@ const map: ProcedureMap = {
     {
       title: 'Interpretazione',
       items: ['Target **94–98%** (adulto)', '**88–92%** se rischio ipercapnia (es. BPCO)', 'Variazione improvvisa: **rivalutare**'],
-      illustration: step('interpretazione', 'Valori di saturazione', 'nurse looking at oxygen saturation reading next to a patient with a nasal cannula'),
+      icon: 'ListChecks',
     },
     {
       title: 'Monitoraggio continuo',
       items: ['Impostare gli **allarmi**', 'Ruotare il sito (rischio **lesioni**)', 'Controllare la cute del dito'],
-      illustration: step('continuo', 'Monitor con allarmi', 'bedside monitor with SpO2 and heart rate values and an adhesive oximeter sensor on a finger'),
+      icon: 'Eye',
     },
     {
       title: 'Documentare',

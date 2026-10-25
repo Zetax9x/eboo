@@ -83,7 +83,7 @@ const map: OverviewMap = {
       illustration: {
         id: 'sistema-immunitario-adattativa',
         alt: 'Linfociti B e T in azione',
-        prompt: 'B cell producing antibodies against a virus, and T cell killing an infected cell, with memory cells forming',
+        prompt: 'one immune cell releasing Y-shaped antibodies that stick to virus particles, and another immune cell attaching to and destroying an infected cell',
         icon: 'Target',
       },
       bullets: [
@@ -116,12 +116,6 @@ const map: OverviewMap = {
       title: 'Citochine e infiammazione',
       accent: 'red',
       icon: 'Zap',
-      illustration: {
-        id: 'sistema-immunitario-citochine',
-        alt: 'Molecole di segnalazione infiammatoria',
-        prompt: 'inflammatory response with redness, swelling, heat, and pain, cytokines signaling between immune cells',
-        icon: 'Zap',
-      },
       bullets: [
         '**Citochine**: IL-1, IL-6, TNF-α, interferoni, chemochine',
         'Mediano la comunicazione tra cellule immunitarie',

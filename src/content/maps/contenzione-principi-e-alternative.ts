@@ -1,0 +1,125 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'contenzione-principi-e-alternative',
+  chapter: 'specialistica',
+  title: 'Contenzione: principi e alternative',
+  subtitle: 'Limiti alla libertà di movimento: quando, come e cosa fare prima',
+  icon: 'ShieldAlert',
+  status: 'bozza',
+  sources: [
+    'Ministero della Salute — Raccomandazioni per la prevenzione delle cadute e la gestione della contenzione (2019)',
+    'FNOPI — Codice Deontologico dell’Infermiere (2014, art. 12-13)',
+    'Legge 833/1978 — Art. 32 (diritto alla dignità e libertà della persona)',
+  ],
+  intro:
+    'La contenzione è un **atto restrittivo** della libertà di movimento. È ammissibile solo come **ultima risorsa**, per un tempo limitato e con **documentazione rigorosa**. L’obiettivo primario è sempre la **prevenzione** e l’uso di alternative non farmacologiche.',
+  columns: 2,
+  blocks: [
+    {
+      title: 'Definizione e Ambito',
+      icon: 'Info',
+      accent: 'blue',
+      items: [
+        'Dispositivi o misure che **limitano volontariamente** la libertà di movimento',
+        'Include: cinghie, manette, letti con sponde, gabbie, corsetti rigidi',
+        '**Non** è contenzione: sponde alzata per sicurezza notturna (se non impedisce la deambulazione), tutori ortopedici terapeutici',
+        'Riguarda pazienti **consapevoli** o con alterazione della coscienza',
+        'In ambito psichiatrico: contenzione fisica e farmacologica (L. 180/1978)',
+        'In ambito geriatrico: spesso legata a **delirium** o rischio caduta',
+        'È un **atto medico** che richiede prescrizione, ma l’attuazione è infermieristica',
+      ],
+    },
+    {
+      title: 'Indicazioni (Quando)',
+      icon: 'Target',
+      accent: 'red',
+      items: [
+        'Rischio imminente di **autodanno** o **danno ad altri**',
+        'Rimozione imminente di **dispositivi vitali** (sonda, catetere, drenaggio)',
+        'Prevenzione di **cadute gravi** in pazienti con delirium acuto',
+        'Protezione da **complicanze post-operatorie** (es. eviscerazione)',
+        'Solo se le **alternative non farmacologiche** sono fallite o non applicabili',
+        'Per il **minore tempo possibile**',
+        'In caso di **aggressività** imminente e non controllabile',
+      ],
+    },
+    {
+      title: 'Controindicazioni e Rischi',
+      icon: 'TriangleAlert',
+      accent: 'orange',
+      items: [
+        '**Lesioni cutanee** (escoriazioni, ematomi, necrosi)',
+        'Rischio di **sindrome da compartimento** (necrosi tissutale)',
+        'Aumento dell’**ansia**, **aggressività** e **delirium**',
+        'Rischio di **asfissia** (se il dispositivo copre il viso)',
+        'Rischio di **fratture** (se il paziente si divincola)',
+        'Danno alla **dignità** e alla **autostima** del paziente',
+        'Possibile **responsabilità legale** se non giustificata o documentata',
+      ],
+    },
+    {
+      title: 'Alternative Non Farmacologiche',
+      icon: 'Lightbulb',
+      accent: 'green',
+      items: [
+        '**Riorientamento** spaziale e temporale (orologio, calendario, foto)',
+        'Presenza di **caregiver** o familiari al letto',
+        '**Monitoraggio continuo** (telecamere, infermiere dedicato)',
+        'Modifica dell’**ambiente**: luci, rumori, odori (ridurre stimoli)',
+        '**Attività occupazionali**: giochi, musica, lettura',
+        'Verifica di **bisogni fisiologici**: dolore, minzione, defecazione',
+        'Uso di **dispositivi adattivi**: guanti morbidi, maniche lunghe',
+      ],
+    },
+    {
+      title: 'Procedure di Applicazione',
+      icon: 'ListChecks',
+      accent: 'purple',
+      items: [
+        'Verificare la **prescrizione medica** scritta e datata',
+        'Informare il **paziente** (se cosciente) e i **familiari**',
+        'Scegliere il **dispositivo** meno restrittivo possibile',
+        'Applicare con **cura**: cuscinetti, evitare pressione sui nervi',
+        'Verificare la **circolazione** distale (polso, colore, temperatura)',
+        'Registrare l’**ora** di applicazione e il **tipo** di contenzione',
+        'Pianificare la **rimozione** (es. dopo 2 ore, o al miglioramento)',
+      ],
+    },
+    {
+      title: 'Monitoraggio e Rimozione',
+      icon: 'RefreshCw',
+      accent: 'teal',
+      items: [
+        'Controllare **ogni 15-30 min** la circolazione e l’integrità cutanea',
+        'Valutare lo **stato di coscienza** e il **livello di agitazione**',
+        'Rimuovere la contenzione **non appena possibile**',
+        'Documentare l’**ora** di rimozione e lo **stato** del paziente',
+        'Se la contenzione è necessaria per > 24h, **rivalutare** la prescrizione',
+        'Segnalare qualsiasi **complicanza** al medico',
+        'Offrire **idratazione** e **movimenti passivi** se possibile',
+      ],
+    },
+    {
+      title: 'Aspetti Legali e Deontologici',
+      icon: 'ShieldCheck',
+      accent: 'navy',
+      checks: [
+        { text: 'Rispetto della **dignità** della persona (L. 833/1978)', kind: 'ok' },
+        { text: 'Obbligo di **documentazione** completa', kind: 'ok' },
+        { text: 'Nessuna contenzione **punitiva** o di comodità', kind: 'no' },
+        { text: 'Obbligo di **informare** il paziente/familiari', kind: 'ok' },
+        { text: 'Prescrizione medica **obbligatoria**', kind: 'ok' },
+        { text: 'Responsabilità **penale** per lesioni colpose', kind: 'alert' },
+      ],
+    },
+  ],
+  keyPoints: [
+    'La contenzione è **ultima risorsa**: prima provare sempre le alternative non farmacologiche',
+    'Documentare **sempre**: motivo, ora, tipo, controlli, rimozione',
+    'Obiettivo: **minimizzare** il tempo e l’intensità della restrizione',
+  ],
+}
+
+export default map

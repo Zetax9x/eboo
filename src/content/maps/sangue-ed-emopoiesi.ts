@@ -56,7 +56,7 @@ const map: OverviewMap = {
         illustration: {
           id: 'sangue-ed-emopoiesi-emoglobina',
           alt: 'Struttura dell’emoglobina',
-          prompt: 'molecular structure of hemoglobin, four subunits with iron atoms in the center, red and blue colors',
+          prompt: 'red blood cells flowing through a small capillary, bright red on one side and darker red on the other',
           icon: 'Layers',
         },
       },
@@ -75,7 +75,7 @@ const map: OverviewMap = {
       illustration: {
         id: 'sangue-ed-emopoiesi-leucociti',
         alt: 'Diversi tipi di leucociti',
-        prompt: 'microscopic view of different white blood cells: neutrophils, lymphocytes, monocytes, eosinophils, basophils, varied shapes and colors',
+        prompt: 'five different white blood cells floating among red blood cells, each with a differently shaped purple nucleus, microscope view',
         icon: 'ShieldCheck',
       },
       inset: {
@@ -123,15 +123,6 @@ const map: OverviewMap = {
         alt: 'Midollo osseo con cellule staminali',
         prompt: 'bone marrow cross-section, hematopoietic stem cells, developing blood cells, spongy bone structure',
         icon: 'RefreshCw',
-      },
-      inset: {
-        label: 'Cellule staminali',
-        illustration: {
-          id: 'sangue-ed-emopoiesi-staminali',
-          alt: 'Cellule staminali ematopoietiche',
-          prompt: 'hematopoietic stem cell dividing, giving rise to different blood cell lineages, branching diagram',
-          icon: 'GitBranch',
-        },
       },
       bullets: [
         '**Sede**: midollo osseo rosso (sterno, costole, vertebre, bacino)',

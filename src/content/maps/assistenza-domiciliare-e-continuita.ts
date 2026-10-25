@@ -1,0 +1,118 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'assistenza-domiciliare-e-continuita',
+  chapter: 'specialistica',
+  title: 'Assistenza domiciliare e continuità',
+  subtitle: 'Principi, ruoli e strumenti per l’assistenza al domicilio',
+  icon: 'Hospital',
+  status: 'bozza',
+  sources: [
+    'Ministero della Salute — Linee guida per l’assistenza domiciliare (2023)',
+    'FNOPI — Codice Deontologico dell’Infermiere (2020)',
+    'Legge 328/2000 — Legge-quadro per la non autosufficienza',
+  ],
+  intro:
+    'L’assistenza domiciliare è un **servizio sanitario** erogato al domicilio della persona, garantendo **continuità** tra ospedale e territorio. L’infermiere opera in autonomia, coordinandosi con l’équipe multiprofessionale.',
+  columns: 3,
+  blocks: [
+    {
+      title: 'Principi fondamentali',
+      icon: 'ShieldCheck',
+      accent: 'blue',
+      items: [
+        '**Centralità** della persona e della famiglia',
+        '**Continuità** assistenziale ospedale-territorio',
+        '**Personalizzazione** del piano di cura',
+        '**Accessibilità** e prossimità',
+        '**Rispetto** della privacy e dignità',
+        '**Partecipazione** attiva del caregiver',
+        '**Equità** nell’accesso ai servizi',
+        '**Prevenzione** delle complicanze',
+      ],
+    },
+    {
+      title: 'Ruolo infermieristico',
+      icon: 'User',
+      accent: 'green',
+      items: [
+        '**Accertamento** infermieristico al domicilio',
+        '**Pianificazione** degli interventi assistenziali',
+        '**Educazione** terapeutica a paziente e famiglia',
+        '**Coordinamento** con équipe e servizi territoriali',
+        '**Monitoraggio** clinico e funzionale',
+        '**Documentazione** in cartella clinica',
+        '**Riferimento** al medico in caso di urgenza',
+        '**Valutazione** del rischio (Braden, NRS)',
+      ],
+    },
+    {
+      title: 'Strumenti di lavoro',
+      icon: 'ClipboardList',
+      accent: 'purple',
+      items: [
+        '**Piano di assistenza** individualizzato',
+        '**Cartella clinica** aggiornata',
+        '**Scale** di valutazione (Braden, NRS, MMSE)',
+        '**Prescrizioni** mediche e infermieristiche',
+        '**Dispositivi** medici e ausili',
+        '**Contatti** con SSN e servizi sociali',
+        '**Kit** di emergenza domiciliare',
+        '**Diario** dei parametri vitali',
+      ],
+    },
+    {
+      title: 'Continuità assistenziale',
+      icon: 'RefreshCw',
+      accent: 'teal',
+      items: [
+        '**Dimissione** protetta dall’ospedale',
+        '**Trasferimento** di informazioni tra professionisti',
+        '**Coordinamento** tra SSN e servizi sociali',
+        '**Follow-up** post-dimissione',
+        '**Prevenzione** delle riammissioni',
+        '**Comunicazione** efficace con il paziente',
+        '**Piano** di dimissione condiviso',
+        '**Monitoraggio** a 72 ore dalla dimissione',
+      ],
+    },
+    {
+      title: 'Aspetti normativi',
+      icon: 'BookOpen',
+      accent: 'navy',
+      items: [
+        '**L. 328/2000**: non autosufficienza',
+        '**L. 833/1978**: SSN e diritti alla salute',
+        '**DM 739/1994**: profilo infermieristico',
+        '**Codice Deontologico FNOPI**: etica e responsabilità',
+        '**GDPR**: protezione dati personali',
+        '**Accordo** paziente-famiglia-infermiere',
+        '**L. 219/2017**: consenso informato',
+        '**DM 778/2016**: continuità assistenziale',
+      ],
+    },
+    {
+      title: 'Sfide e criticità',
+      icon: 'TriangleAlert',
+      accent: 'orange',
+      items: [
+        '**Isolamento** sociale del paziente',
+        '**Carico** assistenziale del caregiver',
+        '**Accessibilità** del domicilio',
+        '**Risorse** limitate rispetto all’ospedale',
+        '**Comunicazione** con altri professionisti',
+        '**Gestione** delle urgenze al domicilio',
+        '**Fragilità** della rete familiare',
+        '**Burocrazia** e tempi di risposta',
+      ],
+    },
+  ],
+  keyPoints: [
+    'L’assistenza domiciliare garantisce **continuità** e **personalizzazione** delle cure',
+    'L’infermiere è **coordinatore** dell’équipe e **riferimento** per paziente e famiglia',
+    'La **continuità** si misura con la riduzione delle **riammissioni** e delle **complicanze**',
+  ],
+}
+
+export default map

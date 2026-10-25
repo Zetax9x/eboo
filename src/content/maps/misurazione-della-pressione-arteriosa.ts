@@ -75,7 +75,7 @@ const map: ProcedureMap = {
     {
       title: 'Lettura',
       items: ['**I tono** di Korotkoff = sistolica', '**V tono** (scomparsa) = diastolica', 'Leggere all’altezza degli occhi'],
-      illustration: step('lettura', 'Lettura del manometro', 'close-up of an aneroid manometer dial with the needle descending'),
+      icon: 'ListChecks',
     },
     {
       title: 'Ripetere',

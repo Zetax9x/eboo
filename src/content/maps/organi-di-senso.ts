@@ -56,7 +56,7 @@ const map: OverviewMap = {
         illustration: {
           id: 'organi-di-senso-cochlea',
           alt: 'Cochlea e organo di Corti',
-          prompt: 'cross-section of the cochlea showing the organ of Corti and hair cells',
+          prompt: 'snail-shaped spiral of the inner ear cut open, showing fluid-filled channels and rows of tiny hair cells inside',
           icon: 'Waves',
         },
       },

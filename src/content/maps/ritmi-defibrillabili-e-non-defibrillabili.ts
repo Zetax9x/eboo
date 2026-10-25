@@ -1,0 +1,112 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'ritmi-defibrillabili-e-non-defibrillabili',
+  chapter: 'emergenze',
+  title: 'Ritmi defibrillabili e non defibrillabili',
+  subtitle: 'Classificazione degli arresti cardiaci e strategie di trattamento secondo le linee guida ERC',
+  icon: 'Zap',
+  status: 'bozza',
+  sources: [
+    'ERC — European Resuscitation Council Guidelines 2021: Arrhythmias and Cardiac Arrest',
+    'AHA — American Heart Association Guidelines for CPR and ECC, 2020',
+    'FNOPI — Codice Deontologico dell’Infermiere e Linee guida per la gestione dell’arresto cardiaco',
+  ],
+  columns: 2,
+  intro: 'La distinzione tra ritmi defibrillabili e non defibrillabili è il primo passo critico nella gestione dell’arresto cardiaco. Determina l’immediata attivazione del defibrillatore o la priorità alla rianimazione cardiopolmonare (RCP) e alla somministrazione di farmaci.',
+  blocks: [
+    {
+      title: 'Ritmi Defibrillabili',
+      icon: 'Zap',
+      accent: 'red',
+      text: 'Ritmi in cui l’energia elettrica può ripristinare un ritmo efficace.',
+      items: [
+        '**Fibrillazione ventricolare (FV)**: attività elettrica caotica, assenza di QRS riconoscibili, assenza di flusso ematico.',
+        '**Tachicardia ventricolare (TV) senza polso**: QRS larghi (> 0,12 s), frequenza > 100 bpm, assenza di pressione arteriosa.',
+        'Sono i ritmi con la **migliore prognosi** se defibrillati precocemente.',
+        'Ogni minuto di ritardo nella defibrillazione riduce la sopravvivenza del **7-10%**.',
+        'La defibrillazione precoce è l’intervento più efficace per questi ritmi.',
+      ],
+    },
+    {
+      title: 'Ritmi Non Defibrillabili',
+      icon: 'CircleX',
+      accent: 'blue',
+      text: 'Ritmi in cui la defibrillazione non è efficace o non indicata.',
+      items: [
+        '**Attività elettrica senza polso (PEA)**: attività elettrica ordinata (QRS stretti o larghi) ma assenza di contrazione meccanica e di polso.',
+        '**Asistolia**: assenza completa di attività elettrica (linea piatta) e di attività meccanica.',
+        'La defibrillazione **non è indicata** e non deve essere tentata.',
+        'La priorità è la **RCP di alta qualità** e la ricerca/trattamento delle cause reversibili.',
+        'La sopravvivenza è significativamente più bassa rispetto ai ritmi defibrillabili.',
+      ],
+    },
+    {
+      title: 'Gestione della FV e TV senza polso',
+      icon: 'HeartPulse',
+      accent: 'orange',
+      items: [
+        'Riconoscere il ritmo con il **monitor/defibrillatore**.',
+        'Se ritmo defibrillabile: **1 shock** (200 J biphasico o 360 J monofasico).',
+        'Riprendere **immediatamente** la RCP per 2 minuti dopo lo shock.',
+        'Non ritardare la RCP per analizzare il ritmo: **shock → RCP**.',
+        'Somministrare **adrenalina** (1 mg IV) dopo il 3° shock.',
+        'Somministrare **amiodarone** (300 mg IV) dopo il 3° shock se la FV/TV persiste.',
+        'Rivalutare il ritmo ogni 2 minuti.',
+      ],
+    },
+    {
+      title: 'Gestione della PEA e Asistolia',
+      icon: 'Activity',
+      accent: 'green',
+      items: [
+        'Riconoscere il ritmo: **PEA** (attività elettrica presente) o **Asistolia** (linea piatta).',
+        '**Nessuna defibrillazione**: non è indicata.',
+        'Priorità assoluta: **RCP di alta qualità** (compressioni 100-120/min, profondità 5-6 cm).',
+        'Somministrare **adrenalina** (1 mg IV) ogni 3-5 minuti.',
+        'Ricerca attiva delle **cause reversibili (4H e 4T)**.',
+        'Evitare iperventilazione: mantenere la **normocapnia**.',
+        'Monitorare continuamente il ritmo per escludere la conversione in FV.',
+      ],
+    },
+    {
+      title: 'Cause Reversibili (4H e 4T)',
+      icon: 'ListChecks',
+      accent: 'purple',
+      items: [
+        '**Ipovolemia**: emorragia, disidratazione grave.',
+        '**Ipossia**: ostruzione delle vie aeree, pneumotorace, embolia polmonare.',
+        '**Ipo/iperkaliemia**: squilibri elettrolitici gravi.',
+        '**Ipoglicemia**: glicemia < 50 mg/dL.',
+        '**Ipotermia**: temperatura corporea < 30 °C.',
+        '**Tossici**: farmaci, droghe, avvelenamenti.',
+        '**Trombosi**: coronarica (SCA) o polmonare.',
+        '**Tamponamento cardiaco**: accumulo di liquido nel pericardio.',
+      ],
+    },
+    {
+      title: 'Ruolo Infermieristico Critico',
+      icon: 'ShieldCheck',
+      accent: 'teal',
+      items: [
+        '**Riconoscere rapidamente** il ritmo defibrillabile o non defibrillabile.',
+        '**Preparare** il defibrillatore e i farmaci (adrenalina, amiodarone) in anticipo.',
+        '**Somministrare** i farmaci secondo protocollo e tempi precisi.',
+        '**Documentare** tempi di arresto, shock, farmaci somministrati e risposte.',
+        '**Comunicare** chiaramente al team: "Ritmo defibrillabile" o "Ritmo non defibrillabile".',
+        '**Mantenere** la qualità della RCP durante le pause per shock o farmaci.',
+        '**Rivalutare** il polso e il ritmo ogni 2 minuti.',
+      ],
+    },
+  ],
+  keyPoints: [
+    'FV e TV senza polso = **Defibrillabili** → Shock immediato.',
+    'PEA e Asistolia = **Non Defibrillabili** → RCP + Adrenalina.',
+    'La **defibrillazione precoce** è il fattore più importante per la sopravvivenza dalla FV.',
+    'Nella PEA/Asistolia, la **RCP di alta qualità** è l’intervento principale.',
+    'Ricerca sistematica delle **cause reversibili** in tutti gli arresti cardiaci.',
+  ],
+}
+
+export default map

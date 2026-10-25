@@ -44,12 +44,6 @@ const map: OverviewMap = {
       title: 'Pressioni parziali dei gas',
       accent: 'purple',
       icon: 'Gauge',
-      illustration: {
-        id: 'scambi-pressioni-parziali',
-        alt: 'Schema delle pressioni parziali di O2 e CO2',
-        prompt: 'diagram showing partial pressures of oxygen and carbon dioxide in alveoli, pulmonary capillaries and systemic tissues, with arrows indicating direction of diffusion',
-        icon: 'Gauge',
-      },
       bullets: [
         '**O2**: alveolo (**104 mmHg**) → sangue venoso (**40 mmHg**)',
         '**CO2**: sangue venoso (**46 mmHg**) → alveolo (**40 mmHg**)',
@@ -68,15 +62,6 @@ const map: OverviewMap = {
         prompt: 'red blood cell with hemoglobin molecules binding oxygen molecules, showing the tetrameric structure of hemoglobin',
         icon: 'Droplet',
       },
-      inset: {
-        label: 'Curva di dissociazione',
-        illustration: {
-          id: 'scambi-curva-o2',
-          alt: 'Curva di dissociazione dell’ossiemoglobina',
-          prompt: 'sigmoidal oxygen-hemoglobin dissociation curve graph with partial pressure of oxygen on x-axis and saturation on y-axis',
-          icon: 'Activity',
-        },
-      },
       bullets: [
         '**98,5%** dell’O2 è legato all’**emoglobina** (Hb) come ossiemoglobina',
         '**1,5%** è disciolto nel plasma (dipende dalla PO2)',
@@ -89,12 +74,6 @@ const map: OverviewMap = {
       title: 'Trasporto della CO2',
       accent: 'orange',
       icon: 'Waves',
-      illustration: {
-        id: 'scambi-trasporto-co2',
-        alt: 'Forme di trasporto della CO2 nel sangue',
-        prompt: 'diagram showing the three forms of carbon dioxide transport in blood: bicarbonate ions in plasma, carbaminohemoglobin and dissolved CO2',
-        icon: 'Waves',
-      },
       bullets: [
         '**70%** come **bicarbonato** (HCO3⁻) nel plasma',
         '**23%** legato all’Hb come **carbaminemoglobina**',
@@ -107,12 +86,6 @@ const map: OverviewMap = {
       title: 'Fattori che spostano la curva O2',
       accent: 'teal',
       icon: 'ArrowUp',
-      illustration: {
-        id: 'scambi-curva-spostata',
-        alt: 'Curva di dissociazione spostata a destra e a sinistra',
-        prompt: 'oxygen-hemoglobin dissociation curve showing two curves: one shifted to the right (high temperature, high CO2) and one shifted to the left (low temperature, low CO2)',
-        icon: 'ArrowUp',
-      },
       bullets: [
         '**Spostamento a destra** (minore affinità, maggiore rilascio):',
         '↑ Temperatura, ↑ CO2, ↓ pH (acidosi), ↑ 2,3-DPG',
@@ -125,12 +98,6 @@ const map: OverviewMap = {
       title: 'Ventilazione e perfusione',
       accent: 'green',
       icon: 'RefreshCw',
-      illustration: {
-        id: 'scambi-ventilazione-perfusione',
-        alt: 'Rapporto ventilazione/perfusione nei polmoni',
-        prompt: 'diagram of the lung showing ventilation and perfusion matching, with alveoli receiving air and blood flow, highlighting the V/Q ratio',
-        icon: 'RefreshCw',
-      },
       bullets: [
         '**Rapporto V/Q** ideale ≈ **1** (ventilazione = perfusione)',
         '**V/Q > 1**: spazio morto (aria senza sangue)',

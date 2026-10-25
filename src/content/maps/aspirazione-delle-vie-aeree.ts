@@ -63,7 +63,7 @@ const map: ProcedureMap = {
     {
       title: 'Ripetere se serve',
       items: ['Riossigenare tra i passaggi', 'Max **2–3 passaggi**', 'Prima **trachea**, poi bocca: mai il contrario'],
-      illustration: step('ripetere', 'Saturimetro che risale', 'pulse oximeter display on a patient finger after airway suctioning'),
+      icon: 'ListChecks',
     },
     {
       title: 'Riordinare',

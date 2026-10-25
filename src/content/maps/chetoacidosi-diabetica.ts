@@ -18,7 +18,7 @@ const map: DiseaseMap = {
   illustration: {
     id: 'dka-metabolismo',
     alt: 'Schematizzazione del metabolismo dei lipidi e della produzione di corpi chetonici',
-    prompt: 'schematic diagram of fatty acid beta-oxidation leading to ketone body production in the liver, arrows showing glucose in blood and insulin deficiency',
+    prompt: 'young adult sitting on a hospital bed breathing deeply and rapidly, flushed dry face, an empty glass of water on the bedside table',
     icon: 'FlaskConical',
   },
   types: [

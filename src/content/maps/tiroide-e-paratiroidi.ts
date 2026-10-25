@@ -88,12 +88,6 @@ const map: OverviewMap = {
       title: 'Paratiroidi e calcio',
       accent: 'green',
       icon: 'Bone',
-      illustration: {
-        id: 'tiroide-e-paratiroidi-paratiroidi',
-        alt: 'Quattro paratiroidi sulla faccia posteriore della tiroide',
-        prompt: 'posterior view of the thyroid gland with four small oval parathyroid glands, two on each lobe, and the trachea and esophagus behind',
-        icon: 'Bone',
-      },
       bullets: [
         '**4 ghiandole** sulla faccia posteriore della tiroide',
         '**PTH** ↑ calcemia: libera Ca²⁺ dall’**osso**, lo trattiene nel **rene**, attiva la **vitamina D**',

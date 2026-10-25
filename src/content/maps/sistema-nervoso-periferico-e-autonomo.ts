@@ -70,7 +70,7 @@ const map: OverviewMap = {
       illustration: {
         id: 'snp-nervi-spinali',
         alt: 'Nervi spinali che emergono dalla colonna vertebrale',
-        prompt: 'spinal cord with nerve roots emerging from the intervertebral foramina, forming the brachial and lumbosacral plexuses',
+        prompt: 'human spine seen from behind with the spinal cord inside the vertebral canal and a pair of nerves leaving between every two vertebrae from the neck to the lower back',
         icon: 'Bone',
       },
       bullets: [
@@ -85,12 +85,6 @@ const map: OverviewMap = {
       title: 'Sistema nervoso autonomo (SNA)',
       accent: 'orange',
       icon: 'Zap',
-      illustration: {
-        id: 'snp-sna-schema',
-        alt: 'Sistema nervoso autonomo con vie simpatiche e parasimpatiche',
-        prompt: 'diagram of the autonomic nervous system showing sympathetic and parasympathetic pathways from the CNS to target organs, with ganglia and neurotransmitters',
-        icon: 'Zap',
-      },
       bullets: [
         'Regola funzioni **involontarie**: cuore, viscere, ghiandole',
         'Due divisioni principali: **simpatica** e **parasimpatica**',
@@ -125,7 +119,7 @@ const map: OverviewMap = {
       illustration: {
         id: 'snp-parasimpatico',
         alt: 'Sistema nervoso parasimpatico con nervi cranici e sacrali',
-        prompt: 'parasympathetic nervous system showing cranial nerves III, VII, IX, X and sacral outflow S2-S4, with ganglia near target organs',
+        prompt: 'side view of a human figure with nerves leaving the base of the brain and the lower end of the spine, reaching the eye, salivary glands, heart, lungs, stomach, intestines and bladder',
         icon: 'Droplet',
       },
       bullets: [

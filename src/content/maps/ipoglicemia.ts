@@ -18,7 +18,7 @@ const map: DiseaseMap = {
   illustration: {
     id: 'ipoglicemia-metabolismo',
     alt: 'Rappresentazione schematica del metabolismo del glucosio e dell’insulina',
-    prompt: 'schematic diagram of glucose metabolism, insulin molecules, liver glycogen storage, brain cells using glucose, blood vessel with low glucose levels',
+    prompt: 'pale sweaty person with trembling hands sitting at a table, a glass of fruit juice and a few sugar cubes in front of them',
     icon: 'Droplet',
   },
   types: [

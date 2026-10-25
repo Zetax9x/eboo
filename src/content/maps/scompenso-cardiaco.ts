@@ -17,7 +17,7 @@ const map: DiseaseMap = {
   illustration: {
     id: 'scompenso-cardiaco-cuore-dilatato',
     alt: 'Cuore dilatato con congestione polmonare ed edemi declivi',
-    prompt: 'enlarged dilated human heart, lungs with fluid congestion, swollen lower legs and ankles',
+    prompt: 'enlarged human heart with thin stretched walls and wide inner cavities, front view, next to a smaller normal heart for comparison',
     icon: 'Heart',
   },
   types: [

@@ -1,0 +1,121 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'evidence-based-nursing',
+  chapter: 'concorsi',
+  title: 'Evidence Based Nursing',
+  subtitle: 'Assistenza basata sulle evidenze: definizione, pilastri e processo',
+  icon: 'BookOpen',
+  status: 'bozza',
+  sources: [
+    'Sackett D.L., Rosenberg W.M., Gray J.A., et al. — Evidence-Based Medicine: What It Is and What It Is Not, BMJ 1996',
+    'FNOPI — Codice Deontologico dell’Infermiere (2020), Art. 12',
+    'Cochrane Collaboration — Handbook for Systematic Reviews of Interventions, Versione 6.4',
+  ],
+  intro:
+    'Integrazione consapevole del **migliore evidenza disponibile** con l’**esperienza clinica** e i **valori del paziente** per prendere decisioni assistenziali efficaci e sicure.',
+  illustration: {
+    id: 'ebn-triade',
+    alt: 'Triangolo con tre vertici: libro, infermiere, paziente',
+    prompt: 'a triangle diagram with three vertices: an open book, a nurse figure, and a patient figure',
+    icon: 'Target',
+  },
+  columns: 3,
+  blocks: [
+    {
+      title: 'Definizione e Pilastri',
+      icon: 'Layers',
+      accent: 'blue',
+      items: [
+        'Definizione: **EBN** = Evidence + Clinical Expertise + Patient Preferences',
+        'Non è solo “usare linee guida”, ma un **processo decisionale** strutturato',
+        'Pilastro 1: **Evidenza scientifica** (studi, meta-analisi, RCT)',
+        'Pilastro 2: **Competenza clinica** dell’infermiere (giudizio, esperienza)',
+        'Pilastro 3: **Valori e preferenze** del paziente (autonomia, contesto)',
+        'Obiettivo: ridurre la **variabilità** assistenziale non giustificata',
+        'Base etica: rispetto della **persona** e della **qualità** dell’assistenza',
+      ],
+    },
+    {
+      title: 'Gerarchia delle Evidenze',
+      icon: 'ArrowUp',
+      accent: 'purple',
+      items: [
+        'Livello 1: **Meta-analisi** e revisioni sistematiche di RCT',
+        'Livello 2: **Studi randomizzati controllati** (RCT) singoli',
+        'Livello 3: **Studi di coorte** e caso-controllo',
+        'Livello 4: **Studi trasversali** e di correlazione',
+        'Livello 5: **Studi di serie di casi** e report di casi',
+        'Livello 6: **Opinioni di esperti** e consenso (senza dati empirici)',
+        'Nota: la **qualità** dello studio conta quanto il livello (valutare con scale GRADE)',
+      ],
+    },
+    {
+      title: 'Processo EBN in 5 Passi',
+      icon: 'Workflow',
+      accent: 'green',
+      items: [
+        '1. **Formulare** una domanda clinica strutturata (PICO)',
+        '2. **Cercare** la migliore evidenza disponibile (database, linee guida)',
+        '3. **Valutare** criticamente la qualità e l’applicabilità dell’evidenza',
+        '4. **Integrare** l’evidenza con competenza clinica e preferenze del paziente',
+        '5. **Valutare** l’esito dell’assistenza e aggiornare la pratica',
+        'Ciclo **continuo**: la pratica EBN è dinamica e si aggiorna con nuove evidenze',
+        'Strumenti: **PICO** (Patient, Intervention, Comparison, Outcome)',
+      ],
+    },
+    {
+      title: 'Fonti di Evidenza',
+      icon: 'FileText',
+      accent: 'orange',
+      items: [
+        'Database: **PubMed**, **Cochrane Library**, **CINAHL**, **MEDLINE**',
+        'Linee guida: **NICE**, **ESC**, **ADA**, **GOLD**, **GINA**, **KDIGO**',
+        'Revisioni sistematiche: **Cochrane Reviews**, **Campbell Collaboration**',
+        'Linee guida italiane: **Ministero della Salute**, **AIFA**, **FNOPI**',
+        'Riviste infermieristiche: **Journal of Advanced Nursing**, **Nurse Researcher**',
+        'Portali: **UpToDate**, **BMJ Best Practice**, **MedlinePlus**',
+        'Importante: verificare la **data di pubblicazione** e l’**aggiornamento**',
+      ],
+    },
+    {
+      title: 'Criticità e Barriere',
+      icon: 'TriangleAlert',
+      accent: 'red',
+      items: [
+        'Barriera 1: **mancanza di tempo** per cercare e valutare le evidenze',
+        'Barriera 2: **scarsa alfabetizzazione informatica** e critica',
+        'Barriera 3: **resistenza al cambiamento** delle pratiche consolidate',
+        'Barriera 4: **evidenze non applicabili** al contesto clinico specifico',
+        'Barriera 5: **mancanza di formazione** continua su EBN',
+        'Barriera 6: **accessibilità** limitata a database e riviste a pagamento',
+        'Soluzione: **formazione ECM** specifica, supporto organizzativo, team EBN',
+      ],
+    },
+    {
+      title: 'EBN e Concorsi',
+      icon: 'ClipboardCheck',
+      accent: 'navy',
+      checks: [
+        { text: 'Conoscere la **definizione** e i **3 pilastri** dell’EBN', kind: 'ok' },
+        { text: 'Sapere la **gerarchia** delle evidenze (da meta-analisi a opinioni)', kind: 'ok' },
+        { text: 'Conoscere il **processo in 5 passi** e lo strumento **PICO**', kind: 'ok' },
+        { text: 'Riconoscere le **fonti principali** (Cochrane, NICE, linee guida italiane)', kind: 'ok' },
+        { text: 'Capire le **barriere** all’implementazione e le soluzioni', kind: 'ok' },
+        { text: 'Collegare EBN al **Codice Deontologico** (Art. 12: aggiornamento)', kind: 'ok' },
+        { text: 'Sapere che EBN **non sostituisce** il giudizio clinico, ma lo integra', kind: 'ok' },
+      ],
+    },
+  ],
+  keyPoints: [
+    'EBN = **Evidenza** + **Competenza clinica** + **Preferenze del paziente**',
+    'Processo in 5 passi: **Formulare → Cercare → Valutare → Integrare → Valutare esito**',
+    'Strumento chiave: **PICO** (Patient, Intervention, Comparison, Outcome)',
+    'Gerarchia: **Meta-analisi > RCT > Studi osservazionali > Opinioni di esperti**',
+    'Fonti principali: **Cochrane**, **NICE**, **linee guida italiane** (Ministero, AIFA, FNOPI)',
+    'EBN è **obbligo deontologico** (Codice FNOPI Art. 12) e migliora la **qualità** dell’assistenza',
+  ],
+}
+
+export default map
