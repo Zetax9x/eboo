@@ -83,29 +83,34 @@ export function App() {
     return () => { cancelled = true }
   }, [currentId])
 
-  // Calcola la percentuale di mappe scritte
-  const progress = useMemo(() => {
+  // Calcola la percentuale di mappe scritte e quali sono scritte
+  const progressData = useMemo(() => {
     let total = 0
     let written = 0
+    const writtenIds = new Set<string>()
     
     for (const mapTitles of Object.values(OUTLINE)) {
       for (const title of mapTitles) {
         total++
         const id = slugify(title)
         // Controlla se il file esiste importando dinamicamente
-        try {
-          import(`../content/maps/${id}`).then(() => {
+        import(`../content/maps/${id}`)
+          .then(() => {
             written++
-          }).catch(() => {
+            writtenIds.add(id)
+          })
+          .catch(() => {
             // non scritta
           })
-        } catch {
-          // non scritta
-        }
       }
     }
     
-    return total > 0 ? Math.round((written / total) * 100) : 0
+    return {
+      total,
+      written,
+      writtenIds,
+      percentage: total > 0 ? Math.round((written / total) * 100) : 0
+    }
   }, [currentId])
 
   function renderPage() {
@@ -162,9 +167,9 @@ export function App() {
         </div>
 
         <div className="topbar__progress">
-          <span>{progress}% completato</span>
+          <span>{progressData.percentage}% completato</span>
           <div className="progress">
-            <span style={{ width: `${progress}%` }} />
+            <span style={{ width: `${progressData.percentage}%` }} />
           </div>
         </div>
 
@@ -185,15 +190,16 @@ export function App() {
           {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
             mapTitles.map((title, i) => {
               const id = slugify(title)
+              const isWritten = progressData.writtenIds.has(id)
               return (
                 <button
                   key={id}
-                  className={`entry ${id === currentId ? 'is-current' : ''} ${false ? 'is-written' : ''}`}
+                  className={`entry ${id === currentId ? 'is-current' : ''} ${isWritten ? 'is-written' : ''}`}
                   onClick={() => setCurrentId(id)}
                 >
                   <span className="entry__num">{String(i + 1).padStart(3, '0')}</span>
                   <span className="entry__title">{title}</span>
-                  <span className={`dot dot--bozza`} />
+                  <span className={`dot ${isWritten ? 'dot--pronta' : 'dot--bozza'}`} />
                 </button>
               )
             })
@@ -212,7 +218,7 @@ export function App() {
                 <span>Totale mappe</span>
               </div>
               <div className="stat">
-                <strong>{progress}%</strong>
+                <strong>{progressData.percentage}%</strong>
                 <span>Completamento</span>
               </div>
             </div>
@@ -222,12 +228,15 @@ export function App() {
             {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
               mapTitles.map((title, i) => {
                 const id = slugify(title)
+                const isWritten = progressData.writtenIds.has(id)
                 return (
                   <button key={id} className="thumb" onClick={() => setCurrentId(id)}>
                     <div className="thumb__frame" style={{ width: 170, height: 226 }}>
                       <div style={{ padding: '16px', background: '#fff' }}>
                         <h3 style={{ margin: 0, fontSize: '14px', fontFamily: 'Barlow Condensed' }}>{title}</h3>
-                        <span className="chip chip--bozza" style={{ marginTop: '8px' }}>bozza</span>
+                        <span className={`chip chip--${isWritten ? 'pronta' : 'bozza'}`} style={{ marginTop: '8px' }}>
+                          {isWritten ? 'pronta' : 'bozza'}
+                        </span>
                       </div>
                     </div>
                     <span className="thumb__label">
