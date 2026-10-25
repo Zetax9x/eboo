@@ -21,11 +21,12 @@ import { createServer } from 'vite'
 
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const OUT_DIR = path.join(ROOT, 'src/assets/illustrations')
+const MAPS_DIR = path.join(ROOT, 'src/content/maps')
 
 const STYLE =
   'Clean educational medical illustration for a nursing textbook: soft 3D shading, smooth clean shapes, ' +
   'bright friendly colors (red, blue, teal, warm skin tones), plain white background, single centered subject, ' +
-  'anatomically plausible, no text, no letters, no numbers, no labels, no watermark, no frame.'
+  'anatomically plausible, unlabeled, no text, no letters, no numbers, no labels, no watermark, no frame.'
 
 const PROVIDERS = {
   fal: {
@@ -88,12 +89,25 @@ async function loadEnv() {
   }
 }
 
-/** Reads every illustration from the real registry (same code the studio uses). */
+/**
+ * Reads every illustration from the map files (same code the studio uses), one file at a time:
+ * a map that does not compile yet (e.g. still being written by genera-mappe) is skipped, not fatal.
+ */
 async function collectIllustrations() {
-  const server = await createServer({ root: ROOT, logLevel: 'error', server: { middlewareMode: true } })
+  const server = await createServer({ root: ROOT, logLevel: 'silent', server: { middlewareMode: true } })
   try {
-    const { MAPS, illustrationsOf } = await server.ssrLoadModule('/src/book/registry.ts')
-    return MAPS.flatMap((map) => illustrationsOf(map).map((ill) => ({ ...ill, mapId: map.id })))
+    const { illustrationsOf } = await server.ssrLoadModule('/src/book/illustrations.ts')
+    const files = (await readdir(MAPS_DIR)).filter((f) => f.endsWith('.ts'))
+    const found = []
+    for (const file of files) {
+      try {
+        const { default: map } = await server.ssrLoadModule(`/src/content/maps/${file}`)
+        found.push(...illustrationsOf(map).map((ill) => ({ ...ill, mapId: map.id })))
+      } catch (err) {
+        console.warn(`⚠ Saltata ${file}: non compila (${err.message.split('\n')[0]})`)
+      }
+    }
+    return found
   } finally {
     await server.close()
   }

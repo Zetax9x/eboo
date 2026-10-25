@@ -28,7 +28,7 @@ const map: OverviewMap = {
         illustration: {
           id: 'cv-cuore-sezione',
           alt: 'Sezione del cuore',
-          prompt: 'cross-section of the human heart showing the four chambers and the interventricular septum',
+          prompt: 'human heart cut open in frontal section, front view, all four inner cavities and the dividing wall between the ventricles visible',
           icon: 'Layers',
         },
       },
@@ -87,7 +87,7 @@ const map: OverviewMap = {
         illustration: {
           id: 'cv-conduzione-nodo-sa',
           alt: 'Impulso elettrico che parte dal nodo senoatriale',
-          prompt: 'close-up of the right atrium with a glowing electrical impulse spreading from the sinoatrial node',
+          prompt: 'whole human heart, front view, a small glowing spot at the top of the right atrium with soft waves of light spreading across both atria',
           icon: 'Zap',
         },
       },
@@ -105,7 +105,7 @@ const map: OverviewMap = {
       illustration: {
         id: 'cv-ciclo-cardiaco',
         alt: 'Cuore in sistole e in diastole',
-        prompt: 'two small hearts side by side: one contracted (systole) and one relaxed and filling (diastole), arrows showing blood flow',
+        prompt: 'two small hearts side by side, the left one squeezed with blood pushed out into the arteries, the right one relaxed and filling with blood, curved arrows showing blood flow',
         icon: 'RefreshCw',
       },
       bullets: [
