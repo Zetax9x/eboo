@@ -23,13 +23,38 @@ function getCurrentMapData(id: string) {
   return null
 }
 
+// Caricamento dinamico delle mappe
+async function loadMapComponent(id: string) {
+  try {
+    const module = await import(`../content/maps/${id}`)
+    return module.default || module
+  } catch (error) {
+    // Mappa non esiste ancora
+    return null
+  }
+}
+
 export function App() {
   const [view, setView] = useState<'studio' | 'plan' | 'grid'>('studio')
   const [currentId, setCurrentId] = useState<string>('ritmo-sinuale')
   const [zoom, setZoom] = useState(1)
+  const [MapComponent, setMapComponent] = useState<any>(null)
 
   const currentMap = useMemo(() => getCurrentMapData(currentId), [currentId])
   const chapterNumber = useMemo(() => getChapterNumber(currentId as keyof typeof OUTLINE), [currentId])
+
+  // Carica la mappa quando cambia currentId
+  useMemo(() => {
+    let cancelled = false
+    loadMapComponent(currentId).then((component) => {
+      if (!cancelled && component) {
+        setMapComponent(component)
+      } else {
+        setMapComponent(null)
+      }
+    })
+    return () => { cancelled = true }
+  }, [currentId])
 
   const progress = useMemo(() => {
     let total = 0
@@ -52,6 +77,11 @@ export function App() {
     if (currentId === 'frontespizio') return <InitialPages />
     if (currentId === 'avvertenze') return <InitialPages />
     
+    // Se c'è un componente mappa caricato, usalo
+    if (MapComponent) {
+      return <MapComponent />
+    }
+
     // Placeholder per mappe non ancora scritte
     return (
       <div className="page" style={{ background: '#fff', padding: '76px 64px' }}>
