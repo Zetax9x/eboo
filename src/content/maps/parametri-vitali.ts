@@ -1,0 +1,132 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'parametri-vitali',
+  chapter: 'fondamenti',
+  title: 'Parametri vitali',
+  subtitle: 'Valori di riferimento, tecniche di misurazione e segnali d’allarme',
+  icon: 'HeartPulse',
+  status: 'bozza',
+  sources: [
+    'Potter P.A., Perry A.G. — Fundamentals of Nursing, 10th ed., Elsevier',
+    'Ministero della Salute — Raccomandazioni per il monitoraggio dei parametri vitali in ambito ospedaliero',
+  ],
+  intro:
+    'I parametri vitali sono i segni fisiologici fondamentali per valutare lo stato di salute. La misurazione accurata e la documentazione tempestiva sono compiti **autonomi** dell’infermiere.',
+  illustration: {
+    id: 'pv-monitor',
+    alt: 'Infermiere che misura la pressione arteriosa a un paziente',
+    prompt: 'nurse measuring blood pressure with a sphygmomanometer on a patient arm, clinical setting',
+    icon: 'Gauge',
+  },
+  columns: 3,
+  blocks: [
+    {
+      title: 'Pressione arteriosa',
+      icon: 'Gauge',
+      accent: 'red',
+      items: [
+        'Valori normali adulto: **120/80 mmHg**',
+        'Ipertensione: ≥ **140/90 mmHg**',
+        'Ipotesione: < **90/60 mmHg**',
+        'Misurare a paziente seduto, braccio a livello del cuore',
+        'Usare manica della **taglia corretta**',
+        'Ascoltare toni di **Korotkoff** (I e V)',
+        'Documentare: valore, arto, posizione',
+      ],
+    },
+    {
+      title: 'Frequenza cardiaca',
+      icon: 'Heart',
+      accent: 'blue',
+      items: [
+        'Valori normali adulto: **60–100 bpm**',
+        'Bradicardia: < **60 bpm**',
+        'Tachicardia: > **100 bpm**',
+        'Palpare polso radiale o carotideo',
+        'Contare per **60 secondi** (o 30s x 2)',
+        'Valutare **ritmo**, **ampiezza**, **simmetria**',
+        'Segnali d’allarme: polso **filiforme**, **irregolare**',
+      ],
+    },
+    {
+      title: 'Frequenza respiratoria',
+      icon: 'Wind',
+      accent: 'green',
+      items: [
+        'Valori normali adulto: **12–20 atti/min**',
+        'Tachipnea: > **20 atti/min**',
+        'Bradipnea: < **12 atti/min**',
+        'Contare per **60 secondi** senza avvisare il paziente',
+        'Valutare **ritmo**, **profondità**, **sforzo**',
+        'Segnali d’allarme: **dispnea**, uso muscoli accessori',
+        'Posizione: seduto o supino, senza sforzo',
+      ],
+    },
+    {
+      title: 'Temperatura corporea',
+      icon: 'Thermometer',
+      accent: 'orange',
+      items: [
+        'Valori normali: **36,5–37,5 °C**',
+        'Febbre: ≥ **37,8 °C**',
+        'Ipotermia: < **35 °C**',
+        'Sedi: ascellare, orale, rettale, timpanica',
+        'Ascellare: + **0,3 °C** rispetto a orale',
+        'Rettale: + **0,5 °C** rispetto a orale',
+        'Misurare a paziente **a riposo** (15 min)',
+      ],
+    },
+    {
+      title: 'Saturazione O₂ (SpO₂)',
+      icon: 'Droplet',
+      accent: 'purple',
+      items: [
+        'Valori normali: **95–100 %**',
+        'Ipossiemia: < **90 %**',
+        'Misurare con **pulsiossimetro**',
+        'Posizionare su dito, orecchio o lobo',
+        'Assicurare **buona perfusione** periferica',
+        'Evitare **smalto** unghie, freddo, movimento',
+        'Segnali d’allarme: SpO₂ < **90 %**',
+      ],
+    },
+    {
+      title: 'Dolore (5° parametro)',
+      icon: 'TriangleAlert',
+      accent: 'pink',
+      items: [
+        'Valutare con **scale** (NRS, VAS, Wong-Baker)',
+        'NRS: **0** (nessuno) – **10** (massimo)',
+        'Valutare **intensità**, **localizzazione**, **caratteristiche**',
+        'Documentare **risposta** alla terapia analgesica',
+        'Rivalutare a **30 min** (IM/IV) o **1 h** (PO)',
+        'Segnali d’allarme: dolore **improvviso**, **intenso**',
+        'Coinvolgere il paziente nella **valutazione**',
+      ],
+    },
+    {
+      title: 'Segnali d’allarme',
+      icon: 'Siren',
+      accent: 'red',
+      checks: [
+        { text: 'PA sistolica < **90 mmHg** o > **180 mmHg**', kind: 'alert' },
+        { text: 'FC < **40 bpm** o > **120 bpm**', kind: 'alert' },
+        { text: 'FR < **8 atti/min** o > **30 atti/min**', kind: 'alert' },
+        { text: 'SpO₂ < **90 %**', kind: 'alert' },
+        { text: 'Temperatura > **39,5 °C** o < **35 °C**', kind: 'alert' },
+        { text: 'Dolore NRS ≥ **8** o **improvviso**', kind: 'alert' },
+        { text: 'Alterazioni **improvvisi** o **progressivi**', kind: 'alert' },
+      ],
+    },
+  ],
+  keyPoints: [
+    'Misurare **prima** di ogni intervento terapeutico e **dopo** ogni cambiamento clinico',
+    'Documentare **valore**, **sede**, **posizione**, **ora** e **condizioni** del paziente',
+    'Seguire i **protocolli** del reparto per la frequenza di misurazione',
+    'Comunicare **immediatamente** al medico i valori **critici**',
+  ],
+}
+
+export default map

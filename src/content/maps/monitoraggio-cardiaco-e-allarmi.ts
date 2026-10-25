@@ -1,0 +1,111 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'monitoraggio-cardiaco-e-allarmi',
+  chapter: 'ecg',
+  title: 'Monitoraggio cardiaco e allarmi',
+  subtitle: 'Parametri, soglie di allarme e gestione infermieristica del paziente in telemetria',
+  icon: 'HeartPulse',
+  status: 'bozza',
+  sources: [
+    'AHA/ACC — Guidelines for the Management of Patients With Acute Coronary Syndromes',
+    'ESC 2021 — Guidelines for the management of patients with ventricular arrhythmias and the prevention of sudden cardiac death',
+    'FNOPI — Codice Deontologico e Linee guida sulla sicurezza del paziente',
+  ],
+  columns: 2,
+  blocks: [
+    {
+      title: 'Parametri monitorati',
+      icon: 'Activity',
+      accent: 'blue',
+      items: [
+        '**Frequenza cardiaca (FC)**: battiti/minuto, derivata dal QRS',
+        '**Frequenza respiratoria (FR)**: atti/minuto, via impedanza toracica',
+        '**Pressione arteriosa (PA)**: sistolica/diastolica (mmHg), non invasiva',
+        '**SpO₂**: saturazione periferica (%), ossimetria continua',
+        '**Impedanza toracica**: stima della ventilazione e del volume corrente',
+        '**Pressione venosa centrale (PVC)**: se catetere centrale, 0–12 mmHg',
+        '**Pressione arteriosa invasiva (PAI)**: se catetere arterioso, continua',
+      ],
+    },
+    {
+      title: 'Soglie di allarme standard',
+      icon: 'TriangleAlert',
+      accent: 'red',
+      items: [
+        'FC: **< 50** o **> 120** bpm (variabile per età e patologia)',
+        'PA sistolica: **< 90** o **> 180** mmHg',
+        'PA diastolica: **< 50** o **> 110** mmHg',
+        'SpO₂: **< 90%** (o **< 92%** in BPCO)',
+        'FR: **< 10** o **> 25** atti/min',
+        'PVC: **< 2** o **> 12** mmHg (se monitorata)',
+        'Allarme aritmico: **asistolia, VT, VF, blocchi AV di III°**',
+      ],
+    },
+    {
+      title: 'Cause di allarmi falsi',
+      icon: 'Ban',
+      accent: 'orange',
+      items: [
+        'Elettrodi **scivolati**, secchi o mal fissati',
+        'Movimento del paziente: tossire, parlare, girarsi',
+        'Interferenza elettrica: telefono, monitor vicino, corrente',
+        'Cable danneggiato, connettore sciolto o ossidato',
+        'Sudorazione eccessiva o grasso sulla pelle',
+        'Pelle non preparata: non rasata, non pulita con alcol',
+        'Elettrodo posizionato su **muscolo** o **osso**',
+      ],
+    },
+    {
+      title: 'Gestione infermieristica',
+      icon: 'Stethoscope',
+      accent: 'green',
+      items: [
+        'Verificare sempre il **paziente** prima di disattivare l’allarme',
+        'Controllare la **qualità del segnale** ECG e la posizione degli elettrodi',
+        'Documentare l’evento, l’ora e l’azione intrapresa nel **referto**',
+        'Comunicare al medico se l’aritmia è **sostenuta** (> 30 s) o sintomatica',
+        'Educare il paziente a non muoversi bruscamente durante il monitoraggio',
+        'Cambiare elettrodi ogni **24–48 h** o se si staccano',
+        'Verificare la **batteria** di riserva e la calibrazione del monitor',
+      ],
+    },
+    {
+      title: 'Posizionamento elettrodi',
+      icon: 'Cable',
+      accent: 'purple',
+      items: [
+        'Pelle **pulita e asciutta**, rasare peli se necessario, pulire con alcol',
+        'Elettrodo **bianco** (destra): clavicola destra, sopra il muscolo',
+        'Elettrodo **nero** (sinistra): clavicola sinistra, sopra il muscolo',
+        'Elettrodo **verde** (gamba sx): sotto la costella, lato sinistro',
+        'Elettrodo **rosso** (gamba dx): sotto la costella, lato destro',
+        'Elettrodo **giallo** (gamba dx, se presente): sotto la costella, lato destro',
+        'Evitare zone con **cicatrici**, lesioni o dispositivi impiantati',
+      ],
+    },
+    {
+      title: 'Errori da evitare',
+      icon: 'CircleX',
+      accent: 'slate',
+      items: [
+        'Ignorare l’allarme senza **valutare il paziente** e il tracciato',
+        'Alzare le soglie per **silenziare** il monitor senza motivo clinico',
+        'Lasciare il monitor **non calibrato** o con batteria scarica',
+        'Non verificare la **batteria** di riserva prima dell’uso',
+        'Non documentare gli **episodi aritmici** e le azioni intraprese',
+        'Posizionare elettrodi su **ossa** o **muscoli** (segnale debole)',
+        'Usare elettrodi **vecchi** o con adesivo staccato',
+      ],
+    },
+  ],
+  keyPoints: [
+    'L’allarme è un **supporto**, non una diagnosi: il paziente va sempre valutato',
+    'Un allarme persistente richiede **azione immediata**, non solo reset',
+    'La qualità del segnale dipende dal **posizionamento** degli elettrodi e dalla pelle',
+    'Documentare ogni **aritmia** e ogni **allarme** è un obbligo deontologico',
+  ],
+}
+
+export default map
