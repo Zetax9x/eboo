@@ -28,7 +28,7 @@ const map: ProcedureMap = {
     illustration: {
       id: 'ecg-siti',
       alt: 'Posizione degli elettrodi su torace e arti',
-      prompt: 'human torso with four limb electrodes on wrists and ankles, and six chest electrodes placed on the rib cage',
+      prompt: 'adult lying on a bed in underwear, small round sticky electrodes on both wrists, both ankles and six across the left side of the chest, thin cables joined to a small box',
       icon: 'Target',
     },
     items: [

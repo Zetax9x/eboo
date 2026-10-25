@@ -27,14 +27,14 @@ const map: ProcedureMap = {
     title: 'Misurazione della lunghezza',
     illustration: {
       id: 'ng-misura',
-      alt: 'Misurazione dalla punta del naso all’ombelico',
-      prompt: 'measuring tape from the tip of the nose to the earlobe and then down to the umbilicus on a human torso',
+      alt: 'Percorso del sondino: naso, esofago, stomaco',
+      prompt: 'adult seen from the side, a thin feeding tube held along the face from the tip of the nose to the earlobe and then down the chest to the lower tip of the breastbone',
       icon: 'Ruler',
     },
     items: [
-      '**Naso-orecchio-ombelico**: misura standard',
+      '**NEX**: naso → lobo dell’orecchio → **processo xifoideo**',
       'Segnare la lunghezza sul sondino con **nastro adesivo**',
-      'Taglia: **Fr 12–14** per adulti, **Fr 8–10** per anziani fragili',
+      'Calibro: **8–12 Fr** per nutrizione, **14–18 Fr** per drenaggio/decompressione',
     ],
   },
   safety: [
@@ -75,8 +75,8 @@ const map: ProcedureMap = {
     {
       title: 'Verifica posizione',
       items: [
-        'Aspirare con siringa: **pH < 5,5** = gastrico',
-        'Verificare **borborigmi** con fonendoscopio',
+        'Aspirare con siringa: **pH ≤ 5,5** = gastrico',
+        '**Mai** il test dell’aria con fonendoscopio: non affidabile',
         'Se dubbio: **radiografia** o pH-metria',
       ],
       icon: 'Syringe',
@@ -86,7 +86,6 @@ const map: ProcedureMap = {
       items: [
         'Fissare con **morse** o nastro adesivo sulla guancia',
         'Assicurare che non sia **tensionato**',
-        'Documentare lunghezza e data',
       ],
       icon: 'Sticker',
     },

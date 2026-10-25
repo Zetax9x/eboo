@@ -26,7 +26,7 @@ const map: ProcedureMap = {
     illustration: {
       id: 'trasferimento-sito',
       alt: 'Carrozzina accanto al letto',
-      prompt: 'wheelchair positioned next to a hospital bed, locked wheels, footrests folded up',
+      prompt: 'empty wheelchair placed alongside a hospital bed at a slight angle, brakes on, footrests swung aside, seen from above at three quarters',
       icon: 'Target',
     },
     items: [

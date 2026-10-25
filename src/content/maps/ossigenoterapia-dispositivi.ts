@@ -28,7 +28,7 @@ const map: ProcedureMap = {
     illustration: {
       id: 'ossigenoterapia-sedi',
       alt: 'Cannule nasali e maschera sul viso',
-      prompt: 'close up of a patient face with nasal prongs and a face mask, medical setting',
+      prompt: 'two adult patients side by side, one wearing thin nasal oxygen prongs and one wearing a clear plastic oxygen face mask with a reservoir bag',
       icon: 'User',
     },
     items: [
