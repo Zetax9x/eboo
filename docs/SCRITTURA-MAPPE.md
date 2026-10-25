@@ -1,3 +1,5 @@
+> Guida principale in italiano: `docs/GUIDA-MAPPE.md`. Questo file è la versione sintetica per agenti.
+
 # Writing maps — brief for writer agents
 
 Project: Italian ebook "Mappe Visive di Infermieristica" — 250 one-page visual maps for Italian nursing

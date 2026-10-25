@@ -1,4 +1,4 @@
-# Mappe da scrivere (id | titolo). Capitolo = valore di chapter nel file.
+# Mappe da scrivere (id | titolo). Capitolo = valore di chapter nel file. Regole: docs/GUIDA-MAPPE.md
 
 ## fondamenti
 piramide-di-maslow-in-assistenza | Piramide di Maslow in assistenza
