@@ -120,7 +120,7 @@ redFlags: string[]                     // 2–3 segnali d’allarme
 materials: { label: string; icon: IconName }[]   // 6–8 (griglia 4 colonne)
 sites?: { title: string; illustration: Illustration; items: string[] }   // solo se c’è una sede anatomica
 safety: { text: string; kind: CheckKind }[]      // 5–6
-steps: { title: string; items: string[]; illustration: Illustration }[]  // 4–8 passi, 2–3 item brevi ciascuno
+steps: { title: string; items: string[]; icon: IconName }[]  // 4–8 passi, 2–3 item brevi ciascuno; icona, NON illustrazione
 swatches?: { title: string; items: { label: string; sub: string; color: string; ink: string }[]; note: string }
            // solo se esiste un codice colore (es. ordine provette, maschere Venturi); color = esadecimale
 complications: { label: string; sub: string }[]  // 4–6

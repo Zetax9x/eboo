@@ -237,6 +237,15 @@
   min-width: 0;
 }
 .step__head { display: flex; align-items: center; gap: 6px; }
+.step__icon {
+  align-self: center;
+  width: 46px; height: 46px;
+  border-radius: 50%;
+  display: grid; place-items: center;
+  background: var(--acc-tint);
+  color: var(--acc);
+  flex-shrink: 0;
+}
 .step__num {
   width: 24px; height: 24px; flex-shrink: 0;
   border-radius: 50%;

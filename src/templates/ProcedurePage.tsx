@@ -37,7 +37,13 @@ export function ProcedurePage({ map }: { map: ProcedureMap }) {
               <span className="step__num">{i + 1}</span>
               <span className="step__title">{step.title}</span>
             </div>
-            <Illustration data={step.illustration} style={{ height: 46 }} iconSize={22} />
+            {step.illustration ? (
+              <Illustration data={step.illustration} style={{ height: 46 }} iconSize={22} />
+            ) : (
+              <span className="step__icon">
+                <Icon name={step.icon ?? 'ListChecks'} size={24} />
+              </span>
+            )}
             <Bullets items={step.items} />
           </div>
         ))}

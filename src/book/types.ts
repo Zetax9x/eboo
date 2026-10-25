@@ -73,7 +73,9 @@ export type CheckKind = 'ok' | 'warn' | 'no' | 'alert'
 export interface ProcedureStep {
   title: string
   items: string[]
-  illustration: Illustration
+  /** Step images print at ~46px: an icon reads better. Kept only where an image was already generated. */
+  illustration?: Illustration
+  icon?: IconName
 }
 export interface ProcedureMap extends MapBase {
   kind: 'procedure'
