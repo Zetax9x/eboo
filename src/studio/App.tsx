@@ -38,9 +38,9 @@ async function loadMapComponent(id: string) {
     }
     
     // Vite può restituire il modulo in diversi formati
-    // Controlla prima l'export default
+    // Controlla prima l'export default se è una funzione diretta
     if (module.default && typeof module.default === 'function') {
-      console.log(`📌 Componente trovato: default export`)
+      console.log(`📌 Componente trovato: default export (funzione)`)
       return module.default
     }
     
@@ -66,11 +66,13 @@ async function loadMapComponent(id: string) {
     }
     
     // Caso speciale: default è un oggetto che contiene un componente
-    if (module.default && typeof module.default === 'object' && module.default.component) {
-      const comp = module.default.component
-      if (typeof comp === 'function') {
-        console.log(`📌 Componente trovato: default.component`)
-        return comp
+    if (module.default && typeof module.default === 'object') {
+      // Cerca proprietà che potrebbero contenere il componente
+      for (const [key, value] of Object.entries(module.default)) {
+        if (typeof value === 'function' && key !== 'default') {
+          console.log(`📌 Componente trovato: default.${key}`)
+          return value
+        }
       }
     }
     
