@@ -284,28 +284,3 @@ export function slugify(title: string): string {
     .replace(/[^a-z0-9]+/g, '-')
     .replace(/^-+|-+$/g, '')
 }
-
-export function getChapterNumber(chapterId: ChapterId): number {
-  const chapterOrder = ['fondamenti', 'anatomia', 'patologie', 'farmacologia', 'procedure', 'laboratorio', 'ecg', 'emergenze', 'specialistica', 'concorsi'] as ChapterId[]
-  return chapterOrder.indexOf(chapterId) + 1
-}
-
-export function getChapterTitle(chapterId: ChapterId): string {
-  const titles: Record<ChapterId, string> = {
-    fondamenti: 'Fondamenti di infermieristica',
-    anatomia: 'Anatomia e fisiologia',
-    patologie: 'Patologie cliniche',
-    farmacologia: 'Farmacologia',
-    procedure: 'Procedure infermieristiche',
-    laboratorio: 'Esami di laboratorio',
-    ecg: 'ECG e aritmie',
-    emergenze: 'Emergenze e urgenze',
-    specialistica: 'Infermieristica specialistica',
-    concorsi: 'Concorsi e normativa',
-  }
-  return titles[chapterId]
-}
-
-export function getChapterMapIds(chapterId: ChapterId): readonly string[] {
-  return OUTLINE[chapterId]
-}

@@ -1,377 +1,180 @@
-import { useState, useMemo, useEffect } from 'react'
-import { OUTLINE, getChapterNumber, getChapterTitle, slugify } from '../book/outline'
-import { InitialPages } from '../book/index'
-import { EcgStrip } from '../components/EcgStrip'
+import { useEffect, useState } from 'react'
+import { CHAPTERS } from '../book/chapters'
+import { ENTRIES, findEntry, MAPS } from '../book/registry'
+import { BookPage } from '../templates/BookPage'
+import { BOOK_TITLE } from '../templates/PageFrame'
+import { Inspector, PageCanvas, type Zoom } from './PageCanvas'
+import { GridView, PlanView } from './PlanView'
+import { useRoute, type Route } from './route'
+import { Sidebar } from './Sidebar'
 
-// Helper per ottenere i dati della mappa corrente
-function getCurrentMapData(id: string) {
-  // Cerca in tutti i capitoli
-  for (const [chapterId, mapTitles] of Object.entries(OUTLINE)) {
-    const idx = mapTitles.findIndex(t => slugify(t) === id || t === id)
-    if (idx !== -1) {
-      return {
-        id: id,
-        title: mapTitles[idx],
-        status: 'bozza' as const,
-        chapter: getChapterNumber(chapterId as keyof typeof OUTLINE),
-        type: 'overview',
-        illustrationPrompt: '',
-        sources: [],
-      }
-    }
-  }
-  return null
-}
+const EINK_KEY = 'studio.eink'
 
-// Caricamento dinamico delle mappe
-async function loadMapComponent(id: string) {
+function readEinkPreference(): boolean {
   try {
-    console.log(`📦 Tentativo di caricamento mappa: ${id}`)
-    // Cerca prima con .ts, poi con .tsx se non trova
-    let module
-    try {
-      module = await import(`../content/maps/${id}.ts`)
-      console.log(`✅ Mappa caricata (da .ts): ${id}`, module)
-    } catch {
-      module = await import(`../content/maps/${id}`)
-      console.log(`✅ Mappa caricata: ${id}`, module)
-    }
-    
-    // Vite può restituire il modulo in diversi formati
-    // Controlla prima l'export default se è una funzione diretta
-    if (module.default && typeof module.default === 'function') {
-      console.log(`📌 Componente trovato: default export (funzione)`)
-      return module.default
-    }
-    
-    // Se non c'è default function, cerca un componente con lo stesso nome del file
-    const componentName = id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('') + 'Page'
-    if (module[componentName] && typeof module[componentName] === 'function') {
-      console.log(`📌 Componente trovato: ${componentName}`)
-      return module[componentName]
-    }
-    
-    // Fallback: cerca qualsiasi export function
-    for (const [key, value] of Object.entries(module)) {
-      if (typeof value === 'function' && key !== 'default') {
-        console.log(`🔍 Componente trovato: ${key}`)
-        return value
-      }
-    }
-    
-    // Se tutto fallisce, controlla se il modulo stesso è un componente
-    if (typeof module === 'function') {
-      console.log(`📌 Componente trovato: modulo diretto`)
-      return module
-    }
-    
-    // Caso speciale: default è un oggetto che contiene un componente
-    if (module.default && typeof module.default === 'object') {
-      // Cerca proprietà che potrebbero contenere il componente
-      for (const [key, value] of Object.entries(module.default)) {
-        if (typeof value === 'function' && key !== 'default') {
-          console.log(`📌 Componente trovato: default.${key}`)
-          return value
-        }
-      }
-      
-      // Se l'oggetto ha una proprietà "component" o "default" che è una funzione
-      if (module.default.component && typeof module.default.component === 'function') {
-        console.log(`📌 Componente trovato: default.component`)
-        return module.default.component
-      }
-    }
-    
-    // Debug: mostra cosa abbiamo ricevuto
-    console.warn(`⚠️ Nessun componente valido trovato per ${id}`, JSON.stringify(module, null, 2))
-    return null
-  } catch (error) {
-    // Mappa non esiste ancora
-    console.warn(`❌ Mappa ${id} non trovata:`, error.message)
-    return null
-  }
-}
-
-// Controlla se una mappa è stata scritta (file .ts o .tsx esiste fisicamente)
-async function checkMapExists(id: string): Promise<boolean> {
-  try {
-    // Prova prima con .ts, poi con .tsx
-    try {
-      await import(`../content/maps/${id}.ts`)
-      console.log(`✅ Mappa ${id} esiste (.ts)`)
-      return true
-    } catch {
-      await import(`../content/maps/${id}`)
-      console.log(`✅ Mappa ${id} esiste`)
-      return true
-    }
-  } catch (error) {
-    console.log(`❌ Mappa ${id} non esiste:`, error.message)
+    return localStorage.getItem(EINK_KEY) === '1'
+  } catch {
     return false
   }
 }
 
-export function App() {
-  const [view, setView] = useState<'studio' | 'plan' | 'grid'>('studio')
-  const [currentId, setCurrentId] = useState<string>('ritmo-sinuale')
-  const [zoom, setZoom] = useState(1)
-  const [MapComponent, setMapComponent] = useState<any>(null)
-  const [writtenIds, setWrittenIds] = useState<Set<string>>(new Set())
+function writeEinkPreference(on: boolean): void {
+  try {
+    localStorage.setItem(EINK_KEY, on ? '1' : '0')
+  } catch {
+    // Storage unavailable (private mode): the toggle still works for this session.
+  }
+}
 
-  const currentMap = useMemo(() => getCurrentMapData(currentId), [currentId])
-  const chapterNumber = useMemo(() => getChapterNumber(currentId as keyof typeof OUTLINE), [currentId])
-
-  // Carica la mappa quando cambia currentId o all'avvio
+/** Bare written pages at 1:1 for the export script. Sets data-ready once fonts and images are loaded. */
+function PrintView({ id }: { id: string }) {
+  const entries = ENTRIES.filter((e) => e.map && (id === 'tutte' || e.id === id))
   useEffect(() => {
-    console.log(`🔄 Effetto: caricamento mappa ${currentId}`)
     let cancelled = false
-    loadMapComponent(currentId).then((component) => {
-      if (!cancelled) {
-        console.log(`📌 Componente impostato:`, component?.name || 'null', typeof component)
-        setMapComponent(component)
-      }
-    })
-    return () => { cancelled = true }
-  }, [currentId])
-
-  // Controlla solo la mappa corrente per il progresso (non tutte all'avvio)
-  useEffect(() => {
-    console.log(`🔍 Effetto: controllo esistenza ${currentId}`)
-    checkMapExists(currentId).then(exists => {
-      if (exists) {
-        setWrittenIds(prev => new Set(prev).add(currentId))
-        console.log(`✅ Aggiornato writtenIds per ${currentId}`)
-      }
-    })
-  }, [currentId])
-
-  const progressData = useMemo(() => {
-    const total = Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)
-    const percentage = total > 0 ? Math.round((writtenIds.size / total) * 100) : 0
-    return {
-      total,
-      written: writtenIds.size,
-      writtenIds,
-      percentage
+    const images = [...document.images].map((img) => img.decode().catch(() => undefined))
+    Promise.all([document.fonts.ready, ...images])
+      .catch(() => undefined)
+      .then(() => {
+        if (!cancelled) document.body.setAttribute('data-ready', '1')
+      })
+    return () => {
+      cancelled = true
     }
-  }, [writtenIds])
+  }, [])
+  if (entries.length === 0) return <p>Nessuna pagina scritta con id: {id}</p>
+  return (
+    <div className="print">
+      {entries.map((entry) => (
+        <BookPage key={entry.id} entry={entry} />
+      ))}
+    </div>
+  )
+}
 
-  function renderPage() {
-    if (currentId === 'copertina') return <InitialPages />
-    if (currentId === 'frontespizio') return <InitialPages />
-    if (currentId === 'avvertenze') return <InitialPages />
-    
-    // Se c'è un componente mappa caricato, usalo
-    if (MapComponent && typeof MapComponent === 'function') {
-      console.log(`📄 Rendering componente: ${MapComponent.name || 'anonymous'}`)
-      return <MapComponent />
-    }
+export function App() {
+  const [route, navigate] = useRoute()
+  const [eink, setEink] = useState(readEinkPreference)
+  const [zoom, setZoom] = useState<Zoom>('fit')
 
-    // Placeholder per mappe non ancora scritte
-    return (
-      <div className="page" style={{ background: '#fff', padding: '76px 64px' }}>
-        <h1 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '32px', fontWeight: 800, color: '#17212f' }}>
-          {currentMap?.title}
-        </h1>
-        <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#6b7280', marginTop: '16px' }}>
-          Stato: <span className={`chip chip--${currentMap?.status}`}>{currentMap?.status}</span>
-        </p>
-        <div style={{ marginTop: '32px', padding: '24px', background: '#f9fafb', borderRadius: '8px' }}>
-          <p style={{ margin: 0, color: '#6b7280' }}>
-            Mappa in lavorazione. Utilizzare lo studio per scrivere il contenuto.
-          </p>
-        </div>
-      </div>
-    )
+  if (route.view === 'print') return <PrintView id={route.id} />
+
+  const firstWritten = ENTRIES.find((e) => e.map) ?? ENTRIES[0]
+  const entry = route.view === 'page' ? (findEntry(route.id) ?? firstWritten) : firstWritten
+  const openPage = (id: string) => navigate({ view: 'page', id })
+
+  const toggleEink = () => {
+    setEink((on) => {
+      writeEinkPreference(!on)
+      return !on
+    })
   }
 
   return (
-    <div className="studio">
-      {/* Top bar */}
-      <header className="topbar">
-        <div className="topbar__brand">
-          <div className="topbar__logo">MV</div>
-          <strong>Mappe Visive</strong>
-          <span>Infermieristica</span>
-        </div>
-
-        <div className="segmented">
-          <button 
-            className={view === 'studio' ? 'is-active' : ''}
-            onClick={() => setView('studio')}
-          >Studio</button>
-          <button 
-            className={view === 'plan' ? 'is-active' : ''}
-            onClick={() => setView('plan')}
-          >Piano</button>
-          <button 
-            className={view === 'grid' ? 'is-active' : ''}
-            onClick={() => setView('grid')}
-          >Griglia</button>
-        </div>
-
-        <div className="topbar__progress">
-          <span>{progressData.percentage}% completato</span>
-          <div className="progress">
-            <span style={{ width: `${progressData.percentage}%` }} />
-          </div>
-        </div>
-
-        <div className="topbar__tools">
-          <button onClick={() => setZoom(z => Math.max(0.5, z - 0.1))}>-</button>
-          <span>{Math.round(zoom * 100)}%</span>
-          <button onClick={() => setZoom(z => Math.min(2, z + 0.1))}>+</button>
-        </div>
-      </header>
-
-      {/* Sidebar */}
-      <aside className="sidebar">
-        <div className="sidebar__search">
-          <span>🔍</span>
-          <input placeholder="Cerca mappa..." />
-        </div>
-        <nav className="sidebar__scroll">
-          {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
-            mapTitles.map((title, i) => {
-              const id = slugify(title)
-              const isWritten = writtenIds.has(id)
-              return (
-                <button
-                  key={id}
-                  className={`entry ${id === currentId ? 'is-current' : ''} ${isWritten ? 'is-written' : ''}`}
-                  onClick={() => setCurrentId(id)}
-                >
-                  <span className="entry__num">{String(i + 1).padStart(3, '0')}</span>
-                  <span className="entry__title">{title}</span>
-                  <span className={`dot ${isWritten ? 'dot--pronta' : 'dot--bozza'}`} />
-                </button>
-              )
-            })
-          ))}
-        </nav>
-      </aside>
-
-      {/* Main canvas */}
+    <div className={`studio ${eink ? 'eink' : ''}`}>
+      <TopBar route={route} navigate={navigate} eink={eink} onToggleEink={toggleEink} zoom={zoom} onZoom={setZoom} />
+      <Sidebar currentId={route.view === 'page' ? entry.id : undefined} onSelect={openPage} />
       <main className="studio__main">
-        {view === 'plan' ? (
-          <div className="plan">
-            <h1>Piano di Lavoro</h1>
-            <div className="plan__stats">
-              <div className="stat">
-                <strong>{Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)}</strong>
-                <span>Totale mappe</span>
-              </div>
-              <div className="stat">
-                <strong>{progressData.percentage}%</strong>
-                <span>Completamento</span>
-              </div>
-            </div>
-          </div>
-        ) : view === 'grid' ? (
-          <div className="grid-view">
-            {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
-              mapTitles.map((title, i) => {
-                const id = slugify(title)
-                const isWritten = writtenIds.has(id)
-                return (
-                  <button key={id} className="thumb" onClick={() => setCurrentId(id)}>
-                    <div className="thumb__frame" style={{ width: 170, height: 226 }}>
-                      <div style={{ padding: '16px', background: '#fff' }}>
-                        <h3 style={{ margin: 0, fontSize: '14px', fontFamily: 'Barlow Condensed' }}>{title}</h3>
-                        <span className={`chip chip--${isWritten ? 'pronta' : 'bozza'}`} style={{ marginTop: '8px' }}>
-                          {isWritten ? 'pronta' : 'bozza'}
-                        </span>
-                      </div>
-                    </div>
-                    <span className="thumb__label">
-                      <span>{String(i + 1).padStart(3, '0')}</span>
-                      {title}
-                    </span>
-                  </button>
-                )
-              })
-            ))}
-          </div>
-        ) : (
-          <div className="pageview">
-            <div className="canvas" data-zoom={zoom}>
-              <div className="canvas__sizer" style={{ transform: `scale(${zoom})` }}>
-                {renderPage()}
-              </div>
-            </div>
-            <nav className="pageview__nav">
-              <button 
-                disabled={!chapterNumber || chapterNumber === 1}
-                onClick={() => {
-                  // Trova mappa precedente nello stesso capitolo
-                  const currentChapterId = Object.keys(OUTLINE).find(k => getChapterNumber(k as keyof typeof OUTLINE) === chapterNumber)
-                  if (currentChapterId) {
-                    const mapTitles = OUTLINE[currentChapterId as keyof typeof OUTLINE]
-                    const idx = mapTitles.findIndex(t => slugify(t) === currentId)
-                    if (idx > 0) {
-                      setCurrentId(slugify(mapTitles[idx - 1]))
-                    }
-                  }
-                }}
-              >← Precedente</button>
-              <span>{currentMap?.title}</span>
-              <button 
-                disabled={chapterNumber === Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)}
-                onClick={() => {
-                  // Trova mappa successiva nello stesso capitolo
-                  const currentChapterId = Object.keys(OUTLINE).find(k => getChapterNumber(k as keyof typeof OUTLINE) === chapterNumber)
-                  if (currentChapterId) {
-                    const mapTitles = OUTLINE[currentChapterId as keyof typeof OUTLINE]
-                    const idx = mapTitles.findIndex(t => slugify(t) === currentId)
-                    if (idx < mapTitles.length - 1) {
-                      setCurrentId(slugify(mapTitles[idx + 1]))
-                    }
-                  }
-                }}
-              >Successivo →</button>
-            </nav>
-          </div>
-        )}
+        {route.view === 'page' && <PageWithNav current={entry.id} onOpen={openPage} zoom={zoom} />}
+        {route.view === 'grid' && <GridView chapter={route.chapter} onOpen={openPage} />}
+        {route.view === 'plan' && <PlanView onOpenChapter={(chapter) => navigate({ view: 'grid', chapter })} />}
       </main>
-
-      {/* Inspector */}
-      <aside className="inspector">
-        <h2>Dettagli Mappa</h2>
-        {currentMap && (
-          <>
-            <dl>
-              <dt>ID</dt>
-              <dd className="mono">{currentMap.id}</dd>
-              <dt>Stato</dt>
-              <dd><span className={`chip chip--${currentMap.status}`}>{currentMap.status}</span></dd>
-              <dt>Tipo</dt>
-              <dd>{currentMap.type}</dd>
-              <dt>Capitolo</dt>
-              <dd>{currentMap.chapter || '-'}</dd>
-            </dl>
-
-            <h3>Prompt Illustrazione</h3>
-            {currentMap.illustrationPrompt ? (
-              <ul className="inspector__prompts">
-                <li className="is-done mono">{currentMap.illustrationPrompt}</li>
-              </ul>
-            ) : (
-              <p style={{ color: '#6b7280' }}>Nessun prompt definito</p>
-            )}
-
-            <h3>Sources</h3>
-            {currentMap.sources?.length ? (
-              <ul className="inspector__list">
-                {currentMap.sources.map((s, i) => (
-                  <li key={i}>{s}</li>
-                ))}
-              </ul>
-            ) : (
-              <p style={{ color: '#6b7280' }}>Nessuna fonte</p>
-            )}
-          </>
-        )}
-      </aside>
+      {route.view === 'page' && <Inspector entry={entry} />}
     </div>
+  )
+}
+
+function PageWithNav({ current, onOpen, zoom }: { current: string; onOpen: (id: string) => void; zoom: Zoom }) {
+  const index = ENTRIES.findIndex((e) => e.id === current)
+  const prev = ENTRIES[index - 1]
+  const next = ENTRIES[index + 1]
+
+  useEffect(() => {
+    const onKey = (event: KeyboardEvent) => {
+      if (event.target instanceof HTMLInputElement) return
+      if (event.key === 'ArrowLeft' && prev) onOpen(prev.id)
+      if (event.key === 'ArrowRight' && next) onOpen(next.id)
+    }
+    window.addEventListener('keydown', onKey)
+    return () => window.removeEventListener('keydown', onKey)
+  }, [prev, next, onOpen])
+
+  return (
+    <div className="pageview">
+      <PageCanvas entry={ENTRIES[index]} zoom={zoom} />
+      <div className="pageview__nav">
+        <button disabled={!prev} onClick={() => prev && onOpen(prev.id)} aria-label="Pagina precedente">
+          ← {prev ? prev.title : ''}
+        </button>
+        <span className="mono">
+          {index + 1} / {ENTRIES.length}
+        </span>
+        <button disabled={!next} onClick={() => next && onOpen(next.id)} aria-label="Pagina successiva">
+          {next ? next.title : ''} →
+        </button>
+      </div>
+    </div>
+  )
+}
+
+interface TopBarProps {
+  route: Route
+  navigate: (route: Route) => void
+  eink: boolean
+  onToggleEink: () => void
+  zoom: Zoom
+  onZoom: (zoom: Zoom) => void
+}
+
+function TopBar({ route, navigate, eink, onToggleEink, zoom, onZoom }: TopBarProps) {
+  const percent = Math.round((MAPS.length / ENTRIES.length) * 100)
+  const tabs: { label: string; route: Route; active: boolean }[] = [
+    { label: 'Pagina', route: { view: 'page' }, active: route.view === 'page' },
+    { label: 'Griglia', route: { view: 'grid', chapter: CHAPTERS[0].id }, active: route.view === 'grid' },
+    { label: 'Piano', route: { view: 'plan' }, active: route.view === 'plan' },
+  ]
+  return (
+    <header className="topbar">
+      <div className="topbar__brand">
+        <span className="topbar__logo">MV</span>
+        <div>
+          <strong>{BOOK_TITLE}</strong>
+          <span>Studio di scrittura · Kindle layout fisso</span>
+        </div>
+      </div>
+
+      <div className="segmented" role="tablist" aria-label="Vista">
+        {tabs.map((tab) => (
+          <button key={tab.label} role="tab" aria-selected={tab.active} className={tab.active ? 'is-active' : ''} onClick={() => navigate(tab.route)}>
+            {tab.label}
+          </button>
+        ))}
+      </div>
+
+      <div className="topbar__progress" title={`${MAPS.length} di ${ENTRIES.length} mappe scritte`}>
+        <div className="progress">
+          <span style={{ width: `${Math.max(percent, 1)}%` }} />
+        </div>
+        <span className="mono">
+          {MAPS.length}/{ENTRIES.length}
+        </span>
+      </div>
+
+      <div className="topbar__tools">
+        {route.view === 'page' && (
+          <div className="segmented" aria-label="Zoom">
+            <button className={zoom === 'fit' ? 'is-active' : ''} onClick={() => onZoom('fit')}>
+              Adatta
+            </button>
+            <button className={zoom === 1 ? 'is-active' : ''} onClick={() => onZoom(1)}>
+              100%
+            </button>
+          </div>
+        )}
+        <button className={`toggle ${eink ? 'is-on' : ''}`} onClick={onToggleEink} aria-pressed={eink} title="Simula uno schermo Kindle in bianco e nero">
+          <span className="toggle__knob" />
+          E-ink
+        </button>
+      </div>
+    </header>
   )
 }

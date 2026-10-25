@@ -1,39 +1,43 @@
-/* Design tokens for Mappe Visive di Infermieristica */
+/* Design tokens.
+   Book page: bright infographic palette (one accent per box / chapter).
+   Studio chrome: quiet neutrals so the page is the only colourful thing on screen. */
 
 :root {
-  /* Typography */
-  --font-head: 'Barlow Condensed', sans-serif;
-  --font-body: 'Barlow', sans-serif;
+  /* Page format: 3:4 fixed layout, exported at 2x => 1536 x 2048 px */
+  --page-w: 768px;
+  --page-h: 1024px;
 
-  /* Colors - Ink */
   --ink: #17212f;
-  --ink-soft: #6b7280;
-  --ink-light: #9ca3af;
+  --ink-soft: #4a5566;
+  --paper: #ffffff;
 
-  /* Accents */
-  --acc-red: #d7263d;
-  --acc-blue: #1f6fd1;
-  --acc-green: #13915f;
-  --acc-purple: #6a3fc8;
-  --acc-orange: #ec7a12;
-  --acc-teal: #0d9488;
-
-  /* Status colors */
-  --status-pianificata: #6b7280;
-  --status-bozza: #f59e0b;
-  --status-illustrata: #3b82f6;
-  --status-revisionata: #10b981;
-  --status-pronta: #d7263d;
+  --font-body: 'Barlow', system-ui, sans-serif;
+  --font-head: 'Barlow Condensed', 'Arial Narrow', sans-serif;
 
   /* Studio chrome */
-  --st-bg: #f5f7fa;
-  --st-panel: #fff;
-  --st-line: #e4e7ec;
-  --st-text: #17212f;
-  --st-muted: #6b7280;
+  --st-bg: #eceef1;
+  --st-panel: #ffffff;
+  --st-line: #d9dde3;
+  --st-text: #1d2430;
+  --st-muted: #6b7482;
   --st-focus: #1f6fd1;
 
-  /* Page layout */
-  --page-width: 768px;
-  --page-height: 1024px;
+  /* Status colours */
+  --status-pianificata: #b8bfca;
+  --status-bozza: #f2a93b;
+  --status-illustrata: #3d8bfd;
+  --status-revisionata: #8a5cf6;
+  --status-pronta: #18a058;
 }
+
+/* Accent palette — each class exposes --acc, --acc-dark, --acc-tint, --acc-line */
+.acc-red    { --acc: #d7263d; --acc-dark: #a3172b; --acc-tint: #fff1f2; --acc-line: #f7c7cd; }
+.acc-blue   { --acc: #1f6fd1; --acc-dark: #154f99; --acc-tint: #eff5ff; --acc-line: #c4daf7; }
+.acc-green  { --acc: #13915f; --acc-dark: #0c6945; --acc-tint: #ecfaf3; --acc-line: #bde8d3; }
+.acc-purple { --acc: #6a3fc8; --acc-dark: #4b2a93; --acc-tint: #f4f0ff; --acc-line: #d8cbf5; }
+.acc-orange { --acc: #ec7a12; --acc-dark: #b25a08; --acc-tint: #fff5eb; --acc-line: #f8d5b0; }
+.acc-teal   { --acc: #0e8c8c; --acc-dark: #096666; --acc-tint: #eafafa; --acc-line: #b6e4e4; }
+.acc-pink   { --acc: #d6336c; --acc-dark: #a2214f; --acc-tint: #fff0f5; --acc-line: #f5c4d6; }
+.acc-navy   { --acc: #173f7a; --acc-dark: #0e2a54; --acc-tint: #eef3fa; --acc-line: #c3d2e8; }
+.acc-olive  { --acc: #5f8a1e; --acc-dark: #446414; --acc-tint: #f3f9ea; --acc-line: #d2e5b5; }
+.acc-slate  { --acc: #3d5a80; --acc-dark: #2a3f5c; --acc-tint: #f0f4f8; --acc-line: #cdd8e5; }

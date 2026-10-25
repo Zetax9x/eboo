@@ -51,6 +51,7 @@ const map: TableMap = {
         'K⁺; segni di infezione e temperatura',
         'Somministrare **al mattino**, con il cibo',
         'Inalatori: **sciacquare la bocca** (candidosi)',
+        'Umore, sonno; nel diabetico adeguare la terapia',
       ],
     },
     {

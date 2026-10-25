@@ -1,74 +1,41 @@
 import type { ReactNode } from 'react'
-import type { IconName } from '../components/icons'
-import { Illustration } from '../components/Illustration'
+import type { Entry } from '../book/registry'
+import { Icon, type IconName } from '../components/icons'
 
-export interface MapPageProps {
-  id: string
-  title: string
-  subtitle?: string
+export const BOOK_TITLE = 'Mappe Visive di Infermieristica'
+
+interface Props {
+  entry: Entry
   icon?: IconName
-  status?: 'bozza' | 'illustrata' | 'revisionata' | 'pronta'
-  illustrationId?: string
-  illustrationPrompt?: string
-  sources?: string[]
+  subtitle?: string
   children: ReactNode
 }
 
-export function PageFrame({ id, title, subtitle, icon, status = 'bozza', illustrationId, illustrationPrompt, sources, children }: MapPageProps) {
+/** Shared chrome of every book page: chapter-coloured header band, body, footer with page number. */
+export function PageFrame({ entry, icon, subtitle, children }: Props) {
+  const { chapter } = entry
   return (
-    <div className="page" style={{ background: '#fff', padding: '76px 64px' }}>
-      {/* Header */}
-      <header style={{ display: 'flex', alignItems: 'center', gap: '12px', marginBottom: '32px' }}>
-        {icon && (
-          <div style={{ width: '48px', height: '48px', borderRadius: '8px', background: '#f6f7f9', display: 'grid', placeItems: 'center' }}>
-            {/* Icon component would go here */}
+    <article className={`page acc-${chapter.accent}`} data-page-id={entry.id}>
+      <header className="page-head">
+        <div className="page-head__icon">
+          <Icon name={icon ?? chapter.icon} size={34} />
+        </div>
+        <div>
+          <div className="page-head__kicker">
+            Cap. {chapter.number} · {chapter.short}
           </div>
-        )}
-        <div style={{ flex: 1 }}>
-          <h1 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '32px', fontWeight: 800, color: '#17212f', margin: 0, lineHeight: 1.2 }}>
-            {title}
-          </h1>
-          {subtitle && (
-            <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#6b7280', margin: '8px 0 0' }}>
-              {subtitle}
-            </p>
-          )}
+          <h1>{entry.title}</h1>
+          {subtitle && <div className="page-head__sub">{subtitle}</div>}
         </div>
       </header>
-
-      {/* Illustration placeholder */}
-      {illustrationId && (
-        <div style={{ marginBottom: '32px' }}>
-          <Illustration data={{ id: illustrationId, alt: title }} />
-        </div>
-      )}
-
-      {/* Main content */}
-      <main style={{ fontFamily: 'Barlow, sans-serif', fontSize: '14px', lineHeight: 1.6, color: '#17212f' }}>
-        {children}
-      </main>
-
-      {/* Sources footer */}
-      {sources && sources.length > 0 && (
-        <footer style={{ marginTop: '48px', paddingTop: '24px', borderTop: '1px solid #e4e7ec' }}>
-          <h3 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '14px', fontWeight: 700, color: '#17212f', marginBottom: '12px' }}>
-            Fonti di riferimento
-          </h3>
-          <ul style={{ paddingLeft: '20px', margin: 0, display: 'flex', flexDirection: 'column', gap: '6px' }}>
-            {sources.map((source, i) => (
-              <li key={i} style={{ fontSize: '12px', color: '#6b7280' }}>{source}</li>
-            ))}
-          </ul>
-        </footer>
-      )}
-
-      {/* Status indicator */}
-      <div style={{ marginTop: '32px', padding: '12px 16px', background: '#f9fafb', borderRadius: '8px' }}>
-        <span style={{ fontSize: '12px', color: '#6b7280' }}>Stato mappa:</span>
-        <span className={`chip chip--${status}`} style={{ marginLeft: '8px' }}>{status}</span>
-      </div>
-    </div>
+      <div className="page-body">{children}</div>
+      <footer className="page-foot">
+        <span>
+          {BOOK_TITLE} · {chapter.title}
+        </span>
+        <span className="disclaimer">Materiale didattico: non sostituisce protocolli, linee guida e prescrizioni.</span>
+        <span className="page-foot__num">{entry.pageNumber}</span>
+      </footer>
+    </article>
   )
 }
-
-export default PageFrame
