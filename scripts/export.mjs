@@ -13,6 +13,7 @@ import { chromium } from 'playwright'
 
 const PAGE = { width: 768, height: 1024 }
 const SCALE = 2
+const MIN_FILL_PERCENT = 60 // below this the boxes look half empty
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const OUT_DIR = fileURLToPath(new URL('../out', import.meta.url))
 const onlyId = process.argv[2]
@@ -38,7 +39,19 @@ try {
       const body = n.querySelector('.page-body')
       const blocks = body ? [body, ...body.children] : []
       const overflow = blocks.some((el) => el.scrollHeight > el.clientHeight + 2)
-      return { id: n.getAttribute('data-page-id'), overflow }
+      // Fill: share of each box body actually used by its content, weighted by box area.
+      let used = 0
+      let total = 0
+      for (const box of n.querySelectorAll('.box__body')) {
+        const rect = box.getBoundingClientRect()
+        const kids = [...box.children]
+        if (kids.length === 0 || rect.height < 40) continue
+        const bottom = Math.max(...kids.map((k) => k.getBoundingClientRect().bottom))
+        used += Math.min(bottom - rect.top, rect.height) * rect.width
+        total += rect.height * rect.width
+      }
+      const fill = total > 0 ? Math.round((used / total) * 100) : 100
+      return { id: n.getAttribute('data-page-id'), overflow, fill }
     }),
   )
   if (pages.length === 0) throw new Error('Nessuna pagina scritta da esportare.')
@@ -64,6 +77,10 @@ try {
       margin: { top: 0, right: 0, bottom: 0, left: 0 },
     })
     console.log(`✓ ${OUT_DIR}/ebook.pdf (${pages.length} pagine)`)
+  }
+
+  for (const p of pages.filter((p) => p.fill < MIN_FILL_PERCENT)) {
+    console.log(`⚠ Poco piena: ${p.id} (riquadri pieni al ${p.fill}%)`)
   }
 
   const overflowing = pages.filter((p) => p.overflow).map((p) => p.id)

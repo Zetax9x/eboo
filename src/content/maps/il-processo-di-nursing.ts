@@ -31,6 +31,9 @@ const map: ConceptMap = {
         'Fonti: persona, familiari, documentazione, équipe',
         'Strumenti: intervista, esame fisico, **scale**',
         'Modelli guida: **Gordon**, **Henderson**',
+        'Tipi: **iniziale**, **mirato**, **continuo**, **d’urgenza**',
+        '**Validare** i dati prima di usarli',
+        'Individuare **bisogni** e **risorse** della persona',
       ],
     },
     {
@@ -42,6 +45,8 @@ const map: ConceptMap = {
         'Formato **PES**: problema, eziologia (“correlato a”), segni (“evidenziato da”)',
         'Tipi: focalizzata sul problema, **di rischio**, di promozione della salute',
         'Non è la diagnosi medica: riguarda risposte, non malattie',
+        'Es.: **Mobilità compromessa** correlata a dolore',
+        '**Problemi collaborativi**: gestiti insieme al medico',
       ],
     },
     {
@@ -53,6 +58,9 @@ const map: ConceptMap = {
         'Definire **risultati attesi** misurabili (NOC)',
         'Scegliere gli **interventi** (NIC)',
         'Scrivere il **piano di assistenza**',
+        'Obiettivi **a breve** e **a lungo termine**',
+        'Coinvolgere persona e **caregiver**',
+        'Usare piani standard **personalizzandoli**',
       ],
     },
     {
@@ -64,6 +72,9 @@ const map: ConceptMap = {
         'Interventi **autonomi**, su **prescrizione**, **collaborativi**',
         'Attribuire all’OSS solo attività appropriate',
         '**Documentare** ciò che si è fatto',
+        '**Rivalutare** la persona prima di ogni intervento',
+        'Lavorare in **équipe** multiprofessionale',
+        '**Educazione terapeutica** a persona e famiglia',
       ],
     },
     {
@@ -74,6 +85,9 @@ const map: ConceptMap = {
         'Confrontare risultati **ottenuti** e **attesi**',
         'Obiettivo raggiunto, parzialmente raggiunto, non raggiunto',
         'Se serve, **rivedere** diagnosi, obiettivi e interventi',
+        'Valutazione di **processo** e di **esito**',
+        'Indicatori **misurabili** (es. punteggio NRS del dolore)',
+        'Esito: **chiusura** del problema o nuovo ciclo',
       ],
     },
     {
@@ -85,6 +99,9 @@ const map: ConceptMap = {
         { text: '**Centrato** sulla persona', kind: 'ok' },
         { text: 'Orientato agli **obiettivi**', kind: 'ok' },
         { text: 'Documentato nella **cartella infermieristica**', kind: 'ok' },
+        { text: 'Basato sulle **evidenze** (EBN)', kind: 'ok' },
+        { text: 'Garantisce **continuità** tra turni e servizi', kind: 'ok' },
+        { text: 'Previsto dal **profilo professionale** (DM 739/1994)', kind: 'ok' },
       ],
     },
   ],

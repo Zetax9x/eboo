@@ -56,6 +56,7 @@ const map: AlgorithmMap = {
         'Frequenza **100–120/min**',
         'Rilascio completo, pause **minime**',
         'Cambio soccorritore ogni **2 min**',
+        'Vittima su superficie **rigida**, braccia tese',
       ],
     },
     {
@@ -66,6 +67,8 @@ const map: AlgorithmMap = {
         'Ogni insufflazione dura **1 secondo**',
         'Volume che **solleva il torace**',
         'Se non sai o non puoi ventilare: **solo compressioni**',
+        'Vie aeree: **iperestensione del capo** e sollevamento del mento',
+        'Usare **maschera tascabile** o pallone-maschera se disponibili',
       ],
     },
     {
@@ -76,6 +79,9 @@ const map: AlgorithmMap = {
         'Placche: sotto la **clavicola destra** e sul fianco **sinistro** (ascellare media)',
         'Torace **nudo e asciutto**',
         'Durante analisi e shock **nessuno tocca** la vittima',
+        'Rimuovere i **cerotti medicati** dal torace',
+        'Pacemaker o defibrillatore impiantato: placca **non sopra** il dispositivo',
+        'Dopo lo shock: **riprendere subito** le compressioni',
       ],
     },
   ],

@@ -31,6 +31,7 @@ const MODEL = process.env.OLLAMA_MODEL
 const CONTEXT_TOKENS = Number(process.env.OLLAMA_CTX ?? 32768)
 const THINK = process.env.OLLAMA_THINK === 'true'
 const MAX_TRIES = 4
+const MAX_FILL_RETRIES = 2 // a half-empty page is retried this many times, then accepted
 const REQUEST_TIMEOUT_MS = 30 * 60 * 1000
 
 // Most likely page kind for each chapter, with a written example of that kind.
@@ -90,6 +91,8 @@ async function buildPrompt(entry, todo) {
     `Tipo consigliato per questo capitolo: ${defaults.kind} (puoi sceglierne un altro se l’argomento lo richiede).`,
     `Il file sarà salvato come src/content/maps/${entry.id}.ts e deve avere id: '${entry.id}' e chapter: '${entry.chapter}'.`,
     `Altre mappe dello stesso capitolo (evita doppioni): ${siblings.join('; ')}.`,
+    'Le `sources` devono riguardare QUESTO argomento: non copiare quelle dell’esempio.',
+    'Riempi bene la pagina: 5–7 item per riquadro, con valori concreti, esempi e dettagli utili all’esame.',
     '',
     'Schema autoritativo (src/book/types.ts):',
     '```ts',
@@ -147,8 +150,16 @@ async function capture(command, args, { shell = false } = {}) {
   }
 }
 
-/** Returns a list of problems in Italian, empty when the page is good. */
+/** Returns { problems, underfilled }: problems block the page, underfilled only asks for more content. */
 async function verify(entry, code) {
+  const problems = await findProblems(entry, code)
+  if (problems.length > 0) return { problems, underfilled: null }
+  return { problems: [], underfilled: lastFillWarning }
+}
+
+let lastFillWarning = null
+
+async function findProblems(entry, code) {
   const problems = []
   if (!code.includes(`id: '${entry.id}'`)) problems.push(`Il campo id deve essere esattamente '${entry.id}'.`)
   if (!code.includes(`chapter: '${entry.chapter}'`)) problems.push(`Il campo chapter deve essere '${entry.chapter}'.`)
@@ -161,6 +172,7 @@ async function verify(entry, code) {
   if (typeErrors.length > 0) return [`Errori TypeScript:\n${typeErrors.join('\n')}`]
 
   const exported = await capture(process.execPath, ['scripts/export.mjs', entry.id])
+  lastFillWarning = exported.output.match(/Poco piena: .*\((.*)\)/)?.[1] ?? null
   if (exported.output.includes('oltre la pagina')) {
     problems.push('Il contenuto SFORA la pagina: accorcia i testi (item più brevi, meno item) mantenendo le informazioni essenziali.')
   } else if (!exported.ok || !exported.output.includes('✓')) {
@@ -173,16 +185,24 @@ async function writeOne(entry, todo) {
   const file = path.join(MAPS_DIR, `${entry.id}.ts`)
   const messages = await buildPrompt(entry, todo)
 
+  let fillRetries = 0
   for (let attempt = 1; attempt <= MAX_TRIES; attempt++) {
     const reply = await chat(messages)
     const code = extractCode(reply)
     await writeFile(file, code)
-    const problems = await verify(entry, code)
-    if (problems.length === 0) return { ok: true, attempts: attempt }
+    const { problems, underfilled } = await verify(entry, code)
+    if (problems.length === 0 && (!underfilled || fillRetries >= MAX_FILL_RETRIES)) {
+      return { ok: true, attempts: attempt, underfilled }
+    }
 
-    console.log(`   ${entry.id} tentativo ${attempt}: ${problems[0].split('\n')[0]}`)
+    const feedback = problems.length > 0
+      ? `Il file ha questi problemi:\n${problems.join('\n')}`
+      : `La pagina è troppo vuota (${underfilled}): i riquadri hanno molto spazio libero. Aggiungi contenuto utile ` +
+        '(più item per riquadro, valori, esempi, mnemoniche, una banda keyPoints), senza ripetere e senza riempitivi.'
+    if (problems.length === 0) fillRetries++
+    console.log(`   ${entry.id} tentativo ${attempt}: ${feedback.split('\n')[0].split(':')[0]}`)
     messages.push({ role: 'assistant', content: reply })
-    messages.push({ role: 'user', content: `Il file ha questi problemi:\n${problems.join('\n')}\nCorreggi e rispondi di nuovo con il file COMPLETO.` })
+    messages.push({ role: 'user', content: `${feedback}\nCorreggi e rispondi di nuovo con il file COMPLETO.` })
   }
 
   await mkdir(REJECTED_DIR, { recursive: true })
@@ -213,7 +233,10 @@ async function main() {
     try {
       const result = await writeOne(entry, todo)
       const seconds = Math.round((Date.now() - started) / 1000)
-      if (result.ok) console.log(`   ✓ ${entry.id} fatta in ${result.attempts} tentativi (${seconds} s)`)
+      if (result.ok) {
+        const note = result.underfilled ? ` — ancora poco piena (${result.underfilled})` : ''
+        console.log(`   ✓ ${entry.id} fatta in ${result.attempts} tentativi (${seconds} s)${note}`)
+      }
       else {
         failed.push(entry.id)
         console.log(`   ✗ ${entry.id} scartata dopo ${result.attempts} tentativi → out/rifiutate/${entry.id}.ts`)
