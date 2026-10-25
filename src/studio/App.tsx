@@ -32,11 +32,13 @@ async function loadMapComponent(id: string) {
     
     // Supporta sia default export che named export
     if (module.default && typeof module.default === 'function') {
+      console.log(`📌 Componente trovato: default export`)
       return module.default
     }
     // Se non c'è default, cerca un componente con lo stesso nome del file
     const componentName = id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('') + 'Page'
     if (module[componentName] && typeof module[componentName] === 'function') {
+      console.log(`📌 Componente trovato: ${componentName}`)
       return module[componentName]
     }
     // Fallback: usa il primo export function trovato
@@ -46,7 +48,7 @@ async function loadMapComponent(id: string) {
         return value
       }
     }
-    console.warn(`⚠️ Nessun componente valido trovato per ${id}`)
+    console.warn(`⚠️ Nessun componente valido trovato per ${id}`, module)
     return null
   } catch (error) {
     // Mappa non esiste ancora
@@ -85,11 +87,7 @@ export function App() {
     loadMapComponent(currentId).then((component) => {
       if (!cancelled) {
         console.log(`📌 Componente impostato:`, component?.name || 'null')
-        if (component && typeof component === 'function') {
-          setMapComponent(component)
-        } else {
-          setMapComponent(null)
-        }
+        setMapComponent(component)
       }
     })
     return () => { cancelled = true }
@@ -123,8 +121,8 @@ export function App() {
     if (currentId === 'avvertenze') return <InitialPages />
     
     // Se c'è un componente mappa caricato, usalo
-    if (MapComponent && typeof MapComponent === 'function') {
-      console.log(`📄 Rendering componente: ${MapComponent.name}`)
+    if (MapComponent) {
+      console.log(`📄 Rendering componente: ${MapComponent.name || 'anonymous'}`)
       return <MapComponent />
     }
 
