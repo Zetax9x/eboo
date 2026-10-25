@@ -50,6 +50,17 @@ async function loadMapComponent(id: string) {
   }
 }
 
+// Controlla se una mappa è stata scritta (file .tsx esiste)
+function isMapWritten(id: string): boolean {
+  try {
+    // Vite permette di importare dinamicamente per verificare l'esistenza
+    const module = import(`../content/maps/${id}`)
+    return true
+  } catch {
+    return false
+  }
+}
+
 export function App() {
   const [view, setView] = useState<'studio' | 'plan' | 'grid'>('studio')
   const [currentId, setCurrentId] = useState<string>('ritmo-sinuale')
@@ -72,21 +83,30 @@ export function App() {
     return () => { cancelled = true }
   }, [currentId])
 
+  // Calcola la percentuale di mappe scritte
   const progress = useMemo(() => {
     let total = 0
     let written = 0
+    
     for (const mapTitles of Object.values(OUTLINE)) {
-      total += mapTitles.length
-      // Per ora contiamo solo quelle che esistono come file
-      try {
-        require(`../content/maps/${mapTitles[0]}.ts`)
-        written++
-      } catch {
-        // non scritta
+      for (const title of mapTitles) {
+        total++
+        const id = slugify(title)
+        // Controlla se il file esiste importando dinamicamente
+        try {
+          import(`../content/maps/${id}`).then(() => {
+            written++
+          }).catch(() => {
+            // non scritta
+          })
+        } catch {
+          // non scritta
+        }
       }
     }
-    return Math.round((written / total) * 100) || 0
-  }, [])
+    
+    return total > 0 ? Math.round((written / total) * 100) : 0
+  }, [currentId])
 
   function renderPage() {
     if (currentId === 'copertina') return <InitialPages />
