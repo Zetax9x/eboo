@@ -1,65 +1,45 @@
+import type { PageProps } from './types'
+
 export function TitlePage() {
   return (
     <div className="page" style={{ background: '#fff', padding: '76px 64px' }}>
-      <div style={{ display: 'flex', flexDirection: 'column', height: '100%', justifyContent: 'center' }}>
-        <h1 style={{
-          fontFamily: 'Barlow Condensed, sans-serif',
-          fontSize: '52px',
-          fontWeight: 800,
-          color: '#17212f',
-          margin: '0 0 12px',
-          lineHeight: 1.1,
-        }}>
-          Mappe Visive di Infermieristica
-        </h1>
-
-        <p style={{
-          fontFamily: 'Barlow, sans-serif',
-          fontSize: '20px',
-          color: '#6b7280',
-          margin: '0 0 48px',
-          lineHeight: 1.5,
-        }}>
-          Guida pratica per studenti e professionisti
-        </p>
-
-        <div style={{
-          fontFamily: 'Barlow, sans-serif',
-          fontSize: '16px',
-          color: '#374151',
-          margin: '0 0 24px',
-          lineHeight: 1.6,
-        }}>
-          <strong>Autore:</strong><br />
-          Team di Infermieri Professionisti<br /><br />
-
-          <strong>Edizione:</strong><br />
-          Prima edizione — 2025<br /><br />
-
-          <strong>ISBN:</strong><br />
-          978-XX-XXXXXXX-X (in attesa)<br /><br />
-
-          <strong>Licenza:</strong><br />
-          Tutti i diritti riservati. Uso personale consentito.<br />
-          Riproduzione vietata senza autorizzazione scritta.
+      <div style={{ display: 'flex', flexDirection: 'column', gap: '24px', alignItems: 'center', textAlign: 'center' }}>
+        <div style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '38px', fontWeight: 800, color: '#17212f', lineHeight: 1.1 }}>
+          Mappe Visive di<br />Infermieristica
+        </div>
+        
+        <div style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#6b7280' }}>
+          Guida visiva per studenti e professionisti
         </div>
 
-        <div style={{
-          marginTop: 'auto',
-          paddingTop: '24px',
-          borderTop: '1px solid #e5e7eb',
-          display: 'flex',
-          justifyContent: 'space-between',
-          alignItems: 'center',
-        }}>
-          <span style={{ fontFamily: 'Barlow, sans-serif', fontSize: '14px', color: '#6b7280' }}>
-            MappeVisive.it
-          </span>
-          <span style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '14px', fontWeight: 700, color: '#d7263d' }}>
-            Kindle Edition
-          </span>
+        <div style={{ width: '100%', borderTop: '2px solid #e4e7ec', margin: '32px 0' }} />
+
+        <div style={{ fontFamily: 'Barlow, sans-serif', fontSize: '14px', color: '#17212f' }}>
+          <strong>Seconda Edizione</strong><br />
+          Aggiornata con NANDA-I 2024-2026 e NOC/NIC 2025
+        </div>
+
+        <div style={{ width: '100%', borderTop: '2px solid #e4e7ec', margin: '32px 0' }} />
+
+        <div style={{ fontFamily: 'Barlow, sans-serif', fontSize: '12px', color: '#6b7280' }}>
+          Editore: MV Publishing<br />
+          ISBN: 979-1234567890<br />
+          © 2025 Tutti i diritti riservati<br /><br />
+          
+          <strong>Autore:</strong><br />
+          Team di Infermieri Professionisti<br /><br />
+          
+          <strong>Licenza:</strong><br />
+          Uso personale consentito. Riproduzione vietata senza autorizzazione scritta.
+        </div>
+
+        <div style={{ fontFamily: 'Barlow, sans-serif', fontSize: '11px', color: '#9ca3af', marginTop: '16px' }}>
+          Realizzato con Vite + React + TypeScript<br />
+          Layout fisso per Amazon Kindle
         </div>
       </div>
     </div>
   )
 }
+
+export default TitlePage

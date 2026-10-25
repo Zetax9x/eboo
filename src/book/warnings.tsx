@@ -1,57 +1,58 @@
+import type { PageProps } from './types'
+
 export function WarningsPage() {
   return (
     <div className="page" style={{ background: '#fff', padding: '76px 64px' }}>
-      <h1 style={{
-        fontFamily: 'Barlow Condensed, sans-serif',
-        fontSize: '32px',
-        fontWeight: 800,
-        color: '#d7263d',
-        margin: '0 0 24px',
-        display: 'flex',
-        alignItems: 'center',
-        gap: '12px',
-      }}>
-        <span style={{ fontSize: '48px' }}>⚠️</span>
+      <h1 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '28px', fontWeight: 800, color: '#d7263d', marginBottom: '24px' }}>
         Avvertenze Mediche
       </h1>
 
-      <div style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#374151', lineHeight: 1.7 }}>
-        <p><strong>Questo libro non è un sostituto della formazione clinica.</strong></p>
+      <div style={{ fontFamily: 'Barlow, sans-serif', fontSize: '14px', lineHeight: 1.6, color: '#17212f' }}>
+        <p style={{ marginBottom: '16px' }}>
+          <strong>Questo libro è uno strumento educativo</strong> e non sostituisce il giudizio clinico professionale. 
+          I contenuti sono basati su linee guida internazionali e testi di riferimento, ma ogni situazione clinica 
+          richiede una valutazione individuale da parte di personale qualificato.
+        </p>
 
-        <p>Le informazioni contenute in questa pubblicazione sono fornite a scopo educativo e di studio per studenti di infermieristica, tirocinanti e professionisti che si preparano ai concorsi. Non devono essere considerate come consulenza medica professionale né utilizzate per prendere decisioni cliniche su pazienti reali.</p>
+        <div style={{ background: '#fef2f2', borderLeft: '4px solid #d7263d', padding: '16px', marginBottom: '16px' }}>
+          <strong>⚠️ Non usare questo libro per prendere decisioni cliniche in situazioni reali.</strong><br />
+          Consultare sempre le linee guida ufficiali e il personale sanitario qualificato.
+        </div>
 
-        <h2 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '18px', fontWeight: 700, color: '#17212f', marginTop: '24px' }}>
-          Limitazioni d'uso
+        <h2 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '18px', fontWeight: 700, color: '#17212f', marginTop: '32px' }}>
+          Verifica delle informazioni
         </h2>
-        <ul style={{ margin: '16px 0', paddingLeft: '24px' }}>
-          <li>Non utilizzare per diagnosi o trattamento di pazienti</li>
-          <li>Verificare sempre i protocolli locali e le linee guida aggiornate</li>
-          <li>I valori di riferimento possono variare tra laboratori e istituzioni</li>
-          <li>In caso di emergenza, contattare immediatamente il personale sanitario qualificato</li>
+
+        <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
+          <li style={{ marginBottom: '8px' }}>
+            I valori di laboratorio e le soglie cliniche devono essere verificati con le fonti ufficiali
+          </li>
+          <li style={{ marginBottom: '8px' }}>
+            Le procedure descritte seguono protocolli standard ma possono variare per istituzione
+          </li>
+          <li style={{ marginBottom: '8px' }}>
+            I farmaci e i dosaggi devono essere confermati con le schede tecniche aggiornate
+          </li>
         </ul>
 
-        <h2 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '18px', fontWeight: 700, color: '#17212f', marginTop: '24px' }}>
-          Verifica delle fonti
+        <h2 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '18px', fontWeight: 700, color: '#17212f', marginTop: '32px' }}>
+          Fonti di riferimento
         </h2>
-        <p>Ogni mappa include riferimenti a linee guida e testi verificabili. Si raccomanda di consultare le fonti primarie per applicazioni cliniche reali.</p>
 
-        <h2 style={{ fontFamily: 'Barlow Condensed, sans-serif', fontSize: '18px', fontWeight: 700, color: '#17212f', marginTop: '24px' }}>
-          Aggiornamenti
-        </h2>
-        <p>I protocolli infermieristici e i valori di laboratorio sono soggetti a revisione. Consultare le linee guida più recenti per applicazioni cliniche.</p>
+        <ul style={{ paddingLeft: '24px', marginBottom: '16px' }}>
+          <li style={{ marginBottom: '8px' }}>NANDA-I International (diagnosi infermieristiche)</li>
+          <li style={{ marginBottom: '8px' }}>NOC & NIC (outcome e interventi)</li>
+          <li style={{ marginBottom: '8px' }}>Linee guida SIN, SIMLII, AIFA</li>
+          <li style={{ marginBottom: '8px' }}>Testi di riferimento accreditati</li>
+        </ul>
 
-        <div style={{
-          marginTop: '32px',
-          padding: '16px',
-          background: '#fef2f2',
-          borderLeft: '4px solid #d7263d',
-          borderRadius: '0 8px 8px 0',
-        }}>
-          <p style={{ margin: 0, fontWeight: 600, color: '#991b1b' }}>
-            In caso di dubbio clinico, consultare sempre un professionista sanitario qualificato.
-          </p>
-        </div>
+        <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '12px', color: '#6b7280', marginTop: '32px' }}>
+          Ultima revisione: 2025<br />
+          Per segnalazioni o aggiornamenti: info@mv-publishing.it
+        </p>
       </div>
     </div>
   )
 }
+
+export default WarningsPage

@@ -12,6 +12,9 @@
 - [x] Outline completo con 250 mappe in 10 capitoli
 - [x] Interfaccia studio funzionante (modalità studio/plan/grid)
 - [x] Generatore illustrazioni AI (`scripts/illustrations.mjs`)
+- [x] Copertina (`CoverPage`)
+- [x] Frontespizio (`TitlePage`) — ISBN, editore, copyright completi
+- [x] Avvertenze / disclaimer medico (`WarningsPage`) — scritto in autonomia
 
 ## 🚧 In corso / Prossimi passi
 
@@ -23,8 +26,8 @@
 
 ### 2. Pagine iniziali del libro
 - [x] Copertina (`CoverPage`)
-- [ ] Frontespizio (`TitlePage`) — da completare con dettagli ISBN, editore, ecc.
-- [ ] Avvertenze / disclaimer medico — da scrivere (non usare testi copiati)
+- [x] Frontespizio (`TitlePage`) — completato con ISBN, editore, ecc.
+- [x] Avvertenze / disclaimer medico (`WarningsPage`) — scritto in autonomia
 - [ ] Indice completo (250 voci) — generabile automaticamente dall'outline
 
 ### 3. Scrittura mappe (250 totali)
@@ -50,9 +53,9 @@
 ## 🎯 Prossimo task immediato
 
 1. **Chiave API** — impostare `FAL_KEY` o `OPENAI_API_KEY` in `.env`
-2. **Pagine iniziali** — completare frontespizio e avvertenze (copertina già fatta)
+2. **Template per mappe** — creare struttura base per ogni tipo di mappa
 3. **Scrittura prima mappa pilota** — seguire template overview, verificare fonti
 
 ---
 
-*Ultima modifica: interfaccia studio funzionante, outline completo 250 mappe, generatore AI implementato*
+*Ultima modifica: pagine iniziali complete (copertina, frontespizio, avvertenze), interfaccia studio funzionante, outline completo 250 mappe, generatore AI implementato*
