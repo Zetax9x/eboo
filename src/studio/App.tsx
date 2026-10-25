@@ -67,7 +67,7 @@ async function loadMapComponent(id: string) {
   }
 }
 
-// Controlla se una mappa è stata scritta (file .tsx esiste)
+// Controlla se una mappa è stata scritta (file .tsx esiste fisicamente)
 async function checkMapExists(id: string): Promise<boolean> {
   try {
     // Vite gestisce automaticamente le estensioni, non serve specificare .tsx
