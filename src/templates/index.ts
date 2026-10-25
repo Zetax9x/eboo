@@ -1,0 +1,6 @@
+export { PageFrame, type MapPageProps } from './PageFrame'
+export { OverviewTemplate } from './overview-template'
+export { DiseaseTemplate } from './disease-template'
+export { ProcedureTemplate } from './procedure-template'
+export { LabTemplate } from './lab-template'
+export { EcgTemplate } from './ecg-template'
