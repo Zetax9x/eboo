@@ -164,7 +164,9 @@
   place-items: center;
   min-height: 0;
 }
-.illus img { width: 100%; height: 100%; object-fit: contain; display: block; }
+/* Absolute: the box gets its size from the layout, never from the 1024px image (which would be cropped). */
+/* Multiply: the images' white background takes the colour of the box instead of showing as a white square. */
+.illus img { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; display: block; mix-blend-mode: multiply; }
 .illus--filled { border: none; background: transparent; }
 .illus__ph { display: flex; flex-direction: column; align-items: center; gap: 4px; color: var(--acc); padding: 6px; text-align: center; }
 .illus__ph svg { opacity: 0.55; }
