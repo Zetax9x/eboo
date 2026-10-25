@@ -60,7 +60,7 @@ export function App() {
   const currentMap = useMemo(() => getCurrentMapData(currentId), [currentId])
   const chapterNumber = useMemo(() => getChapterNumber(currentId as keyof typeof OUTLINE), [currentId])
 
-  // Carica la mappa quando cambia currentId
+  // Carica la mappa quando cambia currentId o all'avvio
   useEffect(() => {
     let cancelled = false
     loadMapComponent(currentId).then((component) => {
