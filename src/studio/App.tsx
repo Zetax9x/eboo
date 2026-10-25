@@ -74,9 +74,16 @@ async function loadMapComponent(id: string) {
           return value
         }
       }
+      
+      // Se l'oggetto ha una proprietà "component" o "default" che è una funzione
+      if (module.default.component && typeof module.default.component === 'function') {
+        console.log(`📌 Componente trovato: default.component`)
+        return module.default.component
+      }
     }
     
-    console.warn(`⚠️ Nessun componente valido trovato per ${id}`, module)
+    // Debug: mostra cosa abbiamo ricevuto
+    console.warn(`⚠️ Nessun componente valido trovato per ${id}`, JSON.stringify(module, null, 2))
     return null
   } catch (error) {
     // Mappa non esiste ancora
