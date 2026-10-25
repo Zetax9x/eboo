@@ -83,12 +83,12 @@ const map: OverviewMap = {
         icon: 'Zap',
       },
       inset: {
-        label: 'Impulso → ECG',
+        label: 'Nodo senoatriale',
         illustration: {
-          id: 'cv-conduzione-ecg',
-          alt: 'Singolo battito ECG',
-          prompt: 'single normal ECG beat (P wave, QRS complex, T wave) on pink grid paper',
-          icon: 'Activity',
+          id: 'cv-conduzione-nodo-sa',
+          alt: 'Impulso elettrico che parte dal nodo senoatriale',
+          prompt: 'close-up of the right atrium with a glowing electrical impulse spreading from the sinoatrial node',
+          icon: 'Zap',
         },
       },
       bullets: [
