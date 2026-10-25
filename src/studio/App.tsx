@@ -27,8 +27,15 @@ function getCurrentMapData(id: string) {
 async function loadMapComponent(id: string) {
   try {
     console.log(`📦 Tentativo di caricamento mappa: ${id}`)
-    const module = await import(`../content/maps/${id}`)
-    console.log(`✅ Mappa caricata: ${id}`, module)
+    // Cerca prima con .ts, poi con .tsx se non trova
+    let module
+    try {
+      module = await import(`../content/maps/${id}.ts`)
+      console.log(`✅ Mappa caricata (da .ts): ${id}`, module)
+    } catch {
+      module = await import(`../content/maps/${id}`)
+      console.log(`✅ Mappa caricata: ${id}`, module)
+    }
     
     // Vite può restituire il modulo in diversi formati
     // Controlla prima l'export default
@@ -67,13 +74,19 @@ async function loadMapComponent(id: string) {
   }
 }
 
-// Controlla se una mappa è stata scritta (file .tsx esiste fisicamente)
+// Controlla se una mappa è stata scritta (file .ts o .tsx esiste fisicamente)
 async function checkMapExists(id: string): Promise<boolean> {
   try {
-    // Vite gestisce automaticamente le estensioni, non serve specificare .tsx
-    await import(`../content/maps/${id}`)
-    console.log(`✅ Mappa ${id} esiste`)
-    return true
+    // Prova prima con .ts, poi con .tsx
+    try {
+      await import(`../content/maps/${id}.ts`)
+      console.log(`✅ Mappa ${id} esiste (.ts)`)
+      return true
+    } catch {
+      await import(`../content/maps/${id}`)
+      console.log(`✅ Mappa ${id} esiste`)
+      return true
+    }
   } catch (error) {
     console.log(`❌ Mappa ${id} non esiste:`, error.message)
     return false
