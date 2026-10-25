@@ -1,4 +1,4 @@
-import { useState, useMemo } from 'react'
+import { useState, useMemo, useEffect } from 'react'
 import { OUTLINE, getChapterNumber, getChapterTitle, slugify } from '../book/outline'
 import { InitialPages } from '../book/index'
 import { EcgStrip } from '../components/EcgStrip'
@@ -50,28 +50,18 @@ async function loadMapComponent(id: string) {
   }
 }
 
-// Controlla se una mappa è stata scritta (file .tsx esiste)
-function isMapWritten(id: string): boolean {
-  try {
-    // Vite permette di importare dinamicamente per verificare l'esistenza
-    const module = import(`../content/maps/${id}`)
-    return true
-  } catch {
-    return false
-  }
-}
-
 export function App() {
   const [view, setView] = useState<'studio' | 'plan' | 'grid'>('studio')
   const [currentId, setCurrentId] = useState<string>('ritmo-sinuale')
   const [zoom, setZoom] = useState(1)
   const [MapComponent, setMapComponent] = useState<any>(null)
+  const [writtenIds, setWrittenIds] = useState<Set<string>>(new Set())
 
   const currentMap = useMemo(() => getCurrentMapData(currentId), [currentId])
   const chapterNumber = useMemo(() => getChapterNumber(currentId as keyof typeof OUTLINE), [currentId])
 
   // Carica la mappa quando cambia currentId
-  useMemo(() => {
+  useEffect(() => {
     let cancelled = false
     loadMapComponent(currentId).then((component) => {
       if (!cancelled && component && typeof component === 'function') {
@@ -83,35 +73,49 @@ export function App() {
     return () => { cancelled = true }
   }, [currentId])
 
-  // Calcola la percentuale di mappe scritte e quali sono scritte
-  const progressData = useMemo(() => {
-    let total = 0
+  // Carica dinamicamente tutte le mappe per calcolare il progresso
+  useEffect(() => {
+    const total = Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)
     let written = 0
-    const writtenIds = new Set<string>()
-    
+    const ids = new Set<string>()
+
     for (const mapTitles of Object.values(OUTLINE)) {
       for (const title of mapTitles) {
-        total++
         const id = slugify(title)
-        // Controlla se il file esiste importando dinamicamente
         import(`../content/maps/${id}`)
           .then(() => {
             written++
-            writtenIds.add(id)
+            ids.add(id)
+            if (written === total) {
+              setWrittenIds(ids)
+            }
           })
           .catch(() => {
             // non scritta
           })
       }
     }
-    
+
+    // Timeout di fallback se alcune importazioni falliscono
+    const timeout = setTimeout(() => {
+      if (written < total) {
+        setWrittenIds(ids)
+      }
+    }, 1000)
+
+    return () => clearTimeout(timeout)
+  }, [])
+
+  const progressData = useMemo(() => {
+    const total = Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)
+    const percentage = total > 0 ? Math.round((writtenIds.size / total) * 100) : 0
     return {
       total,
-      written,
+      written: writtenIds.size,
       writtenIds,
-      percentage: total > 0 ? Math.round((written / total) * 100) : 0
+      percentage
     }
-  }, [currentId])
+  }, [writtenIds])
 
   function renderPage() {
     if (currentId === 'copertina') return <InitialPages />
@@ -190,7 +194,7 @@ export function App() {
           {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
             mapTitles.map((title, i) => {
               const id = slugify(title)
-              const isWritten = progressData.writtenIds.has(id)
+              const isWritten = writtenIds.has(id)
               return (
                 <button
                   key={id}
@@ -228,7 +232,7 @@ export function App() {
             {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
               mapTitles.map((title, i) => {
                 const id = slugify(title)
-                const isWritten = progressData.writtenIds.has(id)
+                const isWritten = writtenIds.has(id)
                 return (
                   <button key={id} className="thumb" onClick={() => setCurrentId(id)}>
                     <div className="thumb__frame" style={{ width: 170, height: 226 }}>
