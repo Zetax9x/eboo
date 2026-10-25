@@ -23,11 +23,16 @@ export function RitmoSinualePage() {
       Il ritmo sinusale è il normale ritmo cardiaco, caratterizzato da una sequenza regolare di depolarizzazioni che partono dal nodo seno-atriale. Rappresenta lo standard di riferimento per l'interpretazione di qualsiasi tracciato ECG.
 
       **Caratteristiche fondamentali:**
+      {' '}
       - Frequenza: 60-100 bpm (battiti per minuto)
+      {' '}
       - Ritmo: regolare, intervalli RR costanti
+      {' '}
       - Onde P: presenti prima di ogni QRS, morfologia normale
+      {' '}
       - Intervallo PR: 120-200 ms (3-5 quadretti piccoli)
-      - Complesso QRS: stretto (<120 ms), morfologia normale
+      {' '}
+      - Complesso QRS: stretto ({'<'}120 ms{'}'}, morfologia normale
     </EcgTemplate>
   )
 }
