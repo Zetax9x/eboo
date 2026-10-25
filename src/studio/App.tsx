@@ -2,7 +2,7 @@ import { useEffect, useState } from 'react'
 import { CHAPTERS } from '../book/chapters'
 import { ENTRIES, findEntry, MAPS } from '../book/registry'
 import { buildSequence, type BookItem } from '../book/sequence'
-import { BookItemView } from '../front/FrontPages'
+import { BookItemView, KDP_COVER_ID, KdpCover } from '../front/FrontPages'
 import { BOOK_TITLE } from '../templates/PageFrame'
 import { Inspector, PageCanvas, type Zoom } from './PageCanvas'
 import { BookView, GridView, PlanView } from './PlanView'
@@ -46,6 +46,7 @@ function PrintView({ id }: { id: string }) {
       cancelled = true
     }
   }, [])
+  if (id === KDP_COVER_ID) return <div className="print"><KdpCover /></div>
   if (items.length === 0) return <p>Nessuna pagina scritta con id: {id}</p>
   return (
     <div className="print">

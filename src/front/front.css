@@ -91,6 +91,14 @@
   border-top: 1.5px solid rgb(255 255 255 / 0.35);
   padding-top: 14px;
 }
+/* KDP store cover: 800×1280 css px (1600×2560 at 2x). Bigger title so it reads as a thumbnail. */
+.front--kdp { --page-w: 800px; --page-h: 1280px; padding: 80px 60px 56px; gap: 30px; }
+.front--kdp .cover__badge { font-size: 20px; padding: 6px 18px; }
+.front--kdp .cover__title { font-size: 112px; }
+.front--kdp .cover__subtitle { font-size: 28px; }
+.front--kdp .cover__grid { grid-template-columns: repeat(2, 1fr); gap: 14px; }
+.front--kdp .cover__tile { flex-direction: row; justify-content: flex-start; padding: 0 22px; gap: 16px; font-size: 22px; text-align: left; }
+.front--kdp .cover__foot { font-size: 30px; }
 .cover__foot strong { color: #ffd34d; font-weight: 800; letter-spacing: 0.04em; }
 
 /* ---------- Title page ---------- */

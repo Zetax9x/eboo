@@ -48,9 +48,17 @@ function SimplePage({ id, title, icon, children }: { id: string; title: string; 
 }
 
 // ---------- Cover ----------
-function CoverPage() {
+/** Id of the Amazon KDP cover: same design as the inner cover, at 1600×2560 (1:1.6). */
+export const KDP_COVER_ID = 'copertina-kdp'
+
+/** Cover for the Kindle store (exported on its own with `npm run export -- copertina-kdp`). */
+export function KdpCover() {
+  return <CoverPage kdp />
+}
+
+function CoverPage({ kdp = false }: { kdp?: boolean }) {
   return (
-    <article className="page front front--cover" data-page-id="copertina">
+    <article className={`page front front--cover ${kdp ? 'front--kdp' : ''}`} data-page-id={kdp ? KDP_COVER_ID : 'copertina'}>
       <span className="cover__badge">
         {BOOK_META.edition} · {BOOK_META.year}
       </span>

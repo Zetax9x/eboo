@@ -3,8 +3,9 @@
 //   out/ebook.pdf            all written pages, one per PDF page
 // Fails (exit 1) if any page's content overflows the fixed page.
 //
-// Usage: npm run export            (all written pages)
-//        npm run export -- <id>    (one page)
+// Usage: npm run export                  (all written pages)
+//        npm run export -- <id>          (one page)
+//        npm run export -- copertina-kdp (Kindle store cover: out/copertina-kdp.jpg, 1600 x 2560)
 
 import { mkdir, rm } from 'node:fs/promises'
 import { fileURLToPath } from 'node:url'
@@ -13,6 +14,7 @@ import { chromium } from 'playwright'
 
 const PAGE = { width: 768, height: 1024 }
 const SCALE = 2
+const KDP_COVER = { id: 'copertina-kdp', width: 800, height: 1280 }
 const MIN_FILL_PERCENT = 60 // below this the boxes look half empty
 const ROOT = fileURLToPath(new URL('..', import.meta.url))
 const OUT_DIR = fileURLToPath(new URL('../out', import.meta.url))
@@ -34,6 +36,26 @@ try {
   await page.goto(`${base}#/stampa/${onlyId ?? 'libro'}`)
   await Promise.race([page.waitForSelector('body[data-ready="1"]', { timeout: 30_000 }), crashed])
 
+  if (onlyId === KDP_COVER.id) await exportKdpCover(page)
+  else await exportPages(page)
+} catch (err) {
+  console.error(`✗ Esportazione fallita: ${err.message}`)
+  process.exitCode = 1
+} finally {
+  await browser?.close()
+  await server.close()
+}
+
+async function exportKdpCover(page) {
+  // KDP wants a JPEG cover; the same 2x scale as the pages gives 1600 x 2560.
+  await page.setViewportSize({ width: KDP_COVER.width, height: KDP_COVER.height })
+  await mkdir(OUT_DIR, { recursive: true })
+  const coverPath = `${OUT_DIR}/${KDP_COVER.id}.jpg`
+  await page.locator('.page').screenshot({ path: coverPath, type: 'jpeg', quality: 95 })
+  console.log(`✓ ${coverPath}`)
+}
+
+async function exportPages(page) {
   const pages = await page.$$eval('.page', (nodes) =>
     nodes.map((n) => {
       // Same rule as the studio's red banner: the body, or any block inside it, is taller than its box.
@@ -90,10 +112,4 @@ try {
     console.error(`✗ Contenuto oltre la pagina in: ${overflowing.join(', ')}`)
     process.exitCode = 1
   }
-} catch (err) {
-  console.error(`✗ Esportazione fallita: ${err.message}`)
-  process.exitCode = 1
-} finally {
-  await browser?.close()
-  await server.close()
 }
