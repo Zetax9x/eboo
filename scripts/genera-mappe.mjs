@@ -124,9 +124,10 @@ function extractCode(reply) {
   return (fenced ? fenced[1] : withoutThinking).trim() + '\n'
 }
 
-async function capture(command, args) {
+// Only npx needs a shell on Windows (it is a .cmd); node must run without one, or "C:\Program Files" breaks.
+async function capture(command, args, { shell = false } = {}) {
   try {
-    const { stdout, stderr } = await run(command, args, { cwd: ROOT, shell: process.platform === 'win32', maxBuffer: 20 * 1024 * 1024 })
+    const { stdout, stderr } = await run(command, args, { cwd: ROOT, shell, maxBuffer: 20 * 1024 * 1024 })
     return { ok: true, output: stdout + stderr }
   } catch (err) {
     return { ok: false, output: (err.stdout ?? '') + (err.stderr ?? '') + (err.message ?? '') }
@@ -141,7 +142,7 @@ async function verify(entry, code) {
   if (!code.includes('export default map')) problems.push('Manca `export default map` alla fine del file.')
   if (problems.length > 0) return problems
 
-  const tsc = await capture('npx', ['tsc', '-b', '--pretty', 'false'])
+  const tsc = await capture('npx', ['tsc', '-b', '--pretty', 'false'], { shell: process.platform === 'win32' })
   const typeErrors = tsc.output.split(/\r?\n/).filter((line) => line.includes(`${entry.id}.ts`))
   if (typeErrors.length > 0) return [`Errori TypeScript:\n${typeErrors.join('\n')}`]
 
