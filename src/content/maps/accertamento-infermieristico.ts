@@ -1,0 +1,116 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'accertamento-infermieristico',
+  chapter: 'fondamenti',
+  title: 'Accertamento infermieristico',
+  subtitle: 'Raccogliere, validare e organizzare i dati della persona',
+  icon: 'Target',
+  status: 'bozza',
+  sources: [
+    'Wilkinson J.M. — Processo infermieristico e pensiero critico, CEA',
+    'Gordon M. — Diagnosi infermieristiche. Processo e applicazioni, CEA',
+    'Craven R.F., Hirnle C.J. — Principi fondamentali dell’assistenza infermieristica, CEA',
+  ],
+  intro:
+    'Prima fase del processo di nursing: raccolta **sistematica e continua** dei dati sulla salute della persona, base di **diagnosi**, obiettivi e interventi. Un dato errato o mancante compromette tutto il piano.',
+  columns: 3,
+  blocks: [
+    {
+      title: 'Tipi di accertamento',
+      icon: 'Layers',
+      accent: 'blue',
+      items: [
+        '**Iniziale**: all’ingresso, completo, entro tempi definiti dal protocollo',
+        '**Focalizzato**: su un problema specifico (es. dolore, cute)',
+        '**Di emergenza**: rapido, priorità **ABCDE**',
+        '**Di rivalutazione**: a distanza, per confrontare con i dati di base',
+        'Accertamento **continuo** a ogni contatto con la persona',
+        'Prima di tutto la **sicurezza**: segni vitali, coscienza, dolore',
+        'Persona instabile: accertamento **mirato**, completo appena possibile',
+        'Adattare a età, lingua, deficit sensoriali e cognitivi',
+      ],
+    },
+    {
+      title: 'Tipi di dati',
+      icon: 'ClipboardList',
+      accent: 'purple',
+      items: [
+        '**Soggettivi** (sintomi): ciò che la persona riferisce, es. “ho nausea”',
+        '**Oggettivi** (segni): osservati o misurati, es. PA, ferita, edema',
+        '**Attuali** e **anamnestici** (storia pregressa)',
+        'Fonte **primaria**: la persona stessa',
+        'Fonti **secondarie**: familiari, cartella, équipe, referti',
+        'Persona non collaborante: **caregiver** o fiduciario come fonte',
+        'Dati **costanti** (gruppo sanguigno) e **variabili** (PA, peso)',
+        'Dati **psicosociali**, culturali, spirituali, abitativi',
+      ],
+    },
+    {
+      title: 'Metodi di raccolta',
+      icon: 'Stethoscope',
+      accent: 'green',
+      items: [
+        '**Intervista**: domande aperte, poi chiuse per precisare',
+        '**Osservazione** sistematica con tutti i sensi',
+        '**Esame fisico**: ispezione, palpazione, percussione, auscultazione',
+        '**Scale validate** (dolore, cadute, LdP, nutrizione)',
+        'Consultazione di documentazione ed esami',
+        'Esame fisico **testa-piedi** o **per apparati**',
+        'Ordine dell’addome: ispezione, **auscultazione**, poi percussione e palpazione',
+        'Ambiente **riservato**, tempo adeguato, eventuale mediatore culturale',
+      ],
+    },
+    {
+      title: 'Validare i dati',
+      icon: 'ClipboardCheck',
+      accent: 'orange',
+      checks: [
+        { text: 'Confrontare dati **soggettivi e oggettivi**', kind: 'ok' },
+        { text: '**Ripetere** la misurazione se il valore è inatteso', kind: 'ok' },
+        { text: 'Verificare con **più fonti** i dati discordanti', kind: 'ok' },
+        { text: 'Controllare la **taratura** degli strumenti', kind: 'ok' },
+        { text: 'Distinguere **dato** da **interpretazione**', kind: 'warn' },
+        { text: 'Attenzione a dati riferiti da terzi', kind: 'warn' },
+        { text: 'Evitare conclusioni affrettate e **pregiudizi**', kind: 'no' },
+        { text: 'Non “normalizzare” un valore anomalo', kind: 'no' },
+      ],
+    },
+    {
+      title: 'Organizzare i dati',
+      icon: 'Workflow',
+      accent: 'teal',
+      items: [
+        'Raggruppare per **modelli funzionali** di Gordon',
+        'Oppure per **bisogni** (Henderson) o per apparati',
+        'Individuare i **dati significativi** e gli scostamenti dalla norma',
+        'Riconoscere i **cluster** che orientano alla diagnosi',
+        'Separare problemi **infermieristici** e **collaborativi**',
+        'Stabilire subito le **priorità** (ABC, sicurezza)',
+        'Segnalare al medico i dati che richiedono intervento',
+      ],
+    },
+    {
+      title: 'Documentare',
+      icon: 'FileText',
+      accent: 'navy',
+      items: [
+        'Registrare in **cartella infermieristica**, subito',
+        'Dati **oggettivi**: valori, sedi, misure',
+        'Soggettivi tra **virgolette**, con le parole della persona',
+        'Data, ora e **firma** dell’infermiere',
+        'Termini **descrittivi**, non giudizi (“agitato” → cosa fa)',
+        'Niente abbreviazioni non standard',
+        'Riportare **scale** con punteggio e ora',
+        'Base per la **continuità** e valore medico-legale',
+      ],
+    },
+  ],
+  keyPoints: [
+    'Soggettivo = **sintomo** (riferito); oggettivo = **segno** (rilevato)',
+    'L’accertamento non finisce all’ingresso: è **continuo** per tutta la presa in carico',
+  ],
+}
+
+export default map

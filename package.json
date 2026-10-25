@@ -1,0 +1,29 @@
+{
+  "name": "mappe-visive-infermieristica",
+  "private": true,
+  "version": "0.1.0",
+  "type": "module",
+  "scripts": {
+    "dev": "vite --open",
+    "build": "tsc -b && vite build",
+    "typecheck": "tsc -b",
+    "test": "vitest run",
+    "export": "node scripts/export.mjs"
+  },
+  "dependencies": {
+    "@fontsource/barlow": "^5.3.0",
+    "@fontsource/barlow-condensed": "^5.3.0",
+    "lucide-react": "^1.61.0",
+    "react": "^18.3.1",
+    "react-dom": "^18.3.1"
+  },
+  "devDependencies": {
+    "@types/react": "^18.3.31",
+    "@types/react-dom": "^18.3.7",
+    "@vitejs/plugin-react": "^4.7.0",
+    "playwright": "^1.64.1",
+    "typescript": "5.7",
+    "vite": "^6.4.5",
+    "vitest": "^3.2.7"
+  }
+}

@@ -1,0 +1,122 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'pancreas-endocrino-e-insulina',
+  chapter: 'anatomia',
+  title: 'Pancreas endocrino e insulina',
+  subtitle: 'Isole di Langerhans e controllo della glicemia',
+  icon: 'Droplet',
+  status: 'bozza',
+  sources: [
+    'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
+    'ADA — Standards of Care in Diabetes 2025, sezione 6 (ipoglicemia)',
+    'Silverthorn D.U. — Fisiologia umana. Un approccio integrato, Pearson',
+  ],
+  intro:
+    'Il pancreas è una ghiandola **mista**: la parte esocrina (circa **98%**) produce succo pancreatico, le **isole di Langerhans** (1–2%) secernono gli ormoni che mantengono la **glicemia** stabile. Il cervello dipende quasi solo dal **glucosio**: per questo l’ipoglicemia è più pericolosa nell’immediato dell’iperglicemia.',
+  illustration: {
+    id: 'pancreas-endocrino-isola',
+    alt: 'Pancreas con isola di Langerhans ingrandita',
+    prompt: 'pancreas behind the stomach next to the duodenum, with a magnified islet of Langerhans showing clusters of different endocrine cells and capillaries',
+    icon: 'Microscope',
+  },
+  columns: 3,
+  blocks: [
+    {
+      title: 'Cellule delle isole',
+      icon: 'Microscope',
+      accent: 'purple',
+      items: [
+        '**Cellule β** (~70%): **insulina** e amilina',
+        '**Cellule α** (~20%): **glucagone**',
+        '**Cellule δ**: **somatostatina** (inibisce insulina e glucagone)',
+        '**Cellule PP**: polipeptide pancreatico',
+        'Ormoni versati nella **vena porta** → primo passaggio nel **fegato**',
+        'Pro-insulina → insulina + **peptide C** (indice di produzione endogena)',
+        'Pancreas **retroperitoneale**: testa nell’ansa duodenale, corpo e coda verso la milza',
+        'Isole più numerose nella **coda**',
+        'Nel **DM1** le cellule β sono distrutte da autoanticorpi',
+      ],
+    },
+    {
+      title: 'Insulina: azioni',
+      icon: 'ArrowDown',
+      accent: 'blue',
+      items: [
+        'Unico ormone **ipoglicemizzante**',
+        'Stimolo: **↑ glicemia** dopo il pasto',
+        'Fa entrare il glucosio nelle cellule (GLUT4 di **muscolo** e **adipe**)',
+        '↑ **glicogenosintesi**, lipogenesi, sintesi proteica',
+        '↓ gluconeogenesi, lipolisi, **chetogenesi**',
+        'Sposta il **K⁺** nelle cellule → rischio **ipokaliemia**',
+        'Secrezione **basale** continua + **picchi** ai pasti',
+        'Le **incretine** intestinali (GLP-1, GIP) ne aumentano il rilascio',
+        'Emivita breve: degradata da **fegato** e **rene**',
+      ],
+    },
+    {
+      title: 'Ormoni iperglicemizzanti',
+      icon: 'ArrowUp',
+      accent: 'orange',
+      items: [
+        '**Glucagone**: stimola glicogenolisi e gluconeogenesi epatiche',
+        'Agisce soprattutto sul **fegato**, a digiuno',
+        'Ormoni **controinsulari**: glucagone, **adrenalina**, **cortisolo**, **GH**',
+        'Stress, infezioni, chirurgia, corticosteroidi → **iperglicemia**',
+        'Senza insulina: lipolisi → **corpi chetonici** → chetoacidosi',
+        '**Fenomeno alba**: iperglicemia del primo mattino da GH e cortisolo',
+        '**Somatostatina**: frena entrambi gli ormoni pancreatici',
+      ],
+    },
+    {
+      title: 'Glicemia: valori',
+      icon: 'Gauge',
+      accent: 'green',
+      items: [
+        'Digiuno normale **70–99 mg/dL**',
+        '**Alterata glicemia a digiuno**: 100–125 mg/dL',
+        '**Diabete**: a digiuno ≥ **126 mg/dL** (confermata)',
+        'Glicemia casuale ≥ **200 mg/dL** con sintomi',
+        'HbA1c: media glicemica degli ultimi **2–3 mesi**',
+        'Conversione: mmol/L × **18** = mg/dL',
+        'Soglia renale: glicosuria oltre ~**180 mg/dL**',
+        'Dopo il pasto (2 h) normale **< 140 mg/dL**',
+      ],
+    },
+    {
+      title: 'Ipoglicemia',
+      icon: 'TriangleAlert',
+      accent: 'red',
+      items: [
+        'Livello 1: **< 70 mg/dL** · livello 2: **< 54 mg/dL**',
+        'Livello 3: grave, serve **aiuto** di altri',
+        'Adrenergici: **sudorazione**, tremori, tachicardia, fame',
+        'Neuroglicopenici: confusione, convulsioni, **coma**',
+        'Cosciente: **regola del 15** (15 g di zuccheri, ricontrollo dopo 15 min)',
+        'Incosciente: **glucagone** o glucosio EV, niente per bocca',
+        'I **β-bloccanti** possono mascherare i sintomi adrenergici',
+      ],
+    },
+    {
+      title: 'Insuline: tempi d’azione',
+      icon: 'Syringe',
+      accent: 'teal',
+      items: [
+        '**Rapide** (lispro, aspart, glulisina): inizio **10–15 min**, ai pasti',
+        '**Regolare** (umana): inizio ~**30 min**; unica usata **EV**',
+        '**Intermedia** (NPH): aspetto lattiginoso, va **rimiscelata**',
+        '**Basali** (glargine, degludec): durata **≥ 24 h**, senza picco',
+        'Sedi SC: addome, cosce, braccia, glutei; **ruotare** i punti',
+        'Flacone in uso a temperatura ambiente per ~**28 giorni**',
+        'Scorte in **frigorifero** (2–8 °C), mai congelare',
+      ],
+    },
+  ],
+  keyPoints: [
+    'Glicemia regolata da **insulina** (↓) contro glucagone, adrenalina, cortisolo e GH (↑)',
+    'Prima di ogni insulina ai pasti: **glicemia capillare** e certezza che il paziente **mangi**',
+  ],
+}
+
+export default map

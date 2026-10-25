@@ -1,0 +1,118 @@
+import type { ConceptMap } from '../../book/types'
+
+const map: ConceptMap = {
+  kind: 'concept',
+  id: 'calcolo-dei-dosaggi',
+  chapter: 'farmacologia',
+  title: 'Calcolo dei dosaggi',
+  subtitle: 'Formule, conversioni ed esempi svolti passo per passo',
+  icon: 'Calculator',
+  status: 'bozza',
+  sources: [
+    'Ministero della Salute — Raccomandazione n. 7 sugli errori in terapia farmacologica, 2008',
+    'Ministero della Salute — Raccomandazione n. 18 sugli errori da abbreviazioni, sigle, acronimi e simboli, 2018',
+    'Clayton B.D., Willihnganz M.J. — Farmacologia per infermieri, Edra',
+  ],
+  intro:
+    'Regola d’oro: **stessa unità di misura** per dose prescritta e dose disponibile, poi una **proporzione**. Ogni risultato va confrontato con una **stima mentale**: un numero “strano” è un errore finché non è verificato.',
+  columns: 3,
+  blocks: [
+    {
+      title: 'La formula base',
+      icon: 'Calculator',
+      accent: 'blue',
+      items: [
+        '**mL da prelevare = (Dose prescritta ÷ Dose disponibile) × Volume**',
+        'Dose disponibile = mg contenuti nel **volume** della fiala',
+        'Come proporzione: **disponibile : volume = prescritta : x**',
+        'Compresse: **n. cpr = dose prescritta ÷ dose di 1 cpr**',
+        'Dose a peso: **dose totale = mg/kg × kg**',
+        '**Concentrazione** (mg/mL) = mg totali ÷ mL totali',
+        'Es.: fiala 20 mg/2 mL → **10 mg/mL**; poi **mL = dose ÷ concentrazione**',
+        'Polvere da ricostituire: usare il **volume finale** indicato in scheda tecnica',
+        'Prima **converti**, poi calcola, poi **verifica** al contrario',
+      ],
+    },
+    {
+      title: 'Conversioni utili',
+      icon: 'Repeat',
+      accent: 'teal',
+      items: [
+        '**1 g = 1.000 mg**; **1 mg = 1.000 mcg**',
+        '**1 L = 1.000 mL**; 1 mL = 1 cm³',
+        'Soluzione **%** = grammi in **100 mL** (5% = 5 g/100 mL = **50 mg/mL**)',
+        '**1:1.000** = 1 g in 1.000 mL = **1 mg/mL**',
+        '**1:10.000** = **0,1 mg/mL**',
+        '**1 kg = 1.000 g**; dose pediatrica sempre sul **peso reale** aggiornato',
+        'Unità (**UI**) e mEq: non si convertono in mg, si calcolano con la stessa proporzione',
+        'Es. eparina **5.000 UI/mL**: prescritte 2.500 UI → **0,5 mL**',
+        'Per mL/h e gocce/min vedi la pagina sulla **velocità di infusione**',
+      ],
+    },
+    {
+      title: 'Esempio 1 · Fiala',
+      icon: 'Syringe',
+      accent: 'purple',
+      items: [
+        'Prescritti **30 mg** di furosemide EV',
+        'Disponibile: fiala **20 mg / 2 mL** (= 10 mg/mL)',
+        '(30 ÷ 20) × 2 = 1,5 × 2 = **3 mL**',
+        'Cioè **1 fiala e mezza**',
+        'Verifica: 3 mL × 10 mg/mL = **30 mg** ✓',
+        'Con conversione: prescritti **125 mcg**; fiala **0,5 mg / 2 mL**',
+        '125 mcg = **0,125 mg**',
+        '(0,125 ÷ 0,5) × 2 = 0,25 × 2 = **0,5 mL**',
+        'Verifica: 0,5 mL × 0,25 mg/mL = **0,125 mg** ✓',
+      ],
+    },
+    {
+      title: 'Esempio 2 · Dose a peso',
+      icon: 'Scale',
+      accent: 'orange',
+      items: [
+        'Prescritti **15 mg/kg** di paracetamolo EV; paziente **40 kg**',
+        'Dose totale: 15 × 40 = **600 mg**',
+        'Disponibile: flacone **10 mg/mL** (1 g/100 mL)',
+        '600 ÷ 10 = **60 mL**',
+        'Somministrare 60 mL ed **eliminare** i 40 mL in eccesso prima di collegare',
+        'Verifica: 60 mL × 10 = **600 mg** ✓',
+        'Stima mentale: 15 mg/kg × 40 kg è poco più di **mezzo grammo** → plausibile',
+        'Peso in libbre? **kg = lb ÷ 2,2**',
+      ],
+    },
+    {
+      title: 'Esempio 3 · % e compresse',
+      icon: 'Pill',
+      accent: 'green',
+      items: [
+        '**Lidocaina 2%** = 2 g/100 mL = **20 mg/mL**',
+        'In 5 mL: 5 × 20 = **100 mg**',
+        '**Glucosata 5%** da 500 mL: 5 g × 5 = **25 g** di glucosio',
+        'Prescritti **0,25 mg**; cpr da **0,125 mg**',
+        '0,25 ÷ 0,125 = **2 compresse**',
+        'Ricostituzione: flacone **1 g** + solvente → volume finale **10 mL** = **100 mg/mL**',
+        'Prescritti **750 mg**: 750 ÷ 100 = **7,5 mL**',
+        'Dividere compresse solo se **divisibili** (linea di frattura)',
+      ],
+    },
+    {
+      title: 'Regole di sicurezza',
+      icon: 'ShieldAlert',
+      accent: 'red',
+      checks: [
+        { text: 'Scrivere sempre lo **zero iniziale**: 0,5 mg', kind: 'ok' },
+        { text: 'Mai lo **zero finale**: 5 mg, non 5,0 (rischio 50)', kind: 'no' },
+        { text: 'Scrivere per esteso **microgrammi** e **unità**', kind: 'ok' },
+        { text: 'Più di **2–3 fiale** per una dose? **Ricontrolla**', kind: 'warn' },
+        { text: '**Doppio controllo** indipendente per farmaci ad alto rischio e pediatria', kind: 'alert' },
+        { text: 'Calcolatrice sì, ma **ragionamento** prima', kind: 'ok' },
+      ],
+    },
+  ],
+  keyPoints: [
+    'Unità diverse? **Converti prima** (es. g → mg), poi applica la formula',
+    'L’errore di un fattore **10** (virgola) o **1.000** (mg/mcg) è il più pericoloso',
+  ],
+}
+
+export default map
