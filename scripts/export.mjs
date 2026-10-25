@@ -65,7 +65,7 @@ try {
     const label = await handle.$eval('.page-foot__num', (el) => el.textContent ?? '').catch(() => '')
     const number = (label.trim() || String(i + 1)).padStart(3, '0')
     await handle.screenshot({ path: `${OUT_DIR}/pagine/${number}-${id}.png` })
-    console.log(`✓ ${number}-${id}.png`)
+    console.log(`✓ ${number}-${id}.png (riempimento ${pages[i].fill}%)`)
   }
 
   if (!onlyId) {

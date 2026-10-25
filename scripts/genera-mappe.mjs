@@ -150,14 +150,15 @@ async function capture(command, args, { shell = false } = {}) {
   }
 }
 
-/** Returns { problems, underfilled }: problems block the page, underfilled only asks for more content. */
+/** Returns { problems, underfilled, fill }: problems block the page, underfilled only asks for more content. */
 async function verify(entry, code) {
   const problems = await findProblems(entry, code)
-  if (problems.length > 0) return { problems, underfilled: null }
-  return { problems: [], underfilled: lastFillWarning }
+  if (problems.length > 0) return { problems, underfilled: null, fill: null }
+  return { problems: [], underfilled: lastFillWarning, fill: lastFill }
 }
 
 let lastFillWarning = null
+let lastFill = null
 
 async function findProblems(entry, code) {
   const problems = []
@@ -173,6 +174,7 @@ async function findProblems(entry, code) {
 
   const exported = await capture(process.execPath, ['scripts/export.mjs', entry.id])
   lastFillWarning = exported.output.match(/Poco piena: .*\((.*)\)/)?.[1] ?? null
+  lastFill = exported.output.match(/riempimento (\d+%)/)?.[1] ?? null
   if (exported.output.includes('oltre la pagina')) {
     problems.push('Il contenuto SFORA la pagina: accorcia i testi (item più brevi, meno item) mantenendo le informazioni essenziali.')
   } else if (!exported.ok || !exported.output.includes('✓')) {
@@ -190,9 +192,9 @@ async function writeOne(entry, todo) {
     const reply = await chat(messages)
     const code = extractCode(reply)
     await writeFile(file, code)
-    const { problems, underfilled } = await verify(entry, code)
+    const { problems, underfilled, fill } = await verify(entry, code)
     if (problems.length === 0 && (!underfilled || fillRetries >= MAX_FILL_RETRIES)) {
-      return { ok: true, attempts: attempt, underfilled }
+      return { ok: true, attempts: attempt, underfilled, fill }
     }
 
     const feedback = problems.length > 0
@@ -234,8 +236,8 @@ async function main() {
       const result = await writeOne(entry, todo)
       const seconds = Math.round((Date.now() - started) / 1000)
       if (result.ok) {
-        const note = result.underfilled ? ` — ancora poco piena (${result.underfilled})` : ''
-        console.log(`   ✓ ${entry.id} fatta in ${result.attempts} tentativi (${seconds} s)${note}`)
+        const note = result.underfilled ? ' ⚠ ancora poco piena' : ''
+        console.log(`   ✓ ${entry.id} fatta in ${result.attempts} tentativi (${seconds} s) — riempimento ${result.fill ?? '?'}${note}`)
       }
       else {
         failed.push(entry.id)
