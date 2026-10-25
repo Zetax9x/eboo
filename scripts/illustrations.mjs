@@ -35,7 +35,8 @@ const PROVIDERS = {
       const response = await fetch(`https://fal.run/${model}`, {
         method: 'POST',
         headers: { Authorization: `Key ${key}`, 'Content-Type': 'application/json' },
-        body: JSON.stringify({ prompt, num_images: 1, image_size: 'square' }),
+        // image_size for Flux-style models, aspect_ratio for Nano Banana: each model ignores the other one
+        body: JSON.stringify({ prompt, num_images: 1, image_size: 'square', aspect_ratio: '1:1' }),
       })
       if (!response.ok) throw new Error(`fal.ai ${response.status}: ${(await response.text()).slice(0, 300)}`)
       const data = await response.json()
