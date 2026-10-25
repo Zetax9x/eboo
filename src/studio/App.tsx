@@ -30,24 +30,34 @@ async function loadMapComponent(id: string) {
     const module = await import(`../content/maps/${id}`)
     console.log(`✅ Mappa caricata: ${id}`, module)
     
-    // Supporta sia default export che named export
+    // Vite può restituire il modulo in diversi formati
+    // Controlla prima l'export default
     if (module.default && typeof module.default === 'function') {
       console.log(`📌 Componente trovato: default export`)
       return module.default
     }
+    
     // Se non c'è default, cerca un componente con lo stesso nome del file
     const componentName = id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('') + 'Page'
     if (module[componentName] && typeof module[componentName] === 'function') {
       console.log(`📌 Componente trovato: ${componentName}`)
       return module[componentName]
     }
-    // Fallback: usa il primo export function trovato
+    
+    // Fallback: cerca qualsiasi export function
     for (const [key, value] of Object.entries(module)) {
       if (typeof value === 'function' && key !== 'default') {
         console.log(`🔍 Componente trovato: ${key}`)
         return value
       }
     }
+    
+    // Se tutto fallisce, controlla se il modulo stesso è un componente
+    if (typeof module === 'function') {
+      console.log(`📌 Componente trovato: modulo diretto`)
+      return module
+    }
+    
     console.warn(`⚠️ Nessun componente valido trovato per ${id}`, module)
     return null
   } catch (error) {
@@ -86,7 +96,7 @@ export function App() {
     let cancelled = false
     loadMapComponent(currentId).then((component) => {
       if (!cancelled) {
-        console.log(`📌 Componente impostato:`, component?.name || 'null')
+        console.log(`📌 Componente impostato:`, component?.name || 'null', typeof component)
         setMapComponent(component)
       }
     })
@@ -121,7 +131,7 @@ export function App() {
     if (currentId === 'avvertenze') return <InitialPages />
     
     // Se c'è un componente mappa caricato, usalo
-    if (MapComponent) {
+    if (MapComponent && typeof MapComponent === 'function') {
       console.log(`📄 Rendering componente: ${MapComponent.name || 'anonymous'}`)
       return <MapComponent />
     }
