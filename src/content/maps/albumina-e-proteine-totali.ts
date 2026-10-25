@@ -22,14 +22,14 @@ const map: LabMap = {
       unit: 'g/dL',
       accent: 'blue',
       low: {
-        name: 'Ipalbuminemia',
+        name: 'Ipopalbuminemia',
         signs: 'edema periferico, ascite, rallentamento della guarigione delle ferite, rischio di infezioni',
         causes: 'malnutrizione cronica, insufficienza epatica, sindrome nefrotica, perdita enterica (enteropatia), ustioni estese, stati infiammatori cronici',
       },
       high: {
         name: 'Iperalbuminemia',
         signs: 'raramente sintomatica; può indicare disidratazione relativa',
-        causes: 'disidratazione severa, uso di diuretici, emocoagulazione (rare)',
+        causes: 'disidratazione severa, uso di diuretici, terapia con albumina esogena',
       },
       nursing: 'Monitorare lo stato nutrizionale con MNA o MUST; valutare edemi e peso; collaborare con il dietista per piani alimentari iperproteici; sorvegliare la guarigione delle ferite.',
     },

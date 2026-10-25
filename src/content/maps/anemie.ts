@@ -9,9 +9,9 @@ const map: DiseaseMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'WHO — Haemoglobin concentration thresholds for anaemia (2011)',
-    'SIAI — Linee guida per la diagnosi e il trattamento delle anemie (ultima edizione)',
-    'Campbell-Walsh Urology / Harrison’s Principles of Internal Medicine (capitolo ematologia)',
+    'World Health Organization (WHO) – Haemoglobin concentration thresholds for anaemia, 2011',
+    'Società Italiana di Ematologia (SIE) – Linee guida per la diagnosi e il trattamento dell’anemia, 2021',
+    'Harrison’s Principles of Internal Medicine, 20th edition – Chapter 73 “Anemia”, 2018',
   ],
   definition:
     'Riduzione della concentrazione di **emoglobina** o dell’ematocrito al di sotto dei valori normali per età e sesso, con conseguente diminuzione della capacità di trasporto dell’ossigeno ai tessuti.',
@@ -69,7 +69,7 @@ const map: DiseaseMap = {
       icon: 'Pill',
       accent: 'green',
       items: [
-        '**Ferro orale**: solfato ferroso 200–300 mg/die (se tollerato)',
+        '**Ferro orale**: solfato ferroso 200 mg (equivalente a 65 mg di ferro elementare) al giorno, se tollerato',
         '**Ferro endovena**: se intolleranza o malassorbimento',
         '**Vitamina B12**: cianocobalamina IM 1000 µg (iniettabile)',
         '**Trasfusione**: Hb < 7 g/dL (o < 8 g/dL in cardiopatici)',
