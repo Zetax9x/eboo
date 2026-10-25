@@ -38,7 +38,7 @@ const map: OverviewMap = {
         'Unità funzionale: **corpuscolo renale** + **tubulo renale**',
         'Tubulo: prossimale, ansa di Henle, distale, dotto collettore',
         'Il **dotto collettore** riceve urina da più nefroni',
-        'I nefroni sono divisi in **corticali** e **giemerali**',
+        'I nefroni sono divisi in **corticali** e **giemmari**',
       ],
     },
     {

@@ -81,7 +81,7 @@ const map: OverviewMap = {
       bullets: [
         '**ADH** (vasopressina): rilasciata dall’**ipofisi posteriore**',
         'Stimoli ADH: **↓ PA**, **↑ osmolarità**, **dolore**, **ansia**',
-        'Effetto ADH: **vasocostrizione** + **riassorbimento H2O** (tubulo colletto)',
+        'Effetto ADH: **vasocostrizione** + **riassorbimento H2O** (tubulo collettore)',
         '**ANP/BNP**: rilasciati dagli **atri** in caso di distensione',
         'Effetto ANP: **vasodilatazione** + **diuresi** + **natriuresi**',
       ],

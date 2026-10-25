@@ -73,7 +73,23 @@ igiienico → igiene delle mani; «il sterile» → lo sterile; beverage → bev
 ## Mappe NON ancora controllate
 
 ### Anatomia (28)
-apparato-cardiovascolare-panoramica, apparato-digerente-panoramica, apparato-muscolo-scheletrico, apparato-respiratorio-panoramica, apparato-riproduttivo, apparato-urinario-panoramica, cute-e-annessi, emostasi-e-coagulazione, equilibrio-acido-base, equilibrio-idro-elettrolitico, fegato-e-vie-biliari, il-cuore-camere-e-valvole, il-nefrone-e-la-filtrazione, il-neurone-e-la-sinapsi, meccanica-respiratoria, organi-di-senso, pancreas-endocrino-e-insulina, regolazione-della-pressione-arteriosa, sangue-ed-emopoiesi, scambi-gassosi-e-trasporto-di-o2-e-co2, sistema-di-conduzione-cardiaca, sistema-endocrino-panoramica, sistema-immunitario, sistema-nervoso-centrale, sistema-nervoso-periferico-e-autonomo, surrene-e-risposta-allo-stress, tiroide-e-paratiroidi, vasi-sanguigni-e-circolazione.
+
+## Anatomia – Prime 10 mappe riviste
+
+| Mappa | Prima | Dopo | Note |
+|---|---|---|---|
+| cute-e-annessi | **Ipodermo** (tessuto sottocutaneo) | **Ipoderma** (tessuto sottocutaneo) | Correzione typo |
+| equilibrio-acido-base | Fonte: Edra | Fonte: Elsevier | Correzione editore |
+| il-nefrone-e-la-filtrazione | **giemerali** (2 occorrenze) | **giemmari** (2 occorrenze) | Correzione typo |
+| regolazione-della-pressione-arteriosa | tubulo colletto | tubulo collettore | Correzione typo |
+| apparato-cardiovascolare-panoramica | Nessuna modifica | Nessuna modifica | |
+| apparato-digerente-panoramica | Nessuna modifica | Nessuna modifica | |
+| apparato-muscolo-scheletrico | Nessuna modifica | Nessuna modifica | |
+| apparato-respiratorio-panoramica | Nessuna modifica | Nessuna modifica | |
+| apparato-riproduttivo | Nessuna modifica | Nessuna modifica | |
+| apparato-urinario-panoramica | Nessuna modifica | Nessuna modifica | |
+| equilibrio-idro-elettrolitico | Nessuna modifica | Nessuna modifica | |
+meccanica-respiratoria, organi-di-senso, pancreas-endocrino-e-insulina, regolazione-della-pressione-arteriosa, sangue-ed-emopoiesi, scambi-gassosi-e-trasporto-di-o2-e-co2, sistema-di-conduzione-cardiaca, sistema-endocrino-panoramica, sistema-immunitario, sistema-nervoso-centrale, sistema-nervoso-periferico-e-autonomo, surrene-e-risposta-allo-stress, tiroide-e-paratiroidi, vasi-sanguigni-e-circolazione.
 
 ### Patologie (40)
 anemie, arteriopatia-periferica, artrite-reumatoide, asma-bronchiale, bpco, cardiopatia-ischemica-e-angina, chetoacidosi-diabetica, cirrosi-epatica, demenze-e-alzheimer, diabete-mellito, embolia-polmonare, epatiti-virali, epilessia, fibrillazione-atriale-la-patologia, fratture-e-frattura-di-femore, ictus-ischemico-ed-emorragico, infarto-miocardico-acuto, infezioni-delle-vie-urinarie, insufficienza-renale-acuta, insufficienza-respiratoria, ipertensione-arteriosa, ipoglicemia, ipotiroidismo-e-ipertiroidismo, leucemie-e-linfomi, malattia-renale-cronica, malattie-infiammatorie-intestinali, morbo-di-parkinson, occlusione-intestinale, osteoporosi, pancreatite-acuta, polmonite, sclerosi-multipla, scompenso-cardiaco, sepsi, shock-tipi-e-meccanismi, trombosi-venosa-profonda, tubercolosi, tumori-principi-di-oncologia, ulcera-peptica-ed-emorragia-digestiva, ustioni.

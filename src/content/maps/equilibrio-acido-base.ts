@@ -10,7 +10,7 @@ const map: OverviewMap = {
   status: 'bozza',
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
-    'Guyton A.C., Hall J.E. — Fisiologia medica, Edra',
+    'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
     'Brunner & Suddarth — Infermieristica medico-chirurgica, CEA',
   ],
   blocks: [

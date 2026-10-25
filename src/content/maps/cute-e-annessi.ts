@@ -36,7 +36,7 @@ const map: OverviewMap = {
       bullets: [
         '**Epidermide**: strato esterno, 0,1–0,2 mm, si rinnova ogni 28–40 giorni',
         '**Derma**: tessuto connettivo, 1–2 mm, contiene vasi, nervi, ghiandole',
-        '**Ipodermo** (tessuto sottocutaneo): grasso, isolamento termico e meccanico',
+        '**Ipoderma** (tessuto sottocutaneo): grasso, isolamento termico e meccanico',
         'Spessore totale: **1–3 mm** a seconda della sede',
       ],
     },
