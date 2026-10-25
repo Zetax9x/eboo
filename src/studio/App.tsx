@@ -1,20 +1,50 @@
 import { useState, useMemo } from 'react'
-import { OUTLINE, getChapterNumber, getMapById } from '../book/outline'
+import { OUTLINE, getChapterNumber, getChapterTitle, slugify } from '../book/outline'
 import { InitialPages } from '../book/index'
 import { EcgStrip } from '../components/EcgStrip'
+
+// Helper per ottenere i dati della mappa corrente
+function getCurrentMapData(id: string) {
+  // Cerca in tutti i capitoli
+  for (const [chapterId, mapTitles] of Object.entries(OUTLINE)) {
+    const idx = mapTitles.findIndex(t => slugify(t) === id || t === id)
+    if (idx !== -1) {
+      return {
+        id: id,
+        title: mapTitles[idx],
+        status: 'bozza' as const,
+        chapter: getChapterNumber(chapterId as keyof typeof OUTLINE),
+        type: 'overview',
+        illustrationPrompt: '',
+        sources: [],
+      }
+    }
+  }
+  return null
+}
 
 export function App() {
   const [view, setView] = useState<'studio' | 'plan' | 'grid'>('studio')
   const [currentId, setCurrentId] = useState<string>('ritmo-sinuale')
   const [zoom, setZoom] = useState(1)
 
-  const currentMap = useMemo(() => getMapById(currentId), [currentId])
-  const chapterNumber = useMemo(() => getChapterNumber(currentId), [currentId])
+  const currentMap = useMemo(() => getCurrentMapData(currentId), [currentId])
+  const chapterNumber = useMemo(() => getChapterNumber(currentId as keyof typeof OUTLINE), [currentId])
 
   const progress = useMemo(() => {
-    const total = OUTLINE.length
-    const written = OUTLINE.filter(m => m.status === 'pronta').length
-    return Math.round((written / total) * 100)
+    let total = 0
+    let written = 0
+    for (const mapTitles of Object.values(OUTLINE)) {
+      total += mapTitles.length
+      // Per ora contiamo solo quelle che esistono come file
+      try {
+        require(`../content/maps/${mapTitles[0]}.ts`)
+        written++
+      } catch {
+        // non scritta
+      }
+    }
+    return Math.round((written / total) * 100) || 0
   }, [])
 
   function renderPage() {
@@ -29,7 +59,7 @@ export function App() {
           {currentMap?.title}
         </h1>
         <p style={{ fontFamily: 'Barlow, sans-serif', fontSize: '16px', color: '#6b7280', marginTop: '16px' }}>
-          Stato: <span className="chip chip--{currentMap?.status}">{currentMap?.status}</span>
+          Stato: <span className={`chip chip--${currentMap?.status}`}>{currentMap?.status}</span>
         </p>
         <div style={{ marginTop: '32px', padding: '24px', background: '#f9fafb', borderRadius: '8px' }}>
           <p style={{ margin: 0, color: '#6b7280' }}>
@@ -86,16 +116,21 @@ export function App() {
           <input placeholder="Cerca mappa..." />
         </div>
         <nav className="sidebar__scroll">
-          {OUTLINE.map((map, i) => (
-            <button
-              key={map.id}
-              className={`entry ${map.id === currentId ? 'is-current' : ''} ${map.status === 'pronta' ? 'is-written' : ''}`}
-              onClick={() => setCurrentId(map.id)}
-            >
-              <span className="entry__num">{String(i + 1).padStart(3, '0')}</span>
-              <span className="entry__title">{map.title}</span>
-              <span className={`dot dot--${map.status}`} />
-            </button>
+          {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
+            mapTitles.map((title, i) => {
+              const id = slugify(title)
+              return (
+                <button
+                  key={id}
+                  className={`entry ${id === currentId ? 'is-current' : ''} ${false ? 'is-written' : ''}`}
+                  onClick={() => setCurrentId(id)}
+                >
+                  <span className="entry__num">{String(i + 1).padStart(3, '0')}</span>
+                  <span className="entry__title">{title}</span>
+                  <span className={`dot dot--bozza`} />
+                </button>
+              )
+            })
           ))}
         </nav>
       </aside>
@@ -107,16 +142,8 @@ export function App() {
             <h1>Piano di Lavoro</h1>
             <div className="plan__stats">
               <div className="stat">
-                <strong>{OUTLINE.length}</strong>
+                <strong>{Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)}</strong>
                 <span>Totale mappe</span>
-              </div>
-              <div className="stat">
-                <strong>{OUTLINE.filter(m => m.status === 'pronta').length}</strong>
-                <span>Pronte</span>
-              </div>
-              <div className="stat">
-                <strong>{OUTLINE.filter(m => m.status === 'bozza').length}</strong>
-                <span>In bozza</span>
               </div>
               <div className="stat">
                 <strong>{progress}%</strong>
@@ -126,19 +153,24 @@ export function App() {
           </div>
         ) : view === 'grid' ? (
           <div className="grid-view">
-            {OUTLINE.map((map, i) => (
-              <button key={map.id} className="thumb" onClick={() => setCurrentId(map.id)}>
-                <div className="thumb__frame" style={{ width: 170, height: 226 }}>
-                  <div style={{ padding: '16px', background: '#fff' }}>
-                    <h3 style={{ margin: 0, fontSize: '14px', fontFamily: 'Barlow Condensed' }}>{map.title}</h3>
-                    <span className={`chip chip--${map.status}`} style={{ marginTop: '8px' }}>{map.status}</span>
-                  </div>
-                </div>
-                <span className="thumb__label">
-                  <span>{String(i + 1).padStart(3, '0')}</span>
-                  {map.title}
-                </span>
-              </button>
+            {Object.entries(OUTLINE).map(([chapterId, mapTitles]) => (
+              mapTitles.map((title, i) => {
+                const id = slugify(title)
+                return (
+                  <button key={id} className="thumb" onClick={() => setCurrentId(id)}>
+                    <div className="thumb__frame" style={{ width: 170, height: 226 }}>
+                      <div style={{ padding: '16px', background: '#fff' }}>
+                        <h3 style={{ margin: 0, fontSize: '14px', fontFamily: 'Barlow Condensed' }}>{title}</h3>
+                        <span className="chip chip--bozza" style={{ marginTop: '8px' }}>bozza</span>
+                      </div>
+                    </div>
+                    <span className="thumb__label">
+                      <span>{String(i + 1).padStart(3, '0')}</span>
+                      {title}
+                    </span>
+                  </button>
+                )
+              })
             ))}
           </div>
         ) : (
@@ -152,16 +184,30 @@ export function App() {
               <button 
                 disabled={!chapterNumber || chapterNumber === 1}
                 onClick={() => {
-                  const prev = OUTLINE.findLast(m => m.chapter === chapterNumber - 1)
-                  if (prev) setCurrentId(prev.id)
+                  // Trova mappa precedente nello stesso capitolo
+                  const currentChapterId = Object.keys(OUTLINE).find(k => getChapterNumber(k as keyof typeof OUTLINE) === chapterNumber)
+                  if (currentChapterId) {
+                    const mapTitles = OUTLINE[currentChapterId as keyof typeof OUTLINE]
+                    const idx = mapTitles.findIndex(t => slugify(t) === currentId)
+                    if (idx > 0) {
+                      setCurrentId(slugify(mapTitles[idx - 1]))
+                    }
+                  }
                 }}
               >← Precedente</button>
               <span>{currentMap?.title}</span>
               <button 
-                disabled={chapterNumber === OUTLINE.length}
+                disabled={chapterNumber === Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)}
                 onClick={() => {
-                  const next = OUTLINE.find(m => m.chapter === chapterNumber + 1)
-                  if (next) setCurrentId(next.id)
+                  // Trova mappa successiva nello stesso capitolo
+                  const currentChapterId = Object.keys(OUTLINE).find(k => getChapterNumber(k as keyof typeof OUTLINE) === chapterNumber)
+                  if (currentChapterId) {
+                    const mapTitles = OUTLINE[currentChapterId as keyof typeof OUTLINE]
+                    const idx = mapTitles.findIndex(t => slugify(t) === currentId)
+                    if (idx < mapTitles.length - 1) {
+                      setCurrentId(slugify(mapTitles[idx + 1]))
+                    }
+                  }
                 }}
               >Successivo →</button>
             </nav>
