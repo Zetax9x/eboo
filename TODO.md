@@ -15,6 +15,8 @@
 - [x] Copertina (`CoverPage`)
 - [x] Frontespizio (`TitlePage`) — ISBN, editore, copyright completi
 - [x] Avvertenze / disclaimer medico (`WarningsPage`) — scritto in autonomia
+- [x] Template base per mappe (5 tipi: overview, disease, procedure, lab, ecg)
+- [x] Prima mappa pilota (ritmo-sinuale - ECG)
 
 ## 🚧 In corso / Prossimi passi
 
@@ -31,7 +33,8 @@
 - [ ] Indice completo (250 voci) — generabile automaticamente dall'outline
 
 ### 3. Scrittura mappe (250 totali)
-- [ ] Scrivere mappa per ogni modello: overview, disease, procedure, lab, ecg
+- [x] Prima mappa pilota scritta e testata
+- [ ] Scrivere altre 4 mappe pilota (una per tipo: overview, disease, procedure, lab)
 - [ ] Verificare fonti e valori clinici (non inventare soglie)
 - [ ] Aggiungere `sources` verificabili a ogni mappa
 - [ ] Status iniziale: `bozza` → revisionata da infermiere → `pronta`
@@ -53,9 +56,9 @@
 ## 🎯 Prossimo task immediato
 
 1. **Chiave API** — impostare `FAL_KEY` o `OPENAI_API_KEY` in `.env`
-2. **Template per mappe** — creare struttura base per ogni tipo di mappa
-3. **Scrittura prima mappa pilota** — seguire template overview, verificare fonti
+2. **Scrittura altre 4 mappe pilota** — completare un esempio per ogni tipo di template
+3. **Test export** — verificare che `npm run export -- ritmo-sinuale` generi PNG corretto
 
 ---
 
-*Ultima modifica: pagine iniziali complete (copertina, frontespizio, avvertenze), interfaccia studio funzionante, outline completo 250 mappe, generatore AI implementato*
+*Ultima modifica: prima mappa pilota creata (ritmo-sinuale), template base completati, pagine iniziali complete, interfaccia studio funzionante, outline completo 250 mappe, generatore AI implementato*
