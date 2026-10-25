@@ -10,8 +10,10 @@
 //   OLLAMA_MODEL=<model> node scripts/genera-mappe.mjs                  all missing maps
 //   OLLAMA_MODEL=<model> node scripts/genera-mappe.mjs --capitolo ecg   one chapter
 //   OLLAMA_MODEL=<model> node scripts/genera-mappe.mjs --id bpco        one map
-//   add --limite 5 to stop after 5 maps
-// Env: OLLAMA_HOST (default http://localhost:11434), OLLAMA_CTX (default 32768)
+//   add --limite 5 to stop after 5 maps, --paralleli 3 to write 3 maps at a time
+//   (the server needs OLLAMA_NUM_PARALLEL >= that number)
+// Env: OLLAMA_HOST (default http://localhost:11434), OLLAMA_CTX (default 32768),
+//      OLLAMA_THINK=true to let reasoning models think before answering (slower; off by default)
 
 import { mkdir, readFile, rm, writeFile } from 'node:fs/promises'
 import { existsSync } from 'node:fs'
@@ -27,6 +29,7 @@ const REJECTED_DIR = path.join(ROOT, 'out/rifiutate')
 const HOST = process.env.OLLAMA_HOST ?? 'http://localhost:11434'
 const MODEL = process.env.OLLAMA_MODEL
 const CONTEXT_TOKENS = Number(process.env.OLLAMA_CTX ?? 32768)
+const THINK = process.env.OLLAMA_THINK === 'true'
 const MAX_TRIES = 4
 const REQUEST_TIMEOUT_MS = 30 * 60 * 1000
 
@@ -105,14 +108,24 @@ async function buildPrompt(entry, todo) {
   ]
 }
 
+let sendThinkFlag = true // dropped automatically if the model rejects the `think` parameter
+
 async function chat(messages) {
+  const body = { model: MODEL, messages, stream: false, options: { num_ctx: CONTEXT_TOKENS, temperature: 0.3 } }
   const response = await fetch(`${HOST}/api/chat`, {
     method: 'POST',
     headers: { 'Content-Type': 'application/json' },
-    body: JSON.stringify({ model: MODEL, messages, stream: false, options: { num_ctx: CONTEXT_TOKENS, temperature: 0.3 } }),
+    body: JSON.stringify(sendThinkFlag ? { ...body, think: THINK } : body),
     signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
   })
-  if (!response.ok) throw new Error(`Ollama ha risposto ${response.status}: ${await response.text()}`)
+  if (!response.ok) {
+    const text = await response.text()
+    if (sendThinkFlag && /think/i.test(text)) {
+      sendThinkFlag = false
+      return chat(messages)
+    }
+    throw new Error(`Ollama ha risposto ${response.status}: ${text}`)
+  }
   const data = await response.json()
   return data.message?.content ?? ''
 }
@@ -142,7 +155,8 @@ async function verify(entry, code) {
   if (!code.includes('export default map')) problems.push('Manca `export default map` alla fine del file.')
   if (problems.length > 0) return problems
 
-  const tsc = await capture('npx', ['tsc', '-b', '--pretty', 'false'], { shell: process.platform === 'win32' })
+  // Plain --noEmit (not -b): writes no build cache, so parallel workers don't collide.
+  const tsc = await capture('npx', ['tsc', '--noEmit', '-p', 'tsconfig.json', '--pretty', 'false'], { shell: process.platform === 'win32' })
   const typeErrors = tsc.output.split(/\r?\n/).filter((line) => line.includes(`${entry.id}.ts`))
   if (typeErrors.length > 0) return [`Errori TypeScript:\n${typeErrors.join('\n')}`]
 
@@ -166,7 +180,7 @@ async function writeOne(entry, todo) {
     const problems = await verify(entry, code)
     if (problems.length === 0) return { ok: true, attempts: attempt }
 
-    console.log(`   tentativo ${attempt}: ${problems[0].split('\n')[0]}`)
+    console.log(`   ${entry.id} tentativo ${attempt}: ${problems[0].split('\n')[0]}`)
     messages.push({ role: 'assistant', content: reply })
     messages.push({ role: 'user', content: `Il file ha questi problemi:\n${problems.join('\n')}\nCorreggi e rispondi di nuovo con il file COMPLETO.` })
   }
@@ -188,25 +202,36 @@ async function main() {
     .filter((t) => !args.id || t.id === args.id)
     .slice(0, limit)
 
-  console.log(`Modello ${MODEL} su ${HOST} — ${queue.length} mappe da scrivere`)
+  const workers = Math.max(1, Number(args.paralleli ?? 1))
+  console.log(`Modello ${MODEL} su ${HOST} — ${queue.length} mappe da scrivere, ${workers} alla volta, ragionamento ${THINK ? 'attivo' : 'spento'}`)
   const failed = []
-  for (const [i, entry] of queue.entries()) {
+  let next = 0
+
+  const processEntry = async (entry, position) => {
     const started = Date.now()
-    console.log(`[${i + 1}/${queue.length}] ${entry.id}`)
+    console.log(`[${position}/${queue.length}] ${entry.id} — inizio`)
     try {
       const result = await writeOne(entry, todo)
       const seconds = Math.round((Date.now() - started) / 1000)
-      if (result.ok) console.log(`   ✓ fatta in ${result.attempts} tentativi (${seconds} s)`)
+      if (result.ok) console.log(`   ✓ ${entry.id} fatta in ${result.attempts} tentativi (${seconds} s)`)
       else {
         failed.push(entry.id)
-        console.log(`   ✗ scartata dopo ${result.attempts} tentativi → out/rifiutate/${entry.id}.ts`)
+        console.log(`   ✗ ${entry.id} scartata dopo ${result.attempts} tentativi → out/rifiutate/${entry.id}.ts`)
       }
     } catch (err) {
       failed.push(entry.id)
       await rm(path.join(MAPS_DIR, `${entry.id}.ts`), { force: true })
-      console.log(`   ✗ errore: ${err.message}`)
+      console.log(`   ✗ ${entry.id} errore: ${err.message}`)
     }
   }
+
+  const worker = async () => {
+    while (next < queue.length) {
+      const index = next++
+      await processEntry(queue[index], index + 1)
+    }
+  }
+  await Promise.all(Array.from({ length: workers }, worker))
   console.log(`\nFatte ${queue.length - failed.length}/${queue.length}.${failed.length ? ` Da rifare: ${failed.join(', ')}` : ''}`)
 }
 
