@@ -53,7 +53,8 @@ async function loadMapComponent(id: string) {
 // Controlla se una mappa è stata scritta (file .tsx esiste)
 async function checkMapExists(id: string): Promise<boolean> {
   try {
-    await import(`../content/maps/${id}`)
+    // Prova a importare il file con estensione .tsx esplicita
+    await import(`../content/maps/${id}.tsx`)
     return true
   } catch {
     return false
