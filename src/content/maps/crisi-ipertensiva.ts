@@ -9,8 +9,8 @@ const map: AlgorithmMap = {
   icon: 'Gauge',
   status: 'bozza',
   sources: [
-    'ESC/ESH Guidelines for the management of arterial hypertension (2023)',
-    'SIC — Società Italiana di Cardiologia, Linee guida sulla crisi ipertensiva',
+    'ESH 2023 — Guidelines for the management of arterial hypertension',
+    'ESC 2024 — Guidelines for the management of elevated blood pressure and hypertension',
     'AHA/ACC — Hypertension in Adults: A Guideline (2017, aggiornato)',
   ],
   steps: [
@@ -22,7 +22,7 @@ const map: AlgorithmMap = {
     {
       kind: 'action',
       title: 'Valutazione immediata',
-      text: 'Misurare la PA in **entrambi gli arti** e verificare la tecnica di misurazione',
+      text: 'Misurare la PA a **entrambe le braccia** e verificare la tecnica di misurazione',
     },
     {
       kind: 'decision',
@@ -30,22 +30,22 @@ const map: AlgorithmMap = {
       branches: [
         {
           label: 'Sì',
-          text: '**Crisi ipertensiva con danno d’organo** (urgenza ipertensiva)',
+          text: '**Crisi ipertensiva con danno d’organo** (emergenza ipertensiva)',
         },
         {
           label: 'No',
-          text: '**Crisi ipertensiva senza danno d’organo** (emergenza ipertensiva)',
+          text: '**Crisi ipertensiva senza danno d’organo** (urgenza ipertensiva)',
         },
       ],
     },
     {
       kind: 'alert',
-      title: 'Urgenza ipertensiva: attivazione immediata',
+      title: 'Emergenza ipertensiva: attivazione immediata',
       text: 'Chiama il **112/118**, monitora continuamente, prepara la terapia IV',
     },
     {
       kind: 'action',
-      title: 'Emergenza ipertensiva: gestione ambulatoriale',
+      title: 'Urgenza ipertensiva: gestione ambulatoriale',
       text: 'Riposo, rivalutazione PA dopo **30–60 min**, educazione al paziente',
     },
     {
@@ -56,7 +56,7 @@ const map: AlgorithmMap = {
   ],
   side: [
     {
-      title: 'Segni di danno d’organo (Urgenza)',
+      title: 'Segni di danno d’organo (emergenza)',
       icon: 'ShieldAlert',
       accent: 'red',
       items: [
@@ -69,20 +69,20 @@ const map: AlgorithmMap = {
       ],
     },
     {
-      title: 'Terapia IV (Urgenza)',
+      title: 'Terapia IV (emergenza)',
       icon: 'Syringe',
       accent: 'blue',
       items: [
         '**Nicardipina** IV: 5–15 mg/h, titolabile',
         '**Labetalolo** IV: 20 mg bolo, poi 1–2 mg/min',
         '**Nitroglicerina** IV: 5–100 µg/min, per edema polmonare',
-        '**Clonidina** IV: 0,5–1,5 mg, per encefalopatia',
+        '**Urapidil** IV: 12,5–25 mg in bolo, poi infusione',
         '**Obiettivo**: ridurre PA del **20–25%** in 1–2 ore',
         'Evitare cali rapidi > **25%** in 24 ore (rischio ischemia)',
       ],
     },
     {
-      title: 'Gestione ambulatoriale (Emergenza)',
+      title: 'Gestione ambulatoriale (urgenza)',
       icon: 'Stethoscope',
       accent: 'green',
       items: [
@@ -96,9 +96,9 @@ const map: AlgorithmMap = {
     },
   ],
   keyPoints: [
-    'Distinzione cruciale: **urgenza** (danno d’organo) vs **emergenza** (asintomatica)',
-    'Nell’urgenza: **terapia IV** e riduzione PA graduale (**20–25%** in 1–2 ore)',
-    'Nell’emergenza: **terapia orale** e monitoraggio, evitare panico',
+    'Distinzione cruciale: **emergenza** (danno d’organo) vs **urgenza** (senza danno)',
+    'Nell’emergenza: **terapia IV** e riduzione PA graduale (**20–25%** in 1–2 ore)',
+    'Nell’urgenza: **terapia orale** e monitoraggio, evitare panico',
   ],
 }
 

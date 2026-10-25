@@ -9,7 +9,7 @@ const map: ConceptMap = {
   icon: 'ClipboardCheck',
   status: 'bozza',
   sources: [
-    'AHA — Basic Life Support and Cardiopulmonary Resuscitation (2020 Guidelines)',
+    'Hampton J. — ECG facile, Elsevier',
     'ESC 2024 — Guidelines for the management of atrial fibrillation',
     'Kligfield P. et al. — Recommendations for the standardization and interpretation of the electrocardiogram, Part I, Heart Rhythm (2007)',
   ],
@@ -55,9 +55,9 @@ const map: ConceptMap = {
       accent: 'purple',
       items: [
         'Valutare QRS in **DI** e **aVF**',
-        'DI positivo + aVF positivo → asse normale (-30° a +90°)',
-        'DI positivo + aVF negativo → deviazione asse sinistra',
-        'DI negativo + aVF positivo → deviazione asse destra',
+        'DI + e aVF + → asse **normale** (0° / +90°)',
+        'DI + e aVF −: guardare DII; se DII − → **deviazione sinistra**',
+        'DI − e aVF + → **deviazione destra**',
       ],
     },
     {
@@ -66,9 +66,9 @@ const map: ConceptMap = {
       accent: 'pink',
       items: [
         'Durata: < **0,12 s** (3 piccoli quadretti)',
-        'Ampiezza: < **2,5 mm** in V1',
-        'P biphasica in V1: possibile ipertrofia atriale sinistra',
-        'P alta e appuntita: possibile ipertrofia atriale destra',
+        'Ampiezza: < **2,5 mm** in DII',
+        'P bifasica in V1 (parte negativa ampia): ingrandimento atriale sinistro',
+        'P alta e appuntita in DII: ingrandimento atriale destro',
       ],
     },
     {
@@ -90,7 +90,7 @@ const map: ConceptMap = {
         'Durata: < **0,12 s** (3 piccoli quadretti)',
         'QRS largo: blocco di branca o origine ventricolare',
         'Onde Q patologiche: > 25% ampiezza R o > 0,04 s',
-        'Delta wave: pre-eccitazione',
+        'Onda delta: pre-eccitazione',
       ],
     },
     {

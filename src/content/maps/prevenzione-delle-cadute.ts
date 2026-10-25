@@ -9,9 +9,9 @@ const map: ConceptMap = {
   icon: 'ShieldAlert',
   status: 'bozza',
   sources: [
-    'Ministero della Salute — Raccomandazioni per la prevenzione delle cadute in ospedale (2019)',
-    'NICE — Falls in older people: assessing risk and prevention (NG97, 2013, updated 2024)',
-    'AIFA — Farmaci ad alto rischio e gestione del rischio di caduta',
+    'Ministero della Salute — Raccomandazione n. 13 per la prevenzione e la gestione della caduta del paziente (2011)',
+    'NICE — Falls: assessment and prevention in older people and in people 50 and over at higher risk (NG249, 2025)',
+    'Montero-Odasso M. et al. — World guidelines for falls prevention and management for older adults, Age Ageing 2022',
   ],
   intro:
     'La **caduta** è un evento imprevisto che porta la persona a terra o su un livello inferiore. La prevenzione è un **obbligo deontologico** e un indicatore di qualità assistenziale.',
@@ -48,7 +48,7 @@ const map: ConceptMap = {
         'Valutare **funzione cognitiva** e capacità di giudizio',
         'Rivedere la **terapia farmacologica** in corso',
         'Documentare il **punteggio** e il livello di rischio (basso/medio/alto)',
-        'Aggiornare la valutazione **quotidianamente** o dopo eventi sentinella',
+        'Aggiornare la valutazione **quotidianamente** o dopo una caduta',
       ],
     },
     {
@@ -89,7 +89,7 @@ const map: ConceptMap = {
         '**Valutare** segni vitali, livello di coscienza, dolore, deformità',
         '**Proteggere** la scena e altri pazienti',
         '**Documentare** l’evento: ora, luogo, circostanze, lesioni, interventi',
-        '**Non colpevolizzare** il paziente: la caduta è un evento sentinella',
+        '**Non colpevolizzare** il paziente; morte o grave danno da caduta = **evento sentinella**',
         '**Rivedere** il piano di prevenzione e gli interventi effettuati',
       ],
     },
@@ -101,7 +101,7 @@ const map: ConceptMap = {
         'Registrare **data, ora, luogo** della caduta',
         'Descrivere **circostanze** e **lesioni** riportate',
         'Indicare **interventi** immediati e **avvisi** dati',
-        'Compilare il **modulo di evento sentinella**',
+        'Compilare la **scheda di segnalazione** (incident reporting)',
         'Monitorare **indicatori**: cadute per 1000 giornate di degenza',
         'Partecipare alle **riunioni di qualità** e analisi degli eventi',
         'Aggiornare il **piano di assistenza** dopo ogni caduta',
@@ -111,7 +111,7 @@ const map: ConceptMap = {
   keyPoints: [
     'La prevenzione è **multifattoriale**: ambiente, farmaci, mobilità, educazione',
     'Valutare il rischio **all’ingresso** e **quotidianamente**',
-    'La caduta è un **evento sentinella**: documentare, analizzare, migliorare',
+    'Ogni caduta va **segnalata** e analizzata; morte o grave danno = **evento sentinella**',
   ],
 }
 

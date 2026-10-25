@@ -9,9 +9,9 @@ const map: ConceptMap = {
   icon: 'Utensils',
   status: 'bozza',
   sources: [
-    'LARN — Livelli di Assunzione di Riferimento di Nutrienti ed energia per la popolazione italiana (SINPEA)',
-    'OMS — Linee guida globali sull’alimentazione e l’attività fisica',
-    'Codice Deontologico dell’Infermiere (FNOPI, 2014)',
+    'LARN — Livelli di Assunzione di Riferimento di Nutrienti ed energia per la popolazione italiana (SINU, IV revisione 2014)',
+    'OMS — Strategia globale su alimentazione, attività fisica e salute (2004)',
+    'Codice Deontologico delle Professioni Infermieristiche (FNOPI, 2019)',
   ],
   intro:
     'L’alimentazione e l’idratazione sono **bisogni primari** (Maslow) essenziali per la vita. L’infermiere valuta lo stato nutrizionale, assiste l’assunzione e previene complicanze come disidratazione o malnutrizione.',
@@ -38,7 +38,7 @@ const map: ConceptMap = {
       items: [
         'L’acqua è il **principale costituente** del corpo umano (~60%)',
         'Funzioni: **trasporto** di nutrienti, termoregolazione, lubrificazione',
-        'Bilancio idrico: **introito** (beverage, alimenti, metabolismo) = **escreto** (urina, sudore, feci, respiro)',
+        'Bilancio idrico: **introito** (bevande, alimenti, metabolismo) = **escreto** (urina, sudore, feci, respiro)',
         'Fabbisogno medio adulto: **1,5–2 L/die** (variabile per peso, età, attività)',
         'Disidratazione: **iponatriemia** o **ipernatriemia** a seconda del tipo di perdita',
         'Segni di disidratazione: **turgore cutaneo** ridotto, mucose secche, oliguria',
@@ -67,7 +67,7 @@ const map: ConceptMap = {
         'Assistere l’assunzione: **posizione** corretta (semi-seduta), ambiente tranquillo',
         'Adattare la **consistenza** degli alimenti (semiliquidi, liquidi) in caso di disfagia',
         'Somministrare **fluidi** per via orale, enterale o parenterale secondo prescrizione',
-        'Monitorare **toleranza** e **reazioni** (nausea, vomito, diarrea)',
+        'Monitorare **tolleranza** e **reazioni** (nausea, vomito, diarrea)',
         'Educazione terapeutica: **dieta** personalizzata, importanza dell’idratazione',
         'Coinvolgere **familiari** e **caregiver** nella gestione quotidiana',
         'Documentare **introito** e **escreto** nella cartella infermieristica',

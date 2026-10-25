@@ -10,8 +10,8 @@ const map: TableMap = {
   status: 'bozza',
   sources: [
     'AIFA — Raccomandazioni per la prevenzione degli errori di somministrazione di farmaci ad alto rischio',
-    'SIAARTI — Linee guida per la terapia sostitutiva renale e gestione degli elettroliti',
-    'Ministero della Salute — Raccomandazioni per la sicurezza del paziente (2023)',
+    'Ministero della Salute — Raccomandazione n. 1 sul corretto utilizzo delle soluzioni concentrate di cloruro di potassio (KCl), 2008',
+    'ERC Guidelines 2021 — Special circumstances: iperkaliemia',
   ],
   intro: 'Il cloruro di potassio (KCl) è un **farmaco ad alto rischio** (High Alert). Le concentrazioni elevate possono causare **arresto cardiaco** se infuse per via endovenosa centrale o periferica senza adeguata diluizione e monitoraggio.',
   tableTitle: 'Concentrazioni massime ammesse per via di somministrazione',
@@ -19,11 +19,11 @@ const map: TableMap = {
   columns: ['Via di somministrazione', 'Concentrazione massima', 'Velocità massima', 'Note'],
   widths: [1.5, 1.2, 1.2, 2],
   rows: [
-    ['Endovenosa periferica (CVP)', '**40 mEq/L**', '**10 mEq/h**', 'Solo in pazienti con monitoraggio continuo; evitare se possibile'],
-    ['Endovenosa centrale (CVC)', '**40 mEq/L**', '**20 mEq/h**', 'Richiede catetere centrale; mai bolus IV'],
+    ['Endovenosa periferica (CVP)', '**40 mEq/L**', '**10 mEq/h**', 'Sempre diluito e in pompa; oltre: flebite e dolore'],
+    ['Endovenosa centrale (CVC)', 'Più alta solo in area critica (protocollo)', '**20 mEq/h**', 'Con ECG continuo; mai in bolo EV'],
     ['Endovenosa periferica (bassa concentrazione)', '**20 mEq/L**', '**10 mEq/h**', 'Preferita in terapia ambulatoriale o degenza'],
-    ['Enterale (sondino)', '**200 mEq/L**', 'Secondo prescrizione', 'Diluire in soluzione isotonica; mai puro'],
-    ['Orale (compresse)', '**20 mEq** per compressa', 'Con pasti', 'Ridurre rischio di irritazione gastrica'],
+    ['Enterale (sondino)', 'Preparazione orale diluita in acqua', 'Secondo prescrizione', 'Mai fiale EV per sonda'],
+    ['Orale (compresse)', 'Variabile (es. 600 mg = **8 mEq**)', 'Con pasti', 'Ridurre rischio di irritazione gastrica'],
   ],
   notes: [
     {
@@ -31,10 +31,10 @@ const map: TableMap = {
       icon: 'ShieldAlert',
       accent: 'red',
       items: [
-        '**Mai** infondere KCl puro o concentrato > 40 mEq/L per via endovenosa',
-        'Verificare **doppia firma** per concentrazioni > 20 mEq/L',
+        '**Mai** KCl concentrato non diluito né in bolo; > 40 mEq/L **mai** in periferica',
+        'Fiale concentrate **solo** in aree autorizzate, separate ed etichettate (Racc. n. 1)',
         'Usare **pompa a siringa** o infusore per controllare la velocità',
-        'Monitorare **ECG continuo** durante l’infusione',
+        '**ECG continuo** se velocità > 10 mEq/h o via centrale',
         'Controllare **funzione renale** e livelli sierici prima e durante la terapia',
       ],
     },
@@ -44,9 +44,9 @@ const map: TableMap = {
       accent: 'orange',
       items: [
         'Parestesie, debolezza muscolare, **paralisi ascendente**',
-        'ECG: **onde P larghe**, QRS allargato, **aritmie ventricolari**',
+        'ECG: **onde T alte e appuntite**, P appiattita, QRS allargato, **aritmie ventricolari**',
         'K⁺ sierico **> 5,5 mEq/L**: allarme; **> 6,5 mEq/L**: emergenza',
-        'Trattamento acuto: **glucagone + insulina**, bicarbonato, calcio gluconato',
+        'Trattamento acuto: **calcio** ev, **insulina + glucosio**, salbutamolo',
       ],
     },
     {
@@ -63,7 +63,7 @@ const map: TableMap = {
   ],
   keyPoints: [
     'Il potassio è un **farmaco ad alto rischio**: errori di concentrazione o velocità possono essere **fatali**',
-    'La via **periferica** è preferibile; la via **centrale** richiede maggiore cautela e monitoraggio',
+    'Concentrazioni > 40 mEq/L solo per via **centrale**, in area critica e con ECG continuo',
     'Sempre verificare **funzione renale** e livelli sierici prima di iniziare la terapia',
   ],
 }

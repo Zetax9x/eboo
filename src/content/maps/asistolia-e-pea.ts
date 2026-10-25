@@ -11,7 +11,7 @@ const map: RhythmMap = {
   sources: [
     'ERC 2025 — Guidelines for Resuscitation',
     'AHA 2020 — Guidelines for CPR and ECC',
-    'Ministero della Salute — Raccomandazioni per la gestione delle emergenze',
+    'ERC 2021 — Guidelines for Resuscitation: Adult Advanced Life Support',
   ],
   rhythm: 'asystole',
   stripLabel: 'Asistolia vs PEA',
@@ -44,9 +44,9 @@ const map: RhythmMap = {
         'Asistolia: escludere **artefatti** (cavi staccati, interferenze)',
         'Asistolia: verificare con **2 derivazioni** (es. I e V1)',
         'PEA: cercare **polso carotideo** per 10 s (non oltre)',
-        'PEA: distinguere da **fibrillazione ventricolare** (QRS caotico)',
+        'Asistolia: escludere **FV fine** (aumentare il guadagno)',
         'PEA: ecocardiogramma point-of-care per tamponamento',
-        'PEA: TTE per pneumotorace a tensione (assenza sliding lung)',
+        'PEA: ecografia polmonare per pneumotorace (assenza di **sliding**)',
       ],
     },
     {
@@ -71,7 +71,7 @@ const map: RhythmMap = {
     'Documentare tempi, farmaci e risposte del paziente',
   ],
   redFlags: [
-    'Asistolia persistente dopo **10 min** di RCP: considerare prognosi sfavorevole',
+    'Asistolia persistente dopo **20 min** di ALS senza cause reversibili: considerare prognosi sfavorevole',
     'PEA con **tamponamento**: rischio di collasso emodinamico immediato',
     'PEA con **embolia polmonare**: rischio di morte improvvisa',
   ],

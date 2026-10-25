@@ -30,7 +30,7 @@ const map: RhythmMap = {
       items: [
         'Guardare **V1** e **V6** (e DI)',
         '**BBDx**: rSR’ “**a M**” in V1–V2; S larga in DI e V6',
-        '**BBSx**: R larga e slargata in DI, aVL, V5–V6; **QS o rS** in V1',
+        '**BBSx**: R larga e **intaccata** in DI, aVL, V5–V6; **QS o rS** in V1',
         'Trucco: QRS in V1 **in su** = destra; **in giù** = sinistra',
         'Emiblocco anteriore sinistro: **deviazione assiale sinistra**',
       ],

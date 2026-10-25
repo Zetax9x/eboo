@@ -15,18 +15,18 @@ const map: AlgorithmMap = {
   steps: [
     { kind: 'start', title: 'Riconoscimento e attivazione', text: 'Conferma arresto cardiaco (assenza di coscienza e respiro), attiva il **112/118** e fai portare il **DAE**' },
     { kind: 'action', title: 'RCP di alta qualità', text: 'Compressioni **100–120/min**, profondità **5–6 cm**, rilascio completo, minimizza le interruzioni (< 10 s)' },
-    { kind: 'action', title: 'Ventilazione e O₂', text: 'Ventilare con **11–12 atti/min** (rapporto 30:2 se singolo soccorritore, asincrono se due). Usare **O₂ al 100%**' },
+    { kind: 'action', title: 'Ventilazione e O₂', text: '**30:2** finché non c’è una via aerea avanzata; poi **10 atti/min** con compressioni continue. **O₂** alla massima concentrazione' },
     { kind: 'decision', title: 'Ritmo defibrillabile?', text: 'Analizza con DAE o monitor', branches: [
-      { label: 'Sì (VF/VT senza polso)', text: '**1 shock** (200 J biphasic), poi **RCP 2 min**' },
-      { label: 'No (PEA/Asistole)', text: '**Nessun shock**, continua **RCP 2 min**' },
+      { label: 'Sì (FV/TV senza polso)', text: '**1 shock** (≥ 150 J bifasico), poi **RCP 2 min**' },
+      { label: 'No (PEA/asistolia)', text: '**Nessuno shock**, continua **RCP 2 min**' },
     ] },
-    { kind: 'action', title: 'Accesso venoso e farmaci', text: 'Instaura via **venosa centrale** o **periferica**. Se non disponibile, via **endotracheale** o **intraossea**' },
-    { kind: 'action', title: 'Farmaci in sequenza', text: '**Adrenalina** 1 mg IV ogni **3–5 min**. Se VF/VT persistente dopo 3 shock: **Amiodarone** 300 mg IV' },
+    { kind: 'action', title: 'Accesso venoso e farmaci', text: 'Accesso **venoso periferico**; se difficile, **intraosseo**. Via endotracheale **non** raccomandata' },
+    { kind: 'action', title: 'Farmaci in sequenza', text: '**Adrenalina** 1 mg IV/IO: subito se non defibrillabile, dopo il **3° shock** se defibrillabile; poi ogni **3–5 min**. Dopo 3 shock: **amiodarone** 300 mg' },
     { kind: 'decision', title: 'ROSC?', text: 'Ripresa di attività cardiaca spontanea (polso, pressione, respiro)', branches: [
       { label: 'Sì', text: 'Passa alla **fase post-arresto** (vedi riquadro a destra)' },
       { label: 'No', text: 'Continua il ciclo: **RCP 2 min** → Shock/Adrenalina' },
     ] },
-    { kind: 'end', title: 'Terminazione', text: 'Solo su indicazione del medico o dopo **30 min** di RCP senza ROSC (criteri variabili)' },
+    { kind: 'end', title: 'Terminazione', text: 'Decisione del **team leader**, secondo criteri clinici ed etici (ERC)' },
   ],
   side: [
     {
@@ -35,9 +35,9 @@ const map: AlgorithmMap = {
       accent: 'green',
       items: [
         '**Adrenalina**: 1 mg IV/IO ogni **3–5 min** (non diluita)',
-        '**Amiodarone**: 300 mg IV dopo il **3° shock** per VF/VT refrattaria',
-        'Seconda dose Amiodarone: **150 mg** se VF/VT persiste',
-        'Lidocaina: alternativa all’Amiodarone (1–1,5 mg/kg)',
+        '**Amiodarone**: 300 mg IV dopo il **3° shock** per FV/TV refrattaria',
+        'Seconda dose amiodarone: **150 mg** dopo il 5° shock',
+        'Lidocaina **100 mg** IV (poi 50 mg) se amiodarone non disponibile',
         'Magnesio: solo per **torsione di punta** (2 g IV)',
         'Nessun farmaco sostituisce la **RCP** e lo **shock**',
       ],
@@ -74,7 +74,7 @@ const map: AlgorithmMap = {
   ],
   keyPoints: [
     'La **RCP di alta qualità** è la priorità assoluta',
-    'Shock precoce per **VF/VT senza polso**',
+    'Shock precoce per **FV/TV senza polso**',
     'Adrenalina **1 mg** ogni **3–5 min** per tutti gli arresti',
     'Cerca e tratta le **cause reversibili** (4H 4T)',
   ],

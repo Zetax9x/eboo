@@ -9,9 +9,9 @@ const map: TableMap = {
   icon: 'Pill',
   status: 'bozza',
   sources: [
-    'Goodman & Gilman — Farmacologia e Terapeutica, 14a ed.',
-    'AIFA — Linee guida psicofarmaci',
-    'FNOPI — Codice Deontologico',
+    'Goodman & Gilman — Le basi farmacologiche della terapia, Zanichelli',
+    'NICE NG222 — Depression in adults: treatment and management (2022)',
+    'NICE CG178 — Psychosis and schizophrenia in adults (2014)',
   ],
   intro: 'Distinzione tra **tipici** e **atipici** per prevedere effetti avversi e guidare il monitoraggio.',
   tableTitle: 'Confronto tra classi',
@@ -23,7 +23,7 @@ const map: TableMap = {
       'Antipsicotici Tipici',
       'Haloperidolo, Clorpromazina',
       'Blocco **D2** dopaminergici',
-      'EPS, acatisia, ipertensione ortostatica',
+      'EPS, acatisia, ipotensione ortostatica',
       'Rigidità, tremori, PA ortostatica',
     ],
     [
@@ -36,7 +36,7 @@ const map: TableMap = {
     [
       'SSRI',
       'Fluoxetina, Sertralina',
-      'Inibizione riassorbimento **5-HT**',
+      'Inibizione ricaptazione **5-HT**',
       'Nausea, insonnia, rischio emorragico',
       'Stato emotivo, appetito, sonno',
     ],
@@ -86,7 +86,7 @@ const map: TableMap = {
       ],
     },
     {
-      title: 'Sindrome da Discontinua',
+      title: 'Sindrome da sospensione',
       icon: 'RefreshCw',
       accent: 'blue',
       items: [

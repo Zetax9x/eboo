@@ -9,7 +9,7 @@ const map: AlgorithmMap = {
   icon: 'HeartPulse',
   status: 'bozza',
   sources: [
-    'ERC — European Resuscitation Council Guidelines, Basic Life Support (ultimo aggiornamento)',
+    'ERC 2021 — European Resuscitation Council Guidelines: Basic Life Support',
     'IRC — Italian Resuscitation Council, manuale BLSD',
   ],
   steps: [

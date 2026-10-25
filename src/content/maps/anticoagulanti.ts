@@ -9,8 +9,8 @@ const map: TableMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'AIFA — Raccomandazioni per l’uso sicuro dei farmaci anticoagulanti',
-    'IST — Linee guida sulla profilassi tromboembolica',
+    'EHRA 2021 — Practical Guide on the use of non-vitamin K antagonist oral anticoagulants',
+    'ACCP — Antithrombotic Therapy for VTE Disease: CHEST Guideline (2016, aggiornamento 2021)',
     'ESC — Guidelines on atrial fibrillation (2024)',
   ],
   intro: 'Agiscono sulla **cascata della coagulazione**. La scelta dipende dall’indicazione, dal rischio emorragico e dalla reversibilità.',
@@ -36,7 +36,7 @@ const map: TableMap = {
     [
       'Antagonisti Vitamina K (AVK)',
       'Inibisce sintesi fattori **II, VII, IX, X**',
-      'PO 1–2 volte/die',
+      'PO 1 volta/die',
       '**INR** (target 2,0–3,0 o 2,5–3,5)',
       '**Vitamina K** / **PCC**',
     ],
@@ -45,7 +45,7 @@ const map: TableMap = {
       'Inibizione diretta **trombina (IIa)**',
       'PO 2 volte/die',
       'Generalmente **non richiesto**',
-      '**Idroxizim** / **PCC**',
+      '**Idarucizumab**',
     ],
     [
       'Inibitori diretti Xa (Rivaroxaban, Apixaban)',
@@ -65,7 +65,7 @@ const map: TableMap = {
         'DOAC: evitare inibitori/induttori **CYP3A4** e **P-gp**',
         'ENF/EBPM: rischio **HIT** → monitorare piastrine a 5–10 gg',
         'Verificare **funzione renale** (eGFR) prima e periodicamente',
-        'Gravidanza: **solo EBPM** sicura',
+        'Gravidanza: **EBPM** (o ENF); AVK e DOAC controindicati',
       ],
     },
     {
@@ -87,7 +87,7 @@ const map: TableMap = {
       items: [
         'Emorragia attiva: **vomito ematico**, **melena**, **cefalea improvvisa**',
         'INR **> 4,5** senza emorragia → sospendere e consultare',
-        'INR **> 5** con emorragia → **PCC + Vitamina K**',
+        'Emorragia maggiore in AVK (qualsiasi INR) → **PCC + Vitamina K** ev',
         'Sospetto **HIT**: piastrine **< 150.000/µL** o calo > 50%',
       ],
     },

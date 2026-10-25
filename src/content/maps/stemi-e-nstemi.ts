@@ -11,7 +11,7 @@ const map: RhythmMap = {
   sources: [
     'ESC 2023 — Guidelines for the management of acute coronary syndromes',
     'Hampton J. — ECG facile, Elsevier',
-    'Ministero della Salute — Percorso diagnostico-terapeutico SCA',
+    'Thygesen K. et al. — Fourth universal definition of myocardial infarction, 2018',
   ],
   rhythm: 'stemi',
   stripLabel: 'STEMI — Sollevazione del tratto ST',
@@ -29,9 +29,9 @@ const map: RhythmMap = {
       icon: 'Activity',
       accent: 'red',
       items: [
-        '**Sollevamento ST** ≥ 1 mm in ≥ 2 derivazioni contigue',
+        '**Sopraslivellamento ST** ≥ 1 mm in ≥ 2 contigue (V2–V3: 1,5–2,5 mm)',
         'Derivazioni inferiori (II, III, aVF) → **arteria coronaria destra**',
-        'Derivazioni anteriori (V1-V4) → **arteria coronaria sinistra**',
+        'Derivazioni anteriori (V1-V4) → **interventricolare anteriore**',
         'Onda Q patologica (> 0,04 s) in fase evolutiva',
         'Inversione delle onde T nelle fasi successive',
         'Tempo di insorgenza sintomi: **< 2 ore** per massimizzare beneficio',
@@ -55,8 +55,8 @@ const map: RhythmMap = {
       icon: 'Workflow',
       accent: 'blue',
       items: [
-        'STEMI: **angioplastica primaria** entro 90 min dal primo contatto',
-        'NSTEMI: strategia invasiva entro **24-72 ore** (rischio GRACE)',
+        'STEMI: **PCI primaria** se eseguibile entro **120 min** dalla diagnosi',
+        'NSTEMI: coronarografia **< 2 h** (rischio altissimo) o **< 24 h** (alto)',
         'Entrambi: **aspirina** + **ticagrelor/clopidogrel** + **eparina**',
         'STEMI: **trombolisi** se angioplastica non disponibile in tempo',
         'NSTEMI: **anticoagulazione** + antiaggreganti, no trombolisi',
@@ -66,11 +66,11 @@ const map: RhythmMap = {
   ],
   nurseRole: [
     'Riconoscere **dolore toracico** tipico e atipico, chiedere durata e caratteristiche',
-    'Effettuare **ECG a 12 derivazioni** entro 10 minuti dal ricovero',
+    'Effettuare **ECG a 12 derivazioni** entro 10 minuti dal primo contatto',
     'Somministrare **aspirina 300 mg** masticata se non controindicata',
     'Monitorare **PA, FC, SpO₂** e segni di shock cardiogeno',
     'Preparare per **angioplastica** o trombolisi secondo protocollo',
-    'Sorvegliare **aritmie** (VT, FV, blocchi AV) e segni di scompenso',
+    'Sorvegliare **aritmie** (TV, FV, blocchi AV) e segni di scompenso',
   ],
   redFlags: [
     'STEMI con **shock cardiogeno** (PA < 90 mmHg, oliguria, confusione)',

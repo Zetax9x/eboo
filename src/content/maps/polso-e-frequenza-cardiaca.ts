@@ -9,8 +9,8 @@ const map: ConceptMap = {
   icon: 'HeartPulse',
   status: 'bozza',
   sources: [
-    'Potter P.A., Perry A.G. — Fondamenti di assistenza infermieristica, CEA',
-    'A.A.V.V. — Linee guida nazionali per la valutazione dei parametri vitali, Ministero della Salute',
+    'Potter P.A., Perry A.G. — Fundamentals of Nursing, Elsevier',
+    'Craven R.F., Hirnle C.J. — Principi fondamentali dell’assistenza infermieristica, CEA',
   ],
   intro:
     'Il **polso** è l’onda di pressione che si propaga nelle arterie a ogni sistole. La sua valutazione fornisce informazioni su **frequenza**, **ritmo** e **ampiezza** del flusso ematico.',
@@ -31,9 +31,9 @@ const map: ConceptMap = {
         '**Carotidea**: collo, solo in urgenza o se il radiale è assente',
         '**Femorale**: inguine, utile in neonati e bambini piccoli',
         '**Ulnare**: lato mignolo del polso',
-        '**Brachiale**: avambraccio, usato in pediatria',
-        '**Temporale**: fronte, vicino all’occhio',
-        '**Pedio**: caviglia, dietro la malleola',
+        '**Brachiale**: faccia interna del braccio, usato nel lattante',
+        '**Temporale**: davanti all’orecchio, sopra lo zigomo',
+        '**Pedidio**: dorso del piede',
       ],
     },
     {
@@ -44,7 +44,7 @@ const map: ConceptMap = {
         '**Frequenza**: battiti per minuto (bpm)',
         '**Ritmo**: regolare o irregolare',
         '**Ampiezza**: pieno, debole, filiforme, assente',
-        '**Simmetria**: confronto tra arti omolaterali',
+        '**Simmetria**: confronto tra arti controlaterali',
         '**Tensione**: forza dell’impulso',
         '**Qualità**: pieno vs vuoto',
       ],
@@ -85,7 +85,7 @@ const map: ConceptMap = {
         '**Aritmia**: ritmo irregolare (fibrillazione atriale)',
         '**Polso filiforme**: debole, difficile da percepire (shock)',
         '**Polso assente**: urgenza medica, verificare sedi alternative',
-        '**Polso paradossale**: variazione >10 bpm tra inspirazione ed espirazione',
+        '**Polso paradossale**: calo della PA sistolica >10 mmHg in inspirazione',
       ],
     },
     {

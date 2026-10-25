@@ -9,9 +9,9 @@ const map: ConceptMap = {
   icon: 'Activity',
   status: 'bozza',
   sources: [
-    'NPIAP/EPUAP/PPPIA — International Guideline: Prevention and Treatment of Pressure Ulcers/Injuries, 2024',
-    'AIFA — Raccomandazioni per la prevenzione delle lesioni da pressione in ospedale',
-    'Codice Deontologico del Professione Infermieristica (FNOPI) e DM 739/1994',
+    'NPIAP/EPUAP/PPPIA — International Guideline: Prevention and Treatment of Pressure Ulcers/Injuries, 3rd ed. (2019)',
+    'NICE — Pressure ulcers: prevention and management (CG179, 2014)',
+    'Codice Deontologico delle Professioni Infermieristiche (FNOPI, 2019) e DM 739/1994',
   ],
   intro:
     'La **mobilizzazione** attiva o assistita e il **posizionamento** corretto sono interventi infermieristici fondamentali per mantenere la **funzionalità**, prevenire le **lesioni da pressione** e garantire la **sicurezza** del paziente.',
@@ -80,7 +80,7 @@ const map: ConceptMap = {
       icon: 'ShieldAlert',
       accent: 'purple',
       items: [
-        'Prevenire le **cadute**: sbarre alzate, scarpe antiscivolo',
+        'Prevenire le **cadute**: letto basso, scarpe antiscivolo',
         'Monitorare la **pressione arteriosa** dopo il cambio (ipotensione ortostatica)',
         'Evitare la **stasi venosa** e il **tromboembolismo**',
         'Controllare la **saturazione** e la **frequenza respiratoria**',

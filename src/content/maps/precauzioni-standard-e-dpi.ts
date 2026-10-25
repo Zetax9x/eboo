@@ -9,9 +9,9 @@ const map: ConceptMap = {
   icon: 'ShieldCheck',
   status: 'bozza',
   sources: [
-    'OMS — Linee guida sulla prevenzione delle infezioni correlate all’assistenza (ICA)',
-    'Ministero della Salute — Raccomandazioni per la prevenzione delle infezioni ospedaliere',
-    'CDC — Guideline for Isolation Precautions: Preventing Transmission of Infectious Agents in Healthcare Settings',
+    'OMS — Standard precautions in health care, Aide-memoire (2007)',
+    'OMS — Guidelines on hand hygiene in health care (2009)',
+    'CDC — Guideline for Isolation Precautions: Preventing Transmission of Infectious Agents in Healthcare Settings (Siegel et al., 2007)',
   ],
   intro:
     'Misure **universali** applicate a **tutti** i pazienti per prevenire la trasmissione di agenti infettivi. Si basano sul principio che ogni paziente può essere portatore di un agente patogeno, anche se non diagnosticato.',
@@ -43,7 +43,7 @@ const map: ConceptMap = {
       items: [
         'È la misura **più efficace** per prevenire le ICA',
         '5 momenti OMS: prima di contatto, prima di procedura asettica, dopo esposizione a fluidi, dopo contatto con paziente, dopo contatto con ambiente',
-        'Durata: **40-60 secondi** con soluzione idroalcolica o **60-90 secondi** con acqua e sapone',
+        'Durata: **20-30 secondi** con soluzione idroalcolica o **40-60 secondi** con acqua e sapone',
         'Usare **guanti** non sostituisce l’igiene delle mani',
         'Lavare le mani **prima e dopo** l’uso dei guanti',
         'Evitare anelli, bracciali e unghie artificiali durante l’assistenza',
@@ -54,9 +54,9 @@ const map: ConceptMap = {
       icon: 'Hand',
       accent: 'teal',
       items: [
-        'Indossare **prima** di toccare il paziente o l’ambiente circostante',
-        'Usare **guanti sterili** per procedure invasive o contatto con mucose',
-        'Usare **guanti non sterili** per contatto con pelle integra o superfici contaminate',
+        'Indossare se previsto contatto con **sangue**, liquidi biologici, mucose, cute lesa',
+        'Usare **guanti sterili** per procedure asettiche invasive (es. CVC, catetere vescicale)',
+        'Non servono per contatto con **cute integra** (es. misurare la PA)',
         'Cambiare guanti tra **diversi pazienti** e tra **diverse aree** dello stesso paziente',
         'Rimuovere i guanti **prima** di toccare superfici ambientali o dispositivi',
         'Non riutilizzare mai guanti monouso',

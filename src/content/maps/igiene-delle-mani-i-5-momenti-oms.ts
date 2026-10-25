@@ -10,8 +10,8 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'OMS — My 5 Moments for Hand Hygiene (2009)',
-    'Ministero della Salute — Raccomandazioni per la prevenzione delle infezioni correlate all’assistenza (2019)',
-    'CDC — Guideline for Hand Hygiene in Health Care (2002, revisione 2024)',
+    'OMS — Hand Hygiene Technical Reference Manual (2009)',
+    'CDC — Guideline for Hand Hygiene in Health Care (MMWR, 2002)',
   ],
   intro:
     'L’igiene delle mani è la **misura singola più efficace** per prevenire le infezioni correlate all’assistenza (ICA). I 5 momenti OMS indicano **quando** lavare o disinfettare le mani durante l’assistenza.',
@@ -53,7 +53,7 @@ const map: ConceptMap = {
       icon: 'ShieldCheck',
       accent: 'red',
       checks: [
-        { text: 'Prima di ogni contatto con paziente o ambiente', kind: 'ok' },
+        { text: 'Prima di ogni contatto con il paziente', kind: 'ok' },
         { text: 'Prima di procedure invasive o asettiche', kind: 'ok' },
         { text: 'Dopo contatto con fluidi corporei', kind: 'ok' },
         { text: 'Dopo rimozione di guanti', kind: 'ok' },
@@ -97,7 +97,7 @@ const map: ConceptMap = {
         'Diminuisce i **tempi di degenza** e i costi sanitari',
         'Migliora la **sicurezza del paziente** e del personale',
         'È un **indicatore di qualità** accreditato (Agenas)',
-        'Obbligo deontologico (Codice FNOPI, art. 37)',
+        'Obbligo deontologico (Codice FNOPI 2019)',
       ],
     },
   ],

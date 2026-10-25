@@ -11,7 +11,7 @@ const map: ConceptMap = {
   sources: [
     'Maslow A.H. — A Theory of Human Motivation, Psychological Review, 1943',
     'Potter P.A., Perry A.G. — Fundamentals of Nursing, 10th ed., Elsevier',
-    'FNOPI — Codice Deontologico dell’Infermiere (2020)',
+    'FNOPI — Codice Deontologico delle Professioni Infermieristiche (2019)',
   ],
   intro:
     'Modello teorico che organizza i bisogni umani in **5 livelli gerarchici**: dalla sopravvivenza fisica all’attualizzazione di sé. In infermieristica serve a **stabilire le priorità** degli interventi quando i bisogni sono multipli.',
@@ -32,7 +32,7 @@ const map: ConceptMap = {
         'Idratazione, **alimentazione**, eliminazione',
         'Temperatura corporea, **sonno**, riposo',
         'Riduzione del **dolore** acuto',
-        'Priorità assoluta: **ABC** (Aria, Breathing, Circulation)',
+        'Priorità assoluta: **ABC** (Airway, Breathing, Circulation)',
         'Intervento: ossigenoterapia, accesso venoso, analgesia',
       ],
     },
@@ -95,7 +95,7 @@ const map: ConceptMap = {
       checks: [
         { text: 'Priorità: **fisiologici** prima di tutto', kind: 'ok' },
         { text: 'I bisogni non sono **rigidamente** sequenziali', kind: 'warn' },
-        { text: 'Un bisogno insoddisfatto **blocca** i successivi', kind: 'alert' },
+        { text: 'Un bisogno di base insoddisfatto **ostacola** i successivi', kind: 'warn' },
         { text: 'Valutare **individualmente** ogni persona', kind: 'ok' },
         { text: 'Rivalutare dopo ogni **intervento**', kind: 'ok' },
         { text: 'Integrare con **processo di nursing**', kind: 'ok' },

@@ -9,9 +9,9 @@ const map: ConceptMap = {
   icon: 'ShieldCheck',
   status: 'bozza',
   sources: [
-    'NPIAP/EPUAP/PPPIA — International Guideline for the Prevention and Treatment of Pressure Ulcers, 3rd ed. (2024)',
-    'Ministero della Salute — Raccomandazioni per la prevenzione delle lesioni da pressione in ambito ospedaliero (2019)',
-    'AIFA — Linee guida per la gestione delle lesioni cutanee e mucose (2023)',
+    'NPIAP/EPUAP/PPPIA — International Guideline for the Prevention and Treatment of Pressure Ulcers, 3rd ed. (2019)',
+    'NICE — Pressure ulcers: prevention and management (CG179, 2014)',
+    'Bergstrom N., Braden B. et al. — The Braden Scale for Predicting Pressure Sore Risk, Nurs Res 1987',
   ],
   intro:
     'Le **lesioni da pressione** (LDP) sono danni localizzati a cute e/o tessuti sottostanti, causati da **pressione** e/o **forze di taglio** prolungate su un osso prominente. La prevenzione è un **obbligo deontologico** e clinico.',
@@ -56,7 +56,7 @@ const map: ConceptMap = {
       accent: 'green',
       items: [
         'Cambiare posizione **ogni 2 ore** (o più spesso se rischio alto)',
-        'Posizione a **45°** (non > 30°) per ridurre la pressione sul sacro',
+        'Decubito laterale a **30°**, testata ≤ **30°** per ridurre la pressione sul sacro',
         'Evitare la **posizione supina** prolungata',
         'Usare **cuscini** per separare le ossa (ginocchia, talloni)',
         '**Sollevare** i talloni con cuscini (non appoggiarli sul materasso)',

@@ -9,8 +9,8 @@ const map: ConceptMap = {
   icon: 'ShieldCheck',
   status: 'bozza',
   sources: [
-    'O.M. 28/12/2012 — Linee guida per la prevenzione e il controllo delle infezioni in ambito sanitario',
-    'FNOPI — Codice Deontologico dell’Infermiere (art. 34, 35)',
+    'Saiani L., Brugnolli A. — Trattato di cure infermieristiche, Idelson-Gnocchi',
+    'FNOPI — Codice Deontologico delle Professioni Infermieristiche (2019)',
     'CDC — Guidelines for Disinfection and Sterilization in Healthcare Facilities (2008, updated)',
   ],
   intro:
@@ -28,12 +28,12 @@ const map: ConceptMap = {
       icon: 'ShieldCheck',
       accent: 'blue',
       items: [
-        'Il **sterile** non tocca il **non sterile**',
-        'Il **non sterile** non tocca il **sterile**',
-        'Il **contaminato** non tocca il **contaminato**',
-        'Il **contaminato** non tocca il **sterile**',
+        'Lo **sterile** tocca solo lo **sterile**',
+        'Il **non sterile** non tocca lo **sterile**',
+        'Il bordo del panno (~2,5 cm) è **non sterile**',
+        'Ciò che esce dalla **vista** è considerato contaminato',
         'Tutto ciò che è **al di sotto del bordo** del campo sterile è considerato **contaminato**',
-        'Il campo sterile è valido solo per il **durante la procedura**',
+        'Il campo sterile è valido solo per la **durata della procedura**',
         'Qualsiasi **dubbio** sulla sterilità = **contaminazione**',
       ],
     },
@@ -42,7 +42,7 @@ const map: ConceptMap = {
       icon: 'Package',
       accent: 'green',
       items: [
-        'Lavaggio mani **igiienico** prima di iniziare',
+        '**Igiene delle mani** prima di iniziare',
         'Indossare **guanti sterili** (se richiesto dalla procedura)',
         'Aprire il panno sterile **senza toccare l’interno**',
         'Posizionare gli strumenti **paralleli** al bordo, non oltre il bordo',
@@ -58,11 +58,11 @@ const map: ConceptMap = {
       items: [
         'Prendere gli strumenti **dal centro** del campo, non dal bordo',
         'Se un oggetto sterile **cade**, è **contaminato**: sostituirlo',
-        'Non **guardarsi indietro** o parlare sopra il campo',
+        'Non **voltare le spalle** al campo, non parlarci sopra',
         'Non **soffiare** sul campo sterile',
         'Non **toccare** il campo con mani non sterili',
         'Se il campo si **bagna** o si **strappa**, è contaminato',
-        'Il campo sterile dura **4 ore** (o meno se interrotto)',
+        'Preparare il campo **subito prima** dell’uso, non in anticipo',
       ],
     },
     {

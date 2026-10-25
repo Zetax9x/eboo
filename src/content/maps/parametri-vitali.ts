@@ -10,7 +10,7 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'Potter P.A., Perry A.G. — Fundamentals of Nursing, 10th ed., Elsevier',
-    'Ministero della Salute — Raccomandazioni per il monitoraggio dei parametri vitali in ambito ospedaliero',
+    'Royal College of Physicians — National Early Warning Score (NEWS2), 2017',
   ],
   intro:
     'I parametri vitali sono i segni fisiologici fondamentali per valutare lo stato di salute. La misurazione accurata e la documentazione tempestiva sono compiti **autonomi** dell’infermiere.',
@@ -29,7 +29,7 @@ const map: ConceptMap = {
       items: [
         'Valori normali adulto: **120/80 mmHg**',
         'Ipertensione: ≥ **140/90 mmHg**',
-        'Ipotesione: < **90/60 mmHg**',
+        'Ipotensione: < **90/60 mmHg**',
         'Misurare a paziente seduto, braccio a livello del cuore',
         'Usare manica della **taglia corretta**',
         'Ascoltare toni di **Korotkoff** (I e V)',
@@ -73,7 +73,7 @@ const map: ConceptMap = {
         'Febbre: ≥ **37,8 °C**',
         'Ipotermia: < **35 °C**',
         'Sedi: ascellare, orale, rettale, timpanica',
-        'Ascellare: + **0,3 °C** rispetto a orale',
+        'Ascellare: circa **0,5 °C in meno** dell’orale',
         'Rettale: + **0,5 °C** rispetto a orale',
         'Misurare a paziente **a riposo** (15 min)',
       ],
@@ -117,7 +117,7 @@ const map: ConceptMap = {
         { text: 'SpO₂ < **90 %**', kind: 'alert' },
         { text: 'Temperatura > **39,5 °C** o < **35 °C**', kind: 'alert' },
         { text: 'Dolore NRS ≥ **8** o **improvviso**', kind: 'alert' },
-        { text: 'Alterazioni **improvvisi** o **progressivi**', kind: 'alert' },
+        { text: 'Alterazioni **improvvise** o **progressive**', kind: 'alert' },
       ],
     },
   ],

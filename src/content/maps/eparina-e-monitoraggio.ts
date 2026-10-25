@@ -9,8 +9,8 @@ const map: TableMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'IST (IST) — Linee guida per la profilassi e il trattamento della trombosi venosa profonda e dell’embolia polmonare',
-    'ESC — Guidelines on the management of atrial fibrillation (2020)',
+    'ACCP — Antithrombotic Therapy for VTE Disease: CHEST Guideline (2016, aggiornamento 2021)',
+    'ACCP — Parenteral Anticoagulants, CHEST 2012 (9ª ed.): dosaggio, monitoraggio, protamina',
     'AIFA — Scheda tecnica eparina sodica e enoxaparina sodica',
   ],
   intro: 'L’eparina è un anticoagulante ad azione rapida, reversibile con protamina. La scelta tra ENF ed EBPM dipende dal contesto clinico, dalla funzionalità renale e dalla necessità di monitoraggio.',
@@ -24,7 +24,7 @@ const map: TableMap = {
     ['Durata d’azione', 'Breve (4–6 ore)', 'Prolungata (12–24 ore)'],
     ['Monitoraggio', 'aPTT (target 1,5–2,5 volte il controllo)', 'Generalmente non necessario; anti-Xa in casi specifici'],
     ['Reversibilità', 'Completa con protamina', 'Parziale con protamina'],
-    ['Rischio di OSTE', 'Basso', 'Più alto (dose dipendente)'],
+    ['Rischio di osteoporosi', 'Più alto (uso prolungato)', 'Più basso'],
     ['Rischio di trombocitopenia (HIT)', 'Alto (tipo II)', 'Basso (tipo II)'],
     ['Uso in gravidanza', 'Sì (non attraversa la placenta)', 'Sì (preferita in gravidanza)'],
     ['Funzionalità renale', 'Sicura in insufficienza renale', 'Accumulo in IR; aggiustare dose o evitare'],
@@ -37,9 +37,9 @@ const map: TableMap = {
       items: [
         'aPTT: target **1,5–2,5** volte il valore di controllo',
         'Misurare a **6 ore** dall’inizio o dal cambio di dose',
-        'Ricalibrare la pompa ogni **6 ore** fino a stabilizzazione',
-        'Controllare **piastrine** a 5–10 giorni per HIT',
-        'Hemoglobina e ematocrito: monitoraggio emorragie',
+        'Adeguare la velocità secondo **nomogramma** aziendale',
+        '**Piastrine** basali e ogni 2–3 giorni (giorni 4–14) per HIT',
+        'Emoglobina ed ematocrito: monitoraggio emorragie',
       ],
     },
     {
@@ -48,7 +48,7 @@ const map: TableMap = {
       accent: 'green',
       items: [
         'Generalmente **non serve** monitoraggio di routine',
-        'Anti-Xa: target **0,6–1,0 UI/mL** (trattamento) o **0,3–0,7 UI/mL** (profilassi)',
+        'Anti-Xa: target **0,6–1,0 UI/mL** (trattamento) o **0,2–0,5 UI/mL** (profilassi)',
         'Misurare **4 ore** dopo la dose SC',
         'Indicato in: obesità (BMI > 40), IR (ClCr < 30), gravidanza, bambini',
         'Controllare **piastrine** per HIT',
@@ -59,8 +59,8 @@ const map: TableMap = {
       icon: 'Siren',
       accent: 'red',
       items: [
-        'ENF: sospendere infusione, somministrare **protamina** (1 mg per ogni 100 UI di eparina nelle ultime 8 ore)',
-        'EBPM: sospendere dose, protamina **parziale** (50% della dose di eparina)',
+        'ENF: sospendere infusione, somministrare **protamina** (1 mg per ogni 100 UI di eparina delle ultime 2–3 ore; max 50 mg)',
+        'EBPM: protamina 1 mg/100 UI anti-Xa (dose < 8 h): neutralizza solo **~60%**',
         'Valutare **aPTT** e **anti-Xa** per guidare la protamina',
         'Trasfusione di piastrine se HIT con emorragia',
         'Monitoraggio stretto per 24–48 ore',

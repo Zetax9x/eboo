@@ -10,8 +10,8 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'Potter P.A., Perry A.G. — Fundamentals of Nursing, 10th ed., Elsevier',
-    'Azzari C., et al. — Infermieristica di base, CEA',
-    'OMS — Linee guida per la gestione dell’ipertermia in ambito sanitario',
+    'Craven R.F., Hirnle C.J. — Principi fondamentali dell’assistenza infermieristica, CEA',
+    'NICE — Fever in under 5s: assessment and initial management (NG143, 2019)',
   ],
   intro:
     'La temperatura corporea è un **parametro vitale** che riflette l’equilibrio tra produzione e dispersione di calore. La sua misurazione corretta è fondamentale per la diagnosi precoce di infezioni, shock e altre condizioni critiche.',
@@ -30,9 +30,9 @@ const map: ConceptMap = {
       items: [
         '**36,5–37,5 °C**: intervallo normale (variabile per età, ora, attività)',
         '**< 35,0 °C**: ipotermia',
-        '**> 37,5 °C**: ipertermia (febbre)',
+        '**> 37,5 °C**: febbre',
         '**> 39,0 °C**: febbre alta',
-        '**> 41,0 °C**: ipertermia maligna / colpo di calore',
+        '**> 41,0 °C**: iperpiressia (es. colpo di calore)',
         'Neonati: **36,4–37,5 °C** (retto)',
         'Anziani: spesso valori più bassi, **36,0–37,0 °C**',
       ],
@@ -44,8 +44,8 @@ const map: ConceptMap = {
       items: [
         '**Retto**: più accurata, riferimento per neonati e pazienti critici',
         '**Orale**: comoda, non usabile in pazienti con alterazioni della coscienza',
-        '**Ascellare**: meno accurata, aggiungere **0,3–0,5 °C** al valore',
-        '**Timpánica**: rapida, utile in pediatria',
+        '**Ascellare**: meno accurata (~0,5 °C sotto l’orale), **registrare la sede**',
+        '**Timpanica**: rapida, utile in pediatria',
         '**Frontale**: non invasiva, meno precisa',
         'Scegliere la sede in base a **età, stato clinico, disponibilità**',
         'Usare lo stesso metodo per confronti nel tempo',
@@ -56,11 +56,11 @@ const map: ConceptMap = {
       icon: 'TriangleAlert',
       accent: 'red',
       items: [
-        '**Ipertermia**: infezioni, infiammazioni, farmaci, neoplasie',
+        '**Rialzo termico**: infezioni, infiammazioni, farmaci, neoplasie',
         '**Ipotermia**: esposizione al freddo, shock, ipotiroidismo',
         '**Febbre**: risposta immunitaria a citochine (IL-1, TNF)',
         'Farmaci: antipiretici, corticosteroidi, chemioterapici',
-        'Condizioni: sepsi, meningite, polmonite, UTI',
+        'Condizioni: sepsi, meningite, polmonite, IVU',
         'Fattori: esercizio fisico, ciclo mestruale, stress',
         'Misurare dopo **30 min** da pasti, bevande calde/fredde',
       ],
@@ -72,11 +72,11 @@ const map: ConceptMap = {
       items: [
         'Lavare le mani prima e dopo la misurazione',
         'Verificare il funzionamento del termometro',
-        'Usare **cuffia** per termometro digitale',
+        'Usare il **coprisonda** monouso',
         'Ascellare: braccio addotto, termometro in posizione centrale',
         'Orale: sotto la lingua, bocca chiusa, **3-5 min**',
         'Retto: lubrificare, inserire **2,5 cm**, **1-2 min**',
-        'Timpánica: tirare l’orecchio in alto e indietro (adulti)',
+        'Timpanica: tirare l’orecchio in alto e indietro (adulti)',
       ],
     },
     {

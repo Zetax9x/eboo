@@ -9,8 +9,8 @@ const map: ConceptMap = {
   icon: 'Users',
   status: 'bozza',
   sources: [
-    'Carpenito L.J. — Manuale di comunicazione e relazione d’aiuto, CEA',
-    'FNOPI — Codice deontologico dell’infermiere (2020)',
+    'Peplau H.E. — Interpersonal Relations in Nursing (1952)',
+    'FNOPI — Codice deontologico delle professioni infermieristiche (2019)',
     'L. 219/2017 — Norme in materia di consenso informato e di disposizioni anticipate di trattamento',
   ],
   intro:
@@ -24,7 +24,7 @@ const map: ConceptMap = {
       items: [
         '**Verbale**: parole, tono, volume, velocità, uso di termini tecnici',
         '**Non verbale**: postura, contatto visivo, espressioni facciali, prossemica',
-        'Il non verbale trasmette spesso più del verbale (regola del 7-38-55)',
+        'Il non verbale pesa molto, soprattutto se contrasta con il verbale',
         'Coerenza tra messaggio verbale e non verbale: incongruenze generano diffidenza',
         'Adattare il linguaggio al livello di istruzione e alla cultura del paziente',
         'Evitare gergo medico senza spiegazione; usare termini comprensibili',
@@ -64,8 +64,8 @@ const map: ConceptMap = {
       icon: 'Workflow',
       accent: 'purple',
       items: [
-        '**Preorientamento**: contatto iniziale, presentazione, creazione di fiducia',
-        '**Orientamento**: definizione dei bisogni, obiettivi condivisi, contratto terapeutico',
+        '**Preinterazione**: l’infermiere si prepara (dati, propri vissuti)',
+        '**Orientamento**: presentazione, fiducia, bisogni, contratto terapeutico',
         '**Lavoro**: attuazione degli interventi, confronto, feedback',
         '**Terminazione**: valutazione degli obiettivi raggiunti, chiusura della relazione',
         'Ogni fase richiede competenze comunicative specifiche',
@@ -82,7 +82,7 @@ const map: ConceptMap = {
         { text: '**Consenso informato**: spiegazione chiara di interventi e rischi', kind: 'ok' },
         { text: '**Riservatezza**: protezione dei dati personali (GDPR)', kind: 'ok' },
         { text: '**Non discriminazione**: uguale cura indipendentemente da etnia, religione, orientamento', kind: 'ok' },
-        { text: '**Verità**: onestà nelle informazioni, senza falsi rassicurazioni', kind: 'ok' },
+        { text: '**Verità**: onestà nelle informazioni, senza false rassicurazioni', kind: 'ok' },
         { text: '**Empatia**: capacità di comprendere la prospettiva del paziente', kind: 'ok' },
       ],
     },

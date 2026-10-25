@@ -10,8 +10,8 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'Potter P.A., Perry A.G. — Fundamentals of Nursing, 10th ed., Elsevier',
-    'Ministero della Salute — Raccomandazioni per la prevenzione delle complicanze in ospedale',
-    'NICE — Fluid balance in adults: assessment and management (2023)',
+    'Craven R.F., Hirnle C.J. — Principi fondamentali dell’assistenza infermieristica, CEA',
+    'NICE — Intravenous fluid therapy in adults in hospital (CG174, 2013, agg. 2017)',
   ],
   intro:
     'Il **bilancio idrico** è il registro giornaliero delle **entrate** (liquidi assunti) e delle **uscite** (liquidi persi). Un bilancio **positivo** indica ritenzione, uno **negativo** indica perdita netta. È fondamentale in terapia intensiva, chirurgia, insufficienza renale e cardiaca.',
@@ -40,7 +40,7 @@ const map: ConceptMap = {
         'Feci: volume e consistenza (diarrea = perdita elevata)',
         'Vomito: stimare il volume (es. 200 mL)',
         'Drenaggi: toracici, addominali, ferite (misurare in mL)',
-        'Sudorazione: **invisibile** (respirazione, pelle) ≈ 400–600 mL/giorno',
+        'Perdite **insensibili** (cute, respiro) ≈ 800–1000 mL/die',
         'Sangue perso: chirurgia, emorragie (registrare in mL)',
         'Liquidi in **dialisi** (ultrafiltrazione)',
       ],
@@ -64,7 +64,7 @@ const map: ConceptMap = {
       icon: 'ShieldAlert',
       accent: 'red',
       items: [
-        'Diuresi **< 0,5 mL/kg/h** per > 2 ore → oliguria/anuria',
+        'Diuresi **< 0,5 mL/kg/h** per ≥ 6 ore → oliguria (KDIGO)',
         'Bilancio negativo **> 1000 mL** in 24h senza causa nota',
         'Bilancio positivo **> 1000 mL** in 24h → rischio sovraccarico',
         'Aumento di peso **> 1 kg** in 24h senza assunzione nota',

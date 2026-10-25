@@ -9,9 +9,9 @@ const map: TableMap = {
   icon: 'Pill',
   status: 'bozza',
   sources: [
-    'OMS — Linee guida per la gestione del dolore (ultima edizione)',
-    'AIFA — Raccomandazioni per l’uso degli analgesici',
-    'Ministero della Salute — Piano Nazionale della Cronicità e del Dolore',
+    'WHO — Cancer Pain Relief, 2ª ed. (1996): scala analgesica a tre gradini',
+    'WHO — Guidelines for the pharmacological and radiotherapeutic management of cancer pain in adults and adolescents (2018)',
+    'Legge 15 marzo 2010, n. 38 — Accesso alle cure palliative e alla terapia del dolore',
   ],
   intro: 'La **scala OMS** (o scala a tre gradini) è il modello di riferimento per la terapia del dolore. Si parte sempre dal **gradino più basso** efficace e si sale solo se necessario.',
   tableTitle: 'Scala OMS del dolore',
@@ -20,7 +20,7 @@ const map: TableMap = {
   widths: [1, 1.2, 2, 2],
   rows: [
     ['1°', '1–3 / 10', 'Paracetamolo, FANS (ibuprofene, ketoprofene)', 'Dolore lieve. Prima scelta. Evitare FANS in gravidanza avanzata o insufficienza renale.'],
-    ['2°', '4–6 / 10', 'Oppioidi deboli (tramadolo, codeina) + Paracetamolo/FANS', 'Dolore moderato. Associare sempre un antiacido se si usa codeina. Monitorare stipsi.'],
+    ['2°', '4–6 / 10', 'Oppioidi deboli (tramadolo, codeina) + Paracetamolo/FANS', 'Dolore moderato. Associare lassativo (codeina: stipsi). Monitorare sedazione.'],
     ['3°', '7–10 / 10', 'Oppioidi forti (morfina, ossicodone, fentanile)', 'Dolore intenso. Somministrazione titrata. Associare lassativo e antiemetico.'],
   ],
   notes: [

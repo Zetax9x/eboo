@@ -9,9 +9,9 @@ const map: RhythmMap = {
   icon: 'Zap',
   status: 'bozza',
   sources: [
-    'ESC 2023 — Guidelines on cardiac pacing and resynchronization therapy',
-    'Hindricks G, et al. — ACC/AHA/HRS Guideline for the Management of Patients With Supraventricular Tachycardia (2015)',
-    'Klein H, et al. — Pacemaker and ICD programming: A practical guide',
+    'ESC 2021 — Guidelines on cardiac pacing and cardiac resynchronization therapy',
+    'Bernstein AD et al. — The revised NASPE/BPEG generic code for antibradycardia pacing, PACE 2002',
+    'Hampton J. — ECG facile, Elsevier',
   ],
   rhythm: 'paced',
   stripLabel: 'Pacing ventricolare (VVI)',
@@ -24,16 +24,16 @@ const map: RhythmMap = {
   ],
   sections: [
     {
-      title: 'Codice NACC (5 lettere)',
+      title: 'Codice NBG (5 lettere)',
       icon: 'ClipboardList',
       accent: 'blue',
       items: [
         '1ª: Camera stimolata (A, V, D)',
-        '2ª: Camera inibita (A, V, D, 0)',
-        '3ª: Camera stimolata in risposta (A, V, D, 0)',
-        '4ª: Modalità (Fissa, Rate-Responsive, Resync)',
-        '5ª: Modalità aggiuntiva (es. Pacing di riserva)',
-        'Esempio: **VVI** = Stimola V, Inibisce V, non risponde',
+        '2ª: Camera sentita (A, V, D, 0)',
+        '3ª: Risposta al sensing (I = inibisce, T, D, 0)',
+        '4ª: Modulazione di frequenza (R = rate-responsive, 0)',
+        '5ª: Stimolazione multisito (A, V, D, 0)',
+        'Esempio: **VVI** = stimola V, sente V, inibito dal battito spontaneo',
       ],
     },
     {
@@ -41,7 +41,7 @@ const map: RhythmMap = {
       icon: 'Layers',
       accent: 'purple',
       items: [
-        '**VVI**: Pacing ventricolare fisso, più comune',
+        '**VVI**: pacing ventricolare **a domanda**',
         '**DDD**: Pacing duale, mantiene sequenza AV',
         '**AAI**: Pacing atriale, solo se nodo AV sano',
         '**VDD**: Stimola V, sente A e V, mantiene sequenza',
@@ -54,9 +54,9 @@ const map: RhythmMap = {
       accent: 'red',
       items: [
         '**Non-capture**: Spike presente, ma no QRS',
-        '**Non-sensing**: Pacing inappropriato (doppia stimolazione)',
-        '**Oversensing**: Inibizione del pacing (asistolia)',
-        '**Atrio-fibrillazione con pacing**: Ritmo irregolare',
+        '**Undersensing**: spike inappropriati, anche sulla T',
+        '**Oversensing**: pacing inibito (pause, asistolia)',
+        '**FA con pacing**: ritmo irregolare',
         '**Batteria esaurita**: Frequenza di riserva (es. 65 bpm)',
       ],
     },

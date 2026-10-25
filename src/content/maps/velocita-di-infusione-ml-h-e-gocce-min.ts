@@ -10,7 +10,7 @@ const map: TableMap = {
   status: 'bozza',
   sources: [
     'INS — Infusion Therapy Standards of Practice (2024)',
-    'Farmacologia clinica — Calcoli posologici e velocità di infusione',
+    'ISO 8536-4 — Set di infusione per uso medico, a gravità (20 gocce = 1 mL)',
   ],
   intro: 'La velocità di infusione determina la **concentrazione plasmatica** del farmaco. Un errore di calcolo può causare **sovradosaggio** o inefficacia terapeutica.',
   tableTitle: 'Fattori di goccia (gtt/ml) per sistema di infusione',
@@ -18,8 +18,8 @@ const map: TableMap = {
   columns: ['Sistema', 'Fattore di goccia', 'Uso tipico', 'Precisione'],
   widths: [1.2, 1, 1.5, 1],
   rows: [
-    ['Macrogocciolatore (macro)', '10–20 gtt/ml', 'Soluzioni saline, glucosio, emoderivati', 'Bassa'],
-    ['Microgocciolatore (micro)', '15–60 gtt/ml', 'Farmaci ad alto rischio, neonati, pediatria', 'Alta'],
+    ['Macrogocciolatore (macro)', '**20** gtt/ml (standard)', 'Soluzioni saline, glucosio; set trasfusione: 15–20', 'Bassa'],
+    ['Microgocciolatore (micro)', '**60** gtt/ml', 'Piccoli volumi, pediatria (meglio pompa)', 'Alta'],
     ['Pompa a siringa', 'ml/h (0,1–999,9)', 'Farmaci critici, dosaggi precisi', 'Molto alta'],
     ['Pompa volumetrica', 'ml/h (1–999)', 'Infusioni prolungate, nutrizione parenterale', 'Alta'],
   ],
@@ -31,7 +31,7 @@ const map: TableMap = {
       items: [
         '**gtt/min = (ml × fattore) / (minuti)**',
         'Esempio: 500 ml in 8 h con fattore 20 → (500 × 20) / 480 = **20,8 gtt/min**',
-        '**ml/h = (gtt/min × minuti) / fattore**',
+        '**ml/h = (gtt/min × 60) / fattore**',
         'Esempio: 30 gtt/min con fattore 15 → (30 × 60) / 15 = **120 ml/h**',
         'Tempo in minuti = **ore × 60**',
       ],
@@ -43,7 +43,7 @@ const map: TableMap = {
       items: [
         'Confondere **macro** e **micro** gocciolatori',
         'Dimenticare di convertire **ore in minuti**',
-        'Arrotondare **giù** la velocità: rischio di sottodosaggio',
+        'Sbagliare la **virgola**: errore di 10 volte',
         'Non verificare il **fattore di goccia** stampato sul set',
         'Usare il calcolo manuale per **farmaci ad alto rischio**',
       ],
@@ -64,7 +64,7 @@ const map: TableMap = {
   keyPoints: [
     'Il **fattore di goccia** varia per produttore: leggi sempre l’etichetta',
     'Per farmaci ad alto rischio usa **pompa a siringa** e verifica indipendente',
-    'Arrotonda **all’unità superiore** per gtt/min: meglio un po’ più veloce che lento',
+    'Arrotonda le gtt/min all’**intero più vicino**; se la precisione conta, usa la pompa',
   ],
 }
 
