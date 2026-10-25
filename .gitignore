@@ -5,3 +5,4 @@ out
 .env.*
 backup
 *.tsbuildinfo
+*.stackdump
