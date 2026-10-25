@@ -9,7 +9,8 @@
     "typecheck": "tsc -b",
     "test": "vitest run",
     "export": "node scripts/export.mjs",
-    "genera": "node scripts/genera-mappe.mjs"
+    "genera": "node scripts/genera-mappe.mjs",
+    "illustrazioni": "node scripts/illustrations.mjs"
   },
   "dependencies": {
     "@fontsource/barlow": "^5.3.0",
