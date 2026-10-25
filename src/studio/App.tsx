@@ -26,7 +26,10 @@ function getCurrentMapData(id: string) {
 // Caricamento dinamico delle mappe
 async function loadMapComponent(id: string) {
   try {
+    console.log(`📦 Tentativo di caricamento mappa: ${id}`)
     const module = await import(`../content/maps/${id}`)
+    console.log(`✅ Mappa caricata: ${id}`, module)
+    
     // Supporta sia default export che named export
     if (module.default && typeof module.default === 'function') {
       return module.default
@@ -39,13 +42,15 @@ async function loadMapComponent(id: string) {
     // Fallback: usa il primo export function trovato
     for (const [key, value] of Object.entries(module)) {
       if (typeof value === 'function' && key !== 'default') {
+        console.log(`🔍 Componente trovato: ${key}`)
         return value
       }
     }
+    console.warn(`⚠️ Nessun componente valido trovato per ${id}`)
     return null
   } catch (error) {
     // Mappa non esiste ancora
-    console.warn(`Mappa ${id} non trovata:`, error)
+    console.warn(`❌ Mappa ${id} non trovata:`, error.message)
     return null
   }
 }
@@ -53,10 +58,12 @@ async function loadMapComponent(id: string) {
 // Controlla se una mappa è stata scritta (file .tsx esiste)
 async function checkMapExists(id: string): Promise<boolean> {
   try {
-    // Prova a importare il file con estensione .tsx esplicita
-    await import(`../content/maps/${id}.tsx`)
+    // Vite gestisce automaticamente le estensioni, non serve specificare .tsx
+    await import(`../content/maps/${id}`)
+    console.log(`✅ Mappa ${id} esiste`)
     return true
-  } catch {
+  } catch (error) {
+    console.log(`❌ Mappa ${id} non esiste:`, error.message)
     return false
   }
 }
@@ -73,12 +80,16 @@ export function App() {
 
   // Carica la mappa quando cambia currentId o all'avvio
   useEffect(() => {
+    console.log(`🔄 Effetto: caricamento mappa ${currentId}`)
     let cancelled = false
     loadMapComponent(currentId).then((component) => {
-      if (!cancelled && component && typeof component === 'function') {
-        setMapComponent(component)
-      } else {
-        setMapComponent(null)
+      if (!cancelled) {
+        console.log(`📌 Componente impostato:`, component?.name || 'null')
+        if (component && typeof component === 'function') {
+          setMapComponent(component)
+        } else {
+          setMapComponent(null)
+        }
       }
     })
     return () => { cancelled = true }
@@ -86,9 +97,11 @@ export function App() {
 
   // Controlla solo la mappa corrente per il progresso (non tutte all'avvio)
   useEffect(() => {
+    console.log(`🔍 Effetto: controllo esistenza ${currentId}`)
     checkMapExists(currentId).then(exists => {
       if (exists) {
         setWrittenIds(prev => new Set(prev).add(currentId))
+        console.log(`✅ Aggiornato writtenIds per ${currentId}`)
       }
     })
   }, [currentId])
@@ -111,6 +124,7 @@ export function App() {
     
     // Se c'è un componente mappa caricato, usalo
     if (MapComponent && typeof MapComponent === 'function') {
+      console.log(`📄 Rendering componente: ${MapComponent.name}`)
       return <MapComponent />
     }
 
