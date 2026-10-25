@@ -50,6 +50,16 @@ async function loadMapComponent(id: string) {
   }
 }
 
+// Controlla se una mappa è stata scritta (file .tsx esiste)
+async function checkMapExists(id: string): Promise<boolean> {
+  try {
+    await import(`../content/maps/${id}`)
+    return true
+  } catch {
+    return false
+  }
+}
+
 export function App() {
   const [view, setView] = useState<'studio' | 'plan' | 'grid'>('studio')
   const [currentId, setCurrentId] = useState<string>('ritmo-sinuale')
@@ -73,38 +83,14 @@ export function App() {
     return () => { cancelled = true }
   }, [currentId])
 
-  // Carica dinamicamente tutte le mappe per calcolare il progresso
+  // Controlla solo la mappa corrente per il progresso (non tutte all'avvio)
   useEffect(() => {
-    const total = Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)
-    let written = 0
-    const ids = new Set<string>()
-
-    for (const mapTitles of Object.values(OUTLINE)) {
-      for (const title of mapTitles) {
-        const id = slugify(title)
-        import(`../content/maps/${id}`)
-          .then(() => {
-            written++
-            ids.add(id)
-            if (written === total) {
-              setWrittenIds(ids)
-            }
-          })
-          .catch(() => {
-            // non scritta
-          })
+    checkMapExists(currentId).then(exists => {
+      if (exists) {
+        setWrittenIds(prev => new Set(prev).add(currentId))
       }
-    }
-
-    // Timeout di fallback se alcune importazioni falliscono
-    const timeout = setTimeout(() => {
-      if (written < total) {
-        setWrittenIds(ids)
-      }
-    }, 1000)
-
-    return () => clearTimeout(timeout)
-  }, [])
+    })
+  }, [currentId])
 
   const progressData = useMemo(() => {
     const total = Object.values(OUTLINE).reduce((acc, arr) => acc + arr.length, 0)
