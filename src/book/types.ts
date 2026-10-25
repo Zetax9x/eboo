@@ -46,7 +46,8 @@ export interface OverviewBlock {
   title: string
   accent: Accent
   icon: IconName
-  illustration: Illustration
+  /** Leave out for abstract topics (chemistry, values, hormones): AI images of them come out wrong or with text. */
+  illustration?: Illustration
   inset?: { label: string; illustration: Illustration }
   bullets: string[]
 }

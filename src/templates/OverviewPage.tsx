@@ -8,15 +8,17 @@ export function OverviewPage({ map }: { map: OverviewMap }) {
       <div className="row row-2 grow" style={{ gridAutoRows: '1fr' }}>
         {map.blocks.map((block) => (
           <Box key={block.title} title={block.title} icon={block.icon} accent={block.accent}>
-            <div style={{ display: 'grid', gridTemplateColumns: block.inset ? '1.55fr 1fr' : '1fr', gap: 6, height: 118 }}>
-              <Illustration data={block.illustration} iconSize={44} />
-              {block.inset && (
-                <div style={{ display: 'flex', flexDirection: 'column', gap: 3, minHeight: 0 }}>
-                  <div className="inset-label">{block.inset.label}</div>
-                  <Illustration data={block.inset.illustration} style={{ flex: 1, background: '#fff' }} iconSize={26} />
-                </div>
-              )}
-            </div>
+            {(block.illustration || block.inset) && (
+              <div style={{ display: 'grid', gridTemplateColumns: block.illustration && block.inset ? '1.55fr 1fr' : '1fr', gap: 6, height: 118 }}>
+                {block.illustration && <Illustration data={block.illustration} iconSize={44} />}
+                {block.inset && (
+                  <div style={{ display: 'flex', flexDirection: 'column', gap: 3, minHeight: 0 }}>
+                    <div className="inset-label">{block.inset.label}</div>
+                    <Illustration data={block.inset.illustration} style={{ flex: 1, background: '#fff' }} iconSize={26} />
+                  </div>
+                )}
+              </div>
+            )}
             <Bullets items={block.bullets} />
           </Box>
         ))}

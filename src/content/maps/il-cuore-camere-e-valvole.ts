@@ -71,7 +71,7 @@ const map: OverviewMap = {
       illustration: {
         id: 'cuore-valvole-semilunari',
         alt: 'Valvola aortica a tre cuspidi',
-        prompt: 'aortic valve with three semilunar cusps viewed from above, coronary artery openings in the aortic sinuses',
+        prompt: 'aortic valve seen from above inside the aorta, three crescent-shaped cusps meeting in the center, two small round openings of the coronary arteries just above the cusps',
         icon: 'CircleDot',
       },
       bullets: [

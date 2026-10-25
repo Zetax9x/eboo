@@ -97,7 +97,7 @@ interface Section { title: string; icon: IconName; accent: Accent; items: string
 ```ts
 blocks: {            // 4 o 6 blocchi, griglia 2 colonne
   title: string; accent: Accent; icon: IconName
-  illustration: Illustration
+  illustration?: Illustration   // ometterla nei blocchi di concetti astratti (vedi § 8)
   inset?: { label: string; illustration: Illustration }   // piccolo riquadro di dettaglio
   bullets: string[]  // 3–4
 }[]
@@ -256,6 +256,11 @@ blu = diagnosi/valutazione, arancio = sintomi, viola = classificazione/cause. Al
   (lo stile comune viene aggiunto dal generatore). Es.: `'healthy lungs and emphysematous lungs side by side, alveoli detail'`.
 - `alt`: breve descrizione in italiano. `icon`: icona del segnaposto finché l’immagine non c’è.
 - Tracciati ECG, grafici, tabelle e valori **non** si fanno con le illustrazioni: sono già disegnati dal codice.
+- **Niente illustrazioni per concetti astratti**: chimica e ioni (pH, tamponi, elettroliti), volumi e pressioni,
+  ormoni e regolazioni, potenziali elettrici, cicli, classificazioni, elenchi. L’AI li disegna con scritte
+  (Na⁺, HCO₃⁻, FRC, GnRH…) o come forme senza senso. In questi blocchi ometti `illustration` e scrivi più punti.
+- Nel prompt **non nominare strutture o sigle** ("stratum corneum", "systole", "four chambers"): il modello le
+  trasforma in etichette. Descrivi l’aspetto: `'flat cells on the surface becoming cube-shaped cells at the bottom'`.
 
 ---
 
