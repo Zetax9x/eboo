@@ -30,7 +30,8 @@ try {
   const page = await context.newPage()
   // Fail fast if the app crashes (e.g. a content file breaks the registry) instead of waiting for the timeout.
   const crashed = new Promise((_, reject) => page.on('pageerror', (err) => reject(new Error(`Errore nella pagina: ${err.message}`))))
-  await page.goto(`${base}#/stampa/${onlyId ?? 'tutte'}`)
+  // No id: the whole book in reading order (front matter, index, chapter dividers, written maps).
+  await page.goto(`${base}#/stampa/${onlyId ?? 'libro'}`)
   await Promise.race([page.waitForSelector('body[data-ready="1"]', { timeout: 30_000 }), crashed])
 
   const pages = await page.$$eval('.page', (nodes) =>
@@ -62,7 +63,8 @@ try {
   const shots = await page.$$('.page')
   for (const [i, handle] of shots.entries()) {
     const { id } = pages[i]
-    const label = await handle.$eval('.page-foot__num', (el) => el.textContent ?? '').catch(() => '')
+    // Single page: named by its printed page number. Whole book: by reading order, so files sort correctly for Kindle.
+    const label = onlyId ? await handle.$eval('.page-foot__num', (el) => el.textContent ?? '').catch(() => '') : ''
     const number = (label.trim() || String(i + 1)).padStart(3, '0')
     await handle.screenshot({ path: `${OUT_DIR}/pagine/${number}-${id}.png` })
     console.log(`✓ ${number}-${id}.png (riempimento ${pages[i].fill}%)`)

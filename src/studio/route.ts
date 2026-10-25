@@ -8,6 +8,7 @@ export type Route =
   | { view: 'page'; id?: string }
   | { view: 'grid'; chapter?: ChapterId }
   | { view: 'plan' }
+  | { view: 'book' }
   | { view: 'print'; id: string }
 
 function safeDecode(part: string): string {
@@ -25,6 +26,8 @@ export function parseHash(hash: string): Route {
       return { view: 'grid', chapter: (param || undefined) as ChapterId | undefined }
     case 'piano':
       return { view: 'plan' }
+    case 'libro':
+      return { view: 'book' }
     case 'stampa':
       return { view: 'print', id: param || 'tutte' }
     default:
@@ -38,6 +41,8 @@ export function toHash(route: Route): string {
       return `#/griglia/${route.chapter ?? ''}`
     case 'plan':
       return '#/piano'
+    case 'book':
+      return '#/libro'
     case 'print':
       return `#/stampa/${route.id}`
     case 'page':

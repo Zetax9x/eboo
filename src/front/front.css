@@ -1,0 +1,175 @@
+/* ============ Front matter and chapter dividers ============ */
+
+.front__head {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  padding-bottom: 10px;
+  border-bottom: 3px solid var(--acc);
+  color: var(--acc);
+  flex-shrink: 0;
+}
+.front__head h1 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 34px;
+  text-transform: uppercase;
+  color: var(--ink);
+}
+.front__part { margin-left: auto; font-family: var(--font-head); font-weight: 700; font-size: 18px; color: var(--ink-soft); }
+
+/* Text pages (notices, how-to): larger type, content centred in each box. */
+.front .box__head { font-size: 18px; padding: 7px 12px; }
+.front .box__body { font-size: 15px; justify-content: center; padding: 12px 16px; }
+.front .bullets li, .front .checklist li { margin: 5px 0; }
+.front .legend-list { font-size: 15px; gap: 11px; }
+
+/* ---------- Cover ---------- */
+.front--cover {
+  padding: 56px 52px 44px;
+  gap: 22px;
+  color: #fff;
+  background:
+    radial-gradient(circle at 85% 8%, rgb(255 255 255 / 0.12) 0 140px, transparent 141px),
+    radial-gradient(circle at 10% 95%, rgb(255 255 255 / 0.08) 0 200px, transparent 201px),
+    linear-gradient(160deg, #173f7a 0%, #0e2a54 100%);
+}
+.cover__badge {
+  align-self: flex-start;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 15px;
+  letter-spacing: 0.14em;
+  text-transform: uppercase;
+  border: 1.5px solid rgb(255 255 255 / 0.6);
+  border-radius: 99px;
+  padding: 4px 14px;
+}
+.cover__title {
+  margin: 10px 0 0;
+  display: flex;
+  flex-direction: column;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 78px;
+  line-height: 0.92;
+  text-transform: uppercase;
+}
+.cover__accent { color: #ffd34d; }
+.cover__subtitle { font-size: 21px; font-weight: 500; max-width: 30em; opacity: 0.95; }
+.cover__grid {
+  flex: 1;
+  display: grid;
+  grid-template-columns: repeat(5, 1fr);
+  grid-auto-rows: 1fr;
+  gap: 12px;
+  margin-top: 8px;
+}
+.cover__tile {
+  border-radius: 16px;
+  background: linear-gradient(150deg, var(--acc), var(--acc-dark));
+  box-shadow: 0 6px 18px rgb(0 0 0 / 0.25), inset 0 0 0 2px rgb(255 255 255 / 0.4);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 16px;
+  text-transform: uppercase;
+  text-align: center;
+  color: #fff;
+}
+.cover__foot {
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  font-family: var(--font-head);
+  font-size: 22px;
+  border-top: 1.5px solid rgb(255 255 255 / 0.35);
+  padding-top: 14px;
+}
+.cover__foot strong { color: #ffd34d; font-weight: 800; letter-spacing: 0.04em; }
+
+/* ---------- Title page ---------- */
+.front--title { padding: 120px 80px 70px; justify-content: space-between; text-align: center; }
+.title__main { display: flex; flex-direction: column; align-items: center; gap: 14px; }
+.title__main h1 {
+  margin: 0;
+  font-family: var(--font-head);
+  font-weight: 800;
+  font-size: 54px;
+  line-height: 1;
+  text-transform: uppercase;
+  color: #173f7a;
+}
+.title__main p { font-size: 18px; color: var(--ink-soft); max-width: 26em; }
+.title__author { font-family: var(--font-head); font-weight: 600; font-size: 22px; letter-spacing: 0.06em; }
+.title__edition { font-family: var(--font-head); font-weight: 600; font-size: 16px; color: var(--ink-soft); margin-top: 16px; }
+.title__legal { display: flex; flex-direction: column; gap: 6px; font-size: 11.5px; color: var(--ink-soft); border-top: 1px solid #e3e7ec; padding-top: 16px; }
+
+/* ---------- How-to legend ---------- */
+.legend-list { display: flex; flex-direction: column; gap: 7px; }
+.legend-list li { display: flex; align-items: center; gap: 8px; }
+.legend-list__chip { width: 26px; height: 14px; border-radius: 4px; background: var(--acc); flex-shrink: 0; }
+
+/* ---------- Index ---------- */
+.index { flex-direction: row; gap: 22px; }
+.index__column { flex: 1; display: flex; flex-direction: column; min-width: 0; }
+.index__chapter {
+  display: flex; align-items: center; gap: 7px;
+  margin: 6px 0 2px;
+  font-family: var(--font-head);
+  font-weight: 700;
+  font-size: 13.5px;
+  text-transform: uppercase;
+  color: var(--acc-dark);
+}
+.index__chapter:first-child { margin-top: 0; }
+.index__chapter .chapter__num {
+  width: 20px; height: 20px; border-radius: 5px;
+  display: inline-grid; place-items: center;
+  background: var(--acc); color: #fff; font-size: 12px;
+}
+.index__entry, .divider__list li { display: flex; align-items: baseline; gap: 4px; font-size: 11.3px; line-height: 1.38; }
+.index__title { white-space: nowrap; overflow: hidden; text-overflow: ellipsis; }
+.index__dots { flex: 1; border-bottom: 1.5px dotted #b8bfca; transform: translateY(-3px); min-width: 10px; }
+.index__page { font-weight: 700; font-variant-numeric: tabular-nums; }
+
+/* ---------- Chapter divider ---------- */
+.front--divider {
+  padding: 0 0 40px;
+  gap: 0;
+  justify-content: center;
+  background: linear-gradient(165deg, var(--acc) 0%, var(--acc-dark) 100%);
+  color: #fff;
+}
+.divider__head {
+  position: relative;
+  display: flex;
+  align-items: center;
+  gap: 22px;
+  padding: 70px 52px 40px;
+}
+.divider__number { font-family: var(--font-head); font-weight: 800; font-size: 150px; line-height: 0.8; opacity: 0.9; }
+.divider__kicker { font-family: var(--font-head); font-weight: 600; font-size: 18px; letter-spacing: 0.14em; text-transform: uppercase; opacity: 0.85; }
+.divider__head h1 { margin: 4px 0 6px; font-family: var(--font-head); font-weight: 800; font-size: 44px; line-height: 0.95; text-transform: uppercase; }
+.divider__count { display: inline-block; font-weight: 600; font-size: 14px; background: rgb(255 255 255 / 0.18); border-radius: 99px; padding: 2px 12px; }
+.divider__icon { position: absolute; right: 52px; top: 40px; opacity: 0.25; }
+.divider__list {
+  flex: none;
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 26px;
+  margin: 0 32px 32px;
+  padding: 22px 24px;
+  background: #fff;
+  color: var(--ink);
+  border-radius: 18px;
+  box-shadow: 0 10px 30px rgb(0 0 0 / 0.2);
+}
+.divider__list ol { margin: 0; padding: 0; list-style: none; display: flex; flex-direction: column; }
+.divider__list li { font-size: 14px; line-height: 1.85; }
+.divider__list .index__page { color: var(--acc-dark); }

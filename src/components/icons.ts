@@ -23,5 +23,7 @@ export const ICONS = {
 export type IconName = keyof typeof ICONS
 
 export function Icon({ name, ...props }: { name: IconName } & LucideProps) {
-  return createElement(ICONS[name], { strokeWidth: 2.2, 'aria-hidden': true, ...props })
+  // Fallback keeps one bad icon name (e.g. a model draft being verified) from crashing the whole book.
+  const component = ICONS[name] ?? CircleDot
+  return createElement(component, { strokeWidth: 2.2, 'aria-hidden': true, ...props })
 }

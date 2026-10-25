@@ -1,10 +1,11 @@
 import { useEffect, useState } from 'react'
 import { CHAPTERS } from '../book/chapters'
 import { ENTRIES, findEntry, MAPS } from '../book/registry'
-import { BookPage } from '../templates/BookPage'
+import { buildSequence, type BookItem } from '../book/sequence'
+import { BookItemView } from '../front/FrontPages'
 import { BOOK_TITLE } from '../templates/PageFrame'
 import { Inspector, PageCanvas, type Zoom } from './PageCanvas'
-import { GridView, PlanView } from './PlanView'
+import { BookView, GridView, PlanView } from './PlanView'
 import { useRoute, type Route } from './route'
 import { Sidebar } from './Sidebar'
 
@@ -28,7 +29,11 @@ function writeEinkPreference(on: boolean): void {
 
 /** Bare written pages at 1:1 for the export script. Sets data-ready once fonts and images are loaded. */
 function PrintView({ id }: { id: string }) {
-  const entries = ENTRIES.filter((e) => e.map && (id === 'tutte' || e.id === id))
+  // 'libro' = whole book in reading order (front matter, index, dividers, written maps)
+  const items: BookItem[] =
+    id === 'libro'
+      ? buildSequence(ENTRIES, { onlyWritten: true })
+      : ENTRIES.filter((e) => e.map && (id === 'tutte' || e.id === id)).map((entry) => ({ type: 'map', id: entry.id, entry }))
   useEffect(() => {
     let cancelled = false
     const images = [...document.images].map((img) => img.decode().catch(() => undefined))
@@ -41,11 +46,11 @@ function PrintView({ id }: { id: string }) {
       cancelled = true
     }
   }, [])
-  if (entries.length === 0) return <p>Nessuna pagina scritta con id: {id}</p>
+  if (items.length === 0) return <p>Nessuna pagina scritta con id: {id}</p>
   return (
     <div className="print">
-      {entries.map((entry) => (
-        <BookPage key={entry.id} entry={entry} />
+      {items.map((item) => (
+        <BookItemView key={item.id} item={item} />
       ))}
     </div>
   )
@@ -77,6 +82,7 @@ export function App() {
         {route.view === 'page' && <PageWithNav current={entry.id} onOpen={openPage} zoom={zoom} />}
         {route.view === 'grid' && <GridView chapter={route.chapter} onOpen={openPage} />}
         {route.view === 'plan' && <PlanView onOpenChapter={(chapter) => navigate({ view: 'grid', chapter })} />}
+        {route.view === 'book' && <BookView onOpen={openPage} />}
       </main>
       {route.view === 'page' && <Inspector entry={entry} />}
     </div>
@@ -131,6 +137,7 @@ function TopBar({ route, navigate, eink, onToggleEink, zoom, onZoom }: TopBarPro
     { label: 'Pagina', route: { view: 'page' }, active: route.view === 'page' },
     { label: 'Griglia', route: { view: 'grid', chapter: CHAPTERS[0].id }, active: route.view === 'grid' },
     { label: 'Piano', route: { view: 'plan' }, active: route.view === 'plan' },
+    { label: 'Libro', route: { view: 'book' }, active: route.view === 'book' },
   ]
   return (
     <header className="topbar">

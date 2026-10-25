@@ -2,6 +2,8 @@ import { CHAPTERS } from '../book/chapters'
 import { ENTRIES, illustrationsOf, MAPS } from '../book/registry'
 import { STATUSES, type ChapterId } from '../book/types'
 import { hasIllustration } from '../components/Illustration'
+import { buildSequence } from '../book/sequence'
+import { BookItemView } from '../front/FrontPages'
 import { BookPage } from '../templates/BookPage'
 
 const THUMB_SCALE = 0.2
@@ -73,6 +75,34 @@ function Stat({ value, label }: { value: string; label: string }) {
     <div className="stat">
       <strong>{value}</strong>
       <span>{label}</span>
+    </div>
+  )
+}
+
+const BOOK_THUMB_SCALE = 0.26
+
+/** The whole book in reading order, front matter included. Click a map to open it. */
+export function BookView({ onOpen }: { onOpen: (id: string) => void }) {
+  const items = buildSequence(ENTRIES)
+  return (
+    <div className="grid-view">
+      {items.map((item, i) => (
+        <button
+          key={item.id}
+          className="thumb"
+          onClick={() => item.type === 'map' && onOpen(item.id)}
+          aria-label={`Pagina ${i + 1} del libro: ${item.id}`}
+        >
+          <div className="thumb__frame" style={{ width: 768 * BOOK_THUMB_SCALE, height: 1024 * BOOK_THUMB_SCALE }}>
+            <div style={{ transform: `scale(${BOOK_THUMB_SCALE})`, transformOrigin: 'top left' }}>
+              <BookItemView item={item} />
+            </div>
+          </div>
+          <span className="thumb__label">
+            {i + 1}. {item.type === 'map' ? item.entry.title : item.id.replace(/-/g, ' ')}
+          </span>
+        </button>
+      ))}
     </div>
   )
 }
