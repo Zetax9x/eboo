@@ -27,9 +27,25 @@ function getCurrentMapData(id: string) {
 async function loadMapComponent(id: string) {
   try {
     const module = await import(`../content/maps/${id}`)
-    return module.default || module
+    // Supporta sia default export che named export
+    if (module.default && typeof module.default === 'function') {
+      return module.default
+    }
+    // Se non c'è default, cerca un componente con lo stesso nome del file
+    const componentName = id.split('-').map(w => w.charAt(0).toUpperCase() + w.slice(1)).join('') + 'Page'
+    if (module[componentName] && typeof module[componentName] === 'function') {
+      return module[componentName]
+    }
+    // Fallback: usa il primo export function trovato
+    for (const [key, value] of Object.entries(module)) {
+      if (typeof value === 'function' && key !== 'default') {
+        return value
+      }
+    }
+    return null
   } catch (error) {
     // Mappa non esiste ancora
+    console.warn(`Mappa ${id} non trovata:`, error)
     return null
   }
 }
@@ -47,7 +63,7 @@ export function App() {
   useMemo(() => {
     let cancelled = false
     loadMapComponent(currentId).then((component) => {
-      if (!cancelled && component) {
+      if (!cancelled && component && typeof component === 'function') {
         setMapComponent(component)
       } else {
         setMapComponent(null)
@@ -78,7 +94,7 @@ export function App() {
     if (currentId === 'avvertenze') return <InitialPages />
     
     // Se c'è un componente mappa caricato, usalo
-    if (MapComponent) {
+    if (MapComponent && typeof MapComponent === 'function') {
       return <MapComponent />
     }
 
