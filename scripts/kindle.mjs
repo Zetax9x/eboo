@@ -143,6 +143,13 @@ function buildOpf(pages, meta, size) {
     })
     .join('\n')
   const spine = pages.map((_, i) => `<itemref idref="pg${i + 1}" properties="rendition:page-spread-center"/>`).join('\n')
+  // EPUB2 <guide>: Kindle reads the start-reading location ("text") from here as well as from the nav landmarks.
+  const at = (id) => pages.findIndex((p) => p.id === id)
+  const guide = [
+    `<reference type="cover" title="Copertina" href="${pageFile(0)}"/>`,
+    at('indice-1') >= 0 ? `<reference type="toc" title="Indice" href="${pageFile(at('indice-1'))}"/>` : '',
+    at('capitolo-1') >= 0 ? `<reference type="text" title="Inizio" href="${pageFile(at('capitolo-1'))}"/>` : '',
+  ].join('\n')
   return `<?xml version="1.0" encoding="UTF-8"?>
 <package xmlns="http://www.idpf.org/2007/opf" version="3.0" unique-identifier="bookid" xml:lang="it" prefix="rendition: http://www.idpf.org/vocab/rendition/#">
 <metadata xmlns:dc="http://purl.org/dc/elements/1.1/">
@@ -168,6 +175,9 @@ ${manifest}
 <spine>
 ${spine}
 </spine>
+<guide>
+${guide}
+</guide>
 </package>`
 }
 
