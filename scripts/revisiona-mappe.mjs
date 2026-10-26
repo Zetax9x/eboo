@@ -13,6 +13,8 @@
 //   npm run revisiona -- --limite 5                  stop after 5 maps
 // Env: OLLAMA_HOST (default http://localhost:11434), OLLAMA_CTX (default 32768),
 //      OLLAMA_THINK = low | medium | high | false (default medium; reasoning effort of the model)
+// vLLM (or any OpenAI-compatible server): set LLM_BASE_URL, e.g. http://localhost:8000/v1, and LLM_MODEL
+// (the model name the server exposes, e.g. openai/gpt-oss-120b). Then OLLAMA_* are ignored except OLLAMA_THINK.
 
 import { execFile } from 'node:child_process'
 import { readFile, readdir, writeFile, appendFile } from 'node:fs/promises'
@@ -27,7 +29,8 @@ const MAPS_DIR = path.join(ROOT, 'src/content/maps')
 const REVIEW_DIR = path.join(ROOT, 'docs/revisione')
 const STATE_FILE = path.join(REVIEW_DIR, 'auto-stato.json')
 const HOST = process.env.OLLAMA_HOST ?? 'http://localhost:11434'
-const MODEL = process.env.OLLAMA_MODEL
+const OPENAI_BASE_URL = process.env.LLM_BASE_URL?.replace(/\/$/, '')
+const MODEL = process.env.LLM_MODEL ?? process.env.OLLAMA_MODEL
 const CONTEXT_TOKENS = Number(process.env.OLLAMA_CTX ?? 32768)
 const THINK = process.env.OLLAMA_THINK ?? 'medium'
 const REQUEST_TIMEOUT_MS = 30 * 60 * 1000
@@ -85,8 +88,23 @@ const chapterOf = (code) => code.match(/chapter:\s*'([a-z]+)'/)?.[1] ?? 'altro'
 const fieldOf = (code, field) => code.match(new RegExp(`${field}:\\s*'([^']+)'`))?.[1]
 const illustrationIds = (code) => [...code.matchAll(/id:\s*'([^']+)'/g)].map((m) => m[1]).slice(1).sort().join(',')
 
+/** OpenAI-compatible servers (vLLM): reasoning goes in a separate field, the answer in `content`. */
+async function chatOpenAI(messages) {
+  const body = { model: MODEL, messages, temperature: 0.1, max_tokens: 12000 }
+  if (THINK !== 'false') body.reasoning_effort = THINK
+  const response = await fetch(`${OPENAI_BASE_URL}/chat/completions`, {
+    method: 'POST',
+    headers: { 'Content-Type': 'application/json', Authorization: `Bearer ${process.env.LLM_API_KEY ?? 'none'}` },
+    body: JSON.stringify(body),
+    signal: AbortSignal.timeout(REQUEST_TIMEOUT_MS),
+  })
+  if (!response.ok) throw new Error(`Server ${response.status}: ${(await response.text()).slice(0, 300)}`)
+  return (await response.json()).choices?.[0]?.message?.content ?? ''
+}
+
 let sendThink = true
 async function chat(messages) {
+  if (OPENAI_BASE_URL) return chatOpenAI(messages)
   const body = { model: MODEL, messages, stream: false, options: { num_ctx: CONTEXT_TOKENS, temperature: 0.1 } }
   const think = THINK === 'false' ? false : THINK
   const response = await fetch(`${HOST}/api/chat`, {
@@ -167,7 +185,7 @@ async function reviewOne(id, types) {
 }
 
 async function main() {
-  if (!MODEL) throw new Error('Imposta OLLAMA_MODEL, es.: $env:OLLAMA_MODEL="gpt-oss:120b"')
+  if (!MODEL) throw new Error('Imposta LLM_MODEL (vLLM) oppure OLLAMA_MODEL, es.: $env:LLM_MODEL="openai/gpt-oss-120b"')
   const args = parseArgs(process.argv.slice(2))
   const state = await readJson(STATE_FILE, {})
   const types = await readFile(path.join(ROOT, 'src/book/types.ts'), 'utf8')
@@ -183,7 +201,7 @@ async function main() {
   queue.splice(Number(args.limite ?? Infinity))
 
   const workers = Math.max(1, Number(args.paralleli ?? 3))
-  console.log(`Revisione con ${MODEL} (ragionamento: ${THINK}) — ${queue.length} mappe, ${workers} alla volta`)
+  console.log(`Revisione con ${MODEL} su ${OPENAI_BASE_URL ?? HOST} (ragionamento: ${THINK}) — ${queue.length} mappe, ${workers} alla volta`)
   console.log(`Già controllate a mano: ${reviewedByHand.size}; dallo script: ${Object.keys(state).length}`)
 
   const counts = { ok: 0, modificata: 0, scartata: 0, errore: 0 }
