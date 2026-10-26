@@ -129,6 +129,7 @@ async function main() {
         await writeFile(STATE_FILE, JSON.stringify(state, null, 2) + '\n')
         console.log(`  ${verdict === 'ok' ? '✓' : '⚠'} ${id}${verdict === 'ok' ? '' : ` — ${wrong} sbagliate, ${doubtful} dubbie`}`)
       } catch (err) {
+        failed++
         console.log(`  ! ${id}: ${err.message}`)
       }
     }
@@ -142,7 +143,8 @@ async function main() {
       (allFlagged.length ? allFlagged.map((id) => `- [ ] ${id}`).join('\n') : 'Nessuna mappa segnalata.') +
       '\n',
   )
-  console.log(`\nFatto: ${queue.length - flagged.length} confermate, ${flagged.length} da controllare in questo giro.`)
+  const confirmed = queue.length - flagged.length - failed
+  console.log(`\nFatto: ${confirmed} confermate, ${flagged.length} da controllare, ${failed} non verificate per errore (rilancia per riprenderle).`)
   console.log('Elenco: docs/revisione/verifica-riepilogo.md — dettagli: docs/revisione/verifica.md')
 }
 
