@@ -9,8 +9,8 @@ const map: ConceptMap = {
   icon: 'Users',
   status: 'bozza',
   sources: [
-    'Fried L.P., et al. — Frailty phenotype and frailty index: a systematic review, J Gerontol A Biol Sci Med Sci, 2018',
-    'Ministero della Salute — Linee guida per la cura della fragilità in età avanzata, 2023',
+    'Fried L.P., et al. — Frailty in older adults: evidence for a phenotype, J Gerontol A Biol Sci Med Sci, 2001',
+    'Ministero della Salute — Linee guida per la gestione della fragilità in età avanzata, 2022',
     'Boult C., et al. — Comprehensive Geriatric Assessment: A Guide for Clinicians, 2022',
   ],
   intro:
@@ -42,7 +42,7 @@ const map: ConceptMap = {
       accent: 'orange',
       items: [
         '**Età** avanzata (>80 anni)',
-        '**Malattie croniche** multiple (diabete, BPCO, ICH)',
+        '**Malattie croniche** multiple (diabete, BPCO, Ictus)',
         '**Polifarmacoterapia** (>5 farmaci)',
         '**Sarcopenia** e perdita di massa muscolare',
         '**Isolamento sociale** e solitudine',

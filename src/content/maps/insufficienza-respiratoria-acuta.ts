@@ -9,7 +9,7 @@ const map: AlgorithmMap = {
   icon: 'Wind',
   status: 'bozza',
   sources: [
-    'SIC — Società Italiana di Anestesia, Analgesia, Rianimazione e Terapia Intensiva (Linee guida su supporto ventilatorio)',
+    'SIC — Società Italiana di Anestesia, Analgesia, Rianimazione e Terapia Intensiva (Linee guida sul supporto ventilatorio)',
     'GOLD — Global Strategy for Diagnosis, Management, Prevention and Treatment of COPD (2024)',
     'GINA — Global Initiative for Asthma (Report 2024)',
   ],
@@ -35,7 +35,7 @@ const map: AlgorithmMap = {
       icon: 'TriangleAlert',
       accent: 'red',
       items: [
-        'SpO₂ **< 90%** nonostante O₂ supplementare',
+        'SpO₂ **< 90%** nonostante l\'ossigeno supplementare',
         'Frequenza respiratoria **> 30/min** o **< 8/min**',
         'PaCO₂ **> 50 mmHg** con pH **< 7,35**',
         'Alterazione dello **stato di coscienza**',
@@ -61,7 +61,7 @@ const map: AlgorithmMap = {
       icon: 'Stethoscope',
       accent: 'green',
       items: [
-        'Posizionare il paziente in **decubito semi-seduto**',
+        'Posizionare il paziente in **posizione semi-seduta**',
         'Somministrare farmaci per via **nebulizzata** o IV',
         'Monitorare la **fatica respiratoria** e la tolleranza alla VNI',
         'Prevenire le **lesioni da pressione** (maschera, tubi)',

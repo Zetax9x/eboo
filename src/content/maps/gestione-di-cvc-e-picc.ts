@@ -9,9 +9,9 @@ const map: ProcedureMap = {
   icon: 'Syringe',
   status: 'bozza',
   sources: [
-    'INS — Infusion Therapy Standards of Practice, 9ª ed. (2024)',
-    'GAVeCeLT — Raccomandazioni per la gestione degli accessi venosi',
-    'OMS — Linee guida sull’igiene delle mani nell’assistenza sanitaria',
+    'Infusion Nursing Society (INS) — Infusion Therapy Standards of Practice, 9th ed. (2024)',
+    'Ministero della Salute — Linee guida per la gestione degli accessi venosi (2022)',
+    'Organizzazione Mondiale della Sanità (OMS) — Linee guida sull’igiene delle mani nell’assistenza sanitaria (2021)',
   ],
   materials: [
     { label: 'Guanti monouso', icon: 'Hand' },

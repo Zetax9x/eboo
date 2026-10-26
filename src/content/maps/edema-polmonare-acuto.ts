@@ -54,7 +54,7 @@ const map: AlgorithmMap = {
     {
       kind: 'alert',
       title: 'Segnali di peggioramento',
-      text: 'SpO₂ in calo, PA sistolica < 90 mmHg, alterazione coscienza. **Chiamare medico/USCI**.',
+      text: 'SpO₂ in calo, PA sistolica < 90 mmHg, alterazione coscienza. **Chiamare il medico / team di emergenza**.',
     },
     {
       kind: 'end',

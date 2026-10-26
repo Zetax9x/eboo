@@ -63,7 +63,7 @@ const map: ConceptMap = {
       items: [
         '**Campionamento**: dimensione adeguata, inclusione/esclusione chiare',
         '**Randomizzazione**: assegnazione casuale e nascosta (allocation concealment)',
-        '**Cieca**: singolo o doppio cieco per ridurre il bias di performance',
+        '**Cieco**: singolo o doppio cieco per ridurre il bias di performance',
         '**Strumenti validati**: affidabilità (Cronbach’s α) e validità (contenuto, criterio)',
         '**Analisi statistica**: test appropriati, intervallo di confidenza, p-value',
         '**Riproducibilità**: protocollo registrato, dati accessibili',
@@ -75,10 +75,10 @@ const map: ConceptMap = {
       accent: 'teal',
       items: [
         '**CASP** (Critical Appraisal Skills Programme): checklist per RCT, coorti, qualitativi',
-        '**JBI** (Joanna Briggs Institute): livelli di evidenza e checklist di appraisement',
+        '**JBI** (Joanna Briggs Institute): livelli di evidenza e checklist di valutazione',
         '**GRADE**: sistema per valutare la qualità delle evidenze e formulare raccomandazioni',
-        '**PRISMA**: linee guida per la reporting delle revisioni sistematiche',
-        '**CONSORT**: checklist per la reporting degli RCT',
+        '**PRISMA**: linee guida per il reporting delle revisioni sistematiche',
+        '**CONSORT**: checklist per il reporting degli RCT',
         'Usare questi strumenti rende la critica della letteratura strutturata e oggettiva',
       ],
     },

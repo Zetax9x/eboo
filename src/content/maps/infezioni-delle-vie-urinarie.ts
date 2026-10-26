@@ -72,7 +72,7 @@ const map: DiseaseMap = {
       icon: 'Pill',
       accent: 'green',
       items: [
-        '**Cistite semplice**: nitrofurantoina, fosfomicina, trimetoprim-sulfametossazolo (3–7 giorni)',
+        '**Cistite semplice**: nitrofurantoina (5 giorni), fosfomicina (dose singola), trimetoprim‑sulfametossazolo (3 giorni)',
         '**Pielonefrite**: cefalosporine, fluoroquinoloni, aminoglicosidi (7–14 giorni)',
         '**Urosepsi**: antibiotici ad ampio spettro EV, fluidoterapia, supporto emodinamico',
         'Rimozione catetere urinario se presente',
@@ -98,7 +98,7 @@ const map: DiseaseMap = {
       icon: 'ShieldCheck',
       accent: 'teal',
       items: [
-        'Idratazione adeguata: > 1,5–2 L/die',
+        'Idratazione adeguata: > 1,5–2 L/giorno',
         'Svuotamento vescicale regolare, non trattenere urina',
         'Igiene perineale corretta, da anteriore a posteriore',
         'Rimozione precoce del catetere urinario',

@@ -9,18 +9,18 @@ const map: ProcedureMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'SITR — Società Italiana di Trasfusioni e Terapia Cellulare, Linee guida (ultima edizione)',
+    'SIT — Società Italiana di Trasfusioni e Terapia Cellulare, Linee guida per la trasfusione di sangue e emocomponenti (ultima edizione)',
     'AIFA — Raccomandazioni per la sicurezza trasfusionale',
-    'Ministero della Salute — Raccomandazioni per la gestione della trasfusione',
+    'Ministero della Salute — Linee guida per la gestione della trasfusione di sangue e emocomponenti',
   ],
   materials: [
     { label: 'Set trasfusionale', icon: 'Package' },
     { label: 'Tubo con filtro', icon: 'Cable' },
-    { label: 'NaCl 0,9%', icon: 'Droplets' },
+    { label: 'NaCl 0,9%', icon: 'Droplet' },
     { label: 'Guanti monouso', icon: 'Hand' },
     { label: 'Cartella trasfusionale', icon: 'ClipboardList' },
     { label: 'Termometro', icon: 'Thermometer' },
-    { label: 'Tensivoglia', icon: 'Gauge' },
+    { label: 'Tensimetro', icon: 'Gauge' },
     { label: 'SpO2', icon: 'Activity' },
   ],
   sites: {
@@ -106,7 +106,7 @@ const map: ProcedureMap = {
     { label: 'Reazione allergica', sub: 'orticaria, prurito, angioedema' },
     { label: 'Reazione febbrile', sub: 'febbre, brividi, tachicardia' },
     { label: 'TRALI', sub: 'edema polmonare, ipossia' },
-    { label: 'TAI', sub: 'sovraccarico volumico, dispnea' },
+    { label: 'TACO', sub: 'sovraccarico volumico, dispnea' },
     { label: 'Infezione', sub: 'batteriemia, sepsi' },
   ],
   nurseRole: [

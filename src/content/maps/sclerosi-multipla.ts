@@ -60,7 +60,7 @@ const map: DiseaseMap = {
       accent: 'red',
       items: [
         '**Metilprednisolone** ad alte dosi per 3–5 giorni',
-        'Ev o per os secondo prescrizione',
+        'EV o per os secondo prescrizione',
         'Plasmaferesi se non risposta',
         'Escludere **infezioni** (pseudo-ricaduta)',
         'Durante i boli: **glicemia**, PA, gastroprotezione se prescritta',
@@ -72,7 +72,7 @@ const map: DiseaseMap = {
       accent: 'green',
       items: [
         'Moderata efficacia: **interferone β**, glatiramer, teriflunomide, dimetilfumarato',
-        'Alta efficacia: **natalizumab**, anti-CD20 (ocrelizumab, ofatumumab), S1P-modulatori, cladribina',
+        'Alta efficacia: **natalizumab**, anti‑CD20 (ocrelizumab, ofatumumab), S1P‑modulatori, cladribina',
         'Ocrelizumab anche nella **PP**',
       ],
     },
@@ -94,7 +94,7 @@ const map: DiseaseMap = {
       accent: 'teal',
       items: [
         'Natalizumab: rischio di **PML** (test JCV)',
-        'Immunosoppressione: **infezioni**',
+        'immunosoppressione: **infezioni**',
         'Controlli periodici: emocromo, funzione epatica',
         'Vaccinazioni prima della terapia',
         'Gravidanza da **pianificare**',

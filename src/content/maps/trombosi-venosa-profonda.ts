@@ -36,7 +36,7 @@ const map: DiseaseMap = {
         '**Immobilità** prolungata (lettino, volo lungo)',
         '**Chirurgia** recente (anca, ginocchio, addome)',
         '**Cancro** attivo o terapia chemioterapica',
-        '**Trombofilia** ereditaria (Fattore V Leiden, Protrombina 202)',
+        '**Trombofilia** ereditaria (Fattore V Leiden, Protrombina G20210A)',
         '**Gravidanza** e post-partum',
         '**Contraccettivi** orali o terapia ormonale sostitutiva',
       ],

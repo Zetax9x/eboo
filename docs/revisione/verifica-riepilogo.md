@@ -1,0 +1,43 @@
+# Verifica delle correzioni — mappe da controllare
+
+Modello: google/medgemma-27b-text-it. Dettagli in `verifica.md`.
+
+- [ ] apparato-urinario-panoramica
+- [ ] catetere-venoso-periferico-cvp
+- [ ] coagulazione-pt-inr-aptt
+- [ ] cure-palliative
+- [ ] embolia-polmonare
+- [ ] edema-polmonare-acuto
+- [ ] elettroliti-valori-e-alterazioni
+- [ ] epatiti-virali
+- [ ] emoderivati-ed-emocomponenti
+- [ ] emogasanalisi-valori-normali
+- [ ] equilibrio-acido-base
+- [ ] fegato-e-vie-biliari
+- [ ] equilibrio-idro-elettrolitico
+- [ ] fratture-e-frattura-di-femore
+- [ ] geriatria-la-fragilita
+- [ ] gestione-del-catetere-vescicale
+- [ ] fibrillazione-atriale-la-patologia
+- [ ] ictus-riconoscimento-e-codice-ictus
+- [ ] gestione-delle-vie-aeree
+- [ ] infezioni-correlate-all-assistenza-ica
+- [ ] il-neurone-e-la-sinapsi
+- [ ] infarto-miocardico-acuto
+- [ ] infezioni-delle-vie-urinarie
+- [ ] insufficienza-renale-acuta
+- [ ] iniezione-intradermica
+- [ ] la-regola-delle-7-g
+- [ ] lattati
+- [ ] meccanica-respiratoria
+- [ ] medicazione-semplice
+- [ ] nitrati-e-farmaci-per-l-angina
+- [ ] occlusione-intestinale
+- [ ] pbls-pediatrico
+- [ ] salute-mentale-valutazione
+- [ ] sindromi-geriatriche
+- [ ] trasfusione-la-procedura
+- [ ] sterilizzazione-e-disinfezione
+- [ ] trauma-maggiore-approccio
+- [ ] tumori-principi-di-oncologia
+- [ ] valutazione-abcde

@@ -55,10 +55,10 @@ const map: DiseaseMap = {
       icon: 'Brain',
       accent: 'red',
       items: [
-        'Score **CHA₂DS₂-VA** (ESC 2024, senza il sesso)',
-        'Score **≥ 2**: anticoagulante raccomandato; **1**: da considerare',
+        'Score **CHA₂DS₂-VASc** (ESC 2024, include il sesso)',
+        'Score **≥ 2 (uomini) o ≥ 3 (donne)**: anticoagulante raccomandato; **1 (uomini) o 2 (donne)**: valutare',
         '**DOAC** preferiti al warfarin',
-        'Warfarin (INR **2–3**) se protesi meccanica o stenosi mitralica moderata-severa',
+        'Warfarin (INR **2–3**) se protesi meccanica o stenosi mitralica moderata‑severa',
         'Aspirina **non** previene l’ictus nella FA',
       ],
     },
@@ -78,7 +78,7 @@ const map: DiseaseMap = {
       icon: 'Activity',
       accent: 'teal',
       items: [
-        '**Frequenza**: beta-bloccanti, calcioantagonisti non DHP, digossina',
+        '**Frequenza**: beta‑bloccanti, calcioantagonisti non DHP, digossina',
         'Obiettivo iniziale FC a riposo **< 110 bpm**',
         '**Ritmo**: cardioversione elettrica o farmacologica (es. amiodarone, flecainide)',
         '**Ablazione** transcatetere in casi selezionati',
@@ -90,7 +90,7 @@ const map: DiseaseMap = {
       accent: 'navy',
       items: [
         'Paziente instabile: **CVE sincronizzata urgente**',
-        'FA **> 24 h** o durata ignota: **3 settimane** di anticoagulante o **ETE**',
+        'FA **> 48 h** o durata ignota: **3 settimane** di anticoagulante o **ETE**',
         'Anticoagulare almeno **4 settimane** dopo',
         'Consenso informato, digiuno, sedazione',
       ],

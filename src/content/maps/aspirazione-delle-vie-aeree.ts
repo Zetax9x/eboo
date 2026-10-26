@@ -28,7 +28,7 @@ const map: ProcedureMap = {
   safety: [
     { text: 'Aspirare **solo se serve**, non a orario', kind: 'ok' },
     { text: 'Vie aeree artificiali: tecnica **sterile**', kind: 'ok' },
-    { text: 'Pressione adulto **≤ 150 mmHg** (di solito 100–150)', kind: 'warn' },
+    { text: 'Pressione di aspirazione **≤ 150 cmH₂O** (di solito 100–150 cmH₂O)', kind: 'warn' },
     { text: 'Sondino **≤ 50%** del lume del tubo nell’adulto', kind: 'warn' },
     { text: 'Ogni passaggio **≤ 10–15 s**, aspirazione **solo in risalita**', kind: 'warn' },
     { text: '**Non** instillare NaCl di routine nel tubo', kind: 'no' },

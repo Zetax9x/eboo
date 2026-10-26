@@ -22,8 +22,8 @@ const map: DiseaseMap = {
     icon: 'Droplet',
   },
   types: [
-    { name: 'Lieve', text: 'Glicemia **70–54 mg/dL**. Sintomi autolimitanti, risolvibile con zuccheri orali.' },
-    { name: 'Moderata', text: 'Glicemia **< 55 mg/dL**. Richiede intervento attivo e monitoraggio.' },
+    { name: 'Lieve', text: 'Glicemia **70–55 mg/dL**. Sintomi autolimitanti, risolvibile con zuccheri orali.' },
+    { name: 'Moderata', text: 'Glicemia **55–40 mg/dL**. Richiede intervento attivo e monitoraggio.' },
     { name: 'Grave', text: 'Glicemia **< 40 mg/dL** o perdita di coscienza. Necessita glucagone o glucosio EV.' },
     { name: 'Ricorrente', text: 'Episodi frequenti (> 2/mese). Richiede rivedere terapia e stile di vita.' },
   ],

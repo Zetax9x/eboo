@@ -10,7 +10,7 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'ERC — European Resuscitation Council Guidelines 2021 (Hypothermia)',
-    'OMS — Linee guida per la gestione delle emergenze da calore',
+    'OMS — Heatwaves and health: guidance for health sector (2022)',
     'Ministero della Salute — Raccomandazioni per la gestione delle ondate di calore',
   ],
   columns: 2,
@@ -71,7 +71,7 @@ const map: ConceptMap = {
       accent: 'red',
       items: [
         'Ipotermia: **aritmie cardiache**, apnea, rigidità muscolare',
-        'Colpo di calore: **convulsioni**, coma, ematuria (rabdomiolisi)',
+        'Colpo di calore: **convulsioni**, coma, mioglobinuria (rabdomiolisi)',
         'Entrambi: **instabilità emodinamica**, ipotensione refrattaria',
         'Entrambi: **coagulopatia** (DIC), insufficienza renale acuta',
         'Entrambi: **alterazione della coscienza** che peggiora',

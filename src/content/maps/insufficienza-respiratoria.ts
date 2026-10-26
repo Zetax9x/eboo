@@ -10,7 +10,7 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'ATS/ACCP — Clinical Practice Guideline: Diagnosis and Management of Acute Hypoxemic Respiratory Failure',
-    'SIC — Linee guida per la gestione dell’insufficienza respiratoria acuta',
+    'SIAARTI — Linee guida per la gestione dell’insufficienza respiratoria acuta (2020)',
     'NICE — Acute respiratory failure: assessment and management',
   ],
   definition:
@@ -45,7 +45,7 @@ const map: DiseaseMap = {
       icon: 'Eye',
       accent: 'orange',
       items: [
-        '**Dispnea**, tachipnea (> 25 atti/min), uso muscoli accessori',
+        '**Dispnea**, tachipnea (> 25 respirazioni/min), uso muscoli accessori',
         'Cianosi, agitazione, confusione, sonnolenza',
         'Sudorazione, tachicardia, ipotensione',
         'Paradosso toracico (in caso di trauma o miopatia)',
@@ -111,7 +111,7 @@ const map: DiseaseMap = {
   redFlags: [
     '**SpO₂ < 90%** persistente nonostante O₂ ad alto flusso: avvisare subito il medico',
     'Alterazione del livello di coscienza, agitazione o sonnolenza: possibile **ipercapnia** o ipossia cerebrale',
-    'Apnea, cianosi grave, aritmie: **attivare il codice arrossato** e prepararsi alla rianimazione',
+    'Apnea, cianosi grave, aritmie: **attivare il codice rosso** e prepararsi alla rianimazione',
   ],
 }
 

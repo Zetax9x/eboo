@@ -10,8 +10,7 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'OMS — Definition and Guidelines for Palliative Care (2018)',
-    'Ministero della Salute — Piano Nazionale delle Cure Palliative (2023)',
-    'Fondazione A.I.D.A. — Linee guida per la gestione del dolore e dei sintomi terminali',
+    'Ministero della Salute — Piano Nazionale delle Cure Palliative (2022)',
   ],
   intro:
     'Approccio che migliora la **qualità della vita** di pazienti e famiglie di fronte a malattie che minacciano la vita, attraverso la **prevenzione** e il **sollievo** dal dolore e da altri problemi fisici, psicologici e spirituali.',
@@ -45,7 +44,7 @@ const map: ConceptMap = {
         '**Psicologo** e **Assistente sociale**',
         '**Cappellano** o referente spirituale',
         '**Fisioterapista** e **Nutrizionista**',
-        '**Volontari** formati (A.I.D.A., ecc.)',
+        '**Volontari** formati delle associazioni',
         'Lavoro in **rete**: ospedale, territorio, hospice',
       ],
     },

@@ -56,7 +56,7 @@ const map: ConceptMap = {
         'Camera singola con **ventilazione negativa** (6-12 ricambi/ora) e porta chiusa',
         'Se camera non disponibile: coorte in camera con ventilazione dedicata',
         'Limitare al minimo i visitatori; se presenti, FFP2/FFP3',
-        'Durata: fino a negativizzazione di 3 campioni di espettorato (TB) o 5° giorno di vita (varicella)',
+        'Durata: fino a negativizzazione di 3 campioni di espettorato (TB) o 5° giorno dall’inizio delle lesioni (varicella)',
       ],
     },
     {

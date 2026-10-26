@@ -109,7 +109,7 @@ const map: OverviewMap = {
         '**Aldosterone**: ↑ riassorbimento Na+ e acqua, ↑ secrezione K+',
         '**ADH** (vasopressina): ↑ permeabilità all’acqua nel dotto collettore',
         '**ANP** (peptide natriuretico atriale): ↑ escrezione di Na+ e acqua',
-        'Sistema **renina-angiotensina-aldosterone (RAA)**: ↑ PA e volume ematico',
+        'Sistema **renina-angiotensina-aldosterone (RAA)**: ↑ pressione arteriosa e volume ematico',
         'Risposta a ipovolemia, iponatriemia, iperkaliemia',
       ],
     },

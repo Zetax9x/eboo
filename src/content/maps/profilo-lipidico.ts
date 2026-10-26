@@ -10,7 +10,7 @@ const map: LabMap = {
   status: 'bozza',
   sources: [
     'ESC/EAS Guidelines for the management of dyslipidemia (2019)',
-    'Linee guida AIFA — Prevenzione cardiovascolare',
+    'AIFA – Linee guida per la prescrizione di farmaci ipolipemizzanti (2020)',
     'Ministero della Salute — Raccomandazioni per la prevenzione delle malattie cardiovascolari',
   ],
   intro: 'Il profilo lipidico valuta il rischio cardiovascolare. I valori di riferimento variano in base al rischio cardiovascolare complessivo del paziente (basso, moderato, alto, molto alto).',
@@ -22,7 +22,7 @@ const map: LabMap = {
       unit: 'mg/dL',
       accent: 'blue',
       low: {
-        name: 'Ipopitosterolemia',
+        name: 'Ipocolesterolemia',
         signs: 'raro, spesso asintomatico; può indicare malassorbimento',
         causes: 'malnutrizione, cirrosi epatica, ipertiroidismo, malassorbimento',
       },
@@ -58,7 +58,7 @@ const map: LabMap = {
       unit: 'mg/dL',
       accent: 'green',
       low: {
-        name: 'Ipodl',
+        name: 'HDL basso',
         signs: 'aumenta il rischio cardiovascolare',
         causes: 'diabete, obesità, fumo, sedentarietà, sindrome metabolica',
       },

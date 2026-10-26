@@ -11,7 +11,7 @@ const map: ProcedureMap = {
   sources: [
     'FNOPI — Codice Deontologico dell’Infermiere (2014)',
     'Ministero della Salute — Raccomandazioni per la sicurezza del paziente',
-    'Linee guida nazionali sulla prevenzione delle lesioni da pressione (2020)',
+    'Linee guida nazionali per la prevenzione e la gestione delle lesioni da pressione (2019) – Ministero della Salute',
   ],
   materials: [
     { label: 'Carrozzina a rotelle', icon: 'User' },
@@ -39,7 +39,7 @@ const map: ProcedureMap = {
   safety: [
     { text: 'Valutare **capacità di collaborazione**', kind: 'ok' },
     { text: 'Verificare **stabilità** carrozzina', kind: 'ok' },
-    { text: 'Usare **sollevamento meccanico** se non collaborante', kind: 'warn' },
+    { text: 'Usare **sollevamento meccanico** se non collaborante', kind: 'ok' },
     { text: '**Mai trascinare** il paziente', kind: 'no' },
     { text: 'Chiedere **aiuto** se paziente pesante', kind: 'warn' },
   ],
@@ -102,7 +102,7 @@ const map: ProcedureMap = {
   complications: [
     { label: 'Caduta', sub: 'perdita di equilibrio' },
     { label: 'Lesioni muscolo-scheletriche', sub: 'dolori lombari' },
-    { label: 'Lesioni da pressione', sub: 'contusioni, abrasioni' },
+    { label: 'Lesioni da pressione', sub: 'ulcere da pressione' },
     { label: 'Ansia e stress', sub: 'paura di cadere' },
   ],
   nurseRole: [

@@ -25,12 +25,6 @@ const map: ProcedureMap = {
   ],
   sites: {
     title: 'Scelta della vena',
-    illustration: {
-      id: 'prelievo-venoso-piega-gomito',
-      alt: 'Vene superficiali della piega del gomito',
-      prompt: 'inner side of an adult arm at the elbow crease, palm facing up, with three superficial blue veins forming an M shape under the skin',
-      icon: 'Target',
-    },
     items: [
       '**Piega del gomito**: vena mediana prima scelta',
       'Poi vena **cefalica**; **basilica** per ultima (vicina ad arteria e nervo)',

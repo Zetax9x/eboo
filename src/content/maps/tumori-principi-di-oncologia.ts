@@ -73,7 +73,7 @@ const map: DiseaseMap = {
         '**Chimioterapia**: farmaci sistemici citotossici o mirati',
         '**Radioterapia**: fasci di radiazioni ionizzanti localizzati',
         '**Immunoterapia**: anticorpi monoclonali, inibitori di checkpoint',
-        '**Terapia ormonale**: per tumori ormono-sensibili (mammella, prostata)',
+        '**Terapia ormonale**: per tumori **ormone**-sensibili (mammella, prostata)',
       ],
     },
     {
@@ -109,7 +109,7 @@ const map: DiseaseMap = {
     'Educare al **riconoscimento** degli effetti collaterali e quando avvisare il medico',
   ],
   redFlags: [
-    '**Febbre > 38 °C** con neutropenia: emergenza, avvisare subito il medico',
+    '**Febbre ≥ 38,3 °C** (o ≥ 38 °C per 1 h) con neutropenia: emergenza, avvisare subito il medico',
     '**Sanguinamento** persistente o ematomi improvvisi: verificare piastrine',
     '**Vomito incoercibile** o dolore addominale acuto: valutare occlusione o perforazione',
   ],

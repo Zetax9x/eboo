@@ -80,7 +80,7 @@ export interface ProcedureStep {
 export interface ProcedureMap extends MapBase {
   kind: 'procedure'
   materials: { label: string; icon: IconName }[]
-  sites?: { title: string; illustration: Illustration; items: string[] }
+  sites?: { title: string; illustration?: Illustration; items: string[] }
   safety: { text: string; kind: CheckKind }[]
   /** 4 to 8 steps. */
   steps: ProcedureStep[]

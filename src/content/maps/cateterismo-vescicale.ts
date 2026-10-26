@@ -10,14 +10,14 @@ const map: ProcedureMap = {
   status: 'bozza',
   sources: [
     'EAU — European Association of Urology Guidelines: Urological Infections (2024)',
-    'SIAARTI — Linee guida per la prevenzione delle infezioni del tratto urinario',
+    'Ministero della Salute — Linee guida per la prevenzione delle infezioni del tratto urinario (2022)',
     'OMS — Linee guida sull’igiene delle mani nell’assistenza sanitaria',
   ],
   materials: [
     { label: 'Guanti sterili', icon: 'Hand' },
     { label: 'Campo sterile', icon: 'Sticker' },
     { label: 'Catetere urinario', icon: 'Droplet' },
-    { label: 'Antisettico', icon: 'Droplets' },
+    { label: 'Antisettico', icon: 'Droplet' },
     { label: 'Lubrificante', icon: 'Pipette' },
     { label: 'Sacca raccolta', icon: 'Box' },
     { label: 'Siringa acqua sterile', icon: 'Syringe' },
@@ -57,8 +57,8 @@ const map: ProcedureMap = {
     },
     {
       title: 'Antisepsi',
-      items: ['Lavare l’area genitale', 'Movimenti **centrifughi**', 'Lasciare asciugare'],
-      icon: 'Droplets',
+      items: ['Lavare l’area genitale', 'Movimenti **circolari**', 'Lasciare asciugare'],
+      icon: 'Droplet',
     },
     {
       title: 'Lubrificazione',

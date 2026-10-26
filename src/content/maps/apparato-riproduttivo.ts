@@ -11,7 +11,6 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
-    'Linee guida ACOG e ESHRE sulla salute riproduttiva',
   ],
   blocks: [
     {

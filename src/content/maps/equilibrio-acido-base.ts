@@ -89,7 +89,7 @@ const map: OverviewMap = {
         '**Passo 2**: pCO₂ o HCO₃⁻ alterati?',
         '**Passo 3**: compensazione presente?',
         '**Passo 4**: causa metabolica o respiratoria?',
-        'Il compenso va **nello stesso verso** del disturbo primario',
+        'Il compenso va **in direzione opposta** al disturbo primario',
         'Il compenso **non** riporta mai il pH oltre la norma',
         'Prelievo arterioso: **test di Allen**, compressione del sito, campione **senza bolle**',
       ],

@@ -10,8 +10,8 @@ const map: OverviewMap = {
   status: 'bozza',
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
-    'Guida pratica alla cura della pelle e prevenzione delle lesioni da pressione — OMS, 2023',
-    'Linee guida NPIAP/EPUAP/PPPIA 2024 sulla prevenzione e gestione delle lesioni da pressione',
+    'Guida pratica alla cura della pelle e prevenzione delle lesioni da pressione — OMS, 2021',
+    'Linee guida internazionali sulla prevenzione e gestione delle lesioni da pressione (NPIAP/EPUAP/PPPIA) – 2020',
   ],
   blocks: [
     {

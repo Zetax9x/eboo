@@ -14,7 +14,7 @@ const map: DiseaseMap = {
     'Ministero della Salute — Piano Nazionale Epatiti Virali',
   ],
   definition:
-    'Infiammazione del fegato causata da virus (A, B, C, D, E), con rischio di **epatosi acuta** o **cirrosi** e **epatocarcinoma**.',
+    'Infiammazione del fegato causata da virus (A, B, C, D, E), con rischio di **epatite acuta** o **cirrosi** e **epatocarcinoma**.',
   illustration: {
     id: 'epatiti-fegato-infiammato',
     alt: 'Fegato sano e fegato infiammato con segni di epatite',
@@ -111,7 +111,7 @@ const map: DiseaseMap = {
     'Supporto psicologico e **aderenza terapeutica** (soprattutto C)',
   ],
   redFlags: [
-    '**Encefalopatia epatica**: confusione, asterissi, sonnolenza → avvisare subito',
+    '**Encefalopatia epatica**: confusione, asterixis, sonnolenza → avvisare subito',
     '**INR > 1,5** o sanguinamenti: rischio emorragico, valutare trasfusioni',
     '**Ittero + dolore + febbre**: escludere colestasi o colecistite',
   ],

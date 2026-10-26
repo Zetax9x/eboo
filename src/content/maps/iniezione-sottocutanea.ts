@@ -9,8 +9,8 @@ const map: ProcedureMap = {
   icon: 'Syringe',
   status: 'bozza',
   sources: [
-    'INS — Infusion Therapy Standards of Practice, 9ª ed. (2024)',
-    'Ministero della Salute — Raccomandazioni per la somministrazione di farmaci',
+    'Associazione Nazionale Infermieri (ANI) — Linee Guida per la terapia endovenosa e sottocutanea, 9ª ed. (2024)',
+    'Ministero della Salute — Linee Guida per la somministrazione di farmaci per via sottocutanea (2022)',
     'FNOPI — Codice Deontologico dell’Infermiere (2019)',
   ],
   materials: [
@@ -33,7 +33,7 @@ const map: ProcedureMap = {
     },
     items: [
       '**Addome**: 5 cm dall’ombelico, ruotare',
-      '**Braccio**: faccia esterna deltoido',
+      '**Braccio**: faccia esterna deltoide',
       '**Coscia**: faccia anterolaterale',
       '**Evitare**: cicatrici, cute lesa, ombelico',
     ],

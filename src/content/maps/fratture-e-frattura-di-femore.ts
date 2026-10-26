@@ -9,7 +9,7 @@ const map: DiseaseMap = {
   icon: 'Bone',
   status: 'bozza',
   sources: [
-    'AAO — American Academy of Orthopaedic Surgeons: Fracture Care Guidelines',
+    'AAOS — American Academy of Orthopaedic Surgeons: Fracture Care Guidelines',
     'NICE — NG213: Fractures and dislocations (2023)',
     'Ministero della Salute — Linee guida per la gestione delle fratture di femore (2022)',
   ],
@@ -22,10 +22,10 @@ const map: DiseaseMap = {
     icon: 'Bone',
   },
   types: [
-    { name: 'Collo del femore', text: 'Sotto-capitali (intracapsulari): rischio **necrosi avascolare**.' },
-    { name: 'Trocanterica', text: 'Extra-capsulare: sanguinamento abbondante, instabilità.' },
+    { name: 'Collo del femore', text: 'Sottocapsulari (intracapsulari): rischio **necrosi avascolare**.' },
+    { name: 'Trocanterica', text: 'Extracapsulare: sanguinamento abbondante, instabilità.' },
     { name: 'Diafisaria', text: 'Frattura del corpo del femore: spesso da trauma ad alta energia.' },
-    { name: 'Inter-trocanterica', text: 'Tra grande e piccolo trocantere: comune negli anziani.' },
+    { name: 'Intertrocanterica', text: 'Tra grande e piccolo trocantere: comune negli anziani.' },
   ],
   sections: [
     {
@@ -85,7 +85,7 @@ const map: DiseaseMap = {
         '**Necrosi avascolare** della testa femorale (fratture intracapsulari)',
         '**Infezione** ossea o articolare (osteomielite)',
         '**Sindrome compartimentale** (rara, ma grave)',
-        '**Pneumopatia** da stasi e dolore (attecchiamento)',
+        '**Pneumopatia** da stasi e dolore (atelettasia)',
       ],
     },
     {

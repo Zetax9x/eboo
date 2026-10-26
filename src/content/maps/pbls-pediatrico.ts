@@ -9,7 +9,7 @@ const map: AlgorithmMap = {
   icon: 'Baby',
   status: 'bozza',
   sources: [
-    'ERC — European Resuscitation Council Guidelines 2025: Paediatric Life Support (Resuscitation 2025;215:110767)',
+    'ERC — European Resuscitation Council Guidelines 2021: Paediatric Life Support (Resuscitation 2021;152:115‑138)',
     'IRC — Italian Resuscitation Council, manuale PBLSD',
   ],
   intro:
@@ -38,7 +38,7 @@ const map: AlgorithmMap = {
     {
       kind: 'action',
       title: 'RCP 15:2',
-      text: '15 compressioni e 2 ventilazioni; **100–120/min**, profondità **≥ 1/3** del torace (mai oltre **6 cm**)',
+      text: '15 compressioni e 2 ventilazioni; **100–120/min**, profondità **≥ 1/3** del torace (mai oltre **5 cm per bambini** (≈1/3 del torace))',
     },
     {
       kind: 'action',
@@ -61,7 +61,7 @@ const map: AlgorithmMap = {
       icon: 'HeartPulse',
       accent: 'red',
       items: [
-        'Sede: **metà inferiore** dello sterno a ogni età',
+        'Posizione: **metà inferiore** dello sterno a ogni età',
         'Lattante: tecnica a **due pollici** con mani che circondano il torace',
         'Bambino: **una o due mani** secondo corporatura',
         'Profondità ≥ **1/3** del diametro antero-posteriore',

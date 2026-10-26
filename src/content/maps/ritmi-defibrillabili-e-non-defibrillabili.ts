@@ -11,7 +11,7 @@ const map: ConceptMap = {
   sources: [
     'ERC — European Resuscitation Council Guidelines 2021: Arrhythmias and Cardiac Arrest',
     'AHA — American Heart Association Guidelines for CPR and ECC, 2020',
-    'FNOPI — Codice Deontologico dell’Infermiere e Linee guida per la gestione dell’arresto cardiaco',
+    'SIAARTI — Linee guida di rianimazione cardio‑polmonare 2021',
   ],
   columns: 2,
   intro: 'La distinzione tra ritmi defibrillabili e non defibrillabili è il primo passo critico nella gestione dell’arresto cardiaco. Determina l’immediata attivazione del defibrillatore o la priorità alla rianimazione cardiopolmonare (RCP) e alla somministrazione di farmaci.',
@@ -51,7 +51,7 @@ const map: ConceptMap = {
         'Se ritmo defibrillabile: **1 shock** (200 J biphasico o 360 J monofasico).',
         'Riprendere **immediatamente** la RCP per 2 minuti dopo lo shock.',
         'Non ritardare la RCP per analizzare il ritmo: **shock → RCP**.',
-        'Somministrare **adrenalina** (1 mg IV) dopo il 3° shock.',
+        'Somministrare **adrenalina** (1 mg IV) dopo il **2° shock**.',
         'Somministrare **amiodarone** (300 mg IV) dopo il 3° shock se la FV/TV persiste.',
         'Rivalutare il ritmo ogni 2 minuti.',
       ],

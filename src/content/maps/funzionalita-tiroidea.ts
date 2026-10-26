@@ -22,12 +22,12 @@ const map: LabMap = {
       unit: 'mUI/L',
       accent: 'blue',
       low: {
-        name: 'Ipofunzione (TSH bassa)',
+        name: 'Iperfunzione (TSH bassa)', // corretto
         signs: 'tachicardia, intolleranza al calore, perdita di peso, tremori, insonnia',
         causes: 'ipertiroidismo, morbo di Graves, tireotossicosi da farmaci, adenoma iperfunzionante',
       },
       high: {
-        name: 'Iperfunzione (TSH alta)',
+        name: 'Ipofunzione (TSH alta)', // corretto
         signs: 'bradicardia, intolleranza al freddo, aumento di peso, stipsi, secchezza cutanea',
         causes: 'ipotiroidismo, malattia di Hashimoto, carenza di iodio, post-tiroidectomia',
       },
@@ -58,7 +58,7 @@ const map: LabMap = {
       unit: 'pmol/L',
       accent: 'teal',
       low: {
-        name: 'Sindrome eutiroidea',
+        name: 'Sindrome di malattia non tiroidea (euthyroid sick syndrome)', // corretto
         signs: 'spesso asintomatica, ma può causare debolezza e apatia',
         causes: 'malattie acute, digiuno, insufficienza renale, post-operatorio',
       },

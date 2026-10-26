@@ -10,7 +10,7 @@ const map: LabMap = {
   status: 'bozza',
   sources: [
     'Surviving Sepsis Campaign — International Guidelines (2021)',
-    'Linee guida nazionali sulla gestione dello shock (Ministero della Salute)',
+    'Surviving Sepsis Campaign — International Guidelines for Management of Sepsis and Septic Shock (2021)',
     'Testi di riferimento: Fisiologia clinica e Biochimica clinica',
   ],
   intro: 'Il lattato è un indicatore di ipoperfusione tissutale e stress metabolico. I valori normali variano leggermente tra laboratori, ma le soglie critiche sono standardizzate.',
@@ -54,7 +54,7 @@ const map: LabMap = {
     {
       name: 'Rapporto lattato/piruvato',
       symbol: 'L/P',
-      range: '1–2',
+      range: '10–20',
       unit: 'rapporto',
       accent: 'teal',
       low: {

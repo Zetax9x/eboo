@@ -96,7 +96,7 @@ const map: DiseaseMap = {
         '**SpO2** continua, frequenza cardiaca, pressione arteriosa',
         '**Troponina** e **BNP/NT-proBNP**: marcatori di danno VD',
         'Emoglobina e ematocrito: monitoraggio per sanguinamenti',
-        'Funzione renale (creatinina): ajuste dosi di EBPM/DOAC',
+        'Funzione renale (creatinina): adeguare le dosi di EBPM/DOAC',
         'Segni di TVP residua o recidiva (dolore, edema)',
       ],
     },

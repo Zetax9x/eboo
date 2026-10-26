@@ -10,7 +10,7 @@ const map: ProcedureMap = {
   status: 'bozza',
   sources: [
     'ESPEN — Guidelines on Parenteral Nutrition: Adult (2019)',
-    'INS — Infusion Therapy Standards of Practice, 9ª ed. (2024)',
+    'Società Italiana di Terapia Infusiva (SITI) – Linee guida per la terapia infusiva (2023)',
     'AIFA — Linee guida per la somministrazione di farmaci e soluzioni',
   ],
   materials: [
@@ -41,7 +41,7 @@ const map: ProcedureMap = {
     { text: 'NP **solo** per via centrale', kind: 'alert' },
     { text: 'Verificare **integrità** busta', kind: 'ok' },
     { text: 'Usare **filtro** 1,2 µm', kind: 'ok' },
-    { text: '**Mai** diluire o aggiungere farmaci', kind: 'no' },
+    { text: '**Solo** farmaci compatibili, verificare compatibilità', kind: 'warn' },
     { text: 'Glicemia ogni **4–6 ore**', kind: 'warn' },
   ],
   steps: [

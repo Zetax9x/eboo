@@ -9,7 +9,7 @@ const map: TableMap = {
   icon: 'Baby',
   status: 'bozza',
   sources: [
-    'American Academy of Pediatrics, ACOG — The Apgar Score, Committee Opinion n. 644 (2015, riaffermato)',
+    'American College of Obstetricians and Gynecologists (ACOG) — Committee Opinion No. 644 (2015, riaffermato)',
     'ERC — Linee guida 2021: supporto vitale neonatale (Newborn Life Support)',
   ],
   intro:

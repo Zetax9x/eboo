@@ -105,11 +105,11 @@ const map: ConceptMap = {
       checks: [
         { text: '**5 momenti** per l’igiene delle mani', kind: 'ok' },
         { text: 'Prima di toccare il paziente', kind: 'ok' },
-        { text: 'Prima di un’aseptica', kind: 'ok' },
+        { text: 'Prima di una procedura aseptica', kind: 'ok' },
         { text: 'Dopo contatto con paziente', kind: 'ok' },
         { text: 'Dopo contatto con secrezioni', kind: 'ok' },
         { text: 'Dopo contatto con ambiente', kind: 'ok' },
-        { text: 'Durata: **40-60 secondi**', kind: 'ok' },
+        { text: 'Durata: **20-30 s** gel alcolico, **40-60 s** acqua e sapone', kind: 'ok' },
         { text: 'Usare **gel** alcolico o acqua e sapone', kind: 'ok' },
         { text: 'Lavare **dita**, polsi, avambracci', kind: 'ok' },
         { text: 'Asciugare con **carta** monouso', kind: 'ok' },

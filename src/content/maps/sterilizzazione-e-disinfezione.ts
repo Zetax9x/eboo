@@ -11,7 +11,7 @@ const map: ConceptMap = {
   sources: [
     'Ministero della Salute — Raccomandazioni per la prevenzione delle infezioni correlate all’assistenza (ICA)',
     'CDC — Guidelines for Disinfection and Sterilization in Healthcare Facilities (2008, updated)',
-    'FNOPI — Codice Deontologico dell’Infermiere (2020)',
+    'FNOPI — Codice deontologico delle professioni infermieristiche (2019)',
   ],
   intro:
     'Processi per **ridurre o eliminare** i microrganismi su dispositivi e superfici. La scelta del metodo dipende dal **livello di rischio** (classificazione di Spaulding) e dal tipo di strumento.',
@@ -32,7 +32,7 @@ const map: ConceptMap = {
         '**Semicritici**: contatto mucose/pelle non integra → **Alta disinfezione**',
         '**Non critici**: contatto pelle integra → **Bassa disinfezione**',
         'Esempio critico: bisturi, cateteri, endoscopi diagnostici',
-        'Esempio semicritico: specula, laringoscopi, cuffie BP',
+        'Esempio semicritico: specula, laringoscopi, sonde ecografiche endocavitarie',
         'Esempio non critico: barelle, maniglie, fonendoscopi',
       ],
     },
@@ -54,9 +54,9 @@ const map: ConceptMap = {
       icon: 'FlaskConical',
       accent: 'blue',
       items: [
-        '**Alta**: Glutaraldeide 2%, Peracetico, Ortotolilene (OTT)',
-        '**Media**: Alcol 70%, Cloro attivo 0,5-1%, Ammoni quaternarie',
-        '**Bassa**: Alcol 70%, Ammoni quaternarie, Cloro 0,05%',
+        '**Alta**: Glutaraldeide 2%, Peracetico, ortoftalaldeide (OPA)',
+        '**Media**: Cloro attivo 0,5-1%, Ammonio quaternario',
+        '**Bassa**: Alcol 70%, Cloro 0,05%',
         'Tempo di contatto: rispettare scheda tecnica (es. Glutaraldeide 20 min)',
         'Attività su spore: solo Glutaraldeide, Peracetico, OTT',
         'Tossicità: Glutaraldeide (respiratoria), Cloro (corrosivo)',

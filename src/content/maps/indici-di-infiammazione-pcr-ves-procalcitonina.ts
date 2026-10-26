@@ -9,7 +9,7 @@ const map: LabMap = {
   icon: 'FlaskConical',
   status: 'bozza',
   sources: [
-    'Bassetti M, et al. — Procalcitonina e gestione delle infezioni batteriche: Linee guida Italiane',
+    'Società Italiana di Malattie Infettive (SIMIT) — Linee guida 2020 sull\'uso della procalcitonina nella diagnosi e gestione delle infezioni',
     'Ministero della Salute — Raccomandazioni per il prelievo venoso e la gestione del campione',
     'Harrison — Principi di medicina interna, sezione Infiammazione e Immunologia',
   ],

@@ -10,7 +10,7 @@ const map: AlgorithmMap = {
   status: 'bozza',
   sources: [
     'ATLS — Advanced Trauma Life Support, 10th Edition (ACS/CCE)',
-    'Surviving Sepsis Campaign: International Guidelines (2021)',
+    'European guideline on major bleeding and coagulopathy following trauma (2023)',
     'Linee guida nazionali per la gestione dell’emorragia traumatica (Ministero della Salute)',
   ],
   intro: 'Lo shock ipovolemico è una condizione di emergenza in cui il volume circolante insufficiente compromette la perfusione tissutale. La forma emorragica richiede un approccio immediato per controllare la perdita di sangue e ripristinare il volume.',
@@ -18,7 +18,7 @@ const map: AlgorithmMap = {
     { kind: 'start', title: 'Riconoscimento immediato', text: 'Pelle fredda, umida, pallida; tachicardia; ipotensione; alterazione dello stato di coscienza' },
     { kind: 'action', title: 'Chiamata al 112/118', text: 'Comunica: paziente in shock, emorragia attiva, età, sesso, eventuali traumi' },
     { kind: 'decision', title: 'Emorragia esterna visibile?', branches: [
-      { label: 'Sì', text: 'Applica pressione diretta con garze sterili; se necessario, turapressore o laccio emostatico (nota l’ora)' },
+      { label: 'Sì', text: 'Applica pressione diretta con garze sterili; se necessario, torniquet o laccio emostatico (nota l’ora)' },
       { label: 'No', text: 'Prosegui con la valutazione dei segni di shock interno' },
     ]},
     { kind: 'action', title: 'Posizione e termoregolazione', text: 'Decubito supino con arti inferiori elevati (se non controindicato); copri il paziente per prevenire l’ipotermia' },
@@ -27,7 +27,7 @@ const map: AlgorithmMap = {
       { label: 'Sì', text: 'Continua il monitoraggio; valuta la necessità di trasfusione di emazie concentrate' },
       { label: 'No', text: 'Escalation: trasfusione di sangue, attivazione del protocollo di massiva trasfusione' },
     ]},
-    { kind: 'alert', title: 'Segnali di peggioramento', text: 'Peggioramento della coscienza, bradicardia, ipotensione refrattaria: prepara per l’intervento chirurgico o la TACE' },
+    { kind: 'alert', title: 'Segnali di peggioramento', text: 'Peggioramento della coscienza, bradicardia, ipotensione refrattaria: prepara per l’intervento chirurgico o l’embolizzazione arteriosa' },
     { kind: 'end', title: 'Trasferimento in reparto', text: 'Documenta: ora di inizio, volume infuso, risposta clinica, interventi eseguiti' },
   ],
   side: [
@@ -41,7 +41,7 @@ const map: AlgorithmMap = {
         'Pelle fredda, umida, pallida',
         'Oliguria (<0,5 ml/kg/h)',
         'Alterazione dello stato di coscienza',
-        'Tachipnea (>20 atti/min)',
+        'Tachipnea (>20 resp/min)',
       ],
     },
     {
@@ -63,11 +63,11 @@ const map: AlgorithmMap = {
       accent: 'orange',
       items: [
         'Pressione diretta con garze sterili',
-        'Turapressore per emorragie degli arti',
+        'Torniquet per emorragie degli arti',
         'Laccio emostatico (solo se necessario, nota l’ora)',
         'Evitare la rimozione del laccio in sede preospedaliera',
         'Valutare le emorragie interne (addome, torace)',
-        'Preparare per la TACE o la chirurgia',
+        'Preparare per l’intervento chirurgico o l’embolizzazione arteriosa',
       ],
     },
   ],

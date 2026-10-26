@@ -29,7 +29,7 @@ const map: LabMap = {
       high: {
         name: 'Elevazione',
         signs: 'Dispnea, dolore toracico, edema unilaterale degli arti inferiori',
-        causes: 'Tromboembolia venosa (TEV), embolia polmonare (EP), coagulazione intravascolare disseminata (CID), gravidanza, post-chirurgia, neoplasie, infezioni gravi',
+        causes: 'Tromboembolia venosa (TEV), embolia polmonare (EP), coagulazione intravascolare disseminata (CIVD), gravidanza, post-chirurgia, neoplasie, infezioni gravi',
       },
       nursing: 'Il D-dimero ha **alta sensibilità** ma bassa specificità. Un valore normale esclude con alta probabilità la TEV/EP in pazienti a basso rischio clinico. Un valore elevato **non conferma** la diagnosi: serve imaging (angio-TC, ecodoppler).',
     },
@@ -40,16 +40,16 @@ const map: LabMap = {
       unit: 'mg/dL',
       accent: 'purple',
       low: {
-        name: 'Ipoprotrombinemia',
+        name: 'Ipofibrinogenemia',
         signs: 'Sanguinamenti, ecchimosi, ematomi',
-        causes: 'Coagulazione intravascolare disseminata (CID), epatopatie gravi, emodiluizione massiva, uso di anticoagulanti',
+        causes: 'Coagulazione intravascolare disseminata (CIVD), epatopatie gravi, emodiluizione massiva, uso di anticoagulanti',
       },
       high: {
-        name: 'Iperprotrombinemia',
+        name: 'Iperfibrinogenemia',
         signs: 'Aumentato rischio trombotico',
         causes: 'Stato infiammatorio acuto/cronico, gravidanza, post-parto, neoplasie, post-chirurgia, fumo di sigaretta',
       },
-      nursing: 'Il fibrinogeno è una **proteina di fase acuta**: si alza in ogni stato infiammatorio. Valori molto bassi (< 100 mg/dL) sono un segno di **consumo** (CID) e richiedono attenzione immediata.',
+      nursing: 'Il fibrinogeno è una **proteina di fase acuta**: si alza in ogni stato infiammatorio. Valori molto bassi (< 100 mg/dL) sono un segno di **consumo** (CIVD) e richiedono attenzione immediata.',
     },
   ],
   tips: [

@@ -11,7 +11,7 @@ const map: ProcedureMap = {
   sources: [
     'IDSA — Clinical Practice Guidelines for the Diagnosis and Management of Intravascular Catheter-Related Infection (2009)',
     'CLSI — M47: Principles and Practices of Sterility Testing (ultima edizione)',
-    'Ministero della Salute — Raccomandazioni per la prevenzione delle infezioni correlate all’assistenza (ICA)',
+    'Ministero della Salute – Linee guida per la prevenzione delle infezioni correlate all’assistenza sanitaria (2017)',
   ],
   materials: [
     { label: 'Guanti monouso', icon: 'Hand' },
@@ -20,7 +20,7 @@ const map: ProcedureMap = {
     { label: 'Clorexidina 2% in alcol', icon: 'Droplets' },
     { label: 'Provette emocoltura', icon: 'TestTube' },
     { label: 'Garze sterili', icon: 'Bandage' },
-    { label: 'Contenitore taglienti', icon: 'Trash2' },
+    { label: 'Contenitore per taglienti', icon: 'Trash2' },
     { label: 'Etichette identificative', icon: 'Tag' },
   ],
   sites: {
@@ -42,7 +42,7 @@ const map: ProcedureMap = {
     { text: '**Igiene delle mani**, tecnica no-touch', kind: 'ok' },
     { text: 'Indagare **allergie** (lattice, clorexidina)', kind: 'warn' },
     { text: '**Mai reincappucciare** l’ago', kind: 'no' },
-    { text: 'Max **2 tentativi** per operatore, **4** in totale', kind: 'warn' },
+    { text: 'Max **2 tentativi** per sito, **4** in totale', kind: 'warn' },
   ],
   steps: [
     {
@@ -67,7 +67,10 @@ const map: ProcedureMap = {
     },
     {
       title: 'Rimozione',
-      items: ['Comprimere la vena **oltre la punta** (verso il cuore)', 'Estrarre l’ago, attivare la **sicurezza**'],
+      items: [
+        'Comprimere la vena **distalmente al punto di puntura** (verso il cuore)',
+        'Estrarre l’ago, attivare la **sicurezza**',
+      ],
       icon: 'Scissors',
     },
     {
@@ -98,7 +101,7 @@ const map: ProcedureMap = {
   ],
   nurseRole: [
     'Valutare il sito con la **scala VIP**',
-    'Ogni giorno: il CVP **serve ancora**?',
+    'Ogni giorno: verificare la necessità di nuovo prelievo',
     'Medicazione sporca o staccata: **cambiarla**',
     '**Rimuovere** ai primi segni di flebite',
   ],

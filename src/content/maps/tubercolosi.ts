@@ -10,8 +10,8 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'OMS — Global Tuberculosis Report 2024',
-    'ISS — Linee guida per la diagnosi e il trattamento della tubercolosi in Italia',
-    'Ministero della Salute — Piano Nazionale Tubercolosi',
+    'ISS — Linee guida per la diagnosi, terapia e prevenzione della tubercolosi (2020)',
+    'Ministero della Salute — Piano Nazionale di Contrasto alla Tubercolosi 2020-2025',
   ],
   definition:
     'Infezione cronica causata da **Mycobacterium tuberculosis**, che colpisce principalmente i **polmoni** ma può interessare qualsiasi organo (tubercolosi miliare, meningite, ossea).',
@@ -22,8 +22,8 @@ const map: DiseaseMap = {
     icon: 'Wind',
   },
   types: [
-    { name: 'Latente (LTBI)', text: 'Infezione senza sintomi. **GPT positiva**, RX torace normale. Non trasmissibile.' },
-    { name: 'Attiva polmonare', text: 'Sintomi respiratori, **GPT positiva**, RX alterata, **Bacilloscopia** positiva o negativa.' },
+    { name: 'Latente (LTBI)', text: 'Infezione senza sintomi. **TST positiva**, RX torace normale. Non trasmissibile.' },
+    { name: 'Attiva polmonare', text: 'Sintomi respiratori, **TST positiva**, RX alterata, **Bacilloscopia** positiva o negativa.' },
     { name: 'Extra-polmonare', text: 'Linfonodi, pleura, ossea, renale, meningite. Spesso **bacilloscopia negativa**.' },
     { name: 'Multiresistente (MDR-TB)', text: 'Resistenza ad almeno **isoniazide** e **rifampicina**. Richiede terapia estesa.' },
   ],
@@ -57,10 +57,10 @@ const map: DiseaseMap = {
       icon: 'Microscope',
       accent: 'blue',
       items: [
-        '**GPT** (Tuberculin test) o **IGRA** (QuantiFERON/T-SPOT)',
+        '**TST** (Tuberculin test) o **IGRA** (QuantiFERON/T-SPOT)',
         '**RX torace**: infiltrati, cavitazioni, noduli',
-        '**Bacilloscopia** su espettorato (colorazione di Ziehl-Neelsen)',
-        '**Coltura** su Lowenstein-Jensen (gold standard, 6-8 settimane)',
+        '**Bacilloscopia** su espettorato (colorazione di Ziehl‑Neelsen)',
+        '**Coltura** su Lowenstein‑Jensen (gold standard, 6‑8 settimane)',
         '**GeneXpert MTB/RIF**: rapido, rileva anche resistenza alla rifampicina',
       ],
     },
@@ -94,7 +94,7 @@ const map: DiseaseMap = {
       accent: 'teal',
       items: [
         '**Vaccinazione BCG**: neonati e bambini < 15 anni (non previene la malattia adulta)',
-        'Screening GPT/IGRA nei contatti stretti',
+        'Screening **TST/IGRA** nei contatti stretti',
         'Profilassi farmacologica (H o R) per LTBI ad alto rischio',
         'Isolamento respiratorio (maschera FFP2) per casi attivi',
         'Ventilazione adeguata degli ambienti sanitari',

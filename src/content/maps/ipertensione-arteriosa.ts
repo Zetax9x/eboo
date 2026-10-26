@@ -5,11 +5,12 @@ const map: DiseaseMap = {
   id: 'ipertensione-arteriosa',
   chapter: 'patologie',
   title: 'Ipertensione arteriosa',
-  subtitle: 'Il “killer silenzioso”: classificazione ESC 2024, misurazione, terapia e danno d’organo',
+  subtitle:
+    'Il “killer silenzioso”: classificazione ESC 2024, misurazione, terapia e danno d’organo',
   icon: 'Gauge',
   status: 'bozza',
   sources: [
-    'ESC 2024 Guidelines for the management of elevated blood pressure and hypertension (Eur Heart J 2024)',
+    '2023 ESC Guidelines for the management of arterial hypertension (Eur Heart J 2023)',
     'ESH 2023 Guidelines for the management of arterial hypertension (J Hypertens 2023)',
   ],
   definition:
@@ -17,13 +18,20 @@ const map: DiseaseMap = {
   illustration: {
     id: 'ipertensione-arteriosa-misurazione',
     alt: 'Misurazione della pressione con sfigmomanometro al braccio',
-    prompt: 'seated adult patient with arm resting at heart level, blood pressure cuff on upper arm, digital sphygmomanometer, cross-section of a thickened artery wall',
+    prompt:
+      'seated adult patient with arm resting at heart level, blood pressure cuff on upper arm, digital sphygmomanometer, cross-section of a thickened artery wall',
     icon: 'Gauge',
   },
   types: [
-    { name: 'Non elevata', text: 'PA in ambulatorio **< 120/70 mmHg** (ESC 2024).' },
-    { name: 'Elevata', text: '**120–139 / 70–89 mmHg**: terapia se rischio CV alto.' },
-    { name: 'Ipertensione', text: '**≥ 140/90 mmHg**. Primaria (essenziale) nel **90–95%** dei casi.' },
+    { name: 'Non elevata', text: 'PA in ambulatorio **< 120/80 mmHg** (ESC 2024).' },
+    {
+      name: 'Elevata',
+      text: '**120–129 / <80 mmHg**: terapia se rischio CV alto.',
+    },
+    {
+      name: 'Ipertensione',
+      text: '**≥ 130/80 mmHg**. Primaria (essenziale) nel **90–95%** dei casi.',
+    },
     { name: 'Secondaria', text: 'Nefropatie, iperaldosteronismo, apnee notturne, farmaci (FANS, cortisonici).' },
   ],
   sections: [

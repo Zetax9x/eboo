@@ -9,9 +9,8 @@ const map: ProcedureMap = {
   icon: 'Wind',
   status: 'bozza',
   sources: [
-    'ATS/ACCP — Guidelines for the Management of Adult Pneumothorax (2001, updated)',
-    'BTS — British Thoracic Society Pleural Disease Guidelines (2023)',
-    'INS — Infusion Therapy Standards of Practice (2024) per la gestione dei flussi',
+    'British Thoracic Society – Pleural Disease Guideline (2023)',
+    'Società Italiana di Medicina d\'Urgenza e Pronto Soccorso (SIMEU) – Linee guida per il drenaggio toracico (2022)',
   ],
   materials: [
     { label: 'Drenaggio toracico (Pigtail o Blake)', icon: 'Wind' },
@@ -67,7 +66,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Verifica flusso',
-      items: ['Osservare il **bollicine** nella camera di sigillo', 'Valutare la **sanguinamento**', 'Documentare il volume'],
+      items: ['Osservare le **bollicine d\'aria** nella camera di sigillo', 'Valutare la **sanguinamento**', 'Documentare il volume'],
       icon: 'Eye',
     },
     {

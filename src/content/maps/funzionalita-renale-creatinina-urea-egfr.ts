@@ -9,7 +9,7 @@ const map: ConceptMap = {
   icon: 'Droplets',
   status: 'bozza',
   sources: [
-    'KDIGO 2024 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease',
+    'KDIGO 2023 Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease',
     'KDIGO 2012 Clinical Practice Guideline for Acute Kidney Injury',
     'Harrison — Principi di medicina interna, sezione nefrologia',
   ],
@@ -27,7 +27,7 @@ const map: ConceptMap = {
         'Sale solo quando il filtrato è già ridotto di **circa il 50%**',
         'Falsi aumenti: dieta ricca di carne, integratori di **creatina**, alcuni farmaci',
         'Valuta il **trend**: conta la variazione rispetto al valore basale',
-        'Provetta: siero (**tappo rosso o giallo** con gel); evitare l’emolisi',
+        'Provetta: siero (**tubo rosso (senza gel) o giallo (con gel)**); evitare l’emolisi',
       ],
     },
     {

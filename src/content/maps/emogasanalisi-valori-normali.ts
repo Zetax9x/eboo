@@ -11,7 +11,6 @@ const map: TableMap = {
   sources: [
     'Kellum, M.A. et al. — Blood Gas Analysis: A Practical Guide, 2023',
     'Ministero della Salute — Linee guida per la gestione dell’insufficienza respiratoria acuta',
-    'Bates — Guida alla visita medica, capitolo emogasanalisi',
   ],
   intro: 'I valori indicati sono di riferimento per l’adulto in condizioni stazionarie. I range possono variare leggermente tra laboratori e apparecchiature. L’interpretazione deve sempre considerare il contesto clinico e la terapia in corso.',
   tableTitle: 'Valori normali emogasanalisi',
@@ -20,8 +19,8 @@ const map: TableMap = {
   widths: [1.2, 0.8, 1.2, 1.2, 2.5],
   rows: [
     ['pH', '—', '7,35–7,45', '7,32–7,42', 'Acidosi < 7,35; Alcalosi > 7,45. Valori critici: < 7,20 o > 7,60'],
-    ['PaO₂', 'mmHg', '80–100', '35–45', 'Ipossiemia < 80 mmHg. In età avanzata o con O₂ terapia, target 88–92%'],
-    ['PaCO₂', 'mmHg', '35–45', '45–55', 'Ipercapnia > 45 mmHg; Ipopnea < 35 mmHg. Correlata alla ventilazione alveolare'],
+    ['PaO₂', 'mmHg', '80–100', '35–45', 'Ipossia < 80 mmHg. In età avanzata o con O₂ terapia, target PaO₂ 60–70 mmHg'],
+    ['PaCO₂', 'mmHg', '35–45', '45–55', 'Ipercapnia > 45 mmHg; ipocapnia < 35 mmHg. Correlata alla ventilazione alveolare'],
     ['HCO₃⁻', 'mEq/L', '22–26', '21–25', 'Bicarbonato ematico. Valore calcolato o misurato. Alterato nelle acidosi metaboliche'],
     ['BE (Base Excess)', 'mEq/L', '−2 a +2', '−2 a +2', 'Eccesso di base. Negativo in acidosi metabolica, positivo in alcalosi metabolica'],
     ['SaO₂', '%', '95–100', '70–75', 'Saturazione arteriosa. < 90% indica ipossiemia significativa. Target 88–92% in BPCO'],

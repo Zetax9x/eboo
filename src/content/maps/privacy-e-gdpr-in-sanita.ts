@@ -24,7 +24,7 @@ const map: ConceptMap = {
       items: [
         'Dati relativi alla **salute fisica o mentale** (anamnesi, referti, terapie)',
         'Categoria **particolare** (art. 9 GDPR): trattamento vietato salvo eccezioni',
-        'Base giuridica in sanità: **esecuzione di un compito di interesse pubblico** (art. 9.2.h) o **consenso esplicito**',
+        'Base giuridica in sanità: **esecuzione di un compito di assistenza sanitaria** (art. 9.2.h) o **consenso esplicito**',
         'Infermiere: **responsabile del trattamento** (art. 28) sotto il controllo del titolare (ASL/ospedale)',
         '**Minimizzazione**: raccogliere solo dati necessari allo scopo assistenziale',
         '**Limitazione della finalità**: uso esclusivo per cura, diagnosi, gestione',

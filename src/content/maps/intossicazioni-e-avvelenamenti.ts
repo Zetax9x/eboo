@@ -10,7 +10,7 @@ const map: AlgorithmMap = {
   status: 'bozza',
   sources: [
     'IST — Istituto Superiore di Sanità, Linee guida per la gestione delle intossicazioni acute',
-    'SIT — Società Italiana di Tossicologia, Raccomandazioni per la pratica clinica',
+    'Società Italiana di Tossicologia (SITOX), Linee guida per la gestione delle intossicazioni acute',
     'Ministero della Salute, Piano Nazionale di Emergenza Sanitaria',
   ],
   intro: 'La gestione dell’intossicazione acuta richiede rapidità nel riconoscimento, stabilizzazione e decontaminazione. Il ruolo infermieristico è centrale nel monitoraggio e nella prevenzione delle complicanze.',
@@ -71,10 +71,10 @@ const map: AlgorithmMap = {
       accent: 'green',
       items: [
         '**Naloxone**: oppioidi, 0,4–2 mg IV/IM',
-        '**N-acetilcisteina**: paracetamolo, 150 mg/kg in 15 min',
+        '**N-acetilcisteina**: paracetamolo, 150 mg/kg in 1 h',
         '**Atropina**: organofosfati, 1–2 mg IV ogni 5 min',
         '**Pralidossima**: organofosfati, 2 g IV in 20 min',
-        '**Glucagone**: beta-bloccanti, 1–5 mg IV',
+        '**Glucagone**: beta‑bloccanti, 1–5 mg IV',
         '**Calcio gluconato**: fluoro, 1–2 g IV lento',
         '**Metionina**: paracetamolo (alternativa)',
         '**Solfato di magnesio**: teofillina, 2 g IV',

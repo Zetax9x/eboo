@@ -11,7 +11,7 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
-    'Linee guida KDIGO 2024 sulla gestione delle alterazioni idro-elettrolitiche',
+    'Guyton & Hall — Fisiologia medica, capitoli sui liquidi corporei e sull’equilibrio elettrolitico',
   ],
   blocks: [
     {
@@ -59,18 +59,18 @@ const map: OverviewMap = {
     {
       title: 'Ormone antidiuretico (ADH)',
       accent: 'orange',
-      icon: 'Droplet',
+      icon: 'Droplets',
       illustration: {
         id: 'idro-adh',
         alt: 'Sintesi e rilascio dell’ADH',
         prompt: 'hypothalamus and posterior pituitary gland with ADH hormone being released into bloodstream, arrows showing effect on kidney collecting ducts',
-        icon: 'Droplet',
+        icon: 'Droplets',
       },
       bullets: [
         'Sintetizzato nell’**ipotalamo**, rilasciato dalla **neuroipofisi**',
         'Aumenta la **permeabilità** dei dotti collettori all’acqua',
         'Stimolato da: **iperosmolarità**, **ipovolemia**, dolore, stress',
-        'Inibito da: **ipovolemia**, etanolo, iponatriemia',
+        'Inibito da: **ipoosmolarità**, **ipervolemia**, etanolo',
         'Effetto: urine concentrate, volume ridotto',
       ],
     },
@@ -79,10 +79,10 @@ const map: OverviewMap = {
       accent: 'red',
       icon: 'Workflow',
       bullets: [
-        '**Renina**: rilasciata dai granulosomi renali',
+        '**Renina**: rilasciata dalle cellule juxtaglomerulari dei reni',
         '**Angiotensina II**: vasocostrizione, stimola ADH e sete',
         '**Aldosterone**: riassorbimento Na⁺, escrezione K⁺ e H⁺',
-        'Attivato da: **ipovolemia**, **iponatriemia**, **ipokaliemia**',
+        'Attivato da: **ipovolemia**, **iponatriemia**, **iperkaliemia**',
         'Effetto: ritenzione idrica, aumento PA',
       ],
     },

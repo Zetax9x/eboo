@@ -10,7 +10,7 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'GOLD — Global Strategy for the Diagnosis, Management, and Prevention of COPD (2024)',
-    'Linee guida AIFA/SIT per la gestione della BPCO',
+    'Linee guida della Società Italiana di Pneumologia (SIP) per la BPCO (2023)',
     'Codice deontologico FNOPI',
   ],
   definition:

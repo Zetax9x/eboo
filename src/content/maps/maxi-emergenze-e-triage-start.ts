@@ -9,15 +9,15 @@ const map: AlgorithmMap = {
   icon: 'Siren',
   status: 'bozza',
   sources: [
-    'Ministero della Salute — Piano Nazionale di Emergenza e Protezione Civile',
-    'IST — Istituto Superiore di Sanità, Linee guida per la gestione delle maxi-emergenze',
-    'FNOPI — Codice Deontologico dell’Infermiere (2020)',
+    'Dipartimento della Protezione Civile — Piano Nazionale di Emergenza e Protezione Civile (PNPC)',
+    'ISS — Istituto Superiore di Sanità, Linee guida per la gestione delle maxi-emergenze',
+    'FNOPI — Codice deontologico delle professioni infermieristiche (2019)',
   ],
   intro: 'Il triage START (Simple Triage and Rapid Treatment) è il metodo standard per classificare rapidamente i pazienti in una maxi-emergenza, quando le risorse sono scarse e le vittime numerose.',
   steps: [
     { kind: 'start', title: 'Sicurezza e comando', text: 'Valuta la scena, stabilisci un punto di comando e una zona sicura per il triage' },
     { kind: 'action', title: 'Identifica i camminabili', text: 'Chiedi a chi è cosciente e mobile di **alzarsi e camminare** verso la zona verde' },
-    { kind: 'decision', title: 'Respiro presente?', text: 'Valuta la respirazione per **massimo 10 secondi**', branches: [
+    { kind: 'decision', title: 'Respiro presente?', text: 'Valuta la respirazione per **massimo 30 secondi**', branches: [
       { label: 'Sì', text: 'Procedi alla valutazione del circolo' },
       { label: 'No', text: 'Apri le vie aeree e rivaluta. Se non respira: **Etichetta Nera (Deceduto)**' },
     ]},

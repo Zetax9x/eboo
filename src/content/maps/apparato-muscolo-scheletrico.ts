@@ -142,7 +142,7 @@ const map: OverviewMap = {
     },
   ],
   keyPoints: [
-    '**Ossa**: 206 nell’adulto, 300 nel neonato',
+    '**Ossa**: 206 nell’adulto, 270 nel neonato',
     '**Articolazioni sinoviali**: 90% delle articolazioni del corpo',
     '**Muscoli scheletrici**: ~600, controllati dal SNC',
     '**Calcio**: 1000 mg/die negli adulti, 1300 mg/die negli adolescenti',

@@ -9,7 +9,7 @@ const map: DiseaseMap = {
   icon: 'FlaskConical',
   status: 'bozza',
   sources: [
-    'RACG — Linee guida per la pancreatite acuta (2023)',
+    'SIGE — Linee guida per la pancreatite acuta (2023)',
     'AGA — American Gastroenterological Association Guidelines for Acute Pancreatitis',
     'NICE — Acute pancreatitis: assessment and management (2022)',
   ],
@@ -60,7 +60,7 @@ const map: DiseaseMap = {
         'Amilasi sierica (meno specifica)',
         'Ecografia addominale: calcoli, edema pancreas',
         'TC addome con contrasto: **necrosi**, collections',
-        'Biliverdina, AST, ALT (sospetto biliare)',
+        'Bilirubina, AST, ALT (sospetto biliare)',
       ],
     },
     {

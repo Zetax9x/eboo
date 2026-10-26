@@ -23,7 +23,7 @@ const map: TableMap = {
     ['1 · Giusto **farmaco**', 'Nome (principio attivo), forma, concentrazione; **scadenza** e integrità; **allergie** note; prescrizione completa e leggibile', 'Farmaci **LASA** scambiati; confezioni simili; farmaco a cui il paziente è **allergico**'],
     ['2 · Giusta **dose**', 'Dose prescritta = dose preparata; **ricalcolare** e far verificare i calcoli critici; peso aggiornato se dose/kg', 'Errore di **virgola** o di unità (mg/mcg, UI); “U” letta come zero'],
     ['3 · Giusta **via**', 'Via prescritta e forma farmaceutica adatta; accesso **pervio**; velocità di infusione corretta', 'Farmaco orale/enterale somministrato **EV**; IM al posto di SC; bolo invece di infusione'],
-    ['4 · Giusto **orario**', 'Ora e intervallo corretti; rapporto con **pasti** e altri farmaci; orari di antibiotici e insuline', 'Dose **omessa**, doppia o in ritardo; insulina senza pasto'],
+    ['4 · Giusto **orario**', 'Ora e intervallo corretti; rapporto con **pasti** e altri farmaci; orari di antibiotici e **insulina**', 'Dose **omessa**, doppia o in ritardo; insulina senza pasto'],
     ['5 · Giusto **paziente**', 'Almeno **2 identificativi** (nome e cognome, data di nascita) + **braccialetto**; domanda aperta “come si chiama?”', 'Omonimie; letti scambiati; chiedere “è lei il signor…?” (domanda chiusa)'],
     ['6 · Giusta **registrazione**', 'Firmare **dopo** la somministrazione; annotare dose non data e **motivo**; firma leggibile', 'Registrare **prima** di somministrare; registrazioni incomplete o dimenticate'],
     ['7 · Giusto **controllo**', 'Monitorare **efficacia** ed effetti avversi; parametri pre-somministrazione; **educazione** del paziente', 'Non rilevare **FC** prima di digossina o **PA** prima di antipertensivi; glicemia prima dell’insulina'],
@@ -36,7 +36,7 @@ const map: TableMap = {
       items: [
         'Prescrizione **scritta**, leggibile; evitare ordini verbali',
         'Scheda **terapeutica unica**',
-        'Evitare **abbreviazioni** a rischio (Racc. n. 18)',
+        'Evitare **abbreviazioni** a rischio (Raccomandazione n. 18)',
         'Procedure per i farmaci **ad alto rischio**',
       ],
     },

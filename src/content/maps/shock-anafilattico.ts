@@ -10,8 +10,8 @@ const map: AlgorithmMap = {
   status: 'bozza',
   sources: [
     'EAACI — European Academy of Allergy and Clinical Immunology Guidelines on Anaphylaxis (2021)',
-    'SIAAI — Società Italiana di Allergologia e Immunologia Clinica, Linee guida sulla gestione dell’anafilassi',
-    'Ministero della Salute — Raccomandazioni per la gestione delle emergenze in ambito sanitario',
+    'SIAIP — Società Italiana di Allergologia e Immunologia Clinica e delle Patologie Allergiche, Linee guida sulla gestione dell’anafilassi (2022)',
+    'Ministero della Salute — Linee guida per la gestione dell’anafilassi (2020)',
   ],
   intro: 'L’anafilassi è una reazione allergica grave e rapida che può portare al collasso circolatorio e alla morte se non trattata immediatamente. L’adrenalina intramuscolare è il trattamento di prima linea.',
   steps: [
@@ -38,7 +38,7 @@ const map: AlgorithmMap = {
     {
       kind: 'action',
       title: 'Accesso venoso e fluidi',
-      text: 'Due accessi venosi calibrali. Infusione rapida di **cristalloidi** (es. NaCl 0,9% o Ringer) **1–2 L** in 15–30 min',
+      text: 'Due accessi venosi **calibrati**. Infusione rapida di **cristalloidi** (es. NaCl 0,9% o Ringer) **1–2 L** in 15–30 min',
     },
     {
       kind: 'decision',
@@ -94,7 +94,7 @@ const map: AlgorithmMap = {
         '**Adrenalina IM**: 0,5 mg (1:1000) ogni 5–15 min se necessario',
         '**Adrenalina EV**: 0,5–1 µg/kg/min in infusione continua (se shock refrattario)',
         '**Antistaminici H1**: cetirizina 10 mg o difenidramina 50 mg IV/IM',
-        '**Antistaminici H2**: ranitidina 50 mg IV (se disponibile)',
+        '**Antistaminici H2**: famotidina 20 mg IV (se disponibile)',
         '**Corticosteroidi**: metilprednisolone 125 mg IV o idrocortisone 200 mg IV',
         '**Broncodilatatori**: salbutamolo 2,5–5 mg nebulizzato (se broncospasmo)',
       ],

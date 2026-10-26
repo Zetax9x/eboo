@@ -11,7 +11,7 @@ const map: DiseaseMap = {
   sources: [
     'ISBI — International Society for Burn Injuries (Guidelines)',
     'Ministero della Salute — Linee guida per la gestione delle ustioni',
-    'AIFA — Farmaci per la terapia delle ustioni',
+    'Società Italiana di Chirurgia — Linee guida per la gestione delle ustioni (2020)',
   ],
   definition:
     'Lesione cutanea e dei tessuti sottostanti causata da **calore**, **chimici**, **elettricità** o **raggi**. La gravità dipende da **superficie** e **profondità**.',
@@ -57,7 +57,7 @@ const map: DiseaseMap = {
       icon: 'FlaskConical',
       accent: 'blue',
       items: [
-        '**Regola dei 9**: stima della superficie ustionata (BSA)',
+        '**Regola dei nove**: stima della superficie ustionata (BSA)',
         'Valutazione della profondità (1°, 2°, 3°, 4°)',
         'Verifica di **shock ipovolemico** (PA, FC, diuresi)',
         'Esami: emoglobina, ematocrito, elettroliti, creatinina',

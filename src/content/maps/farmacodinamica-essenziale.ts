@@ -42,7 +42,7 @@ const map: ConceptMap = {
         'Antagonismo **irreversibile**: es. aspirina sulla COX piastrinica',
         'Base degli **antidoti**: naloxone (oppioidi), flumazenil (benzodiazepine)',
         '**Agonista inverso**: produce l’effetto opposto all’agonista',
-        'Uso prolungato di antagonisti → **up-regulation** dei recettori (rebound)',
+        'Uso prolungato di antagonisti → **up‑regolazione** dei recettori (effetto rebound)',
       ],
     },
     {

@@ -89,7 +89,7 @@ const map: ProcedureMap = {
     'Doccia possibile di norma **dopo 48 h** (NICE)',
     'Rinnovare se **bagnata, sporca** o staccata',
     'Valutare la ferita con criteri oggettivi (es. scala **ASEPSIS**)',
-    'Rimozione punti / agrafes: **su prescrizione** (in genere 7–14 giorni)',
+    'Rimozione punti / agrafi: **su prescrizione** (in genere 7–14 giorni)',
     'Educare: segni d’infezione da riferire, igiene, alimentazione',
   ],
 }

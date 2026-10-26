@@ -23,7 +23,7 @@ const map: AlgorithmMap = {
     {
       kind: 'action',
       title: 'A — Airway (Vie aeree)',
-      text: 'Garantire vie aeree permeabili con protezione cervicale. Se ostruite: **manovre di disostruzione**, intubazione o cricotirorotomia',
+      text: 'Garantire vie aeree permeabili con protezione cervicale. Se ostruite: **manovre di disostruzione**, intubazione o **cricotirotomia**',
     },
     {
       kind: 'decision',
@@ -40,7 +40,7 @@ const map: AlgorithmMap = {
       text: 'Valutare polsi, capillari, pressione arteriosa, segni di emorragia',
       branches: [
         { label: 'Emorragia esterna', text: '**Compressione diretta**, laccio emostatico se necessario, trasfusione ematica' },
-        { label: 'Shock', text: 'Accesso venoso rapido (2 calibri ≥ 14G), fluidoterapia, valutazione per **toracocentesi** o **laparocentesi**' },
+        { label: 'Shock', text: 'Accesso venoso rapido (2 cannule di grosso calibro, 14–16G), fluidoterapia, valutazione per **toracentesi** o **paracentesi**' },
       ],
     },
     {
@@ -83,7 +83,7 @@ const map: AlgorithmMap = {
       icon: 'Droplet',
       accent: 'blue',
       items: [
-        '2 accessi venosi periferici **≥ 14G** (o 16G)',
+        '2 accessi venosi periferici di **grosso calibro** (14–16G)',
         'Se fallimento periferico: **accesso centrale** (giugulare interna, femorale)',
         'Se urgenza estrema: **intraosseo** (tibia prossimale, sterno)',
         'Evitare arto contuso o fratturato',
@@ -101,7 +101,7 @@ const map: AlgorithmMap = {
         '**RX pelvi**: fratture pelviche, ematoma',
         '**TC corpo intero**: se paziente stabile, lesioni multiple sospette',
         '**Emogasanalisi**: acidosi, ipossia, ipercapnia',
-        '**Emocromo + coagulazione**: anemia, piastrinopenia, INR/TPA',
+        '**Emocromo + coagulazione**: anemia, piastrinopenia, **INR/PT**',
       ],
     },
   ],

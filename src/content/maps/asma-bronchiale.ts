@@ -10,7 +10,7 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'GINA — Global Strategy for Asthma Management and Prevention (2024)',
-    'Linee guida AIFA per la terapia dell’asma',
+    'Linee guida SIP per la gestione dell\'asma (2022)',
     'Codice deontologico FNOPI',
   ],
   definition:
@@ -95,7 +95,7 @@ const map: DiseaseMap = {
       items: [
         '**Crisi asmatica grave**: ostruzione severa, rischio di insufficienza respiratoria',
         '**Atelettasia** da tappi di muco',
-        '**Pneumotorace** spontaneo (soprattutto in asmatici giovani)',
+        '**Pneumotorace spontaneo** (raro, ma possibile)',
         '**Polmonite** secondaria a stasi di secrezioni',
         'Sindrome da astma grave refrattaria (status asthmaticus)',
       ],

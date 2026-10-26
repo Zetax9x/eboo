@@ -9,9 +9,9 @@ const map: ProcedureMap = {
   icon: 'Syringe',
   status: 'bozza',
   sources: [
-    'INS — Infusion Therapy Standards of Practice, 9ª ed. (2024)',
+    'Ministero della Salute — Piano Nazionale Vaccinazioni (2023)',
     'CDC — Guidelines for Immunization Practices',
-    'OMS — Linee guida per la gestione delle reazioni avverse post-vaccinali',
+    'OMS — Linee guida per la gestione delle reazioni avverse post‑vaccinali',
   ],
   materials: [
     { label: 'Siringa 1 mL', icon: 'Syringe' },
@@ -47,7 +47,7 @@ const map: ProcedureMap = {
   steps: [
     {
       title: 'Preparazione',
-      items: ['Igiene delle mani, guanti', 'Preparare la siringa (0,1 mL)', 'Spiegare la procedura'],
+      items: ['Igiene delle mani, guanti', 'Preparare la siringa (0,1 mL)', 'Spiegare la procedura'],
       icon: 'Package',
     },
     {
@@ -62,7 +62,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Iniezione',
-      items: ['Iniettare lentamente **0,1 mL**', 'Osservare la formazione del **papula**', 'Nessuna aspirazione'],
+      items: ['Iniettare lentamente **0,1 mL**', 'Osservare la formazione del **papula**', 'Nessuna aspirazione'],
       icon: 'Syringe',
     },
     {
@@ -72,7 +72,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Monitoraggio',
-      items: ['Attendere **15–20 min**', 'Osservare segni di **anafilassi**', 'Documentare la reazione'],
+      items: ['Attendere **15–20 min**', 'Osservare segni di **anafilassi**', 'Documentare la reazione'],
       icon: 'Eye',
     },
   ],
@@ -85,7 +85,7 @@ const map: ProcedureMap = {
   ],
   nurseRole: [
     'Valutare la **papula**: deve essere visibile e palpabile',
-    'Monitorare i segni vitali per **30 min** post-iniezione',
+    'Monitorare i segni vitali per **30 min** post‑iniezione',
     'Documentare **sito, volume, ora** e reazione',
     'Educare il paziente sui **segnali d’allarme**',
   ],

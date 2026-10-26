@@ -9,7 +9,7 @@ const map: DiseaseMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'KDIGO — Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease (2024)',
+    'KDIGO — Clinical Practice Guideline for the Evaluation and Management of Chronic Kidney Disease (2023)',
     'SIN — Linee guida per la gestione della malattia renale cronica',
     'Ministero della Salute — Piano Nazionale Malattie Renali',
   ],
@@ -112,7 +112,7 @@ const map: DiseaseMap = {
   redFlags: [
     '**Iperkaliemia** (K⁺ > 5,5 mEq/L): rischio aritmie fatali, avvisare subito il medico',
     '**Anuria** o oliguria improvvisa: possibile ostruzione o acutizzazione',
-    '**Encefalopatia uremica**: confusione, asterissi, convulsioni → emergenza',
+    '**Encefalopatia uremica**: confusione, asterisse, convulsioni → emergenza',
   ],
 }
 

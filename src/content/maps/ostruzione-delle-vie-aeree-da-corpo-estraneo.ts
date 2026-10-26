@@ -18,7 +18,7 @@ const map: AlgorithmMap = {
     {
       kind: 'start',
       title: 'Riconoscimento',
-      text: 'Il paziente si porta le mani al collo, non riesce a parlare, tossire o respirare. Ciano-lipale e distress respiratorio.',
+      text: 'Il paziente si porta le mani al collo, non riesce a parlare, tossire o respirare. Cianosi labiale e distress respiratorio.',
     },
     {
       kind: 'decision',
@@ -64,7 +64,7 @@ const map: AlgorithmMap = {
         'Non inserire dita in bocca alla cieca (rischio di spingere il CE più in profondità)',
         'Non perdere tempo a cercare il CE se non è visibile',
         'Non sospendere la RCP per tentativi ripetuti di rimozione',
-        'Non ignorare l’ostruzione parziale se il paziente migliora',
+        'Non intervenire se il paziente può tossire efficacemente',
       ],
     },
     {

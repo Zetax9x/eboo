@@ -11,7 +11,7 @@ const map: AlgorithmMap = {
   sources: [
     'ADA — American Diabetes Association, Standards of Care in Diabetes (ultima edizione)',
     'Ministero della Salute — Raccomandazioni per la gestione delle complicanze acute del diabete',
-    'SIC — Società Italiana di Diabetologia, Linee guida per la gestione delle emergenze diabetiche',
+    'SID — Società Italiana di Diabetologia, Linee guida per la gestione delle emergenze diabetiche',
   ],
   intro: 'Le due emergenze principali sono l’ipoglicemia (glicemia < 70 mg/dL) e le chetoacidosi (DKA/HHS). Il riconoscimento rapido e la terapia mirata salvano vite.',
   steps: [

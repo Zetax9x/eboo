@@ -69,7 +69,7 @@ const map: OverviewMap = {
         '**VRI** (riserva inspiratoria): **3000 mL**',
         '**VRE** (riserva espiratoria): **1100 mL**',
         '**VRI + VRE** = parte della capacità vitale',
-        'VRI ridotta in: asma, enfisema',
+        'VRI ridotta in: fibrosi polmonare, restrizione toracica',
         'VRE ridotta in: fibrosi polmonare, obesità',
       ],
     },

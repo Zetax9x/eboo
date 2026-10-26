@@ -31,14 +31,14 @@ const map: TableMap = {
       'Corticale · **fascicolata**',
       '**Cortisolo** (glucocorticoide)',
       '↑ **glicemia** (gluconeogenesi) · catabolismo proteico · **antinfiammatorio** e immunosoppressore · ritmo circadiano, picco al **mattino**',
-      '**Cushing**: obesità centrale, “faccia lunare”, smagliature rubre, iperglicemia, osteoporosi',
+      '**Cushing**: obesità centrale, “faccia lunare”, **smagliature violacee**, iperglicemia, osteoporosi',
       '**Addison**: astenia, **iperpigmentazione**, ipotensione, ipoglicemia',
     ],
     [
       'Corticale · **reticolare**',
       '**Androgeni** surrenalici (DHEA)',
       'Peli pubici e ascellari, **libido** femminile · precursori di testosterone ed estrogeni',
-      '**Irsutismo**, acne, virilizzazione nella donna',
+      '**irsutismo**, acne, virilizzazione nella donna',
       'Riduzione di peli e libido nella donna',
     ],
     [

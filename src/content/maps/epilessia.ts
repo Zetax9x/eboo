@@ -84,7 +84,7 @@ const map: DiseaseMap = {
         'Crisi convulsiva **≥ 5 minuti** o crisi ripetute senza recupero',
         'Emergenza: rischio di **danno neuronale**',
         '1ª linea: **benzodiazepine** (midazolam, lorazepam, diazepam)',
-        'Poi antiepilettici ev secondo protocollo',
+        'Poi antiepilettici, eventualmente, secondo protocollo',
         'Monitorare **ABC**, SpO₂, glicemia',
       ],
     },

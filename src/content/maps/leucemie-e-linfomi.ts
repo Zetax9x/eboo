@@ -11,7 +11,7 @@ const map: DiseaseMap = {
   sources: [
     'NCCN — Clinical Practice Guidelines in Oncology: Hematologic Malignancies (ultima edizione)',
     'AIFA — Linee guida per la terapia delle neoplasie ematologiche',
-    'FIMU — Federazione Italiana Medici di Medicina Generale, Linee guida per la diagnosi e il trattamento delle leucemie e dei linfomi',
+    'AIOM — Associazione Italiana di Oncologia Medica, Linee guida per la diagnosi e il trattamento delle leucemie e dei linfomi',
   ],
   definition:
     'Neoplasie maligne delle cellule ematopoietiche: le **leucemie** colpiscono il midollo osseo e il sangue, i **linfomi** i tessuti linfoidi.',
@@ -110,7 +110,7 @@ const map: DiseaseMap = {
   ],
   redFlags: [
     '**Febbre ≥ 38,0 °C** in paziente neutropenico: **urgenza medica**, emocoltura e antibiotici empirici',
-    '**Sindrome da lisi tumorale**: iperuricemia, iperkaliemia, ipocalcemia → **idratazione aggressiva**, allopurinolo/rasburicasa',
+    '**Sindrome da lisi tumorale**: iperuricemia, iperkaliemia, ipocalcemia → **idratazione aggressiva**, allopurinolo/rasburicase',
     '**Emorragia grave**: epistassi persistente, ematuria, ematomi → **trasfusione piastrinica**, emostasi',
   ],
 }

@@ -11,7 +11,7 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
-    'Linee guida GOLD 2024 — Global Strategy for Diagnosis, Management, and Prevention of COPD',
+    'Linee guida GOLD 2023 — Global Strategy for the Diagnosis, Management, and Prevention of COPD',
   ],
   blocks: [
     {
@@ -98,7 +98,7 @@ const map: OverviewMap = {
       },
       bullets: [
         '**Ispirazione**: contrazione del **diaframma** e intercostali esterni',
-        '**Esiprazione**: rilassamento passivo (a riposo)',
+        '**Espirazione**: rilassamento passivo (a riposo)',
         'Capacità vitale: ~4–5 L nell’adulto',
         'Volume corrente: ~500 mL per atto respiratorio',
         'Frequenza respiratoria: **12–20 atti/min**',
@@ -119,7 +119,7 @@ const map: OverviewMap = {
         '**CO₂**: dal sangue all’alveolo (gradiente parziale ~40 → 40 mmHg)',
         'Diffusione per **gradiente di pressione parziale**',
         'Emoglobina: trasporta **98,5%** dell’O₂',
-        'CO₂ trasportato come **bicarbonato** (70%), carbaminomoglobina (23%), CO₂ disciolto (7%)',
+        'CO₂ trasportato come **bicarbonato** (70%), carbaminoemoglobina (23%), CO₂ disciolto (7%)',
       ],
     },
     {

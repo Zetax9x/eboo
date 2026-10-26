@@ -9,8 +9,8 @@ const map: TableMap = {
   icon: 'Heart',
   status: 'bozza',
   sources: [
-    'ESC 2024 Guidelines for the management of chronic coronary syndromes',
-    'ESC 2023 Guidelines for the management of acute coronary syndromes',
+    'ESC 2023 Guidelines for the management of chronic coronary syndromes',
+    'ESC 2020 Guidelines for the management of acute coronary syndromes',
     'AIFA — Riassunti delle Caratteristiche del Prodotto (RCP), banca dati farmaci',
   ],
   intro:
@@ -26,7 +26,7 @@ const map: TableMap = {
     ['Nitroglicerina ev', 'Infusione continua', 'SCA, edema polmonare acuto, crisi ipertensiva', '**Ipotensione**, cefalea', 'Pompa, PA frequente; set **senza PVC** (il farmaco viene adsorbito)'],
     ['Beta-bloccanti', 'Bisoprololo, metoprololo', '↓ FC e contrattilità; prima linea nell’angina stabile', 'Bradicardia, astenia, broncospasmo', 'FC e PA prima della dose; non sospendere bruscamente'],
     ['Calcio-antagonisti', 'Amlodipina; verapamil, diltiazem', 'Vasodilatazione coronarica; angina vasospastica', 'Edemi, bradicardia (non DHP)', 'FC, edemi declivi'],
-    ['Altri antianginosi', 'Ranolazina, ivabradina', 'Ranolazina: corrente tardiva del Na⁺; ivabradina: ↓ FC (nodo SA)', 'Ranolazina: ↑ QT; ivabradina: bradicardia, fosfeni', 'ECG; ivabradina solo in **ritmo sinusale**'],
+    ['Altri antianginosi', 'Ranolazina, ivabradina', 'Ranolazina: corrente tardiva del Na⁺; ivabradina: ↓ FC (nodo SA)', 'Ranolazina: ↑ QT; ivabradina: bradicardia, fosfenes', 'ECG; ivabradina solo in **ritmo sinusale**'],
     ['Prevenzione eventi', 'ASA, clopidogrel, ticagrelor, prasugrel; statine', 'Antiaggregazione; riduzione LDL', '**Sanguinamenti**; mialgie (statine)', 'Segni di sanguinamento; aderenza alla doppia antiaggregazione dopo stent'],
   ],
   notes: [

@@ -89,7 +89,7 @@ const map: LabMap = {
     },
   ],
   tips: [
-    'Valori **anomali inattesi**: verificare coagulo o emodiluizione (prelievo dal braccio dell’infusione)',
+    'Valori **anomali inattesi**: verificare coagulo o **emodiluzione** (prelievo dal braccio dell’infusione)',
     'Comunicare **subito** Hb molto bassa, neutropenia grave e PLT critiche',
   ],
 }

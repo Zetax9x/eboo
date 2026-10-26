@@ -10,7 +10,7 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'MDS — Movement Disorder Society clinical diagnostic criteria for Parkinson’s disease (2015)',
-    'ISS-SNLG — Linea guida sulla diagnosi e terapia della malattia di Parkinson',
+    'ISS‑SNLG — Linee guida per la diagnosi e la terapia della malattia di Parkinson',
     'NICE NG71 — Parkinson’s disease in adults (2017, aggiornamenti)',
   ],
   definition:
@@ -34,7 +34,7 @@ const map: DiseaseMap = {
       accent: 'orange',
       items: [
         '**Bradicinesia** (criterio obbligatorio)',
-        '**Tremore a riposo** “contamonete”, spesso asimmetrico',
+        '**Tremore a riposo** “conta monete”, spesso asimmetrico',
         '**Rigidità** “a ruota dentata”',
         '**Instabilità posturale**, cadute (fase avanzata)',
         'Marcia a piccoli passi, **freezing**, ipomimia, micrografia',
@@ -70,8 +70,8 @@ const map: DiseaseMap = {
       accent: 'green',
       items: [
         '**Levodopa** + carbidopa/benserazide: la più efficace',
-        '**Dopamino-agonisti**: pramipexolo, ropinirolo, rotigotina',
-        '**IMAO-B** (rasagilina), **COMT-inibitori** (entacapone)',
+        '**Dopamino‑agonisti**: pramipexolo, ropinirolo, rotigotine',
+        '**MAO‑B** (rasagilina), **COMT‑inibitori** (entacapone)',
         'Avanzata: **DBS**, infusione intestinale, apomorfina',
       ],
     },
@@ -80,7 +80,7 @@ const map: DiseaseMap = {
       icon: 'Layers',
       accent: 'red',
       items: [
-        '**Fluttuazioni** “on-off”, wearing-off',
+        '**Fluttuazioni** “on‑off”, wearing‑off',
         '**Discinesie** da levodopa',
         'Cadute, **fratture**',
         '**Polmonite ab ingestis** da disfagia',
@@ -103,7 +103,7 @@ const map: DiseaseMap = {
   ],
   nursing: [
     'Somministrare i farmaci **all’orario esatto** (non posticipare le dosi)',
-    'Levodopa preferibilmente **lontano da pasti iperproteici**',
+    'Levodopa preferibilmente **lontano da pasti ricchi di proteine**',
     'Prevenire le **cadute**: alzarsi lentamente, ambiente sicuro, calzature',
     '**Screening disfagia**, consistenze adeguate, igiene orale',
     'Monitorare **PA in ortostatismo**, alvo, umore, sonno',

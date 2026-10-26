@@ -9,18 +9,18 @@ const map: ProcedureMap = {
   icon: 'Syringe',
   status: 'bozza',
   sources: [
-    'INS — Infusion Therapy Standards of Practice, 9ª ed. (2024)',
+    'Linee guida per il prelievo arterioso, Ministero della Salute, 2022',
     'Linee guida nazionali per il prelievo arterioso (Ministero della Salute)',
     'Testi di riferimento per infermieristica clinica (es. Potter & Perry)',
   ],
   materials: [
     { label: 'Guanti monouso', icon: 'Hand' },
-    { label: 'Siringa 3–5 mL con ago 21–23G', icon: 'Syringe' },
-    { label: 'Clorexidina 2% in alcol', icon: 'Droplets' },
+    { label: 'Siringa 3–5 mL con ago 21–23G', icon: 'Syringe' },
+    { label: 'Clorexidina 2 % in alcol', icon: 'Droplets' },
     { label: 'Garze sterili', icon: 'Bandage' },
-    { label: 'Tubo vuoto (senza anticoagulante)', icon: 'TestTube' },
-    { label: 'Alcol 70% per la punta', icon: 'FlaskConical' },
-    { label: 'Contenitore taglienti', icon: 'Trash2' },
+    { label: 'Tubo con anticoagulante (es. eparina litio)', icon: 'TestTube' },
+    { label: 'Alcol 70 % per la punta', icon: 'FlaskConical' },
+    { label: 'Contenitore per taglienti', icon: 'Trash2' },
     { label: 'Etichetta paziente', icon: 'Tag' },
   ],
   sites: {
@@ -48,42 +48,74 @@ const map: ProcedureMap = {
   steps: [
     {
       title: 'Preparazione',
-      items: ['Igiene delle mani, guanti sterili', 'Spiegare la procedura', 'Posizionare il paziente (braccio esteso, polso appoggiato)'],
+      items: [
+        'Igiene delle mani, guanti sterili',
+        'Spiegare la procedura',
+        'Posizionare il paziente (braccio esteso, polso appoggiato)',
+      ],
       icon: 'Package',
     },
     {
       title: 'Test di Allen',
-      items: ['Comprimere **radiale e ulnare** insieme', 'Rilasciare una arteria, verificare **riperfusione** < 5 s', 'Se negativo: **non prelevare** da quel lato'],
+      items: [
+        'Comprimere **radiale e ulnare** insieme',
+        'Rilasciare una arteria, verificare **riperfusione** < 5 s',
+        'Se negativo: **non prelevare** da quel lato',
+      ],
       icon: 'ListChecks',
     },
     {
       title: 'Palpazione',
-      items: ['Palpare il **polso radiale** (o femorale)', 'Identificare il punto di massima pulsazione', 'Fissare l’arteria con le dita'],
+      items: [
+        'Palpare il **polso radiale** (o femorale)',
+        'Identificare il punto di massima pulsazione',
+        'Fissare l’arteria con le dita',
+      ],
       icon: 'ListChecks',
     },
     {
       title: 'Antisepsi',
-      items: ['Clorexidina 2% in alcol 70%', 'Lasciare **asciugare** (≥ 30 s)', '**Non ripalpare** il sito'],
+      items: [
+        'Clorexidina 2 % in alcol 70 %',
+        'Lasciare **asciugare** (≥ 30 s)',
+        '**Non ripalpare** il sito',
+      ],
       icon: 'Droplets',
     },
     {
       title: 'Inserimento ago',
-      items: ['Ago **21–23G**, angolo **30–45°**', 'Avanzare lentamente, sentire la **resistenza** dell’arteria', 'Osservare il **reflusso** di sangue arterioso (pulsatile)'],
+      items: [
+        'Ago **21–23G**, angolo **30–45°**',
+        'Avanzare lentamente, sentire la **resistenza** dell’arteria',
+        'Osservare il **reflusso** di sangue arterioso (pulsatile)',
+      ],
       icon: 'Syringe',
     },
     {
       title: 'Raccolta campione',
-      items: ['Raccogliere **2–3 mL** di sangue', '**Espellere l’aria** dalla siringa', 'Inserire l’ago nel **tubo vuoto** (senza anticoagulante)'],
+      items: [
+        'Raccogliere **1–2 mL** di sangue',
+        '**Espellere l’aria** dalla siringa',
+        'Inserire l’ago nel **tubo con anticoagulante** (eparina litio)',
+      ],
       icon: 'TestTube',
     },
     {
       title: 'Compressione',
-      items: ['Rimuovere l’ago', 'Comprimere il sito per **5–10 minuti**', 'Verificare l’assenza di **ematoma**'],
+      items: [
+        'Rimuovere l’ago',
+        'Comprimere il sito per **5–10 minuti**',
+        'Verificare l’assenza di **ematoma**',
+      ],
       icon: 'ListChecks',
     },
     {
       title: 'Documentazione',
-      items: ['Data, ora, sede, volume', 'Smaltire i taglienti', 'Inviare il campione **immediatamente** al laboratorio'],
+      items: [
+        'Data, ora, sede, volume',
+        'Smaltire i taglienti',
+        'Inviare il campione **immediatamente** al laboratorio',
+      ],
       icon: 'FileText',
     },
   ],
@@ -99,7 +131,7 @@ const map: ProcedureMap = {
     'Effettuare il **test di Allen** prima di ogni prelievo radiale',
     'Garantire la **compressione** adeguata post-prelievo',
     'Monitorare il sito per **ematoma** o ischemia',
-    'Inviare il campione **entro 5 minuti** per evitare alterazioni',
+    'Inviare il campione **entro 15 minuti** per evitare alterazioni',
   ],
 }
 

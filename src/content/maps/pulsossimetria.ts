@@ -13,7 +13,7 @@ const map: ProcedureMap = {
   sources: [
     'BTS — Guideline for oxygen use in healthcare and emergency settings (2017)',
     'Royal College of Physicians — National Early Warning Score (NEWS) 2 (2017)',
-    'FDA — Pulse oximeters: draft guidance on accuracy and skin pigmentation (2025)',
+    'FDA — Pulse oximeters: guidance on accuracy and skin pigmentation (2023)',
   ],
   materials: [
     { label: 'Pulsossimetro', icon: 'Activity' },
@@ -42,7 +42,7 @@ const map: ProcedureMap = {
   safety: [
     { text: 'SpO2 **non misura la CO2**: non esclude ipoventilazione', kind: 'warn' },
     { text: 'Intossicazione da **CO**: SpO2 falsamente normale → EGA', kind: 'alert' },
-    { text: 'Su **pelle scura** può sovrastimare la saturazione', kind: 'warn' },
+    { text: 'Su **pelle scura** può **sottostimare** la saturazione', kind: 'warn' },
     { text: 'Non fidarsi di valori senza **onda** regolare', kind: 'no' },
     { text: 'Leggere sempre con **FR, FC** e clinica', kind: 'ok' },
   ],

@@ -77,7 +77,7 @@ const map: AlgorithmMap = {
       items: [
         'Aspirina **300 mg** (masticata)',
         'Nitrati sublinguali **0,5 mg**',
-        'Beta-bloccanti (es. metoprololo) se PA > 100/60',
+        'Beta-bloccanti (es. metoprololo) se PA sistolica > 100 mmHg',
         'Anticoagulanti (es. enoxaparina) secondo protocollo',
         'Inibitori P2Y12 (es. ticagrelor) se PCI prevista',
         'Morfina **2–4 mg IV** se dolore persistente',

@@ -23,7 +23,7 @@ const map: ConceptMap = {
       accent: 'navy',
       items: [
         'Enti **pubblici non economici** (L. 4/2013)',
-        'Soggetti di **diritto privato** con funzioni pubbliche',
+        'Soggetti di **diritto pubblico** con funzioni pubbliche',
         'Autonomie: patrimoniale, organizzativa, regolamentare',
         'Sottoposti al controllo del **Ministero della Salute**',
         'Non sono enti del Servizio Sanitario Nazionale',

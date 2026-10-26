@@ -23,7 +23,7 @@ const map: TableMap = {
     ['**Glicemia a digiuno** (da almeno 8 h)', '70–99 mg/dL', '**100–125 mg/dL** (alterata glicemia a digiuno)', '**≥ 126 mg/dL**'],
     ['**Glicemia 2 h dopo carico orale** di 75 g di glucosio (OGTT)', '< 140 mg/dL', '**140–199 mg/dL** (ridotta tolleranza)', '**≥ 200 mg/dL**'],
     ['**HbA1c** in %', '< 5,7%', '**5,7–6,4%** (ADA)', '**≥ 6,5%**'],
-    ['**HbA1c** in mmol/mol', '< 39', '**39–47** (in Italia rischio aumentato **42–48**)', '**≥ 48 mmol/mol**'],
+    ['**HbA1c** in mmol/mol', '< 39', '**39–47** (in Italia rischio aumentato **42–47**)', '**≥ 48 mmol/mol**'],
     ['**Glicemia casuale**', '—', '—', '**≥ 200 mg/dL** con sintomi tipici (poliuria, polidipsia, calo di peso)'],
   ],
   notes: [

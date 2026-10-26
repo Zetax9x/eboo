@@ -67,7 +67,7 @@ const map: ConceptMap = {
       accent: 'red',
       items: [
         'La cartella è **titolarità del paziente** (art. 32 Cost.)',
-        '**Accesso** del paziente: diritto di visione e copia (L. 24/2017)',
+        '**Accesso** del paziente: diritto di visione e copia (L. 24/2017, art. 4)',
         '**Segreto professionale**: obbligo di riservatezza (art. 58 CdE)',
         '**Responsabilità** per omissioni, errori, falsità',
         '**Falsità in atto pubblico**: reato penale (art. 483 c.p.)',

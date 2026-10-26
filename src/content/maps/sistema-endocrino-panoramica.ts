@@ -44,7 +44,7 @@ const map: OverviewMap = {
         '**Ipotalamo**: TRH, CRH, GnRH, GHRH, dopamina',
         '**Adenoipofisi**: TSH, ACTH, FSH, LH, GH, prolattina',
         '**Neuroipofisi**: libera **ADH** e **ossitocina**',
-        'Comanda tiroide, corticale del surrene, gonadi',
+        'Comanda tiroide, **corteccia surrenale**, gonadi',
       ],
     },
     {
@@ -106,7 +106,7 @@ const map: OverviewMap = {
         '**Ovaio**: estrogeni, progesterone · **testicolo**: testosterone',
         '**Rene**: eritropoietina, renina, calcitriolo',
         '**Epifisi**: melatonina (ritmo sonno-veglia)',
-        '**Cuore**: ANP · **stomaco**: gastrina · **adipe**: leptina',
+        '**Tessuto adiposo**: leptina',
       ],
     },
   ],

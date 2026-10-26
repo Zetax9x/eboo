@@ -11,7 +11,7 @@ const map: ProcedureMap = {
   sources: [
     'CLSI — Guidelines for Blood Collection (H3-A6, 2022)',
     'Ministero della Salute — Raccomandazioni per la qualità pre-analitica',
-    'FNOPI — Codice Deontologico e linee guida per la raccolta campioni',
+    'FNOPI — Linee guida per la raccolta dei campioni biologici (2021)',
   ],
   materials: [
     { label: 'Provette colorate', icon: 'TestTubes' },
@@ -58,12 +58,21 @@ const map: ProcedureMap = {
     },
     {
       title: 'Prelievo ematico',
-      items: ['Laccio **10–15 cm** sopra', 'Bisello **15–30°**', 'Rimuovere laccio **prima** di estrarre'],
+      items: [
+        'Laccio **5–10 cm** sopra',
+        'Bisello **15–30°**',
+        'Rimuovere laccio **dopo l’avvio del flusso**',
+      ],
       icon: 'TestTube',
     },
     {
       title: 'Ordine provette',
-      items: ['1. **Emocoltura**', '2. **Coagulazione** (blu)', '3. **Emocromo** (lilla)', '4. **Biochimica** (gialla)'],
+      items: [
+        '1. **Emocoltura**',
+        '2. **Coagulazione** (blu)',
+        '3. **Biochimica** (gialla)',
+        '4. **Emocromo** (lilla)',
+      ],
       icon: 'TestTube',
     },
     {

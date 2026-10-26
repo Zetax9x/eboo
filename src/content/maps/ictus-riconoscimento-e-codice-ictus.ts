@@ -9,7 +9,7 @@ const map: AlgorithmMap = {
   icon: 'Brain',
   status: 'bozza',
   sources: [
-    'Linee guida AIN (Associazione Italiana Neurologia) e SIN (Società Italiana di Neurologia) sulla gestione dell’ictus acuto',
+    'Linee guida AIN (Associazione Italiana di Neurologia) e SIN (Società Italiana di Neurologia) sulla gestione dell’ictus acuto',
     'Ministero della Salute — Percorso Diagnostico Terapeutico Assistenziale (PDTA) Ictus',
     'NICE Guidelines — Stroke: diagnosis and initial management (NG229)',
   ],
@@ -80,7 +80,7 @@ const map: AlgorithmMap = {
       icon: 'Stethoscope',
       accent: 'blue',
       items: [
-        'Riconoscere i sintomi con la scala **FAST** o **CIRCOLO** (Cervello, Ictus, Riconoscere, Chiamare, Osservare, Localizzare, Orario)',
+        'Riconoscere i sintomi con la scala **BE-FAST** o **Cincinnati** (volto, braccio, linguaggio) e annotare l’**ora di esordio**',
         'Misurare **glicemia** e **pressione arteriosa**',
         'Registrare l’**ora di insorgenza** dei sintomi',
         'Attivare il **Codice Ictus** e preparare il trasferimento',

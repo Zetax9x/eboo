@@ -9,12 +9,12 @@ const map: DiseaseMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'ACG Clinical Guideline: Diagnosis and Management of Peptic Ulcer Disease (2024)',
+    'ACG Clinical Guideline: Diagnosis and Management of Peptic Ulcer Disease (2022)',
     'ESGE Guideline: Management of non-variceal upper gastrointestinal bleeding (2022)',
-    'Linee guida AIFA e Raccomandazioni ministeriali per la terapia antiulcera',
+    'Linee guida della Società Italiana di Gastroenterologia (SIGE) per la gestione dell\'ulcera peptica (2020)',
   ],
   definition:
-    'Lesione della mucosa gastrica o duodenale che penetra oltre la muscosa propria. L’emorragia digestiva è la complicanza più grave, caratterizzata da **melena**, **ematemesi** o **ritesso rettale**.',
+    'Lesione della mucosa gastrica o duodenale che penetra oltre la mucosa propria. L’emorragia digestiva è la complicanza più grave, caratterizzata da **melena**, **ematemesi** o **ritesso rettale**.',
   illustration: {
     id: 'ulcera-peptica-anatomia',
     alt: 'Gastrite e ulcera duodenale con sanguinamento',
@@ -25,7 +25,6 @@ const map: DiseaseMap = {
     { name: 'Ulcera gastrica', text: 'Sede: corpo o antrum. Rischio di **malignità** (biopsia obbligatoria).' },
     { name: 'Ulcera duodenale', text: 'Sede: bulbo duodenale. Più comune, legata a **H. pylori**.' },
     { name: 'Ulcera da stress', text: 'In pazienti critici (shock, ustioni, coma). **Profilassi** con IPP.' },
-    { name: 'Emorragia varicosa', text: 'Da ipertensione portale (cirrosi). Sanguinamento **massivo** e rapido.' },
   ],
   sections: [
     {
@@ -34,7 +33,7 @@ const map: DiseaseMap = {
       accent: 'purple',
       items: [
         '**Helicobacter pylori**: causa principale (70-80%)',
-        '**FANS** e AASC: inibizione prostaglandine protettive',
+        '**FANS** e AAS: inibizione prostaglandine protettive',
         'Fumo, alcol, stress fisiologico (ustioni, sepsi)',
         'Malattia di Zollinger-Ellison (gastrinoma)',
         'Terapia anticoagulante o antiaggregante',
@@ -101,7 +100,7 @@ const map: DiseaseMap = {
     },
   ],
   nursing: [
-    'Posizione **Trendelenburg** o semi-seduta per ematemesi',
+    'Posizione semi-seduta (30‑45°) per ematemesi',
     'Accesso venoso calibro **14-16 G**, emogasanalisi e trasfusione',
     'Somministrazione IPP endovenoso (bolo + infusione continua)',
     'Monitoraggio stretto della diuresi e della pressione arteriosa',

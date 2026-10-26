@@ -9,7 +9,7 @@ const map: ProcedureMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'SPEN — Linee guida per la nutrizione clinica (2020)',
+    'SIE — Linee guida per la nutrizione clinica (2020)',
     'ESPEN — Guidelines on Clinical Nutrition in the ICU (2019)',
     'Ministero della Salute — Raccomandazioni per la prevenzione delle infezioni correlate all’assistenza',
   ],
@@ -18,7 +18,7 @@ const map: ProcedureMap = {
     { label: 'Sonda nasogastrica', icon: 'Droplet' },
     { label: 'Siringa 20 mL', icon: 'Syringe' },
     { label: 'Soluzione dietetica', icon: 'FlaskConical' },
-    { label: 'Acqua sterile', icon: 'Droplets' },
+    { label: 'Acqua sterile', icon: 'Droplet' },
     { label: 'Medicazione trasparente', icon: 'Sticker' },
     { label: 'Sacchetto di drenaggio', icon: 'Box' },
     { label: 'Pompa di infusione', icon: 'Monitor' },
@@ -73,7 +73,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Terminazione',
-      items: ['Lavare con **20–30 mL acqua**', 'Chiudere e fissare sonda', 'Riabbassare gradualmente'],
+      items: ['Lavare con **20–30 mL di acqua**', 'Chiudere e fissare sonda', 'Riabbassare gradualmente'],
       icon: 'ListChecks',
     },
   ],

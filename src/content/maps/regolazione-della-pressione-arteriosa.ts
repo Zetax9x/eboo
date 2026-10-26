@@ -11,7 +11,7 @@ const map: OverviewMap = {
   sources: [
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier (11ª ed.)',
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
-    'Linee guida ESC 2024 sulla gestione della pressione arteriosa elevata',
+    'Linee guida ESC/ESH 2023 sulla gestione della pressione arteriosa elevata',
   ],
   blocks: [
     {
@@ -98,7 +98,7 @@ const map: OverviewMap = {
       },
       bullets: [
         '**Metaboliti**: CO2, H+, lattato, adenosina → vasodilatazione',
-        '**Ossigeno**: ipossia locale → vasodilatazione (es. polmoni, muscolo)',
+        '**Ossigeno**: ipossia locale → vasodilatazione nei tessuti (es. muscolo scheletrico)',
         '**Prostaglandine**: PGI2 (prostaciclina) → vasodilatazione',
         '**Ossido nitrico (NO)**: potente vasodilatatore endoteliale',
         '**Termoregolazione**: vasodilatazione cutanea per dispersione di calore',
@@ -112,7 +112,7 @@ const map: OverviewMap = {
         'Regolano il **volume plasmatico** e la **gittata cardiaca**',
         '**Reni**: meccanismo di **riassorbimento** e **secrezione** di Na+ e H2O',
         '**SRAA**: principale sistema ormonale a lungo termine',
-        '**ADH**: regola l’osmolarità plasmatica (1000–1200 mOsm/kg)',
+        '**ADH**: regola l’osmolarità plasmatica (275–295 mOsm/kg)',
         'Alterazioni croniche → **ipertensione** o **ipotensione**',
       ],
     },

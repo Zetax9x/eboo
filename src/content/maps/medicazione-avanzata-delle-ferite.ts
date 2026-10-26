@@ -9,7 +9,7 @@ const map: ProcedureMap = {
   icon: 'Bandage',
   status: 'bozza',
   sources: [
-    'NPIAP/EPUAP/PPPIA — International Guideline: Pressure Ulcer/Injury Prevention and Treatment (2024)',
+    'NPIAP/EPUAP/PPPIA — International Guideline: Pressure Ulcer/Injury Prevention and Treatment (2022)',
     'EADV — European Academy of Dermatology and Venereology Guidelines on Wound Care',
     'Ministero della Salute — Raccomandazioni per la gestione delle ferite croniche',
   ],
@@ -95,11 +95,11 @@ const map: ProcedureMap = {
   },
   complications: [
     { label: 'Ipergranulazione', sub: 'tessuto rosso, sanguinante' },
-    { label: 'Macerazione', sub: 'cute bianca, molle' },
+    { label: 'Macerazione', sub: 'cute bianche, molle' },
     { label: 'Infezione', sub: 'dolore, pus, odore' },
     { label: 'Allergia', sub: 'prurito, rash' },
     { label: 'Tunneling', sub: 'canali sotto pelle' },
-    { label: 'Ritardo guarigione', sub: 'ferita persistente' },
+    { label: 'Ritardo di guarigione', sub: 'ferita persistente' },
   ],
   nurseRole: [
     'Valutare ferita con **scala** standardizzata',

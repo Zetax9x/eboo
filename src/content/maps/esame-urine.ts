@@ -9,7 +9,7 @@ const map: LabMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'SIAU — Linee guida per l’esame urine',
+    'SIU — Linee guida per l’esame delle urine',
     'Harrison — Principi di medicina interna, sezione nefrologia',
   ],
   intro: 'Range indicativi per l’adulto; fa fede il **referto del laboratorio**.',
@@ -84,12 +84,12 @@ const map: LabMap = {
         signs: 'Disuria, febbre',
         causes: 'Infezione urinaria, contaminazione',
       },
-      nursing: 'Raccogliere **medio getto**; inviare al batterio entro **2 h**.',
+      nursing: 'Raccogliere **medio getto**; inviare al **laboratorio** entro **2 h**.',
     },
   ],
   tips: [
     'Raccogliere **medio getto** dopo igiene intima',
-    'Inviare al lab entro **2 h** o refrigerare a 4 °C',
+    'Inviare al lab entro **2 h** o refrigerare a 4 °C',
   ],
 }
 

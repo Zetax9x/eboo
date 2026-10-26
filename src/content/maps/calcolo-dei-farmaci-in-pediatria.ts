@@ -11,7 +11,6 @@ const map: ConceptMap = {
   sources: [
     'Ministero della Salute — Raccomandazione n. 7 per la prevenzione degli errori in terapia farmacologica, 2008',
     'Holliday M.A., Segar W.E. — The maintenance need for water in parenteral fluid therapy, Pediatrics 1957',
-    'Badon P., Cesaro S. — Assistenza infermieristica in pediatria, CEA',
   ],
   intro:
     'In pediatria la dose si calcola quasi sempre in base al **peso in kg** (mg/kg/dose o mg/kg/die). Un errore di virgola produce un sovradosaggio di **10 volte**: ogni calcolo va verificato.',

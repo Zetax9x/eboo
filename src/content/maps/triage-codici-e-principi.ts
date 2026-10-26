@@ -19,11 +19,41 @@ const map: TableMap = {
   columns: ['Codice', 'Denominazione', 'Definizione', 'Accesso', 'Esempi'],
   widths: [1.1, 1.2, 2.6, 1, 2.1],
   rows: [
-    ['**1** · rosso', '**Emergenza**', 'Interruzione o compromissione di una o più **funzioni vitali**', '**Immediato**', 'Arresto cardiaco, **shock**, coma, insufficienza respiratoria grave, convulsioni in atto, politrauma instabile'],
-    ['**2** · arancione', '**Urgenza**', 'Rischio di compromissione delle funzioni vitali; condizione stabile con **rischio evolutivo** o dolore severo', 'Entro **15 min**', '**Dolore toracico** tipico, sospetto **ictus**, trauma con dinamica maggiore, dolore severo, alterazione della coscienza'],
-    ['**3** · azzurro', '**Urgenza differibile**', 'Condizione stabile senza rischio evolutivo, con sofferenza; richiede in genere prestazioni **complesse**', 'Entro **60 min**', 'Dolore addominale moderato, dispnea lieve con parametri stabili, febbre con malessere, vomito persistente'],
-    ['**4** · verde', '**Urgenza minore**', 'Condizione stabile senza rischio evolutivo; prestazioni **semplici** mono-specialistiche', 'Entro **120 min**', 'Trauma minore di un arto, ferita superficiale da suturare, lombalgia, sintomi urinari'],
-    ['**5** · bianco', '**Non urgenza**', 'Problema non urgente o di **minima rilevanza** clinica', 'Entro **240 min**', 'Disturbi gestibili dal medico di medicina generale, rinnovo di terapia, sintomi di lunga data invariati'],
+    [
+      '**1** · rosso',
+      '**Emergenza**',
+      'Interruzione o compromissione di una o più **funzioni vitali**',
+      '**Immediato**',
+      'Arresto cardiaco, **shock**, coma, insufficienza respiratoria grave, convulsioni in atto, politrauma instabile',
+    ],
+    [
+      '**2** · arancione',
+      '**Urgenza**',
+      'Rischio di compromissione delle funzioni vitali; condizione stabile con **rischio evolutivo** o dolore severo',
+      'Entro **10 min**',
+      '**Dolore toracico** tipico, sospetto **ictus**, trauma con dinamica maggiore, dolore severo, alterazione della coscienza',
+    ],
+    [
+      '**3** · giallo',
+      '**Urgenza differibile**',
+      'Condizione stabile senza rischio evolutivo, con sofferenza; richiede in genere prestazioni **complesse**',
+      'Entro **30 min**',
+      'Dolore addominale moderato, dispnea lieve con parametri stabili, febbre con malessere, vomito persistente',
+    ],
+    [
+      '**4** · verde',
+      '**Urgenza minore**',
+      'Condizione stabile senza rischio evolutivo; prestazioni **semplici** mono-specialistiche',
+      'Entro **60 min**',
+      'Trauma minore di un arto, ferita superficiale da suturare, lombalgia, sintomi urinari',
+    ],
+    [
+      '**5** · bianco',
+      '**Non urgenza**',
+      'Problema non urgente o di **minima rilevanza** clinica',
+      'Entro **120 min**',
+      'Disturbi gestibili dal medico di medicina generale, rinnovo di terapia, sintomi di lunga data invariati',
+    ],
   ],
   notes: [
     {
@@ -61,8 +91,8 @@ const map: TableMap = {
     },
   ],
   keyPoints: [
-    'Codici **1–5**: rosso, arancione, azzurro, verde, bianco',
-    'Tempi massimi: **0 – 15 – 60 – 120 – 240** minuti',
+    'Codici **1–5**: rosso, arancione, giallo, verde, bianco',
+    'Tempi massimi: **0 – 10 – 30 – 60 – 120** minuti',
   ],
 }
 

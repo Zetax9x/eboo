@@ -10,8 +10,8 @@ const map: AlgorithmMap = {
   status: 'bozza',
   sources: [
     'ERC — European Resuscitation Council Guidelines 2021: Airway Management',
-    'FIO — Federazione Italiana di Anestesia e Rianimazione, Linee guida sulla gestione delle vie aeree',
-    'NICE — National Institute for Health and Care Excellence, Acute airway obstruction (2023)',
+    'SIAARTI — Società Italiana di Anestesia e Rianimazione, Linee guida sulla gestione delle vie aeree (2020)',
+    'Difficult Airway Society (DAS) — Guidelines for management of unanticipated difficult intubation in adults (2015)',
   ],
   intro: 'La gestione delle vie aeree è la prima priorità nella catena della sopravvivenza e nella stabilizzazione del paziente critico. Un’aria non perviabile o non ventilata porta all’arresto cardiaco in pochi minuti.',
   steps: [
@@ -44,12 +44,12 @@ const map: AlgorithmMap = {
     {
       kind: 'alert',
       title: 'Ostruzione persistente',
-      text: 'Se il paziente è cosciente e non riesce a parlare o tossire: **manovre di disostruzione** (compressioni addominali o dorsali). Se incosciente: **RCP** e ricerca del corpo estraneo in bocca'
+      text: 'Se il paziente è cosciente e non riesce a parlare o tossire: **manovre di disostruzione** (compressioni addominali (manovra di Heimlich)). Se incosciente: **RCP** e ricerca del corpo estraneo in bocca'
     },
     {
       kind: 'action',
       title: 'Ventilazione di supporto',
-      text: 'Pallone-maschera con **valvola unidirezionale** e **O₂ ad alto flusso**. Rapporto **1:10–12** (1 ventilazione ogni 5–6 secondi) nel paziente con respiro assente o inefficace'
+      text: 'Pallone-maschera con **valvola unidirezionale** e **O₂ ad alto flusso**. **10–12 ventilazioni al minuto** (una ogni 5–6 secondi) nel paziente con respiro assente o inefficace'
     },
     {
       kind: 'end',
@@ -78,7 +78,7 @@ const map: AlgorithmMap = {
       items: [
         '**Pallone-maschera (BVM)**: con valvola unidirezionale e O₂ **15 L/min**',
         '**Cannula orofaringea (Guedel)**: per pazienti incoscienti con riflesso faringeo assente',
-        '**Cannula nasofaringea**: alternativa se bocca non accessibile o spasmo massetere',
+        '**Cannula nasofaringea**: alternativa se bocca non accessibile o trisma',
         '**Maschera laringea (LMA)**: dispositivo supraglottico per ventilazione temporanea',
         'Taglie cannule: **orofaringea** (misurare da angolo bocca a orecchio), **nasofaringea** (da narice a lobo orecchio)',
         'Se la ventilazione con BVM è inefficace: preparare per **intubazione orotracheale**',

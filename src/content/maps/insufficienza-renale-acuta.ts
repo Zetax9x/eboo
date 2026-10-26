@@ -9,7 +9,7 @@ const map: DiseaseMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'KDIGO Clinical Practice Guideline for Acute Kidney Injury (2012, aggiornamento 2024)',
+    'KDIGO Clinical Practice Guideline for Acute Kidney Injury (2012)',
     'SIN — Società Italiana di Nefrologia, Linee guida per la gestione dell’AKI',
     'Surviving Sepsis Campaign: International Guidelines (2021)',
   ],
@@ -44,7 +44,7 @@ const map: DiseaseMap = {
       icon: 'Eye',
       accent: 'orange',
       items: [
-        'Variazione della **diuresi**: oliguria (< 400 mL/die) o anuria (< 100 mL/die)',
+        'Variazione della **diuresi**: oliguria (< 400 mL/giorno) o anuria (< 100 mL/giorno)',
         'Edema periferico, edema polmonare (ipervolemia)',
         'Nausea, vomito, anorexia (uremia)',
         'Confusione, sonnolenza, convulsioni (encefalopatia uremica)',
@@ -69,9 +69,9 @@ const map: DiseaseMap = {
       accent: 'green',
       items: [
         'Trattare la **causa** (es. reidratazione se pre-renale, rimozione ostruzione)',
-        'Evitare farmaci nefrotossici (ANS, AINS, contrasto iodato)',
+        'Evitare farmaci nefrotossici (FANS, aminoglicosidi, mezzo di contrasto iodato)',
         'Controllo stretto degli **elettroliti**: iperkaliemia, ipercalcemia, acidosi metabolica',
-        'Nutrizione: limitare proteine se non in dialisi, adeguare calorie',
+        'Nutrizione: proteine **0,8–1 g/kg/die** senza dialisi (non ridurle per ritardarla)',
         '**Dialisi** (emodialisi o dialisi peritoneale) se indicata',
       ],
     },

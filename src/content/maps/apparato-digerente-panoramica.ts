@@ -11,7 +11,7 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
-    'Linee guida AIFA e OMS sulla nutrizione e digestione',
+    'OMS – Linee guida sulla nutrizione, 2020',
   ],
   blocks: [
     {
@@ -108,7 +108,7 @@ const map: OverviewMap = {
       bullets: [
         'Lunghezza: **6–7 m**, superficie di assorbimento **200–300 m²**',
         '**Duodeno**: riceve bile e succo pancreatico; pH alcalinizzato',
-        '**Digiuno**: principale sito di assorbimento di nutrienti',
+        '**Duodeno**: principale sito di assorbimento di nutrienti',
         '**Ileo**: assorbe **vitamina B12** e acidi biliari',
         'Movimenti: **segmentazione** (mescolamento) e **peristalsi** (trasporto)',
       ],
@@ -125,7 +125,7 @@ const map: OverviewMap = {
       },
       bullets: [
         'Lunghezza: **1,5 m**, diametro **6 cm**',
-        '**Cieco** e **appendice**: valvola ileo-cecale previene il reflusso',
+        '**Cieco** e **appendice**: valvola ileocecale previene il reflusso',
         '**Colon**: assorbe **acqua** e **elettroliti**; forma le feci',
         '**Microbiota intestinale**: 100 trilioni di batteri, fermentazione',
         'Tempo di transito: **12–48 ore** (variabile)',

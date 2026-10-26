@@ -29,7 +29,7 @@ const map: ConceptMap = {
         '**Collegio sindacale**: controllo contabile e di regolarità',
         'Organizzazione interna: **dipartimento** come modello ordinario',
         'Unità operative **complesse** e **semplici**',
-        'Direzione delle professioni sanitarie (**SITRA**/DPS): dirigente infermiere (L. 251/2000)',
+        'Direzione delle professioni sanitarie (DPS): dirigente infermiere (L. 251/2000)',
       ],
     },
     {

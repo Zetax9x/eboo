@@ -128,7 +128,7 @@ const map: OverviewMap = {
         'Neurotrasmettitore: **acetilcolina** (sia pre che postgangliare)',
         'Effetti: **bradicardia**, **miosi**, **broncocostrizione**',
         'Stimola peristalsi, secrezione gastrica, diuresi',
-        'Rilasciamento muscolare liscio, contrazione muscolare liscio',
+        'Rilassamento muscolare liscio',
       ],
     },
   ],

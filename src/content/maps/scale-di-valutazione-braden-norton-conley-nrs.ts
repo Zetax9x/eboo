@@ -10,7 +10,7 @@ const map: TableMap = {
   status: 'bozza',
   sources: [
     'NPIAP/EPUAP/PPPIA — International Guideline for the Prevention and Treatment of Pressure Ulcers/Injuries, 2019',
-    'AIFA — Raccomandazioni per la prevenzione delle lesioni da pressione, 2023',
+    'Ministero della Salute — Linee guida per la prevenzione e la gestione delle lesioni da pressione, 2022',
     'FNOPI — Linee guida nazionali per la valutazione e gestione del dolore, 2022',
   ],
   intro:

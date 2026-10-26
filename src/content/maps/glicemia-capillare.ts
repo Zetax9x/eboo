@@ -9,9 +9,9 @@ const map: ProcedureMap = {
   icon: 'Droplet',
   status: 'bozza',
   sources: [
-    'ADA — Standards of Care in Diabetes 2025 (sez. 6 Glycemic Goals and Hypoglycemia; sez. 16 Diabetes Care in the Hospital)',
+    'ADA — Standards of Care in Diabetes 2024 (sez. 6 Glycemic Goals and Hypoglycemia; sez. 16 Diabetes Care in the Hospital)',
     'OMS — WHO Guidelines on Drawing Blood: Best Practices in Phlebotomy (2010), capitolo sul prelievo capillare',
-    'SID-AMD — Standard italiani per la cura del diabete mellito (ultima edizione)',
+    'SID — Linee guida per la gestione del diabete mellito, ultima edizione (2023)',
   ],
   materials: [
     { label: 'Glucometro', icon: 'Gauge' },
@@ -25,12 +25,6 @@ const map: ProcedureMap = {
   ],
   sites: {
     title: 'Sede della puntura',
-    illustration: {
-      id: 'glicemia-capillare-dito',
-      alt: 'Polpastrello del dito con una goccia di sangue sul lato',
-      prompt: 'close-up of an adult hand with the fingertip of the ring finger seen from the side, a single small round drop of blood on the side of the fingertip',
-      icon: 'Target',
-    },
     items: [
       '**Lato del polpastrello** di medio o anulare',
       'Non il centro (più dolore); **ruotare** le dita',
@@ -41,7 +35,7 @@ const map: ProcedureMap = {
     { text: 'Paziente identificato con **2 identificativi**', kind: 'ok' },
     { text: 'Glucometro con **controllo di qualità** eseguito', kind: 'ok' },
     { text: 'Strisce **non scadute**, conservate chiuse', kind: 'warn' },
-    { text: '**Pungidito mai condiviso** tra pazienti', kind: 'no' },
+    { text: '**Lancetta mai condivisa** tra pazienti', kind: 'no' },
     { text: 'Shock o ipoperfusione: valore poco attendibile, **prelievo venoso**', kind: 'alert' },
   ],
   steps: [
@@ -62,7 +56,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Puntura',
-      items: ['Lancetta sul **lato** del dito', '**Non spremere** con forza', 'Prima goccia: secondo protocollo'],
+      items: ['Lancetta sul **lato** del dito', '**Non spremere** con forza', 'Scartare la prima goccia, secondo protocollo'],
       icon: 'Pipette',
     },
     {
@@ -72,7 +66,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Fine',
-      items: ['Comprimere con garza', 'Lancetta nei **taglienti**', 'Registrare valore, **ora**, pasto'],
+      items: ['Comprimere con garza', 'Lancetta nel **contenitore per taglienti**', 'Registrare valore, **ora**, pasto'],
       icon: 'ClipboardList',
     },
   ],

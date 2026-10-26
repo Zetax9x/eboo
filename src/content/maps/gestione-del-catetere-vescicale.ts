@@ -41,7 +41,7 @@ const map: ProcedureMap = {
     { text: 'Mani lavate e **guanti monouso**', kind: 'ok' },
     { text: 'Sacca di raccolta **mai sopra** la vescica', kind: 'warn' },
     { text: '**Non toccare** la parte sterile del catetere', kind: 'no' },
-    { text: 'Verificare la **patenza** del sistema', kind: 'ok' },
+    { text: 'Verificare la **tenuta** del sistema', kind: 'ok' },
     { text: 'Rispettare la **privacy** del paziente', kind: 'ok' },
   ],
   steps: [
@@ -49,7 +49,7 @@ const map: ProcedureMap = {
       title: 'Valutazione iniziale',
       items: [
         'Verificare la **necessità** del catetere',
-        'Controllare la **patenza** del sistema',
+        'Controllare la **tenuta** del sistema',
         'Valutare la **posizione** della sacca',
       ],
       icon: 'ClipboardCheck',
@@ -93,7 +93,7 @@ const map: ProcedureMap = {
     {
       title: 'Rimozione del catetere',
       items: [
-        'Deflare il **globo** con siringa',
+        'Deflare il **palloncino** con siringa',
         'Rimuovere il catetere **lentamente**',
         'Istruire il paziente sulla **diuresi** successiva',
       ],

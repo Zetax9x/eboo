@@ -9,9 +9,9 @@ const map: ConceptMap = {
   icon: 'HeartPulse',
   status: 'bozza',
   sources: [
-    'OMS — Three-step analgesic ladder (1986, revisione 2018)',
-    'AIFA — Linee guida per la terapia del dolore in oncologia',
-    'Fondazione A.I.R.C. — Guida al dolore oncologico',
+    'OMS — WHO analgesic ladder (1986, revisione 2019)',
+    'AIFA — Linee guida per la terapia del dolore oncologico (2020)',
+    'Fondazione AIRC — Guida al dolore oncologico',
   ],
   intro:
     'Il dolore è il **quinto segno vitale**. Nella neoplasia può essere somatico, viscerale, neuropatico o psicogeno. La gestione richiede un approccio **multimodale** e personalizzato.',
@@ -56,9 +56,9 @@ const map: ConceptMap = {
         '**Step 1**: dolore lieve (NRS 1-3) → Paracetamolo, FANS',
         '**Step 2**: dolore moderato (NRS 4-6) → Opioidi deboli (tramadolo, codeina)',
         '**Step 3**: dolore severo (NRS 7-10) → Opioidi forti (morfina, ossicodone)',
-        '**Principio**: "per os, per clock, per patient, by the ladder"',
+        '**Principio**: "per via orale, a intervalli regolari, per paziente, secondo la scala"',
         '**Titolazione**: adattare la dose al singolo paziente',
-        '**Non esiste** un tetto massimo di dose per la morfina',
+        '**Non esiste un tetto massimo assoluto di dose per la morfina; la titolazione è individuale**',
       ],
     },
     {

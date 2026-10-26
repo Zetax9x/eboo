@@ -52,7 +52,7 @@ const map: OverviewMap = {
       },
       bullets: [
         '**Dotti epatici** dx e sx → **dotto epatico comune**',
-        '**Dotto cistico** (dalla colecisti) si unisce al dotto epatico',
+        '**Dotto cistico** (dalla colecisti) si unisce al **dotto epatico comune**',
         '**Dotto biliare comune** → **ampulla di Vater** → duodeno',
         '**Colecisti**: riserva e concentrazione della bile',
       ],

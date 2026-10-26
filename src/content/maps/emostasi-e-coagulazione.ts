@@ -10,8 +10,8 @@ const map: OverviewMap = {
   status: 'bozza',
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
-    'Guideline ESC 2024 sulla gestione dell’anticoagulazione',
-    'Linee guida AIFA e Raccomandazioni ministeriali sulla terapia anticoagulante',
+    'Guideline ESC 2020 sulla gestione dell’anticoagulazione in fibrillazione atriale',
+    'Linee guida AIFA 2021 sulla terapia anticoagulante orale (NOAC) e raccomandazioni ministeriali',
   ],
   blocks: [
     {
@@ -26,7 +26,7 @@ const map: OverviewMap = {
       },
       bullets: [
         '**Vasocostrizione** immediata: riduce il flusso ematico',
-        'Mediata da **endotelina** e **trombina**',
+        'Mediata da **endotelina** e **trombossano A2**',
         'Dura **15–30 minuti**',
         'Prima risposta difensiva contro l’emorragia',
       ],
@@ -53,7 +53,7 @@ const map: OverviewMap = {
       bullets: [
         '**Aderenza**: piastrine → **collagene** esposto (via **vWF**)',
         '**Attivazione**: forma pseudopodi, rilascia **ADP**, **trombossano A2**',
-        '**Aggregazione**: legame **GPIIb/IIIa** con **fibrogene**',
+        '**Aggregazione**: legame **GPIIb/IIIa** con **fibrinogeno**',
         'Formazione del **tappo piastrinico** (tappo bianco)',
       ],
     },

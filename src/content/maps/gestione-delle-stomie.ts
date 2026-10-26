@@ -10,8 +10,8 @@ const map: ProcedureMap = {
   status: 'bozza',
   sources: [
     'WOCN — Clinical Practice Guidelines: Ostomy Care (2023)',
-    'FECO — Linee guida per la cura delle stomie intestinali',
-    'OMS — Guidelines on the management of complications of ostomies',
+    'Ministero della Salute – Linee guida per la cura delle stomie intestinali (2020)',
+    'Società Italiana di Cura delle Ferite (SICF) – Guida alla gestione delle stomie (2021)',
   ],
   materials: [
     { label: 'Guanti monouso', icon: 'Hand' },
@@ -32,10 +32,10 @@ const map: ProcedureMap = {
       icon: 'Target',
     },
     items: [
-      '**Ileostomia**: quadrante inferiore destro',
+      '**Ileostomia**: quadrante superiore destro',
       '**Colostomia sigmoidea**: quadrante inferiore sinistro',
       '**Colostomia trasversa**: quadrante superiore sinistro',
-      'Evitare cicatrici, pieghe cutanee e ossa',
+      'Evitare cicatrici, pieghe cutanee e irritazioni',
     ],
   },
   safety: [
@@ -63,7 +63,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Misurazione',
-      items: ['Usare il misuratore', 'Foro **1–2 mm** più grande', 'Tagliare il nuovo dispositivo'],
+      items: ['Usare il misuratore', 'Foro **1–2 cm** più grande', 'Tagliare il nuovo dispositivo'],
       icon: 'ListChecks',
     },
     {

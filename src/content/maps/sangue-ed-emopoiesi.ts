@@ -11,7 +11,7 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
-    'Linee guida SIT (Società Italiana di Trapianto) — Trasfusioni e emocomponenti',
+    'Linee guida SIT (Società Italiana di Trasfusioni) — Trasfusioni e emocomponenti',
   ],
   blocks: [
     {
@@ -143,9 +143,9 @@ const map: OverviewMap = {
         icon: 'Droplets',
       },
       bullets: [
-        '**Sistema ABO**: gruppi A, B, AB, 0',
+        '**Sistema ABO**: gruppi A, B, AB, O',
         '**Fattore Rh**: positivo (+) o negativo (−)',
-        '**Donatore universale**: 0 Rh− (eritrociti)',
+        '**Donatore universale**: O Rh− (eritrociti)',
         '**Ricevente universale**: AB Rh+ (eritrociti)',
         '**Compatibilità**: test cross-match prima della trasfusione',
       ],

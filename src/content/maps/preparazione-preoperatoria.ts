@@ -10,8 +10,8 @@ const map: ProcedureMap = {
   status: 'bozza',
   sources: [
     'NPSA — National Patient Safety Agency: Safe Surgery Saves Lives (2008)',
-    'OMS — Checklist per la sicurezza in sala operatoria (ultima revisione)',
-    'Linee guida nazionali sulla prevenzione delle infezioni correlate all’assistenza (ICA)',
+    'OMS — World Health Organization: Surgical Safety Checklist (ultima revisione, 2019)',
+    'Istituto Superiore di Sanità – Linee guida per la prevenzione delle infezioni correlate all’assistenza (2017)',
   ],
   materials: [
     { label: 'Cartella clinica', icon: 'FileText' },
@@ -28,7 +28,7 @@ const map: ProcedureMap = {
     { text: 'Verificare **consenso informato** firmato e specifico', kind: 'ok' },
     { text: 'Confermare **sito chirurgico** e lateralità (destra/sinistra)', kind: 'alert' },
     { text: 'Segnalare **allergie** a farmaci, lattice, antisettici', kind: 'warn' },
-    { text: 'Rimuovere **protesi mobili**, gioielli, lenti a contatto', kind: 'no' },
+    { text: 'Rimuovere **protesi mobili**, gioielli, lenti a contatto', kind: 'ok' },
     { text: 'Verificare **digiuno** (minimo 6-8 ore per solidi)', kind: 'warn' },
   ],
   steps: [

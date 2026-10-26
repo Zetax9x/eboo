@@ -11,7 +11,7 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, 15ª ed., CEA',
     'Kandel E.R. et al. — Principi di neuroscienze, 6ª ed., Elsevier',
-    'Linee guida AIN (American Institute for Nursing) sulla valutazione neurologica',
+    'Linee guida della Società Italiana di Neurologia (SIN) per la valutazione neurologica, 2020',
   ],
   blocks: [
     {
@@ -97,7 +97,7 @@ const map: OverviewMap = {
         },
       },
       bullets: [
-        '**4 ventricoli**: 2 laterali, 3° (mesencefalico), 4° (ponte/midollo)',
+        '**4 ventricoli**: 2 laterali, 3° (diencefalico), 4° (ponte/midollo)',
         '**Liquor**: prodotto dai **plessi corioideali**',
         '**Volume**: 120–150 mL totali, produzione **500 mL/giorno**',
         '**Pressione intracranica (PIC)**: 7–15 mmHg in adulto',
@@ -144,7 +144,7 @@ const map: OverviewMap = {
   keyPoints: [
     '**GCS ≤ 8**: intubazione e ventilazione meccanica',
     '**PIC > 20 mmHg**: rischio di ernia cerebrale',
-    '**Liquor**: 1,25–1,45 g/dL, glucosio 60–80 mg/dL, proteine 15–45 mg/dL',
+    '**Liquor**: 1,003–1,008 g/mL, glucosio 60–80 mg/dL, proteine 15–45 mg/dL',
   ],
 }
 

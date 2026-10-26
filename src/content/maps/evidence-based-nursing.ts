@@ -10,7 +10,7 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'Sackett D.L., Rosenberg W.M., Gray J.A., et al. — Evidence-Based Medicine: What It Is and What It Is Not, BMJ 1996',
-    'FNOPI — Codice Deontologico dell’Infermiere (2020), Art. 12',
+    'FNOPI — Codice deontologico delle professioni infermieristiche (2019), Art. 12',
     'Cochrane Collaboration — Handbook for Systematic Reviews of Interventions, Versione 6.4',
   ],
   intro:

@@ -49,7 +49,7 @@ const map: TableMap = {
         'Dose iniziale: **0,4–2 mg** EV/IM/SC; ripetere ogni 2–3 min',
         'Dose massima: **10 mg** in 1 ora (valutare caso per caso)',
         'Emivita breve (30–80 min): rischio di **re-sedazione** dopo 1–2 h',
-        'Somministrare in **bolus lenti** per evitare crisi di astinenza acuta',
+        'Somministrare in **bolus piccoli e ripetuti** per evitare crisi di astinenza acuta',
         'Monitorare la respirazione per almeno **4 ore** dopo la somministrazione',
       ],
     },

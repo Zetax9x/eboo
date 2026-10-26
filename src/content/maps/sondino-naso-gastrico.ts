@@ -17,7 +17,7 @@ const map: ProcedureMap = {
     { label: 'Sondino NG (Fr 12–18)', icon: 'Droplet' },
     { label: 'Siringa 20 mL', icon: 'Syringe' },
     { label: 'Guanti monouso', icon: 'Hand' },
-    { label: 'Lubrificante idrosolubile', icon: 'Droplets' },
+    { label: 'Lubrificante idrosolubile', icon: 'Droplet' },
     { label: 'Morse o nastro adesivo', icon: 'Sticker' },
     { label: 'Bacinella / vaschetta', icon: 'Box' },
     { label: 'Cappuccio di protezione', icon: 'CircleDot' },
@@ -67,7 +67,7 @@ const map: ProcedureMap = {
       title: 'Inserimento',
       items: [
         'Lubrificare la punta del sondino',
-        'Inserire per via **orale** o **nasale**',
+        'Inserire per via **nasale**',
         'Chiedere al paziente di **deglutire** a ogni 5–10 cm',
       ],
       icon: 'Hand',
@@ -76,7 +76,7 @@ const map: ProcedureMap = {
       title: 'Verifica posizione',
       items: [
         'Aspirare con siringa: **pH ≤ 5,5** = gastrico',
-        '**Mai** il test dell’aria con fonendoscopio: non affidabile',
+        '**Non affidabile da solo** il test dell’aria con fonendoscopio',
         'Se dubbio: **radiografia** o pH-metria',
       ],
       icon: 'Syringe',

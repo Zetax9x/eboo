@@ -9,7 +9,6 @@ const map: ConceptMap = {
   icon: 'Route',
   status: 'bozza',
   sources: [
-    'Kellum, K. A., et al. — Surviving Sepsis Campaign: Blood Gas Interpretation',
     'Boron, W. F. — Medical Physiology, capitolo Acid-Base Balance',
     'Linee guida SIAARTI — Gestione delle alterazioni acido-base in terapia intensiva',
   ],

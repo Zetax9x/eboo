@@ -11,7 +11,6 @@ const map: DiseaseMap = {
   sources: [
     'ADA — Standards of Care in Diabetes: Hyperglycemic Crises (2024)',
     'NICE — Diabetic ketoacidosis (NG28, 2023)',
-    'Ministero della Salute — Linee guida per la gestione delle emergenze metaboliche',
   ],
   definition:
     'Emergenza metabolica caratterizzata da **iperglicemia**, **acidosi metabolica** e **chetonemia/chetonuria**, dovuta a un deficit assoluto o relativo di insulina con eccesso di ormoni contro-regolatori.',
@@ -71,7 +70,7 @@ const map: DiseaseMap = {
       items: [
         '**Fluidoterapia**: NaCl 0,9% (15-20 mL/kg nelle prime 2 h)',
         '**Insulina endovenosa**: bolo 0,1 U/kg (opzionale) + infusione 0,1 U/kg/h',
-        'Correzione **potassio**: se K+ < 3,3 mEq/L sospendere insulina e somministrare K+',
+        'Correzione **potassio**: se K+ < 3,3 mEq/L correggere con K+ prima di avviare/continuare l’insulina',
         'Trattamento della **causa scatenante** (es. antibiotici)',
         'Monitoraggio glicemia ogni **1-2 ore**, target 150-200 mg/dL',
       ],
@@ -109,9 +108,9 @@ const map: DiseaseMap = {
     'Educare il paziente al **riconoscimento** dei sintomi e all’aderenza alla terapia insulinica',
   ],
   redFlags: [
-    '**K+ < 3,3 mEq/L**: sospendere insulina, somministrare K+ e avvisare il medico',
+    '**K+ < 3,3 mEq/L**: correggere con K+ prima di avviare/continuare l’insulina e avvisare il medico',
     '**Edema cerebrale**: cefalea, vomito, alterazione coscienza → **chiamare il medico subito**',
-    '**Glicemia < 150 mg/dL**: ridurre o sospendere insulina, iniziare glucosio per via endovenosa',
+    '**Glicemia < 200 mg/dL**: ridurre o sospendere insulina, iniziare glucosio per via endovenosa',
   ],
 }
 

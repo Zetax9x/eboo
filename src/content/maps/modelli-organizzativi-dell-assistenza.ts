@@ -40,7 +40,7 @@ const map: ConceptMap = {
         '**Direzione Generale**: governance strategica dell’azienda ospedaliera',
         '**Unità Operative (UO)**: reparti clinici, chirurgici, specialistici',
         '**Servizi di supporto**: laboratorio, radiologia, farmacia, centrale sterilizzazione',
-        '**Comitato di Etna**: etica, bioetica, diritti del paziente',
+        '**Comitato Etico**: etica, bioetica, diritti del paziente',
       ],
     },
     {
@@ -76,10 +76,10 @@ const map: ConceptMap = {
       items: [
         '**Indicatori di qualità**: mortalità, infezioni ospedaliere, readmission',
         '**Eventi sentinella**: segnalazione obbligatoria, analisi causa radice',
-        '**Risk management**: identificazione rischi, prevenzione, gestione incidenti',
+        '**Gestione del rischio**: identificazione rischi, prevenzione, gestione incidenti',
         '**Accreditamento**: requisiti strutturali, organizzativi, funzionali (DM 70/2015)',
         '**Audit clinico**: revisione sistematica delle pratiche assistenziali',
-        '**Patient safety**: checklist, protocolli, comunicazione efficace',
+        '**Sicurezza del paziente**: checklist, protocolli, comunicazione efficace',
       ],
     },
     {

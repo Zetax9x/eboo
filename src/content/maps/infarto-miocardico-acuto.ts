@@ -13,7 +13,7 @@ const map: DiseaseMap = {
     'Fourth Universal Definition of Myocardial Infarction (ESC/ACC/AHA/WHF, 2018)',
   ],
   definition:
-    '**Necrosi** di cellule miocardiche da ischemia prolungata: aumento e/o calo della **troponina** (almeno un valore > 99° percentile) + segni clinici, ECG o di imaging di ischemia.',
+    '**Necrosi** di cellule miocardiche da ischemia prolungata: aumento della **troponina** (almeno un valore > 99° percentile) + segni clinici, ECG o di imaging di ischemia.',
   illustration: {
     id: 'infarto-miocardico-acuto-trombo',
     alt: 'Coronaria occlusa da un trombo e area di miocardio infartuato',
@@ -57,7 +57,7 @@ const map: DiseaseMap = {
       accent: 'red',
       items: [
         'STEMI: **PCI primaria** entro **120 min** dalla diagnosi',
-        'Se non possibile: **fibrinolisi** entro 10 min, poi PCI',
+        'Se non possibile: **fibrinolisi** entro **30 min**, poi PCI',
         'NSTEMI: coronarografia **< 24 h** se alto rischio',
         '**Tempo è muscolo**: subito se instabile',
       ],

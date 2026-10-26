@@ -9,7 +9,7 @@ const map: DiseaseMap = {
   icon: 'Waves',
   status: 'bozza',
   sources: [
-    'ECCO — European Crohn’s and Colitis Organisation (Linee guida 2024)',
+    'ECCO — European Crohn’s and Colitis Organisation (Linee guida 2023)',
     'AIGO — Associazione Italiana Gastroenterologi Ospedalieri (Raccomandazioni sulle MICI)',
     'NICE — Inflammatory bowel disease (NG196, aggiornato)',
   ],

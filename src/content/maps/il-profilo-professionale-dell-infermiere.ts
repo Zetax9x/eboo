@@ -11,7 +11,7 @@ const map: ConceptMap = {
   sources: [
     'DM 14 settembre 1994 n. 739 — Regolamento concernente il profilo professionale dell’infermiere',
     'L. 26 febbraio 1999 n. 42; L. 10 agosto 2000 n. 251; L. 1 febbraio 2006 n. 43',
-    'FNOPI — Codice deontologico delle professioni infermieristiche (2019, aggiornato 2025)',
+    'FNOPI — Codice deontologico delle professioni infermieristiche (2019)',
   ],
   intro:
     'L’infermiere è l’operatore sanitario che, in possesso del **diploma universitario abilitante** e dell’**iscrizione all’albo**, è **responsabile dell’assistenza generale infermieristica** (DM 739/1994).',

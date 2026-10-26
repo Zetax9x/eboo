@@ -75,12 +75,12 @@ const map: LabMap = {
       unit: 'mg/dL',
       accent: 'green',
       low: {
-        name: 'Ipomagnesiemia',
-        signs: 'tremori, iperreflessia, aritmie (torsione di punta)',
+        name: 'Ipomagnesemia',
+        signs: 'tremori, iperreflessia, aritmie (torsade di punta)',
         causes: 'alcolismo, malnutrizione, diuretici, diarrea cronica',
       },
       high: {
-        name: 'Ipermagnesiemia',
+        name: 'Ipermagnesemia',
         signs: 'iporeflessia, ipotensione, bradicardia, depressione respiratoria',
         causes: 'insufficienza renale, eccesso di somministrazione (es. Mg ev in ostetricia)',
       },

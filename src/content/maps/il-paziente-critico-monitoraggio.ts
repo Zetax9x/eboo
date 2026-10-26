@@ -9,8 +9,8 @@ const map: ConceptMap = {
   icon: 'Monitor',
   status: 'bozza',
   sources: [
-    'SIC — Società Italiana di Cure Intensive, Linee guida sul monitoraggio in UTI',
-    'AIFA — Raccomandazioni per il monitoraggio dei parametri vitali in ambito ospedaliero',
+    'SITI — Società Italiana di Terapia Intensiva, Linee guida per il monitoraggio in terapia intensiva (2022)',
+    'Ministero della Salute — Linee guida per il monitoraggio dei parametri vitali in ambito ospedaliero (2021)',
     'FNOPI — Codice Deontologico e standard di pratica infermieristica',
   ],
   columns: 2,
@@ -25,7 +25,7 @@ const map: ConceptMap = {
         '**FR**: < 12 atti/min o > 24 atti/min; SpO₂ < 92% = ipossiemia',
         '**T°C**: < 35 °C (ipotermia) o > 38,5 °C (febbre)',
         '**Glicemia**: < 70 mg/dL (ipoglicemia) o > 250 mg/dL (iperglicemia)',
-        '**Diuresi**: < 0,5 mL/kg/h = oliguria; < 0,3 mL/kg/h = anuria',
+        '**Diuresi**: < 0,5 mL/kg/h = oliguria; < 0,1 mL/kg/h = anuria',
       ],
     },
     {

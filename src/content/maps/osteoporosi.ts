@@ -5,11 +5,12 @@ const map: DiseaseMap = {
   id: 'osteoporosi',
   chapter: 'patologie',
   title: 'Osteoporosi',
-  subtitle: 'Riduzione della densità ossea: fattori di rischio, diagnosi, terapia e prevenzione delle fratture',
+  subtitle:
+    'Riduzione della densità ossea: fattori di rischio, diagnosi, terapia e prevenzione delle fratture',
   icon: 'Bone',
   status: 'bozza',
   sources: [
-    'AIO — Linee guida per la diagnosi e la terapia dell’osteoporosi (2023)',
+    'SIOMM — Società Italiana di Osteoporosi e Metabolismo Minerale: Linee guida per la diagnosi e la terapia dell’osteoporosi (2023)',
     'IST — Istituto Superiore di Sanità: Raccomandazioni per la prevenzione delle fratture da fragilità',
     'NOF — National Osteoporosis Foundation: Clinician’s Guide (2024)',
   ],
@@ -18,13 +19,23 @@ const map: DiseaseMap = {
   illustration: {
     id: 'osteoporosi-osso-trabecolare',
     alt: 'Confronto tra osso sano e osso osteoporotico',
-    prompt: 'cross-section of healthy bone with dense trabecular network next to osteoporotic bone with thin sparse trabeculae, magnified view',
+    prompt:
+      'cross-section of healthy bone with dense trabecular network next to osteoporotic bone with thin sparse trabeculae, magnified view',
     icon: 'Bone',
   },
   types: [
-    { name: 'Postmenopausale', text: 'Tipo I: legata al **deficit estrogenico**. Colpisce prevalentemente donne > 50 anni. Siti tipici: vertebre, polso, femore.' },
-    { name: 'Senile', text: 'Tipo II: legata all’**invecchiamento** e al calo dell’assorbimento del calcio. Colpisce uomini e donne > 70 anni. Siti tipici: femore, vertebre, bacino.' },
-    { name: 'Secondaria', text: 'Dovuta a patologie o farmaci: **corticosteroidi**, iperparatiroidismo, ipogonadismo, malassorbimento, malattie reumatiche.' },
+    {
+      name: 'Postmenopausale',
+      text: 'Tipo I: legata al **deficit estrogenico**. Colpisce prevalentemente donne > 50 anni. Siti tipici: vertebre, polso, femore.',
+    },
+    {
+      name: 'Senile',
+      text: 'Tipo II: legata all’**invecchiamento** e al calo dell’assorbimento del calcio. Colpisce uomini e donne > 70 anni. Siti tipici: femore, vertebre, bacino.',
+    },
+    {
+      name: 'Secondaria',
+      text: 'Dovuta a patologie o farmaci: **corticosteroidi**, iperparatiroidismo, ipogonadismo, malassorbimento, malattie reumatiche.',
+    },
   ],
   sections: [
     {
@@ -71,8 +82,8 @@ const map: DiseaseMap = {
       items: [
         '**Integrazione**: Calcio (1000–1200 mg/die) + Vitamina D (800–1000 UI/die)',
         '**Bisfosfonati** (es. Alendronato): inibiscono il riassorbimento osseo',
-        '**Denosumab**: anticorpo anti-RANKL, iniezione ogni 6 mesi',
-        '**Terapia ormonale** (HRT): solo in donne giovani con sintomi vasomotori',
+        '**Denosumab**: anticorpo anti‑RANKL, iniezione ogni 6 mesi',
+        '**Terapia ormonale** (HRT): solo in donne in postmenopausa con sintomi vasomotori',
         'Terapie anaboliche (es. Teriparatide) in casi gravi',
       ],
     },
@@ -94,7 +105,7 @@ const map: DiseaseMap = {
       items: [
         '**Attività fisica** con carico (camminata, pesi leggeri)',
         'Dieta ricca di **calcio** (latticini, verdure a foglia verde)',
-        'Esposizione al **sole** (10-15 min/die) per sintesi Vitamina D',
+        'Esposizione al **sole** (10‑15 min/die) per sintesi Vitamina D',
         'Evitare **fumo** e limitare l’alcol',
         'Prevenzione **cadute**: illuminazione, scarpe antiscivolo, revisione farmaci',
       ],

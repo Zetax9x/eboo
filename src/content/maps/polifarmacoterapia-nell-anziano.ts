@@ -10,8 +10,8 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'Beers Criteria for Potentially Inappropriate Medication Use in Older Adults, AGS 2023',
-    'Raccolta Nazionale delle Linee Guida (RNLG) — Razionalizzazione della terapia farmacologica in età geriatrica',
-    'Fondazione Giovanni e Maria Fabbri — Linee guida per la prescrizione in geriatria',
+    'Ministero della Salute – Linee guida per la prescrizione di farmaci negli anziani, 2022',
+    'Società Italiana di Geriatria e Gerontologia (SIGG) – Linee guida per la polifarmacia, 2021',
   ],
   intro:
     'La **polifarmacoterapia** (≥ 5 farmaci) è un fattore di rischio indipendente per **cadute**, **interazioni** e **adverse drug events** (ADE) nell’anziano. L’obiettivo è la **deprescrizione** mirata e l’uso di criteri di appropriatezza.',
@@ -24,7 +24,7 @@ const map: ConceptMap = {
       items: [
         'Definizione operativa: assunzione di **≥ 5 farmaci** concomitanti',
         'Prevalenza: **> 50%** negli anziani istituzionalizzati e in RSA',
-        'Fattori di rischio: **multi-morbilità**, polipatologie croniche, età > 80 anni',
+        'Fattori di rischio: **multimorbilità**, polipatologie croniche, età > 80 anni',
         'Impatto: aumento del rischio di **ADE** del 20-30% rispetto a < 5 farmaci',
         'Correlazione con **ospedalizzazioni** e **mortalità** a 1 anno',
         'Costo sociale: aumento delle **cadute** e della **fragilità**',
@@ -37,7 +37,7 @@ const map: ConceptMap = {
       items: [
         '**Beers Criteria 2023**: lista di farmaci da evitare o usare con cautela',
         '**STOPP/START**: criteri per la sospensione e l’inizio della terapia',
-        '**Anticoag**: criteri specifici per gli anticoagulanti orali',
+        '**Anticoagulanti**: criteri specifici per gli anticoagulanti orali',
         '**PRISCUS**: criteri per la prescrizione in geriatria (Italia)',
         'Farmaci con **emivita lunga** o metabolismo epatico/renale alterato',
         'Farmaci con **effetto anticolinergico** o **sedativo** elevato',
@@ -63,7 +63,7 @@ const map: ConceptMap = {
       items: [
         '**Deprescrizione**: sospensione graduale di farmaci non necessari',
         '**Rivisitazione** della terapia a ogni cambio di stato di salute',
-        '**Semplificazione** del regime posologico (es. 1 volta/die se possibile)',
+        '**Semplificazione** del regime posologico (es. 1 volta al giorno se possibile)',
         '**Educazione terapeutica**: coinvolgere il paziente e i caregiver',
         '**Monitoraggio** degli effetti avversi e delle interazioni',
         '**Collaborazione** con il farmacista ospedaliero e il medico di base',

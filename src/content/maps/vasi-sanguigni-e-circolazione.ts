@@ -11,7 +11,6 @@ const map: OverviewMap = {
   sources: [
     'Tortora G.J., Derrickson B. — Principi di anatomia e fisiologia, CEA',
     'Guyton A.C., Hall J.E. — Fisiologia medica, Elsevier',
-    'Linee guida ESC 2024 sulla gestione della pressione arteriosa elevata e dell’ipertensione',
   ],
   blocks: [
     {
@@ -52,7 +51,7 @@ const map: OverviewMap = {
         icon: 'ArrowDown',
       },
       bullets: [
-        'Portano sangue **ai polmoni** o **al cuore**',
+        'Portano sangue al cuore (veine sistemiche) o dai polmoni al cuore (vene polmonari)',
         'Parete sottile, **tunica media** meno muscolare',
         'Valve unidirezionali nelle vene degli arti inferiori',
         'Pressione bassa: **2–10 mmHg**',
@@ -88,10 +87,10 @@ const map: OverviewMap = {
         icon: 'GitBranch',
       },
       bullets: [
-        'Arteriole → **sfinctere precapillare** → capillari → venula',
-        'I **sfincteri** regolano il flusso verso i capillari',
+        'Arteriole → **sfiintere precapillare** → capillari → venula',
+        'I **sfiinteri** regolano il flusso verso i capillari',
         'Circa **20%** del flusso passa attraverso i capillari funzionali',
-        'Il resto scorre nei **shunt arterovenosi**',
+        'Il resto scorre nei **shunt artero‑venosi**',
         'Pressione capillare: **15–35 mmHg**',
       ],
     },
@@ -110,7 +109,7 @@ const map: OverviewMap = {
         'Pressione alta: **120/80 mmHg**',
         'Flusso: **4–8 L/min** a riposo',
         'Irriga tutti gli organi e tessuti del corpo',
-        'Resistenze periferiche: **1000–1500 dyn·s/cm⁵**',
+        'Resistenze periferiche: **1000–1500 dyn·s·cm⁻⁵**',
       ],
     },
     {

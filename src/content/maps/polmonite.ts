@@ -11,7 +11,7 @@ const map: DiseaseMap = {
   sources: [
     'IDSA/ATS — Clinical Practice Guidelines for the Diagnosis and Management of Community-Acquired Pneumonia (2019)',
     'ESICM — Surviving Sepsis Campaign (2021)',
-    'Linee guida nazionali per la gestione della polmonite acquisita in comunità',
+    'Ministero della Salute – Linee guida per la diagnosi e la terapia della polmonite acquisita in comunità (2017)',
   ],
   definition:
     'Infezione acuta del **parenchima polmonare** causata da batteri, virus o funghi, con infiammazione degli alveoli e riempimento con essudato.',
@@ -70,9 +70,9 @@ const map: DiseaseMap = {
       accent: 'green',
       items: [
         '**Antibiotici empirici**: amoxicillina o macrolidi (CAP lieve)',
-        'CAP grave: **cefalosporina** + macrolide o **quinolone respiratorio**',
+        'CAP grave: **cefalo**sporina + macrolide o **quinolone respiratoria**',
         'HAP: copertura per **Pseudomonas** e MRSA (es. piperacillina-tazobactam)',
-        '**Ossigenoterapia** per mantenere SpO₂ ≥ 92%**',
+        '**Ossigenoterapia** per mantenere SpO₂ ≥ 92%',
         'Fluidoterapia endovenosa se disidratato o settico',
       ],
     },

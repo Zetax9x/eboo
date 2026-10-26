@@ -47,7 +47,7 @@ const map: OverviewMap = {
       icon: 'Layers',
       illustration: {
         id: 'glia-cellule',
-        alt: 'Cellule gliali attorno a un assoni',
+        alt: 'Cellule gliali attorno a un assone',
         prompt: 'astrocyte, oligodendrocyte, microglia and schwann cell surrounding a nerve fiber, distinct shapes and colors',
         icon: 'Layers',
       },
@@ -68,7 +68,7 @@ const map: OverviewMap = {
         '**Soglia**: -55 mV, necessaria per aprire canali Na⁺ voltaggio-dipendenti',
         '**Depolarizzazione**: ingresso massivo di Na⁺',
         '**Ripolarizzazione**: uscita di K⁺',
-        '**Iperpolarizzazione**: breve periodo refrattario assoluto',
+        '**Iperpolarizzazione**: periodo refrattario relativo',
       ],
     },
     {
@@ -121,7 +121,7 @@ const map: OverviewMap = {
       accent: 'teal',
       icon: 'Scale',
       bullets: [
-        '**EPSP** (Eccitatorio): depolarizzazione, apertura canali Na⁺/K⁺',
+        '**EPSP** (Eccitatorio): depolarizzazione, apertura canali Na⁺',
         '**IPSP** (Inibitorio): iperpolarizzazione, apertura canali Cl⁻/K⁺',
         '**Somma temporale**: stimoli ravvicinati nello stesso punto',
         '**Somma spaziale**: stimoli simultanei in punti diversi',

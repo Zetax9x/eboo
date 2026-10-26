@@ -11,7 +11,6 @@ const map: ConceptMap = {
   sources: [
     'FNOPI — Codice Deontologico dell’Infermiere (2014)',
     'Ministero della Salute — DM 739/1994 (Profilo professionale)',
-    'Mantellassi P. — Management e leadership in sanità, CEA',
   ],
   intro:
     'Il **management infermieristico** è l’insieme delle competenze per pianificare, organizzare, dirigere e controllare l’assistenza, garantendo **qualità**, **sicurezza** e **efficienza** delle risorse.',

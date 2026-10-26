@@ -10,7 +10,7 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'D.Lgs. 81/2008 — Testo Unico sulla salute e sicurezza nei luoghi di lavoro',
-    'Ministero della Salute — Linee guida per la sicurezza nei luoghi di lavoro in ambito sanitario',
+    'D.Lgs. 81/2008 — Testo unico sulla salute e sicurezza sul lavoro, Titolo X (esposizione ad agenti biologici)',
     'FNOPI — Codice Deontologico dell’Infermiere (2019), artt. 19-22',
   ],
   intro:

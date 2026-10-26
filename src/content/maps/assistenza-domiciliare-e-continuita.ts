@@ -10,7 +10,7 @@ const map: ConceptMap = {
   status: 'bozza',
   sources: [
     'Ministero della Salute — Linee guida per l’assistenza domiciliare (2023)',
-    'FNOPI — Codice Deontologico dell’Infermiere (2020)',
+    'FNOPI — Codice deontologico delle professioni infermieristiche (2019)',
     'Legge 328/2000 — Legge-quadro per la non autosufficienza',
   ],
   intro:

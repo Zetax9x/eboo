@@ -11,9 +11,8 @@ const map: ProcedureMap = {
   icon: 'Gauge',
   status: 'bozza',
   sources: [
-    'ESH — Guidelines for the management of arterial hypertension (2023)',
-    'ESC — Guidelines for the management of elevated blood pressure and hypertension (2024)',
-    'ESH — Practice guidelines for office and out-of-office blood pressure measurement (2021)',
+    'ESC/ESH Guidelines for the management of arterial hypertension (2023)',
+    'Italian Society of Hypertension – Guidelines for blood pressure measurement in clinical practice (2020)',
   ],
   materials: [
     { label: 'Apparecchio validato', icon: 'Gauge' },
@@ -74,7 +73,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Lettura',
-      items: ['**I tono** di Korotkoff = sistolica', '**V tono** (scomparsa) = diastolica', 'Leggere all’altezza degli occhi'],
+      items: ['**Il tono** di Korotkoff = sistolica', '**Il V tono** (scomparsa) = diastolica', 'Leggere all’altezza degli occhi'],
       icon: 'ListChecks',
     },
     {

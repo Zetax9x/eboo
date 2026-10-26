@@ -11,9 +11,8 @@ const map: ProcedureMap = {
   icon: 'Wind',
   status: 'bozza',
   sources: [
-    'National Tracheostomy Safety Project (NTSP) — Comprehensive Tracheostomy Care, Wiley-Blackwell',
     'McGrath B.A. et al. — Multidisciplinary guidelines for the management of tracheostomy and laryngectomy airway emergencies, Anaesthesia 2012',
-    'Saiani L., Brugnolli A. — Trattato di cure infermieristiche, Idelson-Gnocchi',
+    'Ministero della Salute — Linee guida per la gestione della tracheostomia, 2020',
   ],
   materials: [
     { label: 'Guanti, DPI', icon: 'Hand' },
@@ -92,7 +91,7 @@ const map: ProcedureMap = {
   complications: [
     { label: 'Ostruzione', sub: 'tappo di muco: controcannula' },
     { label: 'Decannulazione accidentale', sub: 'stoma recente: emergenza' },
-    { label: 'Emorragia', sub: 'stoma o arteria anonima' },
+    { label: 'Emorragia', sub: 'stoma o arteria anomala' },
     { label: 'Enfisema sottocutaneo', sub: 'crepitio al collo' },
     { label: 'Infezione dello stoma', sub: 'arrossamento, pus' },
     { label: 'Lesioni da pressione', sub: 'flangia, fettuccia, cuffia' },

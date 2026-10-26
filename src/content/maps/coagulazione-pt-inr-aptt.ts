@@ -11,7 +11,7 @@ const map: LabMap = {
   sources: [
     'ISTH — International Society on Thrombosis and Haemostasis, Guidelines for anticoagulation monitoring',
     'AIFA — Agenzia Italiana del Farmaco, Raccomandazioni per il monitoraggio degli anticoagulanti',
-    'Linee guida ESC 2024 — Gestione della tromboembolia venosa e dell’embolia polmonare',
+    'ESC 2019 — Linee guida per la diagnosi e il trattamento dell’embolia polmonare acuta',
   ],
   intro: 'I range variano tra laboratori e sistemi di analisi. Fa sempre fede il **referto del proprio laboratorio** e la prescrizione medica.',
   rows: [
@@ -64,7 +64,7 @@ const map: LabMap = {
       },
       high: {
         name: 'aPTT prolungato',
-        signs: 'sanguinamento, ecchimosi, emartro',
+        signs: 'sanguinamento, ecchimosi, ematomi',
         causes: 'eparina (non frazionata), emofilia A/B, lupus anticoagulante, deficit fattori VIII, IX, XI, XII',
       },
       nursing: 'Monitorare aPTT durante terapia eparinica: target **1,5–2,5 volte** il valore di base. Verificare segni di sanguinamento. Comunicare aPTT > 60 s o sanguinamento attivo al medico.',

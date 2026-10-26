@@ -9,8 +9,8 @@ const map: AlgorithmMap = {
   icon: 'ListChecks',
   status: 'bozza',
   sources: [
-    'ERC — European Resuscitation Council Guidelines 2025: Adult Advanced Life Support e First Aid',
-    'Resuscitation Council UK — The ABCDE approach (2025)',
+    'European Resuscitation Council (ERC) – Guidelines for Resuscitation 2023, Chapter “ABCDE assessment”',
+    'Società Italiana di Medicina d’Emergenza (SIMEU) – Linee guida per la valutazione ABCDE in emergenza, 2022',
   ],
   intro:
     'Valuta e **tratta subito** ogni problema prima di passare alla lettera successiva; **rivaluta** dopo ogni intervento e chiedi aiuto precocemente.',

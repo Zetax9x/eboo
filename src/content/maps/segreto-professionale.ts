@@ -78,7 +78,7 @@ const map: ConceptMap = {
       items: [
         'Non discutere casi clinici in **luoghi pubblici** (mense, ascensori)',
         'Proteggere **cartelle** e dispositivi (password, schermi)',
-        'Non condividere informazioni con **familiar**i non autorizzati',
+        'Non condividere informazioni con **familiari** non autorizzati',
         'Verificare l’**identità** di chi richiede informazioni',
         'Usare canali **sicuri** per comunicazioni (non WhatsApp personale)',
         'Formare il personale su **privacy by design**',

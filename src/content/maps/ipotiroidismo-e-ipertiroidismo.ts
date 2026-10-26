@@ -110,7 +110,7 @@ const map: DiseaseMap = {
   ],
   redFlags: [
     '**Crisi tiroidea**: febbre > 39°C, tachicardia > 140 bpm, confusione → **emergenza medica**',
-    '**Miixedema**: ipotermia, bradicardia, stato confusionale → **ricovero immediato**',
+    '**Mixedema**: ipotermia, bradicardia, stato confusionale → **ricovero immediato**',
     'Agranulocitosi (con propiltiouracile): febbre, faringite → **sospendere il farmaco e avvisare il medico**',
   ],
 }

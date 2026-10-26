@@ -76,7 +76,7 @@ const map: OverviewMap = {
       icon: 'Waves',
       bullets: [
         '**70%** come **bicarbonato** (HCO3⁻) nel plasma',
-        '**23%** legato all’Hb come **carbaminemoglobina**',
+        '**23%** legato all’Hb come **carbaminoemoglobina**',
         '**7%** disciolto nel plasma',
         'La conversione in HCO3⁻ avviene grazie all’**anidrasi carbonica** nei globuli rossi',
         'Effetto **Haldane**: l’Hb deossigenata trasporta più CO2',

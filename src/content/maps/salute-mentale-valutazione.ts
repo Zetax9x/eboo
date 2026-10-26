@@ -24,7 +24,7 @@ const map: ConceptMap = {
       items: [
         'Raccolta dati **soggettivi** (storia clinica, farmaci, sostanze) e **oggettivi** (aspetto, comportamento)',
         'Valutazione dello **stato mentale** (MSE): coscienza, orientamento, pensiero, percezione, umore',
-        'Screening **rischio suicidario** (Columbia C-SSRS) e **aggressività** (Buss-Perry, BVC)**',
+        'Screening **rischio suicidario** (Columbia C-SSRS) e **aggressività** (Buss-Perry Aggression Questionnaire, Brøset Violence Checklist - BVC)',
         'Verifica **capacità decisionale** e consenso informato (L. 219/2017)',
         'Identificazione **risorse** sociali, familiari e di coping',
         'Documentazione in **cartella infermieristica** con linguaggio oggettivo',
@@ -38,9 +38,9 @@ const map: ConceptMap = {
         '**PHQ-9**: depressione (0-27; ≥10 moderata, ≥15 severa)',
         '**GAD-7**: ansia (0-21; ≥10 moderata, ≥15 severa)',
         '**PANSS**: psicosi (30-210; >60 severa)',
-        '**YMRS**: mania (0-60; ≥12 mania lieve, ≥20 severa)',
+        '**YMRS**: mania (0-60; ≥13 mania lieve, ≥40 severa)',
         '**MMSE**: cognizione (0-30; <24 possibile demenza)',
-        '**C-SSRS**: rischio suicidio (0-6; ≥4 alto rischio)',
+        '**C-SSRS**: rischio suicidio (≥4 alto rischio)',
       ],
     },
     {

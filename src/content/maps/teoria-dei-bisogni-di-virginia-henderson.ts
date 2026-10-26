@@ -15,12 +15,6 @@ const map: ConceptMap = {
   ],
   intro:
     'Virginia **Henderson** (1897–1996) definisce la **funzione propria** dell’infermiere: assistere la persona, malata o sana, nelle attività che contribuiscono alla salute, al recupero o a una **morte serena**, che compirebbe da sola se avesse la necessaria **forza, volontà o conoscenza**, aiutandola a riacquistare l’**indipendenza** il più rapidamente possibile.',
-  illustration: {
-    id: 'henderson-assistenza',
-    alt: 'Infermiera che aiuta un anziano a camminare',
-    prompt: 'a nurse in scrubs gently supporting an elderly man by the arm as he walks slowly in a bright hospital corridor',
-    icon: 'Users',
-  },
   columns: 3,
   blocks: [
     {

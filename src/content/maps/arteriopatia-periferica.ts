@@ -9,9 +9,8 @@ const map: DiseaseMap = {
   icon: 'Activity',
   status: 'bozza',
   sources: [
-    'ESC — Guidelines on the diagnosis and treatment of peripheral arterial disease (2024)',
-    'SICVE — Linee guida per la diagnosi e il trattamento delle arteriopatie periferiche',
-    'AIFA — Raccomandazioni per la terapia dell’arteriopatia periferica',
+    'ESC — Guidelines on the diagnosis and treatment of peripheral arterial disease (2023)',
+    'SIAPV — Linee guida per la diagnosi e il trattamento delle arteriopatie periferiche (2022)',
   ],
   definition:
     'Malattia cronica progressiva delle arterie degli arti inferiori causata da **aterosclerosi**, che riduce il flusso ematico e provoca **claudicatio intermittente** o **ischemia critica**.',
@@ -46,7 +45,7 @@ const map: DiseaseMap = {
       icon: 'Eye',
       accent: 'orange',
       items: [
-        '**Claudicatio intermittente**: dolore a coscia, coscia o polpaccio durante la camminata',
+        '**Claudicatio intermittente**: dolore a coscia, **ginocchio** o polpaccio durante la camminata',
         'Dolore a riposo (stadio avanzato)',
         '**Ulcere** plantari o digitali, **necrosi** tissutale',
         'Pelle fredda, pallida o cianotica',

@@ -55,7 +55,7 @@ const map: OverviewMap = {
         '**Unità funzionale** del rene: ~1 milione per rene',
         '**Corpuscolo renale**: glomerulo + capsula di Bowman',
         '**Tubulo prossimale**: riassorbimento di Na⁺, glucosio, aminoacidi',
-        '**Laccio di Henle**: concentrazione dell’urina',
+        '**Ansa di Henle**: concentrazione dell’urina',
         '**Tubulo distale** e **dotto collettore**: regolazione finale',
       ],
     },

@@ -80,7 +80,7 @@ const map: DiseaseMap = {
       items: [
         '**ICD**: prevenzione della morte improvvisa',
         '**CRT** (resincronizzazione) se QRS largo',
-        'Correzione della **carenza marziale** (ferro ev)',
+        'Correzione della **carenza di ferro** (ferro EV)',
         'Casi avanzati: assistenza ventricolare, trapianto, cure palliative',
       ],
     },

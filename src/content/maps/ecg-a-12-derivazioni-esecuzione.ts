@@ -10,7 +10,7 @@ const map: ProcedureMap = {
   status: 'bozza',
   sources: [
     'ESC — Guidelines for the management of patients with ST-segment elevation acute myocardial infarction (2023)',
-    'AHA — Basic Life Support and Cardiovascular Emergency Care (2020)',
+    'AHA — Basic Life Support (2020)',
     'FNOPI — Codice deontologico e standard assistenziali',
   ],
   materials: [
@@ -47,7 +47,7 @@ const map: ProcedureMap = {
   safety: [
     { text: 'Paziente **nudo** dal torace in su', kind: 'ok' },
     { text: 'Cute **pulita e asciutta**', kind: 'ok' },
-    { text: 'Elettrodi su **ossa** (clavicola, sterno)', kind: 'warn' },
+    { text: 'Elettrodi su **pelle** (clavicola, sterno)', kind: 'ok' },
     { text: '**Niente** pacemaker senza verifica', kind: 'alert' },
     { text: 'Verificare **allergie** alla colla', kind: 'warn' },
     { text: 'Ottenere **consenso**', kind: 'ok' },

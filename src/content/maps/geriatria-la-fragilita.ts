@@ -9,7 +9,6 @@ const map: ConceptMap = {
   icon: 'Users',
   status: 'bozza',
   sources: [
-    'CFSR — Consensus on Frailty Screening and Risk Assessment (2020)',
     'Fried L.P. et al. — Frailty in older adults: evidence for a phenotype, J Gerontol A Biol Sci Med Sci (2001)',
     'Ministero della Salute — Linee guida per la valutazione geriatria (2019)',
   ],
@@ -56,7 +55,7 @@ const map: ConceptMap = {
       icon: 'ClipboardCheck',
       accent: 'green',
       items: [
-        '**FRAIL Index**: 11 criteri (sintomi, funzioni, comorbidità)',
+        '**FRAIL Index**: 5 criteri (sintomi, funzioni, comorbidità)',
         '**Fried Phenotype**: 5 criteri (peso, camminata, grip, esaurimento, attività)',
         '**FRAIL Scale**: 5 domande (Forza, Resilienza, Attività, Igiene, Malattie)',
         '**Gait Speed**: velocità di camminata su 4 metri',

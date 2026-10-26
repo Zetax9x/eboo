@@ -24,7 +24,7 @@ const map: TableMap = {
     ['**ALT** (GPT)', '< 40–45 U/L', 'Danno degli epatociti, **più specifica** per il fegato', 'Epatiti virali, steatosi, farmaci; **> 10 volte** il limite: danno acuto (virus, **paracetamolo**, ischemia)'],
     ['**GGT**', 'M < 60 · F < 40 U/L', 'Colestasi e induzione enzimatica', '**Alcol**, ostruzione biliare, farmaci (antiepilettici)'],
     ['**Fosfatasi alcalina** (ALP)', '40–130 U/L', 'Colestasi; prodotta anche dall’**osso**', 'Calcolosi del coledoco, neoplasie, metastasi ossee, **gravidanza**, crescita'],
-    ['**Bilirubina totale**', '0,3–1,2 mg/dL', 'Ittero visibile oltre **2–3 mg/dL** (prima alle **sclere**)', 'Indiretta ↑: **emolisi**, sindrome di Gilbert · diretta ↑: epatite, **ostruzione biliare**'],
+    ['**Bilirubina totale**', '0,3–1,2 mg/dL', 'Ittero visibile oltre **2–3 mg/dL** (prima alla **sclera**)', 'Indiretta ↑: **emolisi**, sindrome di Gilbert · diretta ↑: epatite, **ostruzione biliare**'],
     ['**Bilirubina diretta**', '< 0,3 mg/dL', 'Quota **coniugata** dal fegato, eliminata con la bile', 'Colestasi: **urine scure**, feci chiare (acoliche), prurito'],
     ['**Albumina**', '3,5–5,0 g/dL', 'Funzione di **sintesi** (emivita circa 3 settimane)', '↓ in cirrosi, malnutrizione, sindrome nefrosica, infiammazione: **edemi, ascite**'],
     ['**PT / INR**', 'INR 0,8–1,2', 'Sintesi dei fattori della coagulazione: indice **rapido**', '↑ in insufficienza epatica acuta e cronica, deficit di **vitamina K**'],
@@ -46,7 +46,7 @@ const map: TableMap = {
       icon: 'Eye',
       accent: 'orange',
       items: [
-        '**Ittero** di sclere e cute, prurito',
+        '**Ittero** di sclera e cute, prurito',
         'Colore di **urine e feci**',
         'Confusione, **flapping tremor**, sonnolenza',
         'Ascite: peso e **circonferenza addominale**',
@@ -59,7 +59,7 @@ const map: TableMap = {
       items: [
         'INR alto: segni di **sanguinamento**, compressione prolungata',
         'Paracetamolo: rispettare la **dose massima** giornaliera',
-        'Encefalopatia: **alvo** regolare (lattulosio secondo prescrizione)',
+        'Encefalopatia: **mantenere un alvo regolare** (lattulosio secondo prescrizione)',
       ],
     },
   ],

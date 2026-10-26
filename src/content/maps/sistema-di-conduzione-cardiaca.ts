@@ -96,7 +96,7 @@ const map: ConceptMap = {
       accent: 'blue',
       items: [
         '**Fase 0**: ingresso rapido di **Na⁺** (depolarizzazione)',
-        '**Fase 1–2**: **plateau** da ingresso di **Ca²⁺**',
+        '**Fase 1**: breve ripolarizzazione (uscita di **K⁺**); **Fase 2**: plateau da ingresso di **Ca²⁺**',
         '**Fase 3**: uscita di **K⁺** (ripolarizzazione)',
         '**Fase 4**: riposo ≈ −90 mV nei miocardiociti',
         '**Refrattarietà** lunga: il cuore non va in tetano',

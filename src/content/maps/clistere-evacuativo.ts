@@ -41,7 +41,7 @@ const map: ProcedureMap = {
     { text: 'Verificare **prescrizione** e consenso', kind: 'ok' },
     { text: 'Controllare **controindicazioni** (ernia, emorroidi)', kind: 'warn' },
     { text: 'Rispettare **privacy** e dignità', kind: 'ok' },
-    { text: '**Non forzare** l’insertione', kind: 'no' },
+    { text: '**Non forzare** l’inserzione', kind: 'no' },
     { text: 'Soluzione a **37 °C**', kind: 'warn' },
   ],
   steps: [
@@ -93,7 +93,7 @@ const map: ProcedureMap = {
     {
       title: 'Evacuazione',
       items: [
-        'Aiutare al **water** o vasino',
+        'Aiutare al **water** o al vasino',
         'Valutare **colore, consistenza**',
         'Offrire **acqua**',
       ],

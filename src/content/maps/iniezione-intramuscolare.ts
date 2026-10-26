@@ -9,7 +9,7 @@ const map: ProcedureMap = {
   icon: 'Syringe',
   status: 'bozza',
   sources: [
-    'INS — Infusion Therapy Standards of Practice, 9ª ed. (2024)',
+    'Ministero della Salute — Linee guida per la somministrazione di farmaci per via intramuscolare (2022)',
     'AIFA — Raccomandazioni per la somministrazione parenterale di farmaci',
     'OMS — Linee guida sulla sicurezza delle iniezioni (Safe Injection)',
   ],
@@ -32,14 +32,17 @@ const map: ProcedureMap = {
     items: [
       '**Vasto laterale**: prima scelta',
       '**Deltoide**: 2–3 dita sotto acromion',
-      '**Vento-glutea**: rischio nervo sciatico',
+      '**Gluteo**: rischio di lesione del nervo sciatico',
       'Evitare: cicatrici, lesioni, masse',
     ],
   },
   safety: [
     { text: 'Verificare **prescrizione** e allergie', kind: 'ok' },
     { text: 'Igiene delle mani e **guanti**', kind: 'ok' },
-    { text: 'Volume max: **1–2 mL** (deltoide), **3–5 mL** (vasto/gluteo)', kind: 'warn' },
+    {
+      text: 'Volume max: **1 mL** (deltoide), **2–3 mL** (vasto laterale), **3–5 mL** (gluteo)',
+      kind: 'warn',
+    },
     { text: '**Mai** iniettare in vene o sottocute', kind: 'no' },
     { text: 'Smaltire ago in **contenitore taglienti**', kind: 'ok' },
   ],
@@ -66,12 +69,15 @@ const map: ProcedureMap = {
     },
     {
       title: 'Aspirazione',
-      items: ['Tirare lo stantuffo', 'Verificare assenza di sangue'],
+      items: [
+        '(Facoltativa) Tirare lo stantuffo per verificare assenza di sangue',
+        'Se presente sangue, non iniettare e segnalare',
+      ],
       icon: 'Wind',
     },
     {
       title: 'Iniezione',
-      items: ['Iniettare lentamente', 'Velocità costante'],
+      items: ['Iniettare lentamente (≈ 1 mL/10‑15 s)', 'Velocità costante'],
       icon: 'Syringe',
     },
     {
@@ -94,7 +100,7 @@ const map: ProcedureMap = {
   ],
   nurseRole: [
     'Valutare la **sede** e lo stato del paziente',
-    'Monitorare **reazioni avverse** post-iniezione',
+    'Monitorare **reazioni avverse** post‑iniezione',
     'Educare il paziente alla **sicurezza**',
     'Documentare ogni **dettaglio** della procedura',
   ],

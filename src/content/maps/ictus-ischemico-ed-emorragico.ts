@@ -10,7 +10,6 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'ESO — European Stroke Organisation guidelines on intravenous thrombolysis (2021) e su tenecteplase (2023)',
-    'ISO-SPREAD — Ictus cerebrale: linee guida italiane di prevenzione e trattamento',
     'AHA/ASA — Guideline for the management of spontaneous intracerebral hemorrhage (2022)',
   ],
   definition:
@@ -85,7 +84,7 @@ const map: DiseaseMap = {
         '**Reversal** degli anticoagulanti secondo protocollo',
         'Controllo di ICP, glicemia, temperatura',
         'Neurochirurgia in casi selezionati',
-        'ESA: trattamento dell’aneurisma (**coiling**/clipping)',
+        'Trattamento endovascolare dell’aneurisma (**coiling**/clipping)',
       ],
     },
     {
@@ -93,7 +92,7 @@ const map: DiseaseMap = {
       icon: 'Layers',
       accent: 'teal',
       items: [
-        '**Polmonite ab ingestis** da disfagia',
+        '**Polmonite da aspirazione**',
         'Edema cerebrale, trasformazione emorragica',
         '**TVP**/embolia polmonare, lesioni da pressione',
         'Spalla dolorosa, cadute, depressione',

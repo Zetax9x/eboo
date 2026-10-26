@@ -10,7 +10,7 @@ const map: DiseaseMap = {
   status: 'bozza',
   sources: [
     'SIC — Linee guida per la gestione dell’occlusione intestinale',
-    'SIAE — Società Italiana di Chirurgia d’Urgenza e d’Organo',
+    'SICUO — Società Italiana di Chirurgia d’Urgenza e d’Organo',
     'Schwartz’s Principles of Surgery (11th ed.)',
   ],
   definition:
@@ -24,7 +24,7 @@ const map: DiseaseMap = {
   types: [
     { name: 'Meccanica', text: 'Ostruzione fisica: **ernie**, aderenze, tumori, volvolo, intussuscezione.' },
     { name: 'Dinamica', text: 'Paralisi intestinale (**ileo paralitico**): post-operatoria, peritonite, farmaci oppioidi.' },
-    { name: 'Semplice', text: 'Solo stasi; la parete intestinale è **vitalizzata**.' },
+    { name: 'Semplice', text: 'Solo stasi; la parete intestinale è **vitale**.' },
     { name: 'Strangolativa', text: 'Compromissione vascolare: **ischemia**, necrosi, perforazione. Emergenza chirurgica.' },
   ],
   sections: [
@@ -99,7 +99,7 @@ const map: DiseaseMap = {
       accent: 'teal',
       items: [
         'Segni vitali ogni **1–2 ore** (shock, tachicardia)',
-        'Bilancio idrico e **diuresi** (target ≥ 0,5 mL/kg/h)',
+        'Bilancio idrico e **diuresi** (target ≥ 0,5 mL/kg/h)',
         'Output nasogastrico: quantità, colore, odore',
         'Esami ematochimici ripetuti: **lattato**, elettroliti, creatinina',
         'Valutazione del dolore e della distensione addominale',
@@ -117,7 +117,7 @@ const map: DiseaseMap = {
   ],
   redFlags: [
     '**Dolore improvviso e intenso** con rigidità addominale: sospetto di **strangolamento** o perforazione',
-    'Vomito **fecaloide** o ematichemico: occlusione bassa o ischemia',
+    'Vomito **fecaloide** o ematemico: occlusione bassa o ischemia',
     'Tachicardia, ipotensione, **lattato > 4 mmol/L**: shock settico o emorragico',
   ],
 }

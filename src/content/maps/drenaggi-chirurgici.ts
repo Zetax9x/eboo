@@ -9,7 +9,7 @@ const map: ProcedureMap = {
   icon: 'Droplets',
   status: 'bozza',
   sources: [
-    'SIR — Società Italiana di Chirurgia, Linee guida sulla gestione dei drenaggi chirurgici',
+    'Ministero della Salute – Linee guida per la prevenzione delle infezioni chirurgiche, 2020',
     'NICE — Surgical site infections: prevention and treatment (2023)',
     'AORN — Guidelines for Management of Surgical Drains',
   ],
@@ -67,7 +67,7 @@ const map: ProcedureMap = {
     },
     {
       title: 'Rimozione',
-      items: ['Solo su **prescrizione medica**', 'Solitamente < 100 mL/die per 24-48h', 'Disinfettare il sito dopo la rimozione'],
+      items: ['Solo su **prescrizione medica**', 'Solitamente < 100 mL/24 h', 'Disinfettare il sito dopo la rimozione'],
       icon: 'Scissors',
     },
     {

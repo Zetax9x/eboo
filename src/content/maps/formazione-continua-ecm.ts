@@ -53,7 +53,7 @@ const map: ConceptMap = {
         '**Formazione obbligatoria**: corsi su temi specifici (es. sicurezza, privacy)',
         '**Attività di ricerca e docenza**: pubblicazioni, insegnamento universitario',
         '**Formazione sul lavoro**: attività di miglioramento della qualità (QI)',
-        'Ogni attività deve essere **accreditata** da ANACI o enti riconosciuti',
+        'Gli eventi sono erogati da **provider ECM accreditati** (Agenas / Commissione nazionale per la formazione continua)',
       ],
     },
     {
@@ -64,7 +64,7 @@ const map: ConceptMap = {
         'Documento che traccia i **bisogni formativi** del professionista',
         'Va aggiornato ogni **3 anni** (a fine triennio)',
         'Include: obiettivi, attività previste, crediti acquisiti',
-        'Va compilato tramite la **piattaforma nazionale** (ANACI)',
+        'Crediti e dossier si consultano sul portale **Co.Ge.A.P.S.**',
         'Serve a dimostrare l’adempimento dell’obbligo ECM',
         'È un documento **personale** e **tracciabile**',
       ],

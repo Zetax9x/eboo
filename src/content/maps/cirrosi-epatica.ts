@@ -74,7 +74,7 @@ const map: DiseaseMap = {
       items: [
         'Trattare la **causa**: astensione dall’alcol, antivirali',
         'Ascite: **restrizione di sodio**, spironolattone ± furosemide',
-        '**Paracentesi** evacuativa + **albumina** ev',
+        '**Paracentesi** evacuativa + **albumina** (es. 6,5 g/dL) ',
         'β-bloccanti **non selettivi** (carvedilolo) per le varici',
         '**Trapianto** di fegato nei casi selezionati',
       ],
@@ -87,7 +87,7 @@ const map: DiseaseMap = {
         'Da **ammoniaca** non detossificata',
         'Confusione, inversione **sonno-veglia**, asterixis, coma',
         'Scatenanti: emorragia, infezioni, **stipsi**, sedativi',
-        '**Lattulosio**: 2–3 evacuazioni morbide/die',
+        '**Lattulosio**: 2–3 evacuazioni morbide al giorno',
         '**Rifaximina** per prevenire le recidive',
       ],
     },
@@ -108,7 +108,7 @@ const map: DiseaseMap = {
     'Pesare il paziente ogni giorno **alla stessa ora**, a digiuno',
     'Dieta **iposodica**, **senza restrizione proteica**; spuntino serale',
     'Evitare **sedativi**, FANS e farmaci epatotossici',
-    'Cura della cute (prurito, edemi) e prevenzione delle **LdP**',
+    'Cura della cute (prurito, edemi) e prevenzione delle **lesioni da pressione (LdP)**',
     'Paracentesi: posizione, PA, sede di puntura, **volume drenato**',
   ],
   redFlags: [

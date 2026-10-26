@@ -19,7 +19,7 @@ export function ProcedurePage({ map }: { map: ProcedureMap }) {
         </Box>
         {map.sites && (
           <Box title={map.sites.title} icon="Target" accent="green">
-            <Illustration data={map.sites.illustration} style={{ height: 86 }} />
+            {map.sites.illustration && <Illustration data={map.sites.illustration} style={{ height: 86 }} />}
             <Bullets items={map.sites.items} style={{ fontSize: 11 }} />
           </Box>
         )}

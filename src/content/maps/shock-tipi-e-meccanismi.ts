@@ -22,7 +22,7 @@ const map: DiseaseMap = {
     icon: 'HeartPulse',
   },
   types: [
-    { name: 'Ipoipolemico', text: 'Perdita di volume ematico (emorragia) o extravasazione (ustioni, pancreatite).' },
+    { name: 'Ipovolemico', text: 'Perdita di volume ematico (emorragia) o extravasazione (ustioni, pancreatite).' },
     { name: 'Cardiogeno', text: 'Insufficienza della pompa cardiaca (infarto, miocardite, aritmie).' },
     { name: 'Distributivo', text: 'Vasodilatazione patologica (anafilassi, sepsi, neurogeno).' },
     { name: 'Ostruttivo', text: 'Ostruzione meccanica del flusso (embolia polmonare, tamponamento).' },
@@ -84,7 +84,7 @@ const map: DiseaseMap = {
         '**Danno d’organo multiorgano** (renale, epatico, polmonare)',
         'Coagulopatia da consumo (DIC)',
         'Lesione renale acuta (LRA)',
-        'Sindrome da distress respiratorio acuto (SDRA)',
+        'Sindrome da distress respiratorio acuto (ARDS)',
         'Morte per arresto cardiaco',
       ],
     },
@@ -102,7 +102,7 @@ const map: DiseaseMap = {
     },
   ],
   nursing: [
-    'Posizionare il paziente in **posizione di Trendelenburg** (solo se indicato) o con gambe elevate',
+    'Posizionare il paziente in **posizione supina con gambe sollevate** (se tollerata) o con gambe elevate',
     'Garantire un **accesso venoso** rapido e somministrare fluidi secondo protocollo',
     'Monitorare continuamente **PA, FC, SpO₂** e stato di coscienza',
     'Raccogliere campioni per **emogasanalisi** e lattato ematico',

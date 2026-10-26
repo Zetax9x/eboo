@@ -35,7 +35,7 @@ const map: OverviewMap = {
       },
       bullets: [
         '**Primari**: midollo osseo (maturazione B) e **timo** (maturazione T)',
-        '**Secondari**: milza, linfonodi, tonsille, Peyer patches (GII)',
+        '**Secondari**: milza, linfonodi, tonsille, Peyer patches (GALT)',
         'Il **timo** regredisce dopo la pubertà (involuzione timica)',
         'La **milza** filtra il sangue e produce anticorpi',
       ],
@@ -72,7 +72,7 @@ const map: OverviewMap = {
         '**Barriere fisiche**: cute, mucose, secrezioni (muco, lacrime)',
         '**Barriere chimiche**: pH gastrico, lisozima, acidi grassi cutanei',
         '**Cellule**: neutrofili, macrofagi, cellule NK (Natural Killer)',
-        '**Sistema complemento**: attivazione classica, alternativa, lezina',
+        '**Sistema complemento**: attivazione classica, alternativa, lectina',
         'Risposta **immediata** (minuti-ore), non specifica',
       ],
     },

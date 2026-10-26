@@ -9,8 +9,8 @@ const map: ProcedureMap = {
   icon: 'Wind',
   status: 'bozza',
   sources: [
-    'NICE — Oxygen therapy in adults in healthcare settings (NG157, 2023)',
-    'GOLD — Global Strategy for COPD (2024)',
+    'NICE — Oxygen therapy in adults in healthcare settings (NG157, 2021)',
+    'GOLD — Global Strategy for COPD (2023)',
     'Ministero della Salute — Linee guida per l’uso dell’ossigenoterapia',
   ],
   materials: [
@@ -19,7 +19,7 @@ const map: ProcedureMap = {
     { label: 'Cannule nasali', icon: 'Droplet' },
     { label: 'Tubo ossigeno', icon: 'Cable' },
     { label: 'Flussometro', icon: 'Gauge' },
-    { label: 'Umidificatore', icon: 'Droplets' },
+    { label: 'Umidificatore', icon: 'Droplet' },
     { label: 'Ossimetro', icon: 'Activity' },
     { label: 'Guanti monouso', icon: 'Hand' },
   ],
