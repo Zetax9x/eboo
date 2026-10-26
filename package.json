@@ -11,6 +11,7 @@
     "export": "node scripts/export.mjs",
     "genera": "node scripts/genera-mappe.mjs",
     "revisiona": "node scripts/revisiona-mappe.mjs",
+    "verifica": "node scripts/verifica-modifiche.mjs",
     "kindle": "node scripts/kindle.mjs",
     "illustrazioni": "node scripts/illustrations.mjs"
   },
