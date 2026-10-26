@@ -1,13 +1,14 @@
 // Non-map pages of the book: cover, title page, notices, how-to, index pages, chapter dividers.
 
 import type { ReactNode } from 'react'
-import { CHAPTERS, type Chapter } from '../book/chapters'
+import type { Chapter } from '../book/chapters'
 import { BOOK_META } from '../book/meta'
 import type { Entry } from '../book/registry'
 import type { BookItem, FrontId, IndexLine } from '../book/sequence'
 import { Box, Bullets, CheckList, KeyBand } from '../components/Box'
 import { Icon, type IconName } from '../components/icons'
 import { BookPage } from '../templates/BookPage'
+import coverArt from '../assets/copertina-sfondo.png'
 
 export function BookItemView({ item }: { item: BookItem }) {
   switch (item.type) {
@@ -56,29 +57,27 @@ export function KdpCover() {
   return <CoverPage kdp />
 }
 
+/** Cover: AI artwork (no text) as background, all text drawn here so it is always sharp and correct. */
 function CoverPage({ kdp = false }: { kdp?: boolean }) {
   return (
-    <article className={`page front front--cover ${kdp ? 'front--kdp' : ''}`} data-page-id={kdp ? KDP_COVER_ID : 'copertina'}>
-      <span className="cover__badge">
-        {BOOK_META.edition} · {BOOK_META.year}
-      </span>
+    <article
+      className={`page front front--cover front--art ${kdp ? 'front--kdp' : ''}`}
+      data-page-id={kdp ? KDP_COVER_ID : 'copertina'}
+      style={{ ['--cover-art' as string]: `url(${coverArt})` }}
+    >
+      {/* Title in the calm top of the artwork, the rest in the calm bottom: the heart stays visible. */}
       <h1 className="cover__title">
         <span>Mappe visive</span>
         <span className="cover__accent">di infermieristica</span>
       </h1>
-      <p className="cover__subtitle">{BOOK_META.subtitle}</p>
-      <div className="cover__grid">
-        {CHAPTERS.map((c) => (
-          <div key={c.id} className={`cover__tile acc-${c.accent}`}>
-            <Icon name={c.icon} size={34} />
-            <span>{c.short}</span>
-          </div>
-        ))}
+      <div className="cover__bottom">
+        <span className="cover__count">250 mappe illustrate</span>
+        <p className="cover__subtitle">Per lo studio, il tirocinio e i concorsi pubblici</p>
+        <footer className="cover__foot">
+          <span>10 capitoli · {BOOK_META.edition.toLowerCase()} {BOOK_META.year}</span>
+          <strong>{BOOK_META.author}</strong>
+        </footer>
       </div>
-      <footer className="cover__foot">
-        <strong>250 mappe · 10 capitoli</strong>
-        <span>{BOOK_META.author}</span>
-      </footer>
     </article>
   )
 }
