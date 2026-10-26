@@ -71,16 +71,21 @@
   gap: 10px;
 }
 
+/* Fixed height: changing it would change the space available to every map. */
 .page-foot {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  font-size: 9.5px;
+  gap: 10px;
+  height: 24.36px;
+  font-size: 11px;
+  white-space: nowrap;
   color: var(--ink-soft);
   border-top: 1px solid #e3e7ec;
   padding-top: 6px;
   flex-shrink: 0;
 }
+.page-foot .disclaimer { font-size: 11px; }
 .page-foot__num {
   font-family: var(--font-head);
   font-weight: 700;

@@ -266,7 +266,7 @@ function IndexPage({ id, part, parts, lines }: { id: string; part: number; parts
                   {line.chapter.title}
                 </li>
               ) : (
-                <li key={line.entry.id} className="index__entry">
+                <li key={line.entry.id} className="index__entry" data-link={line.entry.id}>
                   <span className="index__title">{line.entry.title}</span>
                   <span className="index__dots" />
                   <span className="index__page">{line.entry.pageNumber}</span>
@@ -298,7 +298,7 @@ function ChapterDivider({ id, chapter, entries }: { id: string; chapter: Chapter
         {[entries.slice(0, half), entries.slice(half)].map((column, i) => (
           <ol key={i}>
             {column.map((e) => (
-              <li key={e.id}>
+              <li key={e.id} data-link={e.id}>
                 <span>{e.title}</span>
                 <span className="index__dots" />
                 <span className="index__page">{e.pageNumber}</span>

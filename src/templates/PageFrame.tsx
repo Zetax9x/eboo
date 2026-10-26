@@ -31,7 +31,7 @@ export function PageFrame({ entry, icon, subtitle, children }: Props) {
       <div className="page-body">{children}</div>
       <footer className="page-foot">
         <span>
-          {BOOK_TITLE} · {chapter.title}
+          {BOOK_TITLE} · {chapter.short}
         </span>
         <span className="disclaimer">Materiale didattico: non sostituisce protocolli, linee guida e prescrizioni.</span>
         <span className="page-foot__num">{entry.pageNumber}</span>
