@@ -109,6 +109,7 @@ async function main() {
   console.log(`Verifica con ${MODEL} — ${changed.length} mappe modificate rispetto a ${base}, ${queue.length} da verificare`)
 
   const flagged = []
+  let failed = 0
   let next = 0
   const worker = async () => {
     while (next < queue.length) {
